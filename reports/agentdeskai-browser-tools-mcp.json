@@ -1,0 +1,361 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-29T19:47:24.655Z",
+  "server": {
+    "name": "Browser Tools MCP",
+    "version": "1.2.0"
+  },
+  "toolCount": 14,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "permissions": "F",
+      "validation": "F",
+      "auth": "B",
+      "hallucination": "F"
+    }
+  },
+  "summary": {
+    "CRITICAL": 7,
+    "HIGH": 3,
+    "MEDIUM": 22,
+    "LOW": 14,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 5,
+    "mutation": 0,
+    "destructive": 1,
+    "execution": 7,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "wipeLogs",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"wipeLogs\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "CRITICAL",
+      "tool": "runAccessibilityAudit",
+      "rule": "dangerous_tool_execution",
+      "detail": "Tool \"runAccessibilityAudit\" classified as execution — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "CRITICAL",
+      "tool": "runPerformanceAudit",
+      "rule": "dangerous_tool_execution",
+      "detail": "Tool \"runPerformanceAudit\" classified as execution — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "CRITICAL",
+      "tool": "runSEOAudit",
+      "rule": "dangerous_tool_execution",
+      "detail": "Tool \"runSEOAudit\" classified as execution — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "CRITICAL",
+      "tool": "runNextJSAudit",
+      "rule": "dangerous_tool_execution",
+      "detail": "Tool \"runNextJSAudit\" classified as execution — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "CRITICAL",
+      "tool": "runDebuggerMode",
+      "rule": "dangerous_tool_execution",
+      "detail": "Tool \"runDebuggerMode\" classified as execution — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "CRITICAL",
+      "tool": "runAuditMode",
+      "rule": "dangerous_tool_execution",
+      "detail": "Tool \"runAuditMode\" classified as execution — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "CRITICAL",
+      "tool": "runBestPracticesAudit",
+      "rule": "dangerous_tool_execution",
+      "detail": "Tool \"runBestPracticesAudit\" classified as execution — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "getConsoleLogs",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"getConsoleLogs\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "getConsoleLogs",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"getConsoleLogs\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "getConsoleErrors",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"getConsoleErrors\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "getConsoleErrors",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"getConsoleErrors\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "getNetworkErrors",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"getNetworkErrors\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "getNetworkErrors",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"getNetworkErrors\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "getNetworkLogs",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"getNetworkLogs\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "getNetworkLogs",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"getNetworkLogs\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "takeScreenshot",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"takeScreenshot\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "takeScreenshot",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"takeScreenshot\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "getSelectedElement",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"getSelectedElement\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "getSelectedElement",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"getSelectedElement\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "wipeLogs",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"wipeLogs\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "wipeLogs",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"wipeLogs\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "runAccessibilityAudit",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"runAccessibilityAudit\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "runAccessibilityAudit",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"runAccessibilityAudit\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "runPerformanceAudit",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"runPerformanceAudit\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "runPerformanceAudit",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"runPerformanceAudit\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "runSEOAudit",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"runSEOAudit\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "runSEOAudit",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"runSEOAudit\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "runNextJSAudit",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"runNextJSAudit\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "runNextJSAudit",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"runNextJSAudit\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "runDebuggerMode",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"runDebuggerMode\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "runDebuggerMode",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"runDebuggerMode\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "runAuditMode",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"runAuditMode\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "runAuditMode",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"runAuditMode\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "runBestPracticesAudit",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"runBestPracticesAudit\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "runBestPracticesAudit",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"runBestPracticesAudit\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "getNetworkErrors",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"getNetworkErrors\" references network without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "getNetworkLogs",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"getNetworkLogs\" references network without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "runAccessibilityAudit",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"runAccessibilityAudit\" uses vague action words (run, access) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "runPerformanceAudit",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"runPerformanceAudit\" uses vague action words (perform, run) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "runSEOAudit",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"runSEOAudit\" uses vague action words (run) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "runNextJSAudit",
+      "rule": "no_description",
+      "detail": "Tool \"runNextJSAudit\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "runDebuggerMode",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"runDebuggerMode\" uses vague action words (run) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "runAuditMode",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"runAuditMode\" uses vague action words (perform, run, access) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "runBestPracticesAudit",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"runBestPracticesAudit\" uses vague action words (run) without specific operations. LLMs will interpret this as the broadest possible action."
+    }
+  ]
+}

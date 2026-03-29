@@ -1,0 +1,1467 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-29T19:51:51.567Z",
+  "server": {
+    "name": "european-parliament-mcp-server",
+    "version": "1.1.12"
+  },
+  "toolCount": 61,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "validation": "F",
+      "permissions": "B",
+      "secrets": "B",
+      "hallucination": "F"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 2,
+    "MEDIUM": 159,
+    "LOW": 43,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 43,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_meps",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_meps\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_plenary_sessions",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_plenary_sessions\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_plenary_sessions",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_plenary_sessions\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_voting_records",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_voting_records\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "search_documents",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"search_documents\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "search_documents",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"search_documents\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_committee_info",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_committee_info\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_parliamentary_questions",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_parliamentary_questions\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_parliamentary_questions",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_parliamentary_questions\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "analyze_coalition_dynamics",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"analyze_coalition_dynamics\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "detect_voting_anomalies",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"detect_voting_anomalies\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "monitor_legislative_pipeline",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"monitor_legislative_pipeline\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "analyze_committee_activity",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"analyze_committee_activity\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "track_mep_attendance",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"track_mep_attendance\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "track_mep_attendance",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"track_mep_attendance\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "analyze_country_delegation",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"analyze_country_delegation\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "generate_political_landscape",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"generate_political_landscape\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "generate_political_landscape",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"generate_political_landscape\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "network_analysis",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"network_analysis\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "sentiment_tracker",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"sentiment_tracker\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "early_warning_system",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"early_warning_system\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_current_meps",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_current_meps\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_speeches",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_speeches\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_speeches",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_speeches\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_procedures",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_procedures\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_procedures",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_procedures\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_adopted_texts",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_adopted_texts\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_adopted_texts",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_adopted_texts\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_events",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_events\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_events",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_events\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_meeting_activities",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_meeting_activities\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_meeting_decisions",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_meeting_decisions\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_mep_declarations",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_mep_declarations\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_mep_declarations",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_mep_declarations\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_incoming_meps",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_incoming_meps\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_outgoing_meps",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_outgoing_meps\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_homonym_meps",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_homonym_meps\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_plenary_documents",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_plenary_documents\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_plenary_documents",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_plenary_documents\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_committee_documents",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_committee_documents\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_committee_documents",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_committee_documents\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_plenary_session_documents",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_plenary_session_documents\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_plenary_session_documents",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_plenary_session_documents\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_plenary_session_document_items",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_plenary_session_document_items\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_controlled_vocabularies",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_controlled_vocabularies\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_controlled_vocabularies",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_controlled_vocabularies\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_external_documents",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_external_documents\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_external_documents",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_external_documents\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_meeting_foreseen_activities",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_meeting_foreseen_activities\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_procedure_events",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_procedure_events\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_meeting_plenary_session_documents",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_meeting_plenary_session_documents\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_meeting_plenary_session_document_items",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_meeting_plenary_session_document_items\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_all_generated_stats",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_all_generated_stats\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_meps_feed",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_meps_feed\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_meps_feed",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_meps_feed\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_events_feed",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_events_feed\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_events_feed",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_events_feed\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_procedures_feed",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_procedures_feed\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_procedures_feed",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_procedures_feed\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_adopted_texts_feed",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_adopted_texts_feed\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_adopted_texts_feed",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_adopted_texts_feed\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_mep_declarations_feed",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_mep_declarations_feed\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_mep_declarations_feed",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_mep_declarations_feed\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_documents_feed",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_documents_feed\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_documents_feed",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_documents_feed\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_plenary_documents_feed",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_plenary_documents_feed\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_plenary_documents_feed",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_plenary_documents_feed\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_committee_documents_feed",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_committee_documents_feed\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_committee_documents_feed",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_committee_documents_feed\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_plenary_session_documents_feed",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_plenary_session_documents_feed\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_plenary_session_documents_feed",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_plenary_session_documents_feed\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_external_documents_feed",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_external_documents_feed\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_external_documents_feed",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_external_documents_feed\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_parliamentary_questions_feed",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_parliamentary_questions_feed\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_parliamentary_questions_feed",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_parliamentary_questions_feed\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_corporate_bodies_feed",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_corporate_bodies_feed\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_corporate_bodies_feed",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_corporate_bodies_feed\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_controlled_vocabularies_feed",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_controlled_vocabularies_feed\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_controlled_vocabularies_feed",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_controlled_vocabularies_feed\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_procedure_event_by_id",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_procedure_event_by_id\""
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "*",
+      "rule": "large_tool_surface",
+      "detail": "Server exposes 61 tools — large attack surface without per-tool permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "excessive_tool_surface",
+      "detail": "Server exposes 61 tools — excessive attack surface, strongly recommends per-agent tool scoping"
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "search_documents",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"search_documents\" may expose secrets in its output based on description"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_mep_details",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"get_mep_details\" uses vague action words (access) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "search_documents",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"search_documents\" references key without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_parliamentary_questions",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"get_parliamentary_questions\" uses vague action words (do) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "track_legislation",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"track_legislation\" uses vague action words (do) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "generate_report",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"generate_report\" uses vague action words (perform) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "assess_mep_influence",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"assess_mep_influence\" uses vague action words (do) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "analyze_coalition_dynamics",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"analyze_coalition_dynamics\" uses vague action words (do, use) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "detect_voting_anomalies",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"detect_voting_anomalies\" references config without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "compare_political_groups",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"compare_political_groups\" uses vague action words (perform) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "analyze_legislative_effectiveness",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"analyze_legislative_effectiveness\" uses vague action words (do) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "monitor_legislative_pipeline",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"monitor_legislative_pipeline\" uses vague action words (do) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "analyze_committee_activity",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"analyze_committee_activity\" uses vague action words (do) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "early_warning_system",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"early_warning_system\" references config without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "comparative_intelligence",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"comparative_intelligence\" references file, cluster without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "correlate_intelligence",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"correlate_intelligence\" references file, network without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_mep_declarations",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"get_mep_declarations\" references file without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_all_generated_stats",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"get_all_generated_stats\" uses vague action words (do) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_speeches + get_plenary_documents",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_speeches\" and \"get_plenary_documents\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_procedures + get_adopted_texts",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_procedures\" and \"get_adopted_texts\" have 75% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_procedures + get_mep_declarations",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_procedures\" and \"get_mep_declarations\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_procedures + get_plenary_documents",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_procedures\" and \"get_plenary_documents\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_procedures + get_committee_documents",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_procedures\" and \"get_committee_documents\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_adopted_texts + get_plenary_documents",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_adopted_texts\" and \"get_plenary_documents\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_adopted_texts + get_committee_documents",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_adopted_texts\" and \"get_committee_documents\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_meeting_activities + get_meeting_decisions",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_meeting_activities\" and \"get_meeting_decisions\" have 62% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_meeting_decisions + get_meeting_plenary_session_documents",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_meeting_decisions\" and \"get_meeting_plenary_session_documents\" have 62% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_mep_declarations + get_plenary_documents",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_mep_declarations\" and \"get_plenary_documents\" have 75% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_mep_declarations + get_committee_documents",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_mep_declarations\" and \"get_committee_documents\" have 75% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_incoming_meps + get_outgoing_meps",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_incoming_meps\" and \"get_outgoing_meps\" have 75% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_incoming_meps + get_homonym_meps",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_incoming_meps\" and \"get_homonym_meps\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_outgoing_meps + get_homonym_meps",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_outgoing_meps\" and \"get_homonym_meps\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_plenary_documents + get_committee_documents",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_plenary_documents\" and \"get_committee_documents\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_plenary_documents + get_plenary_session_documents",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_plenary_documents\" and \"get_plenary_session_documents\" have 75% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_plenary_documents + get_external_documents",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_plenary_documents\" and \"get_external_documents\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_committee_documents + get_plenary_session_documents",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_committee_documents\" and \"get_plenary_session_documents\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_committee_documents + get_external_documents",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_committee_documents\" and \"get_external_documents\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_plenary_session_documents + get_external_documents",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_plenary_session_documents\" and \"get_external_documents\" have 63% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_plenary_session_document_items + get_meeting_plenary_session_document_items",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_plenary_session_document_items\" and \"get_meeting_plenary_session_document_items\" have 77% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_meeting_foreseen_activities + get_meeting_plenary_session_documents",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_meeting_foreseen_activities\" and \"get_meeting_plenary_session_documents\" have 62% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_meeting_foreseen_activities + get_meeting_plenary_session_document_items",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_meeting_foreseen_activities\" and \"get_meeting_plenary_session_document_items\" have 64% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_procedure_events + get_procedure_event_by_id",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_procedure_events\" and \"get_procedure_event_by_id\" have 71% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_meeting_plenary_session_documents + get_meeting_plenary_session_document_items",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_meeting_plenary_session_documents\" and \"get_meeting_plenary_session_document_items\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_meeting_plenary_session_documents + get_plenary_session_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_meeting_plenary_session_documents\" and \"get_plenary_session_documents_feed\" have 62% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_meps_feed + get_events_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_meps_feed\" and \"get_events_feed\" have 100% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_meps_feed + get_procedures_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_meps_feed\" and \"get_procedures_feed\" have 100% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_meps_feed + get_adopted_texts_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_meps_feed\" and \"get_adopted_texts_feed\" have 100% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_meps_feed + get_mep_declarations_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_meps_feed\" and \"get_mep_declarations_feed\" have 100% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_meps_feed + get_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_meps_feed\" and \"get_documents_feed\" have 100% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_meps_feed + get_plenary_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_meps_feed\" and \"get_plenary_documents_feed\" have 100% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_meps_feed + get_committee_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_meps_feed\" and \"get_committee_documents_feed\" have 100% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_meps_feed + get_plenary_session_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_meps_feed\" and \"get_plenary_session_documents_feed\" have 100% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_meps_feed + get_external_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_meps_feed\" and \"get_external_documents_feed\" have 100% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_meps_feed + get_parliamentary_questions_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_meps_feed\" and \"get_parliamentary_questions_feed\" have 100% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_meps_feed + get_corporate_bodies_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_meps_feed\" and \"get_corporate_bodies_feed\" have 100% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_meps_feed + get_controlled_vocabularies_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_meps_feed\" and \"get_controlled_vocabularies_feed\" have 100% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_events_feed + get_procedures_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_events_feed\" and \"get_procedures_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_events_feed + get_adopted_texts_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_events_feed\" and \"get_adopted_texts_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_events_feed + get_mep_declarations_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_events_feed\" and \"get_mep_declarations_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_events_feed + get_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_events_feed\" and \"get_documents_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_events_feed + get_plenary_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_events_feed\" and \"get_plenary_documents_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_events_feed + get_committee_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_events_feed\" and \"get_committee_documents_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_events_feed + get_plenary_session_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_events_feed\" and \"get_plenary_session_documents_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_events_feed + get_external_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_events_feed\" and \"get_external_documents_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_events_feed + get_parliamentary_questions_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_events_feed\" and \"get_parliamentary_questions_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_events_feed + get_corporate_bodies_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_events_feed\" and \"get_corporate_bodies_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_events_feed + get_controlled_vocabularies_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_events_feed\" and \"get_controlled_vocabularies_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_procedures_feed + get_adopted_texts_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_procedures_feed\" and \"get_adopted_texts_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_procedures_feed + get_mep_declarations_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_procedures_feed\" and \"get_mep_declarations_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_procedures_feed + get_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_procedures_feed\" and \"get_documents_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_procedures_feed + get_plenary_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_procedures_feed\" and \"get_plenary_documents_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_procedures_feed + get_committee_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_procedures_feed\" and \"get_committee_documents_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_procedures_feed + get_plenary_session_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_procedures_feed\" and \"get_plenary_session_documents_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_procedures_feed + get_external_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_procedures_feed\" and \"get_external_documents_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_procedures_feed + get_parliamentary_questions_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_procedures_feed\" and \"get_parliamentary_questions_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_procedures_feed + get_corporate_bodies_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_procedures_feed\" and \"get_corporate_bodies_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_procedures_feed + get_controlled_vocabularies_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_procedures_feed\" and \"get_controlled_vocabularies_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_adopted_texts_feed + get_mep_declarations_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_adopted_texts_feed\" and \"get_mep_declarations_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_adopted_texts_feed + get_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_adopted_texts_feed\" and \"get_documents_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_adopted_texts_feed + get_plenary_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_adopted_texts_feed\" and \"get_plenary_documents_feed\" have 86% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_adopted_texts_feed + get_committee_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_adopted_texts_feed\" and \"get_committee_documents_feed\" have 86% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_adopted_texts_feed + get_plenary_session_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_adopted_texts_feed\" and \"get_plenary_session_documents_feed\" have 86% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_adopted_texts_feed + get_external_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_adopted_texts_feed\" and \"get_external_documents_feed\" have 86% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_adopted_texts_feed + get_parliamentary_questions_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_adopted_texts_feed\" and \"get_parliamentary_questions_feed\" have 86% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_adopted_texts_feed + get_corporate_bodies_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_adopted_texts_feed\" and \"get_corporate_bodies_feed\" have 86% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_adopted_texts_feed + get_controlled_vocabularies_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_adopted_texts_feed\" and \"get_controlled_vocabularies_feed\" have 86% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_mep_declarations_feed + get_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_mep_declarations_feed\" and \"get_documents_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_mep_declarations_feed + get_plenary_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_mep_declarations_feed\" and \"get_plenary_documents_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_mep_declarations_feed + get_committee_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_mep_declarations_feed\" and \"get_committee_documents_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_mep_declarations_feed + get_plenary_session_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_mep_declarations_feed\" and \"get_plenary_session_documents_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_mep_declarations_feed + get_external_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_mep_declarations_feed\" and \"get_external_documents_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_mep_declarations_feed + get_parliamentary_questions_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_mep_declarations_feed\" and \"get_parliamentary_questions_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_mep_declarations_feed + get_corporate_bodies_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_mep_declarations_feed\" and \"get_corporate_bodies_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_mep_declarations_feed + get_controlled_vocabularies_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_mep_declarations_feed\" and \"get_controlled_vocabularies_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_documents_feed + get_plenary_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_documents_feed\" and \"get_plenary_documents_feed\" have 100% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_documents_feed + get_committee_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_documents_feed\" and \"get_committee_documents_feed\" have 100% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_documents_feed + get_plenary_session_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_documents_feed\" and \"get_plenary_session_documents_feed\" have 100% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_documents_feed + get_external_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_documents_feed\" and \"get_external_documents_feed\" have 100% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_documents_feed + get_parliamentary_questions_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_documents_feed\" and \"get_parliamentary_questions_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_documents_feed + get_corporate_bodies_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_documents_feed\" and \"get_corporate_bodies_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_documents_feed + get_controlled_vocabularies_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_documents_feed\" and \"get_controlled_vocabularies_feed\" have 92% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_plenary_documents_feed + get_committee_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_plenary_documents_feed\" and \"get_committee_documents_feed\" have 93% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_plenary_documents_feed + get_plenary_session_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_plenary_documents_feed\" and \"get_plenary_session_documents_feed\" have 100% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_plenary_documents_feed + get_external_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_plenary_documents_feed\" and \"get_external_documents_feed\" have 93% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_plenary_documents_feed + get_parliamentary_questions_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_plenary_documents_feed\" and \"get_parliamentary_questions_feed\" have 86% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_plenary_documents_feed + get_corporate_bodies_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_plenary_documents_feed\" and \"get_corporate_bodies_feed\" have 86% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_plenary_documents_feed + get_controlled_vocabularies_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_plenary_documents_feed\" and \"get_controlled_vocabularies_feed\" have 86% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_committee_documents_feed + get_plenary_session_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_committee_documents_feed\" and \"get_plenary_session_documents_feed\" have 93% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_committee_documents_feed + get_external_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_committee_documents_feed\" and \"get_external_documents_feed\" have 93% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_committee_documents_feed + get_parliamentary_questions_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_committee_documents_feed\" and \"get_parliamentary_questions_feed\" have 86% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_committee_documents_feed + get_corporate_bodies_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_committee_documents_feed\" and \"get_corporate_bodies_feed\" have 86% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_committee_documents_feed + get_controlled_vocabularies_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_committee_documents_feed\" and \"get_controlled_vocabularies_feed\" have 86% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_plenary_session_documents_feed + get_external_documents_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_plenary_session_documents_feed\" and \"get_external_documents_feed\" have 87% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_plenary_session_documents_feed + get_parliamentary_questions_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_plenary_session_documents_feed\" and \"get_parliamentary_questions_feed\" have 86% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_plenary_session_documents_feed + get_corporate_bodies_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_plenary_session_documents_feed\" and \"get_corporate_bodies_feed\" have 80% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_plenary_session_documents_feed + get_controlled_vocabularies_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_plenary_session_documents_feed\" and \"get_controlled_vocabularies_feed\" have 86% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_external_documents_feed + get_parliamentary_questions_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_external_documents_feed\" and \"get_parliamentary_questions_feed\" have 86% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_external_documents_feed + get_corporate_bodies_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_external_documents_feed\" and \"get_corporate_bodies_feed\" have 75% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_external_documents_feed + get_controlled_vocabularies_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_external_documents_feed\" and \"get_controlled_vocabularies_feed\" have 86% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_parliamentary_questions_feed + get_corporate_bodies_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_parliamentary_questions_feed\" and \"get_corporate_bodies_feed\" have 86% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_parliamentary_questions_feed + get_controlled_vocabularies_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_parliamentary_questions_feed\" and \"get_controlled_vocabularies_feed\" have 86% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_corporate_bodies_feed + get_controlled_vocabularies_feed",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_corporate_bodies_feed\" and \"get_controlled_vocabularies_feed\" have 86% description overlap. LLM may choose between them unpredictably."
+    }
+  ]
+}

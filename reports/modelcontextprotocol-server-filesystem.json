@@ -3,7 +3,7 @@
     "name": "agentsid-scanner",
     "version": "0.1.0"
   },
-  "scannedAt": "2026-03-29T17:55:40.883Z",
+  "scannedAt": "2026-03-29T19:39:07.375Z",
   "server": {
     "name": "secure-filesystem-server",
     "version": "0.2.0"
@@ -17,13 +17,14 @@
       "permissions": "B",
       "validation": "F",
       "auth": "B",
-      "output": "C"
+      "output": "C",
+      "hallucination": "D"
     }
   },
   "summary": {
     "CRITICAL": 0,
-    "HIGH": 1,
-    "MEDIUM": 16,
+    "HIGH": 3,
+    "MEDIUM": 18,
     "LOW": 10,
     "INFO": 0
   },
@@ -225,6 +226,34 @@
       "tool": "get_file_info",
       "rule": "unfiltered_file_output",
       "detail": "File reading tool \"get_file_info\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "read_file",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"read_file\" references file without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "edit_file",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"edit_file\" uses vague action words (change) without specific operations. LLMs will interpret this as the broadest possible action on sensitive resources (file)."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "move_file",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"move_file\" uses vague action words (use) without specific operations. LLMs will interpret this as the broadest possible action on sensitive resources (file)."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "list_directory + list_directory_with_sizes",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"list_directory\" and \"list_directory_with_sizes\" have 92% description overlap. LLM may choose between them unpredictably."
     }
   ]
 }

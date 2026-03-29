@@ -1,0 +1,59 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-29T19:44:37.792Z",
+  "server": {
+    "name": "Nx MCP",
+    "version": "0.0.1"
+  },
+  "toolCount": 1,
+  "grade": {
+    "overall": "C",
+    "score": 69,
+    "categories": {
+      "validation": "A",
+      "auth": "B",
+      "hallucination": "A"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 1,
+    "MEDIUM": 2,
+    "LOW": 0,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 0,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "nx_docs",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"nx_docs\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "nx_docs",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"nx_docs\" references user, config without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    }
+  ]
+}

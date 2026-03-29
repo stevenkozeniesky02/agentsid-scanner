@@ -1,0 +1,166 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-29T19:44:40.469Z",
+  "server": {
+    "name": "mcp-ssh",
+    "version": "1.0.0"
+  },
+  "toolCount": 7,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "permissions": "D",
+      "validation": "D",
+      "auth": "B",
+      "output": "A",
+      "hallucination": "C"
+    }
+  },
+  "summary": {
+    "CRITICAL": 2,
+    "HIGH": 1,
+    "MEDIUM": 12,
+    "LOW": 3,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 2,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 2,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "CRITICAL",
+      "tool": "runRemoteCommand",
+      "rule": "dangerous_tool_execution",
+      "detail": "Tool \"runRemoteCommand\" classified as execution — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "CRITICAL",
+      "tool": "runCommandBatch",
+      "rule": "dangerous_tool_execution",
+      "detail": "Tool \"runCommandBatch\" classified as execution — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "listKnownHosts",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"listKnownHosts\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "listKnownHosts",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"listKnownHosts\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "runRemoteCommand",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"runRemoteCommand\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "getHostInfo",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"getHostInfo\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "checkConnectivity",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"checkConnectivity\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "uploadFile",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"uploadFile\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "downloadFile",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"downloadFile\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "runCommandBatch",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"runCommandBatch\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "uploadFile",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"uploadFile\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "downloadFile",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"downloadFile\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "listKnownHosts",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"listKnownHosts\" references config without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "runRemoteCommand",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"runRemoteCommand\" uses vague action words (run) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "getHostInfo",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"getHostInfo\" references config without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "uploadFile",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"uploadFile\" references file without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "downloadFile",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"downloadFile\" references file without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    }
+  ]
+}

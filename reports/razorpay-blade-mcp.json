@@ -1,0 +1,182 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-29T19:51:49.386Z",
+  "server": {
+    "name": "Blade MCP",
+    "version": "1.26.0"
+  },
+  "toolCount": 9,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "injection": "B",
+      "permissions": "C",
+      "validation": "F",
+      "auth": "B",
+      "secrets": "C",
+      "hallucination": "B"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 5,
+    "MEDIUM": 14,
+    "LOW": 1,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 5,
+    "mutation": 2,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0,
+    "deployment": 1
+  },
+  "findings": [
+    {
+      "category": "injection",
+      "severity": "MEDIUM",
+      "tool": "get_blade_changelog",
+      "rule": "excessive_description_length",
+      "detail": "Tool description is 1497 chars — unusually long, may contain hidden instructions"
+    },
+    {
+      "category": "injection",
+      "severity": "MEDIUM",
+      "tool": "publish_lines_of_code_metric",
+      "rule": "excessive_description_length",
+      "detail": "Tool description is 1720 chars — unusually long, may contain hidden instructions"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_blade_cursor_rules",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_blade_cursor_rules\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_new_blade_project",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_new_blade_project\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "publish_lines_of_code_metric",
+      "rule": "dangerous_tool_deployment",
+      "detail": "Tool \"publish_lines_of_code_metric\" classified as deployment — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_blade_cursor_rules",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_blade_cursor_rules\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_blade_component_docs",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_blade_component_docs\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_blade_pattern_docs",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_blade_pattern_docs\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_blade_general_docs",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_blade_general_docs\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "hi_blade",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"hi_blade\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "hi_blade",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"hi_blade\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_new_blade_project",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_new_blade_project\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_figma_to_code",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_figma_to_code\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_blade_changelog",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_blade_changelog\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "publish_lines_of_code_metric",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"publish_lines_of_code_metric\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "get_blade_general_docs",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"get_blade_general_docs\" may expose secrets in its output based on description"
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "get_blade_changelog",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"get_blade_changelog\" may expose secrets in its output based on description"
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "hi_blade",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"hi_blade\" uses vague action words (use) without specific operations. LLMs will interpret this as the broadest possible action on sensitive resources (user)."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "hi_blade",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"hi_blade\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    }
+  ]
+}

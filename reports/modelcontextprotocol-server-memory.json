@@ -3,7 +3,7 @@
     "name": "agentsid-scanner",
     "version": "0.1.0"
   },
-  "scannedAt": "2026-03-29T17:55:43.045Z",
+  "scannedAt": "2026-03-29T19:39:08.762Z",
   "server": {
     "name": "memory-server",
     "version": "0.6.3"
@@ -11,18 +11,19 @@
   "toolCount": 9,
   "grade": {
     "overall": "F",
-    "score": 2,
+    "score": 0,
     "categories": {
       "permissions": "F",
       "validation": "B",
       "auth": "B",
-      "output": "A"
+      "output": "A",
+      "hallucination": "A"
     }
   },
   "summary": {
     "CRITICAL": 0,
     "HIGH": 4,
-    "MEDIUM": 4,
+    "MEDIUM": 5,
     "LOW": 2,
     "INFO": 0
   },
@@ -104,6 +105,13 @@
       "tool": "read_graph",
       "rule": "unfiltered_file_output",
       "detail": "File reading tool \"read_graph\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "delete_entities + delete_relations",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"delete_entities\" and \"delete_relations\" have 100% description overlap. LLM may choose between them unpredictably."
     }
   ]
 }

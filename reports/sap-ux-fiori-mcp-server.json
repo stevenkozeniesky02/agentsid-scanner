@@ -1,0 +1,80 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-29T19:57:16.542Z",
+  "server": {
+    "name": "fiori-mcp",
+    "version": "0.6.46"
+  },
+  "toolCount": 5,
+  "grade": {
+    "overall": "F",
+    "score": 28,
+    "categories": {
+      "permissions": "B",
+      "validation": "C",
+      "auth": "B"
+    }
+  },
+  "summary": {
+    "CRITICAL": 1,
+    "HIGH": 1,
+    "MEDIUM": 4,
+    "LOW": 0,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 4,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 1,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "CRITICAL",
+      "tool": "execute_functionality",
+      "rule": "dangerous_tool_execution",
+      "detail": "Tool \"execute_functionality\" classified as execution — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "search_docs",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"search_docs\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_functionality",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_functionality\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_functionality_details",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_functionality_details\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "execute_functionality",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"execute_functionality\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    }
+  ]
+}

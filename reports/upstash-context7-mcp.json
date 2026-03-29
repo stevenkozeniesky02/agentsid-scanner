@@ -1,0 +1,82 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-29T19:53:41.331Z",
+  "server": {
+    "name": "Context7",
+    "version": "2.1.6",
+    "websiteUrl": "https://context7.com",
+    "description": "Context7 provides up-to-date documentation and code examples for libraries and frameworks.",
+    "icons": [
+      {
+        "src": "https://context7.com/context7-icon-green.png",
+        "mimeType": "image/png"
+      }
+    ]
+  },
+  "toolCount": 2,
+  "grade": {
+    "overall": "D",
+    "score": 53,
+    "categories": {
+      "injection": "A",
+      "validation": "B",
+      "auth": "B",
+      "hallucination": "A"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 1,
+    "MEDIUM": 4,
+    "LOW": 0,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 1,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "injection",
+      "severity": "MEDIUM",
+      "tool": "resolve-library-id",
+      "rule": "excessive_description_length",
+      "detail": "Tool description is 2006 chars — unusually long, may contain hidden instructions"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "resolve-library-id",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"resolve-library-id\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "query-docs",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"query-docs\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "resolve-library-id + query-docs",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"resolve-library-id\" and \"query-docs\" have 63% description overlap. LLM may choose between them unpredictably."
+    }
+  ]
+}

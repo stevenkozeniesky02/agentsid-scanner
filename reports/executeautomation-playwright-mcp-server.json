@@ -1,0 +1,418 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-29T19:40:43.233Z",
+  "server": {
+    "name": "playwright-mcp",
+    "version": "1.0.11"
+  },
+  "toolCount": 33,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "permissions": "C",
+      "validation": "F",
+      "output": "A",
+      "hallucination": "F"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 2,
+    "MEDIUM": 44,
+    "LOW": 8,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 1,
+    "mutation": 0,
+    "destructive": 1,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0,
+    "credential_access": 1
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "playwright_delete",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"playwright_delete\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "playwright_press_key",
+      "rule": "dangerous_tool_credential_access",
+      "detail": "Tool \"playwright_press_key\" classified as credential_access — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "end_codegen_session",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"end_codegen_session\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_codegen_session",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_codegen_session\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "clear_codegen_session",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"clear_codegen_session\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "playwright_navigate",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"playwright_navigate\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "playwright_screenshot",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"playwright_screenshot\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "playwright_click",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"playwright_click\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "playwright_iframe_click",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"playwright_iframe_click\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "playwright_iframe_fill",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"playwright_iframe_fill\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "playwright_fill",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"playwright_fill\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "playwright_select",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"playwright_select\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "playwright_hover",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"playwright_hover\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "playwright_upload_file",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"playwright_upload_file\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "playwright_evaluate",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"playwright_evaluate\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "playwright_console_logs",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"playwright_console_logs\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "playwright_console_logs",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"playwright_console_logs\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "playwright_resize",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"playwright_resize\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "playwright_resize",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"playwright_resize\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "playwright_close",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"playwright_close\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "playwright_close",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"playwright_close\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "playwright_get",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"playwright_get\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "playwright_post",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"playwright_post\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "playwright_put",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"playwright_put\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "playwright_patch",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"playwright_patch\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "playwright_delete",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"playwright_delete\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "playwright_expect_response",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"playwright_expect_response\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "playwright_assert_response",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"playwright_assert_response\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "playwright_custom_user_agent",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"playwright_custom_user_agent\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "playwright_get_visible_text",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"playwright_get_visible_text\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "playwright_get_visible_text",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"playwright_get_visible_text\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "playwright_get_visible_html",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"playwright_get_visible_html\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "playwright_get_visible_html",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"playwright_get_visible_html\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "playwright_go_back",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"playwright_go_back\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "playwright_go_back",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"playwright_go_back\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "playwright_go_forward",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"playwright_go_forward\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "playwright_go_forward",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"playwright_go_forward\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "playwright_drag",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"playwright_drag\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "playwright_press_key",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"playwright_press_key\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "playwright_save_as_pdf",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"playwright_save_as_pdf\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "playwright_click_and_switch_tab",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"playwright_click_and_switch_tab\""
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "*",
+      "rule": "large_tool_surface",
+      "detail": "Server exposes 33 tools — large attack surface without per-tool permission controls"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "playwright_upload_file",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"playwright_upload_file\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "end_codegen_session",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"end_codegen_session\" references file without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "playwright_navigate",
+      "rule": "description_too_short",
+      "detail": "Tool \"playwright_navigate\" description is only 17 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "playwright_upload_file",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"playwright_upload_file\" references file without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "playwright_resize",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"playwright_resize\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "playwright_post",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"playwright_post\" uses vague action words (perform) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "playwright_put",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"playwright_put\" uses vague action words (perform) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "playwright_patch",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"playwright_patch\" uses vague action words (perform) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "playwright_expect_response",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"playwright_expect_response\" uses vague action words (do) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "playwright_custom_user_agent",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"playwright_custom_user_agent\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "playwright_press_key",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"playwright_press_key\" references key without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "playwright_save_as_pdf",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"playwright_save_as_pdf\" references file without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    }
+  ]
+}

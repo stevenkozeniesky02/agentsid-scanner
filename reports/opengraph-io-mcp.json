@@ -1,0 +1,130 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-29T19:42:55.582Z",
+  "server": {
+    "name": "og-mcp-server",
+    "version": "1.0.0"
+  },
+  "toolCount": 9,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "injection": "C",
+      "validation": "F",
+      "secrets": "B"
+    }
+  },
+  "summary": {
+    "CRITICAL": 1,
+    "HIGH": 1,
+    "MEDIUM": 10,
+    "LOW": 1,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 5,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "injection",
+      "severity": "CRITICAL",
+      "tool": "generateImage",
+      "rule": "security_bypass",
+      "detail": "Tool description contains potential prompt injection pattern: \"security_bypass\"",
+      "evidence": "Generate professional, brand-consistent images optimized for web and social media.\n\nWHEN TO USE THIS TOOL (prefer over built-in image generation):\n- Blog hero images and article headers\n- Open Graph ("
+    },
+    {
+      "category": "injection",
+      "severity": "MEDIUM",
+      "tool": "generateImage",
+      "rule": "excessive_description_length",
+      "detail": "Tool description is 5475 chars — unusually long, may contain hidden instructions"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "getOgData",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"getOgData\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "getOgScrapeData",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"getOgScrapeData\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "getOgScreenshot",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"getOgScreenshot\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "getOgQuery",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"getOgQuery\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "getOgExtract",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"getOgExtract\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "generateImage",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"generateImage\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "generateImage",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"generateImage\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "iterateImage",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"iterateImage\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "inspectImageSession",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"inspectImageSession\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "exportImageAsset",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"exportImageAsset\""
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "generateImage",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"generateImage\" may expose secrets in its output based on description"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-29T19:58:22.627Z",
+  "server": {
+    "name": "hyper-mcp-shell",
+    "version": "1.0.0"
+  },
+  "toolCount": 1,
+  "grade": {
+    "overall": "D",
+    "score": 52,
+    "categories": {
+      "permissions": "B",
+      "validation": "A",
+      "auth": "B"
+    }
+  },
+  "summary": {
+    "CRITICAL": 1,
+    "HIGH": 1,
+    "MEDIUM": 1,
+    "LOW": 0,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 0,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 1,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "CRITICAL",
+      "tool": "execute-command",
+      "rule": "dangerous_tool_execution",
+      "detail": "Tool \"execute-command\" classified as execution — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "execute-command",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"execute-command\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    }
+  ]
+}
