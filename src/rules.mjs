@@ -216,3 +216,148 @@ export function scanOutputSafety(tools) {
 
   return findings;
 }
+
+// ═══════════════════════════════════════════════════════════════
+// HALLUCINATION-BASED VULNERABILITY SCANNING
+//
+// These detect cases where vague, ambiguous, or misleading tool
+// definitions cause LLMs to over-privilege, misroute, or make
+// unpredictable tool choices.
+//
+// Nobody else scans for these.
+// ═══════════════════════════════════════════════════════════════
+
+const VAGUE_ACTION_WORDS = [
+  "manage", "handle", "process", "work with", "deal with",
+  "interact", "operate on", "perform", "do", "run",
+  "access", "use", "control", "modify", "change",
+  "update", "affect", "manipulate", "transform",
+];
+
+const SPECIFIC_ACTION_WORDS = [
+  "read", "write", "delete", "create", "list", "get", "set",
+  "search", "find", "count", "validate", "check", "verify",
+  "send", "receive", "upload", "download", "export", "import",
+];
+
+const SENSITIVE_RESOURCES = [
+  "file", "database", "user", "account", "payment", "credential",
+  "config", "setting", "permission", "role", "secret", "key",
+  "server", "cluster", "deployment", "container", "network",
+  "email", "message", "notification", "webhook",
+];
+
+export function scanHallucinationRisks(tools) {
+  const findings = [];
+
+  for (const tool of tools) {
+    const desc = (tool.description || "");
+    const descLower = desc.toLowerCase();
+    const name = (tool.name || "");
+
+    // 1. Vague description causing over-privileging
+    const vagueMatches = VAGUE_ACTION_WORDS.filter(w => descLower.includes(w));
+    const specificMatches = SPECIFIC_ACTION_WORDS.filter(w => descLower.includes(w));
+    const sensitiveMatches = SENSITIVE_RESOURCES.filter(w => descLower.includes(w));
+
+    if (vagueMatches.length > 0 && specificMatches.length === 0) {
+      findings.push({
+        category: "hallucination",
+        severity: sensitiveMatches.length > 0 ? "HIGH" : "MEDIUM",
+        tool: name,
+        rule: "vague_description_over_privilege",
+        detail: `Tool "${name}" uses vague action words (${vagueMatches.join(", ")}) without specific operations. LLMs will interpret this as the broadest possible action${sensitiveMatches.length > 0 ? ` on sensitive resources (${sensitiveMatches.join(", ")})` : ""}.`,
+      });
+    }
+
+    // 2. Ambiguous tool name
+    const ambiguousVerbs = ["manage", "handle", "process", "admin", "control", "maintain"];
+    const nameVerb = name.split(/[_\-\.]/)[0]?.toLowerCase();
+    if (ambiguousVerbs.includes(nameVerb)) {
+      findings.push({
+        category: "hallucination",
+        severity: "HIGH",
+        tool: name,
+        rule: "ambiguous_tool_name",
+        detail: `Tool name "${name}" is ambiguous — "${nameVerb}" could mean read, create, update, or delete. LLM may choose the most destructive interpretation.`,
+      });
+    }
+
+    // 3. Missing scope boundaries
+    if (sensitiveMatches.length > 0 && !/only|restrict|limit|within|specific|allowed|scoped|bounded/i.test(desc)) {
+      if (!/must|should|cannot|must not|only if|requires/i.test(desc)) {
+        findings.push({
+          category: "hallucination",
+          severity: "MEDIUM",
+          tool: name,
+          rule: "missing_scope_boundary",
+          detail: `Tool "${name}" references ${sensitiveMatches.join(", ")} without specifying scope boundaries. LLM will attempt to access the broadest possible scope.`,
+        });
+      }
+    }
+
+    // 4. Description too short — LLM fills in the gaps
+    if (desc.length > 0 && desc.length < 20) {
+      findings.push({
+        category: "hallucination",
+        severity: "MEDIUM",
+        tool: name,
+        rule: "description_too_short",
+        detail: `Tool "${name}" description is only ${desc.length} chars. LLM will hallucinate capabilities based on the name alone.`,
+      });
+    }
+
+    // 5. No description at all
+    if (!desc || desc.trim().length === 0) {
+      findings.push({
+        category: "hallucination",
+        severity: "HIGH",
+        tool: name,
+        rule: "no_description",
+        detail: `Tool "${name}" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage.`,
+      });
+    }
+
+    // 6. Implicit authority escalation
+    const innocuousWords = ["helper", "utility", "tool", "assistant", "basic", "simple", "general"];
+    const dangerousNameParts = ["admin", "root", "sudo", "deploy", "delete", "drop", "exec", "shell", "kill"];
+    const descInnocuous = innocuousWords.some(w => descLower.includes(w));
+    const nameDangerous = dangerousNameParts.some(w => name.toLowerCase().includes(w));
+
+    if (descInnocuous && nameDangerous) {
+      findings.push({
+        category: "hallucination",
+        severity: "CRITICAL",
+        tool: name,
+        rule: "implicit_authority_escalation",
+        detail: `Tool "${name}" has dangerous capabilities but is described as a "${innocuousWords.find(w => descLower.includes(w))}". LLM will underestimate the risk and use it without caution.`,
+      });
+    }
+  }
+
+  // 7. Conflicting/overlapping tool descriptions
+  for (let i = 0; i < tools.length; i++) {
+    for (let j = i + 1; j < tools.length; j++) {
+      const descA = (tools[i].description || "").toLowerCase();
+      const descB = (tools[j].description || "").toLowerCase();
+      if (!descA || !descB) continue;
+
+      const wordsA = new Set(descA.split(/\s+/).filter(w => w.length > 4));
+      const wordsB = new Set(descB.split(/\s+/).filter(w => w.length > 4));
+      const overlap = [...wordsA].filter(w => wordsB.has(w));
+      const overlapRatio = overlap.length / Math.min(wordsA.size, wordsB.size);
+
+      if (overlapRatio > 0.6 && overlap.length >= 5) {
+        findings.push({
+          category: "hallucination",
+          severity: "MEDIUM",
+          tool: `${tools[i].name} + ${tools[j].name}`,
+          rule: "conflicting_tool_descriptions",
+          detail: `Tools "${tools[i].name}" and "${tools[j].name}" have ${Math.round(overlapRatio * 100)}% description overlap. LLM may choose between them unpredictably.`,
+        });
+      }
+    }
+  }
+
+  return findings;
+}

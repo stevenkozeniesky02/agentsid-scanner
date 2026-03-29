@@ -12,6 +12,7 @@ import {
   scanInputSchemas,
   scanAuthIndicators,
   scanOutputSafety,
+  scanHallucinationRisks,
 } from "./rules.mjs";
 import { grade } from "./grader.mjs";
 import { formatTerminalReport, formatJsonReport } from "./reporter.mjs";
@@ -184,6 +185,7 @@ function generateReport(serverInfo, tools, json) {
   const schemaFindings = scanInputSchemas(tools);
   const authFindings = scanAuthIndicators(tools, serverInfo);
   const outputFindings = scanOutputSafety(tools);
+  const hallucinationFindings = scanHallucinationRisks(tools);
 
   // Combine all findings
   const allFindings = [
@@ -192,6 +194,7 @@ function generateReport(serverInfo, tools, json) {
     ...schemaFindings,
     ...authFindings,
     ...outputFindings,
+    ...hallucinationFindings,
   ];
 
   // Grade
