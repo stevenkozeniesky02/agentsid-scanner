@@ -1,0 +1,109 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-29T17:55:43.045Z",
+  "server": {
+    "name": "memory-server",
+    "version": "0.6.3"
+  },
+  "toolCount": 9,
+  "grade": {
+    "overall": "F",
+    "score": 2,
+    "categories": {
+      "permissions": "F",
+      "validation": "B",
+      "auth": "B",
+      "output": "A"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 4,
+    "MEDIUM": 4,
+    "LOW": 2,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 2,
+    "mutation": 2,
+    "destructive": 3,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_entities",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_entities\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_relations",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_relations\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete_entities",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete_entities\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete_observations",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete_observations\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete_relations",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete_relations\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "read_graph",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"read_graph\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "read_graph",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"read_graph\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "search_nodes",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"search_nodes\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "read_graph",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"read_graph\" may output sensitive file contents without filtering"
+    }
+  ]
+}

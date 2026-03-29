@@ -1,0 +1,230 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-29T17:55:40.883Z",
+  "server": {
+    "name": "secure-filesystem-server",
+    "version": "0.2.0"
+  },
+  "toolCount": 14,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "injection": "A",
+      "permissions": "B",
+      "validation": "F",
+      "auth": "B",
+      "output": "C"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 1,
+    "MEDIUM": 16,
+    "LOW": 10,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 9,
+    "mutation": 2,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "injection",
+      "severity": "MEDIUM",
+      "tool": "read_media_file",
+      "rule": "encoded_payload",
+      "detail": "Tool description contains potential prompt injection pattern: \"encoded_payload\"",
+      "evidence": "Read an image or audio file. Returns the base64 encoded data and MIME type. Only works within allowed directories."
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "write_file",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"write_file\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_directory",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_directory\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "read_file",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"read_file\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "read_text_file",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"read_text_file\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "read_media_file",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"read_media_file\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "write_file",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"write_file\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "edit_file",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"edit_file\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_directory",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_directory\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_directory",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_directory\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_directory_with_sizes",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_directory_with_sizes\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "directory_tree",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"directory_tree\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "move_file",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"move_file\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "search_files",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"search_files\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_file_info",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_file_info\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_allowed_directories",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"list_allowed_directories\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_allowed_directories",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_allowed_directories\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "read_file",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"read_file\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "read_text_file",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"read_text_file\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "read_media_file",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"read_media_file\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "read_multiple_files",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"read_multiple_files\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "write_file",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"write_file\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "edit_file",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"edit_file\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "move_file",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"move_file\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "search_files",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"search_files\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "get_file_info",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"get_file_info\" may output sensitive file contents without filtering"
+    }
+  ]
+}
