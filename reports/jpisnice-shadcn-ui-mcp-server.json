@@ -1,0 +1,149 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-29T18:03:44.926Z",
+  "server": {
+    "name": "shadcn-ui-mcp-server",
+    "version": "2.0.0"
+  },
+  "toolCount": 10,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "validation": "F",
+      "auth": "B"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 1,
+    "MEDIUM": 10,
+    "LOW": 5,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 9,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_component",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_component\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_component_demo",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_component_demo\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_components",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"list_components\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_components",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_components\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_component_metadata",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_component_metadata\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_directory_structure",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_directory_structure\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_directory_structure",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_directory_structure\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_block",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_block\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_blocks",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_blocks\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_blocks",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_blocks\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "apply_theme",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"apply_theme\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "apply_theme",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"apply_theme\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_themes",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"list_themes\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_themes",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_themes\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_theme",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_theme\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    }
+  ]
+}

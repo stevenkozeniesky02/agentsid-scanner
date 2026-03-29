@@ -1,0 +1,220 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-29T18:00:51.438Z",
+  "server": {
+    "name": "Notion API",
+    "version": "1.0.0"
+  },
+  "toolCount": 22,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "validation": "F",
+      "auth": "B",
+      "permissions": "A"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 1,
+    "MEDIUM": 22,
+    "LOW": 3,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 0,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-get-user",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-get-user\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "API-get-users",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"API-get-users\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-get-users",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-get-users\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "API-get-self",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"API-get-self\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-get-self",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-get-self\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "API-post-search",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"API-post-search\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-post-search",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-post-search\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-get-block-children",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-get-block-children\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-patch-block-children",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-patch-block-children\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-block",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-retrieve-a-block\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-update-a-block",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-update-a-block\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-delete-a-block",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-delete-a-block\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-page",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-retrieve-a-page\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-patch-page",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-patch-page\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-post-page",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-post-page\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-page-property",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-retrieve-a-page-property\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-comment",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-retrieve-a-comment\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-query-data-source",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-query-data-source\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-data-source",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-retrieve-a-data-source\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-update-a-data-source",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-update-a-data-source\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-create-a-data-source",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-create-a-data-source\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-list-data-source-templates",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-list-data-source-templates\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-database",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-retrieve-a-database\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-move-page",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-move-page\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "*",
+      "rule": "large_tool_surface",
+      "detail": "Server exposes 22 tools — large attack surface without per-tool permission controls"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+# .github/workflows/security-scan.yml
+#
+# Drop this into any MCP server repo to get automatic security
+# scans on every pull request. The scanner grades your server
+# and comments on the PR with findings.
+#
+# Usage:
+#   1. Copy this file to .github/workflows/security-scan.yml
+#   2. Update the server-command to match your MCP server
+#   3. Push — the scan runs on every PR
+#
+# Learn more: https://github.com/stevenkozeniesky02/agentsid-scanner
+
+name: MCP Security Scan
+
+on:
+  pull_request:
+    branches: [main, master]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  security-scan:
+    name: AgentsID Security Scan
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run AgentsID Security Scanner
+        uses: stevenkozeniesky02/agentsid-scanner@master
+        with:
+          # Option 1: Scan by starting your MCP server
+          server-command: 'node src/index.mjs'
+
+          # Option 2: Scan a remote server
+          # server-url: 'https://your-mcp-server.com/mcp'
+
+          # Option 3: Scan tool definitions from a JSON file
+          # tool-definitions: 'src/tools.json'
+
+          # Fail the PR if grade is below C
+          fail-on: 'C'
+
+          # Post results as a PR comment
+          comment: 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

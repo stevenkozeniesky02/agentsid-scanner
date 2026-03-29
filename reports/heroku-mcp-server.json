@@ -1,0 +1,333 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-29T18:01:32.350Z",
+  "server": {
+    "name": "Heroku MCP Server",
+    "version": "1.2.1"
+  },
+  "toolCount": 33,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "permissions": "F",
+      "validation": "F"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 3,
+    "MEDIUM": 32,
+    "LOW": 7,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 9,
+    "mutation": 2,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0,
+    "credential_access": 1,
+    "deployment": 2
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_app",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_app\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_addon",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_addon\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "pg_credentials",
+      "rule": "dangerous_tool_credential_access",
+      "detail": "Tool \"pg_credentials\" classified as credential_access — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "deploy_to_heroku",
+      "rule": "dangerous_tool_deployment",
+      "detail": "Tool \"deploy_to_heroku\" classified as deployment — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "deploy_one_off_dyno",
+      "rule": "dangerous_tool_deployment",
+      "detail": "Tool \"deploy_one_off_dyno\" classified as deployment — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_apps",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_apps\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_apps",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_apps\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_app_info",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_app_info\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "create_app",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"create_app\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_app",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_app\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "rename_app",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"rename_app\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "maintenance_on",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"maintenance_on\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "maintenance_off",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"maintenance_off\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_app_logs",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_app_logs\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_private_spaces",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_private_spaces\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_teams",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_teams\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_addons",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_addons\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_addons",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_addons\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_addon_info",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_addon_info\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_addon",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_addon\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_addon_services",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_addon_services\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_addon_plans",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_addon_plans\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "pg_psql",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"pg_psql\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "pg_info",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"pg_info\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "pg_ps",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"pg_ps\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "pg_locks",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"pg_locks\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "pg_outliers",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"pg_outliers\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "pg_credentials",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"pg_credentials\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "pg_kill",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"pg_kill\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "pg_maintenance",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"pg_maintenance\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "pg_backups",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"pg_backups\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "pg_upgrade",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"pg_upgrade\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "ps_list",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"ps_list\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "ps_scale",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"ps_scale\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "ps_restart",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"ps_restart\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "pipelines_create",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"pipelines_create\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "pipelines_promote",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"pipelines_promote\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "pipelines_list",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"pipelines_list\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "pipelines_info",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"pipelines_info\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "deploy_to_heroku",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"deploy_to_heroku\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "deploy_one_off_dyno",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"deploy_one_off_dyno\""
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "*",
+      "rule": "large_tool_surface",
+      "detail": "Server exposes 33 tools — large attack surface without per-tool permission controls"
+    }
+  ]
+}

@@ -1,0 +1,411 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-29T18:09:26.394Z",
+  "server": {
+    "name": "slack-mcp",
+    "version": "1.0.0"
+  },
+  "toolCount": 20,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "permissions": "F",
+      "validation": "F",
+      "auth": "B",
+      "output": "B"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 1,
+    "MEDIUM": 40,
+    "LOW": 12,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 0,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0,
+    "external_action": 20
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "slack_list_workspaces",
+      "rule": "dangerous_tool_external_action",
+      "detail": "Tool \"slack_list_workspaces\" classified as external_action — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "slack_switch_workspace",
+      "rule": "dangerous_tool_external_action",
+      "detail": "Tool \"slack_switch_workspace\" classified as external_action — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "slack_get_current_workspace",
+      "rule": "dangerous_tool_external_action",
+      "detail": "Tool \"slack_get_current_workspace\" classified as external_action — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "slack_list_channels",
+      "rule": "dangerous_tool_external_action",
+      "detail": "Tool \"slack_list_channels\" classified as external_action — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "slack_get_channel_info",
+      "rule": "dangerous_tool_external_action",
+      "detail": "Tool \"slack_get_channel_info\" classified as external_action — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "slack_get_channel_members",
+      "rule": "dangerous_tool_external_action",
+      "detail": "Tool \"slack_get_channel_members\" classified as external_action — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "slack_get_messages",
+      "rule": "dangerous_tool_external_action",
+      "detail": "Tool \"slack_get_messages\" classified as external_action — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "slack_get_thread_replies",
+      "rule": "dangerous_tool_external_action",
+      "detail": "Tool \"slack_get_thread_replies\" classified as external_action — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "slack_send_message",
+      "rule": "dangerous_tool_external_action",
+      "detail": "Tool \"slack_send_message\" classified as external_action — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "slack_reply_to_thread",
+      "rule": "dangerous_tool_external_action",
+      "detail": "Tool \"slack_reply_to_thread\" classified as external_action — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "slack_search_messages",
+      "rule": "dangerous_tool_external_action",
+      "detail": "Tool \"slack_search_messages\" classified as external_action — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "slack_list_users",
+      "rule": "dangerous_tool_external_action",
+      "detail": "Tool \"slack_list_users\" classified as external_action — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "slack_get_user_info",
+      "rule": "dangerous_tool_external_action",
+      "detail": "Tool \"slack_get_user_info\" classified as external_action — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "slack_get_user_profile",
+      "rule": "dangerous_tool_external_action",
+      "detail": "Tool \"slack_get_user_profile\" classified as external_action — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "slack_list_files",
+      "rule": "dangerous_tool_external_action",
+      "detail": "Tool \"slack_list_files\" classified as external_action — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "slack_get_file_info",
+      "rule": "dangerous_tool_external_action",
+      "detail": "Tool \"slack_get_file_info\" classified as external_action — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "slack_upload_file",
+      "rule": "dangerous_tool_external_action",
+      "detail": "Tool \"slack_upload_file\" classified as external_action — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "slack_add_reaction",
+      "rule": "dangerous_tool_external_action",
+      "detail": "Tool \"slack_add_reaction\" classified as external_action — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "slack_remove_reaction",
+      "rule": "dangerous_tool_external_action",
+      "detail": "Tool \"slack_remove_reaction\" classified as external_action — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "slack_get_reactions",
+      "rule": "dangerous_tool_external_action",
+      "detail": "Tool \"slack_get_reactions\" classified as external_action — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "slack_list_workspaces",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"slack_list_workspaces\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "slack_list_workspaces",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"slack_list_workspaces\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "slack_switch_workspace",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"slack_switch_workspace\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "slack_get_current_workspace",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"slack_get_current_workspace\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "slack_get_current_workspace",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"slack_get_current_workspace\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "slack_list_channels",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"slack_list_channels\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "slack_list_channels",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"slack_list_channels\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "slack_get_channel_info",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"slack_get_channel_info\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "slack_get_channel_members",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"slack_get_channel_members\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "slack_get_messages",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"slack_get_messages\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "slack_get_thread_replies",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"slack_get_thread_replies\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "slack_send_message",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"slack_send_message\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "slack_reply_to_thread",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"slack_reply_to_thread\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "slack_search_messages",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"slack_search_messages\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "slack_list_users",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"slack_list_users\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "slack_list_users",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"slack_list_users\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "slack_get_user_info",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"slack_get_user_info\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "slack_get_user_profile",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"slack_get_user_profile\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "slack_get_user_profile",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"slack_get_user_profile\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "slack_list_files",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"slack_list_files\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "slack_list_files",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"slack_list_files\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "slack_get_file_info",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"slack_get_file_info\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "slack_upload_file",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"slack_upload_file\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "slack_add_reaction",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"slack_add_reaction\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "slack_remove_reaction",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"slack_remove_reaction\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "slack_get_reactions",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"slack_get_reactions\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "slack_get_thread_replies",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"slack_get_thread_replies\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "slack_reply_to_thread",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"slack_reply_to_thread\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "slack_get_user_profile",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"slack_get_user_profile\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "slack_list_files",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"slack_list_files\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "slack_get_file_info",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"slack_get_file_info\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "slack_upload_file",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"slack_upload_file\" may output sensitive file contents without filtering"
+    }
+  ]
+}

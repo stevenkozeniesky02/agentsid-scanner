@@ -1,0 +1,103 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-29T18:02:00.167Z",
+  "server": {
+    "name": "figma-mcp",
+    "version": "0.1.3"
+  },
+  "toolCount": 5,
+  "grade": {
+    "overall": "F",
+    "score": 31,
+    "categories": {
+      "permissions": "A",
+      "validation": "C",
+      "auth": "B",
+      "output": "A"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 1,
+    "MEDIUM": 6,
+    "LOW": 2,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 1,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0,
+    "external_action": 1
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "post_comment",
+      "rule": "dangerous_tool_external_action",
+      "detail": "Tool \"post_comment\" classified as external_action — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "add_figma_file",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"add_figma_file\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "view_node",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"view_node\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "read_comments",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"read_comments\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "post_comment",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"post_comment\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "reply_to_comment",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"reply_to_comment\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "add_figma_file",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"add_figma_file\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "read_comments",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"read_comments\" may output sensitive file contents without filtering"
+    }
+  ]
+}

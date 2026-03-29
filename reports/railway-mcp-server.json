@@ -1,0 +1,194 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-29T18:01:19.481Z",
+  "server": {
+    "name": "railway-mcp-server",
+    "title": "Railway MCP Server",
+    "version": "0.1.8"
+  },
+  "toolCount": 14,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "permissions": "D",
+      "validation": "F",
+      "auth": "B"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 3,
+    "MEDIUM": 17,
+    "LOW": 2,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 5,
+    "mutation": 3,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0,
+    "deployment": 2
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create-environment",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create-environment\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create-project-and-link",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create-project-and-link\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "deploy-template",
+      "rule": "dangerous_tool_deployment",
+      "detail": "Tool \"deploy-template\" classified as deployment — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "deploy",
+      "rule": "dangerous_tool_deployment",
+      "detail": "Tool \"deploy\" classified as deployment — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "set-variables",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"set-variables\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "check-railway-status",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"check-railway-status\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "check-railway-status",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"check-railway-status\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create-environment",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create-environment\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create-project-and-link",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create-project-and-link\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "deploy-template",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"deploy-template\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "deploy",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"deploy\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "generate-domain",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"generate-domain\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-logs",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get-logs\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "link-environment",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"link-environment\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "link-service",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"link-service\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list-deployments",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list-deployments\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list-projects",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"list-projects\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list-projects",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list-projects\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list-services",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list-services\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list-variables",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list-variables\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "set-variables",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"set-variables\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    }
+  ]
+}

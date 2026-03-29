@@ -1,0 +1,122 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-29T18:08:27.250Z",
+  "server": {
+    "name": "@aashari/mcp-server-aws-sso",
+    "version": "4.0.0"
+  },
+  "toolCount": 5,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "injection": "A",
+      "validation": "D",
+      "secrets": "D"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 4,
+    "MEDIUM": 5,
+    "LOW": 3,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 0,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "injection",
+      "severity": "MEDIUM",
+      "tool": "aws_sso_login",
+      "rule": "excessive_description_length",
+      "detail": "Tool description is 1024 chars — unusually long, may contain hidden instructions"
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "aws_sso_login",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"aws_sso_login\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "aws_sso_status",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"aws_sso_status\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "aws_sso_status",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"aws_sso_status\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "aws_sso_ls_accounts",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"aws_sso_ls_accounts\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "aws_sso_ls_accounts",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"aws_sso_ls_accounts\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "aws_sso_exec_command",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"aws_sso_exec_command\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "aws_sso_ec2_exec_command",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"aws_sso_ec2_exec_command\""
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "aws_sso_login",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"aws_sso_login\" may expose secrets in its output based on description"
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "aws_sso_status",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"aws_sso_status\" may expose secrets in its output based on description"
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "aws_sso_exec_command",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"aws_sso_exec_command\" may expose secrets in its output based on description"
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "aws_sso_ec2_exec_command",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"aws_sso_ec2_exec_command\" may expose secrets in its output based on description"
+    }
+  ]
+}

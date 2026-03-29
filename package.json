@@ -21,7 +21,8 @@
     "agentsid",
     "mcp-server",
     "authentication",
-    "permissions"
+    "permissions",
+    "github-action"
   ],
   "license": "MIT",
   "repository": {
@@ -29,6 +30,8 @@
     "url": "https://github.com/stevenkozeniesky02/agentsid-scanner"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.0.0"
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^6.0.0"
   }
 }

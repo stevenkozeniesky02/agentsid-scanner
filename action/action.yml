@@ -1,0 +1,42 @@
+name: 'AgentsID Security Scanner'
+description: 'Scan MCP server tool definitions for security vulnerabilities. Grades auth, permissions, injection risks, and tool safety.'
+author: 'AgentsID'
+
+branding:
+  icon: 'shield'
+  color: 'orange'
+
+inputs:
+  server-command:
+    description: 'Command to start the MCP server (stdio transport)'
+    required: false
+  server-url:
+    description: 'URL of a remote MCP server (HTTP transport)'
+    required: false
+  tool-definitions:
+    description: 'Path to a JSON file containing tool definitions (static analysis, no server needed)'
+    required: false
+  fail-on:
+    description: 'Fail the check if grade is below this (A, B, C, D, F). Default: no failure.'
+    required: false
+    default: ''
+  comment:
+    description: 'Post results as a PR comment (true/false). Default: true'
+    required: false
+    default: 'true'
+
+outputs:
+  grade:
+    description: 'Overall letter grade (A-F)'
+  score:
+    description: 'Numeric score (0-100)'
+  findings:
+    description: 'Number of findings'
+  critical:
+    description: 'Number of critical findings'
+  report:
+    description: 'Full JSON report'
+
+runs:
+  using: 'node20'
+  main: 'index.mjs'

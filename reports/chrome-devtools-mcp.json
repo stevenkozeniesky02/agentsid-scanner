@@ -1,0 +1,300 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-29T18:03:07.569Z",
+  "server": {
+    "name": "chrome_devtools",
+    "title": "Chrome DevTools MCP server",
+    "version": "0.20.3"
+  },
+  "toolCount": 29,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "permissions": "D",
+      "validation": "F",
+      "auth": "B",
+      "output": "A"
+    }
+  },
+  "summary": {
+    "CRITICAL": 1,
+    "HIGH": 2,
+    "MEDIUM": 22,
+    "LOW": 12,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 5,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 1,
+    "privilege": 0,
+    "financial": 0,
+    "credential_access": 1
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "CRITICAL",
+      "tool": "evaluate_script",
+      "rule": "dangerous_tool_execution",
+      "detail": "Tool \"evaluate_script\" classified as execution — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "press_key",
+      "rule": "dangerous_tool_credential_access",
+      "detail": "Tool \"press_key\" classified as credential_access — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "click",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"click\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "drag",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"drag\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "emulate",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"emulate\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "emulate",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"emulate\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "evaluate_script",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"evaluate_script\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "fill",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"fill\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_network_request",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_network_request\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_network_request",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_network_request\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "handle_dialog",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"handle_dialog\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "hover",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"hover\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "lighthouse_audit",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"lighthouse_audit\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "lighthouse_audit",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"lighthouse_audit\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_console_messages",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_console_messages\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_network_requests",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_network_requests\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_pages",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"list_pages\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_pages",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_pages\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "navigate_page",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"navigate_page\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "navigate_page",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"navigate_page\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "new_page",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"new_page\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "performance_analyze_insight",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"performance_analyze_insight\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "performance_start_trace",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"performance_start_trace\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "performance_start_trace",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"performance_start_trace\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "performance_stop_trace",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"performance_stop_trace\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "performance_stop_trace",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"performance_stop_trace\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "press_key",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"press_key\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "take_memory_snapshot",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"take_memory_snapshot\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "take_screenshot",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"take_screenshot\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "take_screenshot",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"take_screenshot\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "take_snapshot",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"take_snapshot\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "take_snapshot",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"take_snapshot\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "type_text",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"type_text\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "upload_file",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"upload_file\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "*",
+      "rule": "large_tool_surface",
+      "detail": "Server exposes 29 tools — large attack surface without per-tool permission controls"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "upload_file",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"upload_file\" may output sensitive file contents without filtering"
+    }
+  ]
+}

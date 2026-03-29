@@ -1,0 +1,222 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-29T18:07:47.073Z",
+  "server": {
+    "name": "chrome-local",
+    "version": "1.0.0"
+  },
+  "toolCount": 25,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "permissions": "D",
+      "validation": "D",
+      "auth": "B",
+      "secrets": "B"
+    }
+  },
+  "summary": {
+    "CRITICAL": 1,
+    "HIGH": 3,
+    "MEDIUM": 18,
+    "LOW": 4,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 5,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 1,
+    "privilege": 0,
+    "financial": 0,
+    "credential_access": 1
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "press_key",
+      "rule": "dangerous_tool_credential_access",
+      "detail": "Tool \"press_key\" classified as credential_access — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "CRITICAL",
+      "tool": "eval",
+      "rule": "dangerous_tool_execution",
+      "detail": "Tool \"eval\" classified as execution — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "launch",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"launch\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "close_browser",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"close_browser\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "close_browser",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"close_browser\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "new_tab",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"new_tab\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "new_tab",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"new_tab\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_pages",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"list_pages\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_pages",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_pages\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "navigate",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"navigate\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "click_ref",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"click_ref\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "type_ref",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"type_ref\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "click",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"click\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "type",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"type\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "press_key",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"press_key\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "select",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"select\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "wait_for",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"wait_for\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_text",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_text\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "eval",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"eval\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "screenshot",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"screenshot\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "ocr",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"ocr\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "fill_form",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"fill_form\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_network_requests",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_network_requests\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "*",
+      "rule": "large_tool_surface",
+      "detail": "Server exposes 25 tools — large attack surface without per-tool permission controls"
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "snapshot",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"snapshot\" may expose secrets in its output based on description"
+    }
+  ]
+}

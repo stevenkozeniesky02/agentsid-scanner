@@ -1,0 +1,214 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-29T18:07:16.402Z",
+  "server": {
+    "name": "mobile-mcp",
+    "version": "0.0.50"
+  },
+  "toolCount": 21,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "permissions": "B",
+      "validation": "F",
+      "auth": "B"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 2,
+    "MEDIUM": 22,
+    "LOW": 1,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 0,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0,
+    "credential_access": 1
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "mobile_type_keys",
+      "rule": "dangerous_tool_credential_access",
+      "detail": "Tool \"mobile_type_keys\" classified as credential_access — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "mobile_list_available_devices",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"mobile_list_available_devices\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "mobile_list_available_devices",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"mobile_list_available_devices\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "mobile_list_apps",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"mobile_list_apps\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "mobile_launch_app",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"mobile_launch_app\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "mobile_terminate_app",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"mobile_terminate_app\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "mobile_install_app",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"mobile_install_app\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "mobile_uninstall_app",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"mobile_uninstall_app\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "mobile_get_screen_size",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"mobile_get_screen_size\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "mobile_click_on_screen_at_coordinates",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"mobile_click_on_screen_at_coordinates\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "mobile_double_tap_on_screen",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"mobile_double_tap_on_screen\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "mobile_long_press_on_screen_at_coordinates",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"mobile_long_press_on_screen_at_coordinates\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "mobile_list_elements_on_screen",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"mobile_list_elements_on_screen\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "mobile_press_button",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"mobile_press_button\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "mobile_open_url",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"mobile_open_url\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "mobile_swipe_on_screen",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"mobile_swipe_on_screen\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "mobile_type_keys",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"mobile_type_keys\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "mobile_save_screenshot",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"mobile_save_screenshot\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "mobile_take_screenshot",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"mobile_take_screenshot\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "mobile_set_orientation",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"mobile_set_orientation\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "mobile_get_orientation",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"mobile_get_orientation\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "mobile_start_screen_recording",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"mobile_start_screen_recording\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "mobile_stop_screen_recording",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"mobile_stop_screen_recording\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "*",
+      "rule": "large_tool_surface",
+      "detail": "Server exposes 21 tools — large attack surface without per-tool permission controls"
+    }
+  ]
+}

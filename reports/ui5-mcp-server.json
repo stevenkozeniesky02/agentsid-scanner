@@ -1,0 +1,157 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-29T18:03:31.448Z",
+  "server": {
+    "name": "UI5",
+    "version": "0.2.9"
+  },
+  "toolCount": 10,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "permissions": "F",
+      "validation": "F",
+      "auth": "B"
+    }
+  },
+  "summary": {
+    "CRITICAL": 2,
+    "HIGH": 1,
+    "MEDIUM": 11,
+    "LOW": 3,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 6,
+    "mutation": 2,
+    "destructive": 0,
+    "execution": 2,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "CRITICAL",
+      "tool": "run_ui5_linter",
+      "rule": "dangerous_tool_execution",
+      "detail": "Tool \"run_ui5_linter\" classified as execution — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_ui5_app",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_ui5_app\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_integration_card",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_integration_card\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "CRITICAL",
+      "tool": "run_manifest_validation",
+      "rule": "dangerous_tool_execution",
+      "detail": "Tool \"run_manifest_validation\" classified as execution — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_guidelines",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"get_guidelines\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_guidelines",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_guidelines\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "run_ui5_linter",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"run_ui5_linter\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_api_reference",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_api_reference\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_project_info",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_project_info\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_ui5_app",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_ui5_app\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_integration_cards_guidelines",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"get_integration_cards_guidelines\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_integration_cards_guidelines",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_integration_cards_guidelines\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_integration_card",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_integration_card\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "run_manifest_validation",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"run_manifest_validation\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_typescript_conversion_guidelines",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"get_typescript_conversion_guidelines\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_typescript_conversion_guidelines",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_typescript_conversion_guidelines\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    }
+  ]
+}

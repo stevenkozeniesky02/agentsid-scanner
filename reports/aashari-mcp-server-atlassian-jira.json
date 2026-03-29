@@ -1,0 +1,138 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-29T18:08:00.050Z",
+  "server": {
+    "name": "@aashari/mcp-server-atlassian-jira",
+    "version": "3.3.0"
+  },
+  "toolCount": 5,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "injection": "B",
+      "permissions": "B",
+      "validation": "C",
+      "auth": "B",
+      "secrets": "F"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 7,
+    "MEDIUM": 7,
+    "LOW": 0,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 0,
+    "mutation": 0,
+    "destructive": 1,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "injection",
+      "severity": "MEDIUM",
+      "tool": "jira_get",
+      "rule": "excessive_description_length",
+      "detail": "Tool description is 1814 chars — unusually long, may contain hidden instructions"
+    },
+    {
+      "category": "injection",
+      "severity": "MEDIUM",
+      "tool": "jira_post",
+      "rule": "excessive_description_length",
+      "detail": "Tool description is 1423 chars — unusually long, may contain hidden instructions"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "jira_delete",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"jira_delete\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "jira_get",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"jira_get\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "jira_post",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"jira_post\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "jira_put",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"jira_put\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "jira_patch",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"jira_patch\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "jira_delete",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"jira_delete\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "jira_get",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"jira_get\" may expose secrets in its output based on description"
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "jira_post",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"jira_post\" may expose secrets in its output based on description"
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "jira_put",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"jira_put\" may expose secrets in its output based on description"
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "jira_patch",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"jira_patch\" may expose secrets in its output based on description"
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "jira_delete",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"jira_delete\" may expose secrets in its output based on description"
+    }
+  ]
+}

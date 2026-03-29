@@ -1,0 +1,74 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-29T18:04:21.479Z",
+  "server": {
+    "name": "exa-search-server",
+    "title": "Exa",
+    "version": "3.2.0"
+  },
+  "toolCount": 3,
+  "grade": {
+    "overall": "D",
+    "score": 46,
+    "categories": {
+      "validation": "B",
+      "auth": "B",
+      "secrets": "B"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 2,
+    "MEDIUM": 3,
+    "LOW": 0,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 1,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "web_search_exa",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"web_search_exa\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "crawling_exa",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"crawling_exa\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_code_context_exa",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_code_context_exa\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "web_search_exa",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"web_search_exa\" may expose secrets in its output based on description"
+    }
+  ]
+}

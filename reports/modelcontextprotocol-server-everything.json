@@ -1,0 +1,165 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-29T18:00:15.971Z",
+  "server": {
+    "name": "mcp-servers/everything",
+    "title": "Everything Reference Server",
+    "version": "2.0.0"
+  },
+  "toolCount": 13,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "validation": "F",
+      "auth": "B",
+      "output": "A"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 1,
+    "MEDIUM": 7,
+    "LOW": 10,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 7,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "echo",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"echo\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-env",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"get-env\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get-env",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get-env\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get-resource-links",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get-resource-links\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get-resource-reference",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get-resource-reference\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-tiny-image",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"get-tiny-image\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get-tiny-image",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get-tiny-image\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "gzip-file-as-resource",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"gzip-file-as-resource\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gzip-file-as-resource",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gzip-file-as-resource\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "toggle-simulated-logging",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"toggle-simulated-logging\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "toggle-simulated-logging",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"toggle-simulated-logging\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "toggle-subscriber-updates",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"toggle-subscriber-updates\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "toggle-subscriber-updates",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"toggle-subscriber-updates\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "trigger-long-running-operation",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"trigger-long-running-operation\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "simulate-research-query",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"simulate-research-query\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "get-structured-content",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"get-structured-content\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "gzip-file-as-resource",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"gzip-file-as-resource\" may output sensitive file contents without filtering"
+    }
+  ]
+}
