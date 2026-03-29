@@ -1,0 +1,101 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-29T20:21:42.712Z",
+  "server": {
+    "name": "example-servers/puppeteer",
+    "version": "0.1.0"
+  },
+  "toolCount": 7,
+  "grade": {
+    "overall": "F",
+    "score": 21,
+    "categories": {
+      "validation": "D",
+      "auth": "B",
+      "hallucination": "A"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 1,
+    "MEDIUM": 8,
+    "LOW": 0,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 0,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "puppeteer_navigate",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"puppeteer_navigate\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "puppeteer_screenshot",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"puppeteer_screenshot\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "puppeteer_click",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"puppeteer_click\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "puppeteer_fill",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"puppeteer_fill\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "puppeteer_select",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"puppeteer_select\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "puppeteer_hover",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"puppeteer_hover\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "puppeteer_evaluate",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"puppeteer_evaluate\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "puppeteer_navigate",
+      "rule": "description_too_short",
+      "detail": "Tool \"puppeteer_navigate\" description is only 17 chars. LLM will hallucinate capabilities based on the name alone."
+    }
+  ]
+}
