@@ -1,0 +1,96 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T14:27:04.934Z",
+  "server": {
+    "name": "openapi-mcp-server",
+    "version": "2.1.0"
+  },
+  "toolCount": 2,
+  "grade": {
+    "overall": "F",
+    "score": 15,
+    "categories": {
+      "injection": "B",
+      "validation": "B",
+      "auth": "B",
+      "secrets": "C",
+      "hallucination": "A"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 3,
+    "MEDIUM": 5,
+    "LOW": 0,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 2,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "injection",
+      "severity": "MEDIUM",
+      "tool": "getApiOverview",
+      "rule": "excessive_description_length",
+      "detail": "Tool description is 3523 chars — unusually long, may contain hidden instructions"
+    },
+    {
+      "category": "injection",
+      "severity": "MEDIUM",
+      "tool": "getApiOperation",
+      "rule": "excessive_description_length",
+      "detail": "Tool description is 3527 chars — unusually long, may contain hidden instructions"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "getApiOverview",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"getApiOverview\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "getApiOperation",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"getApiOperation\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "getApiOverview",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"getApiOverview\" may expose secrets in its output based on description"
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "getApiOperation",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"getApiOperation\" may expose secrets in its output based on description"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "getApiOverview + getApiOperation",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"getApiOverview\" and \"getApiOperation\" have 98% description overlap. LLM may choose between them unpredictably."
+    }
+  ]
+}

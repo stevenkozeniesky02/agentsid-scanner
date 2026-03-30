@@ -1,0 +1,123 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T14:52:26.688Z",
+  "server": {
+    "name": "linear-mcp-server",
+    "version": "0.1.0"
+  },
+  "toolCount": 5,
+  "grade": {
+    "overall": "F",
+    "score": 7,
+    "categories": {
+      "permissions": "B",
+      "validation": "D",
+      "auth": "B",
+      "hallucination": "B"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 1,
+    "MEDIUM": 9,
+    "LOW": 2,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 2,
+    "mutation": 2,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_issue",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_issue\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_issue",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_issue\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_issue",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_issue\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update_issue",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update_issue\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "search_issues",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"search_issues\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "search_issues",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"search_issues\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_user_issues",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_user_issues\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_user_issues",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_user_issues\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "add_comment",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"add_comment\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_issue",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"update_issue\" uses vague action words (use, modify, update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "add_comment",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"add_comment\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    }
+  ]
+}

@@ -1,0 +1,1226 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T15:12:57.799Z",
+  "server": {
+    "name": "gitlab-mcp",
+    "version": "1.2.1"
+  },
+  "toolCount": 116,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "injection": "A",
+      "validation": "F",
+      "auth": "B",
+      "permissions": "B",
+      "output": "B",
+      "secrets": "B",
+      "hallucination": "F"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 4,
+    "MEDIUM": 158,
+    "LOW": 7,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 0,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "injection",
+      "severity": "MEDIUM",
+      "tool": "gitlab_download_attachment",
+      "rule": "encoded_payload",
+      "detail": "Tool description contains potential prompt injection pattern: \"encoded_payload\"",
+      "evidence": "Download attachment by URL/path and return base64."
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "health_check",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"health_check\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "health_check",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"health_check\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "gitlab_get_project",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"gitlab_get_project\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_project",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_get_project\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_list_projects",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_list_projects\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_create_repository",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_create_repository\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_list_project_members",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_list_project_members\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_list_group_projects",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_list_group_projects\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_list_group_iterations",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_list_group_iterations\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_search_repositories",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_search_repositories\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_search_code_blobs",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_search_code_blobs\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_repository_tree",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_get_repository_tree\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_file_contents",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_get_file_contents\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_create_or_update_file",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_create_or_update_file\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_push_files",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_push_files\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_create_branch",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_create_branch\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_branch_diffs",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_get_branch_diffs\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_list_commits",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_list_commits\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_commit",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_get_commit\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_commit_diff",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_get_commit_diff\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_list_merge_requests",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_list_merge_requests\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_merge_request",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_get_merge_request\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_create_merge_request",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_create_merge_request\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_fork_repository",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_fork_repository\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_update_merge_request",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_update_merge_request\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_merge_merge_request",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_merge_merge_request\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_merge_request_diffs",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_get_merge_request_diffs\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_list_merge_request_diffs",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_list_merge_request_diffs\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_merge_request_code_context",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_get_merge_request_code_context\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_list_merge_request_versions",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_list_merge_request_versions\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_merge_request_version",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_get_merge_request_version\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_approve_merge_request",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_approve_merge_request\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_unapprove_merge_request",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_unapprove_merge_request\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_merge_request_approval_state",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_get_merge_request_approval_state\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_list_merge_request_discussions",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_list_merge_request_discussions\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_create_merge_request_thread",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_create_merge_request_thread\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_mr_discussions",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_mr_discussions\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_create_merge_request_discussion_note",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_create_merge_request_discussion_note\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_update_merge_request_discussion_note",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_update_merge_request_discussion_note\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_delete_merge_request_discussion_note",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_delete_merge_request_discussion_note\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_resolve_merge_request_thread",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_resolve_merge_request_thread\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_list_merge_request_notes",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_list_merge_request_notes\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_merge_request_notes",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_get_merge_request_notes\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_draft_note",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_get_draft_note\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_list_draft_notes",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_list_draft_notes\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_create_draft_note",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_create_draft_note\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_update_draft_note",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_update_draft_note\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_delete_draft_note",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_delete_draft_note\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_publish_draft_note",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_publish_draft_note\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_bulk_publish_draft_notes",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_bulk_publish_draft_notes\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_merge_request_note",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_get_merge_request_note\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_create_merge_request_note",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_create_merge_request_note\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_create_note",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_create_note\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_update_merge_request_note",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_update_merge_request_note\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_delete_merge_request_note",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_delete_merge_request_note\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_list_issues",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_list_issues\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_my_issues",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_my_issues\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_issue",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_get_issue\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_create_issue",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_create_issue\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_update_issue",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_update_issue\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_delete_issue",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_delete_issue\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_list_issue_discussions",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_list_issue_discussions\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_create_issue_note",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_create_issue_note\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_update_issue_note",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_update_issue_note\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_list_issue_links",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_list_issue_links\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_issue_link",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_get_issue_link\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_create_issue_link",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_create_issue_link\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_delete_issue_link",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_delete_issue_link\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_list_wiki_pages",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_list_wiki_pages\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_wiki_page",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_get_wiki_page\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_create_wiki_page",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_create_wiki_page\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_update_wiki_page",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_update_wiki_page\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_delete_wiki_page",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_delete_wiki_page\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_list_pipelines",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_list_pipelines\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_pipeline",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_get_pipeline\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_list_pipeline_jobs",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_list_pipeline_jobs\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_list_pipeline_trigger_jobs",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_list_pipeline_trigger_jobs\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_pipeline_job",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_get_pipeline_job\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_pipeline_job_output",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_get_pipeline_job_output\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_create_pipeline",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_create_pipeline\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_retry_pipeline",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_retry_pipeline\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_cancel_pipeline",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_cancel_pipeline\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_retry_pipeline_job",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_retry_pipeline_job\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_cancel_pipeline_job",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_cancel_pipeline_job\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_play_pipeline_job",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_play_pipeline_job\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_list_milestones",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_list_milestones\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_milestone",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_get_milestone\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_create_milestone",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_create_milestone\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_update_milestone",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_update_milestone\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_edit_milestone",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_edit_milestone\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_delete_milestone",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_delete_milestone\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_milestone_issue",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_get_milestone_issue\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_milestone_merge_requests",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_get_milestone_merge_requests\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_promote_milestone",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_promote_milestone\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_milestone_burndown_events",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_get_milestone_burndown_events\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_list_releases",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_list_releases\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_release",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_get_release\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_create_release",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_create_release\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_update_release",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_update_release\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_delete_release",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_delete_release\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_create_release_evidence",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_create_release_evidence\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_download_release_asset",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_download_release_asset\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_list_labels",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_list_labels\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_label",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_get_label\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_create_label",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_create_label\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_update_label",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_update_label\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_delete_label",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_delete_label\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_list_namespaces",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_list_namespaces\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_namespace",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_get_namespace\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_verify_namespace",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_verify_namespace\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_users",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_get_users\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_list_events",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_list_events\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_project_events",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_get_project_events\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_upload_markdown",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_upload_markdown\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_download_attachment",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_download_attachment\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_execute_graphql_query",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_execute_graphql_query\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_execute_graphql_mutation",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_execute_graphql_mutation\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gitlab_execute_graphql",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gitlab_execute_graphql\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "*",
+      "rule": "large_tool_surface",
+      "detail": "Server exposes 116 tools — large attack surface without per-tool permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "excessive_tool_surface",
+      "detail": "Server exposes 116 tools — excessive attack surface, strongly recommends per-agent tool scoping"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "gitlab_get_file_contents",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"gitlab_get_file_contents\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "gitlab_create_or_update_file",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"gitlab_create_or_update_file\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "gitlab_push_files",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"gitlab_push_files\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "gitlab_get_merge_request_code_context",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"gitlab_get_merge_request_code_context\" may expose secrets in its output based on description"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "gitlab_create_merge_request_thread",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"gitlab_create_merge_request_thread\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "gitlab_resolve_merge_request_thread",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"gitlab_resolve_merge_request_thread\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "health_check",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"health_check\" references server without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_list_projects",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"gitlab_list_projects\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_search_repositories",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"gitlab_search_repositories\" references key without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_repository_tree",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"gitlab_get_repository_tree\" references file without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_file_contents",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"gitlab_get_file_contents\" references file without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_create_or_update_file",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"gitlab_create_or_update_file\" references file without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_push_files",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"gitlab_push_files\" references file without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_update_merge_request",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"gitlab_update_merge_request\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_merge_request_diffs",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"gitlab_get_merge_request_diffs\" references file without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "gitlab_unapprove_merge_request",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"gitlab_unapprove_merge_request\" uses vague action words (use) without specific operations. LLMs will interpret this as the broadest possible action on sensitive resources (user)."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_unapprove_merge_request",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"gitlab_unapprove_merge_request\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_update_merge_request_discussion_note",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"gitlab_update_merge_request_discussion_note\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_update_draft_note",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"gitlab_update_draft_note\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_update_merge_request_note",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"gitlab_update_merge_request_note\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_delete_merge_request_note",
+      "rule": "description_too_short",
+      "detail": "Tool \"gitlab_delete_merge_request_note\" description is only 18 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_my_issues",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"gitlab_my_issues\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_issue",
+      "rule": "description_too_short",
+      "detail": "Tool \"gitlab_get_issue\" description is only 17 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_create_issue",
+      "rule": "description_too_short",
+      "detail": "Tool \"gitlab_create_issue\" description is only 19 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_update_issue",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"gitlab_update_issue\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_delete_issue",
+      "rule": "description_too_short",
+      "detail": "Tool \"gitlab_delete_issue\" description is only 16 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_update_issue_note",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"gitlab_update_issue_note\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_create_wiki_page",
+      "rule": "description_too_short",
+      "detail": "Tool \"gitlab_create_wiki_page\" description is only 19 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_update_wiki_page",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"gitlab_update_wiki_page\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_pipeline",
+      "rule": "description_too_short",
+      "detail": "Tool \"gitlab_get_pipeline\" description is only 17 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_cancel_pipeline",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"gitlab_cancel_pipeline\" uses vague action words (run) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_cancel_pipeline_job",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"gitlab_cancel_pipeline_job\" uses vague action words (run) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_play_pipeline_job",
+      "rule": "description_too_short",
+      "detail": "Tool \"gitlab_play_pipeline_job\" description is only 18 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_create_milestone",
+      "rule": "description_too_short",
+      "detail": "Tool \"gitlab_create_milestone\" description is only 19 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_update_milestone",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"gitlab_update_milestone\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_edit_milestone",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"gitlab_edit_milestone\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_delete_milestone",
+      "rule": "description_too_short",
+      "detail": "Tool \"gitlab_delete_milestone\" description is only 19 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_create_release",
+      "rule": "description_too_short",
+      "detail": "Tool \"gitlab_create_release\" description is only 17 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_update_release",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"gitlab_update_release\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_create_label",
+      "rule": "description_too_short",
+      "detail": "Tool \"gitlab_create_label\" description is only 15 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_update_label",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"gitlab_update_label\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_update_label",
+      "rule": "description_too_short",
+      "detail": "Tool \"gitlab_update_label\" description is only 15 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_list_namespaces",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"gitlab_list_namespaces\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_users",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"gitlab_get_users\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_get_users",
+      "rule": "description_too_short",
+      "detail": "Tool \"gitlab_get_users\" description is only 13 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_list_events",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"gitlab_list_events\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gitlab_upload_markdown",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"gitlab_upload_markdown\" references file without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    }
+  ]
+}

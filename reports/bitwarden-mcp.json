@@ -1,0 +1,881 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T15:20:23.786Z",
+  "server": {
+    "name": "Bitwarden MCP Server",
+    "version": "2026.2.0"
+  },
+  "toolCount": 58,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "permissions": "F",
+      "validation": "F",
+      "auth": "B",
+      "output": "A",
+      "hallucination": "F"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 11,
+    "MEDIUM": 97,
+    "LOW": 12,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 16,
+    "mutation": 14,
+    "destructive": 7,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0,
+    "credential_access": 1
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_item",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_item\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_folder",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_folder\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_org_collection",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_org_collection\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_text_send",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_text_send\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_file_send",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_file_send\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete_send",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete_send\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "remove_send_password",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"remove_send_password\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "remove_send_password",
+      "rule": "dangerous_tool_credential_access",
+      "detail": "Tool \"remove_send_password\" classified as credential_access — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_attachment",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_attachment\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_org_collection",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_org_collection\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete_org_collection",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete_org_collection\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_org_member",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_org_member\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_org_member_groups",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_org_member_groups\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "remove_org_member",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"remove_org_member\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_org_group",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_org_group\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_org_group",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_org_group\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete_org_group",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete_org_group\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_org_group_members",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_org_group_members\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_org_policy",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_org_policy\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_org_subscription",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_org_subscription\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "lock",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"lock\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "lock",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"lock\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "sync",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"sync\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "sync",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"sync\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "status",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"status\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "status",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"status\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "generate",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"generate\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "generate",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"generate\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_item",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_item\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_folder",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_folder\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "edit_item",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"edit_item\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "edit_folder",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"edit_folder\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "delete",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"delete\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "confirm",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"confirm\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_org_collection",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_org_collection\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "edit_org_collection",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"edit_org_collection\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "edit_item_collections",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"edit_item_collections\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "move",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"move\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "device_approval_list",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"device_approval_list\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "device_approval_approve",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"device_approval_approve\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "device_approval_approve_all",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"device_approval_approve_all\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "device_approval_deny",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"device_approval_deny\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "device_approval_deny_all",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"device_approval_deny_all\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "restore",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"restore\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_text_send",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_text_send\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_file_send",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_file_send\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_send",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"list_send\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_send",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_send\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_send",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_send\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "edit_send",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"edit_send\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "delete_send",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"delete_send\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "remove_send_password",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"remove_send_password\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_attachment",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_attachment\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_org_collections",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"list_org_collections\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_org_collections",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_org_collections\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_org_collection",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_org_collection\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update_org_collection",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update_org_collection\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "delete_org_collection",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"delete_org_collection\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_org_members",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"list_org_members\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_org_members",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_org_members\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_org_member",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_org_member\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_org_member_groups",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_org_member_groups\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update_org_member",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update_org_member\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update_org_member_groups",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update_org_member_groups\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "remove_org_member",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"remove_org_member\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "reinvite_org_member",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"reinvite_org_member\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "revoke_org_member",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"revoke_org_member\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "restore_org_member",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"restore_org_member\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_org_groups",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"list_org_groups\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_org_groups",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_org_groups\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_org_group",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_org_group\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_org_group_members",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_org_group_members\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update_org_group",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update_org_group\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "delete_org_group",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"delete_org_group\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update_org_group_members",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update_org_group_members\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_org_policies",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"list_org_policies\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_org_policies",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_org_policies\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_org_events",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_org_events\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_org_subscription",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"get_org_subscription\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_org_subscription",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_org_subscription\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "update_org_subscription",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"update_org_subscription\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "*",
+      "rule": "large_tool_surface",
+      "detail": "Server exposes 58 tools — large attack surface without per-tool permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "excessive_tool_surface",
+      "detail": "Server exposes 58 tools — excessive attack surface, strongly recommends per-agent tool scoping"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "create_file_send",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"create_file_send\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "lock",
+      "rule": "description_too_short",
+      "detail": "Tool \"lock\" description is only 14 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "sync",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"sync\" references server without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "create_file_send",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"create_file_send\" references file without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "create_attachment",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"create_attachment\" references file without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_org_collection",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"update_org_collection\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_org_collection",
+      "rule": "description_too_short",
+      "detail": "Tool \"update_org_collection\" description is only 19 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "delete_org_collection",
+      "rule": "description_too_short",
+      "detail": "Tool \"delete_org_collection\" description is only 19 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "list_org_members",
+      "rule": "description_too_short",
+      "detail": "Tool \"list_org_members\" description is only 16 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_org_member",
+      "rule": "description_too_short",
+      "detail": "Tool \"get_org_member\" description is only 17 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "invite_org_member",
+      "rule": "description_too_short",
+      "detail": "Tool \"invite_org_member\" description is only 15 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_org_member",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"update_org_member\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_org_member",
+      "rule": "description_too_short",
+      "detail": "Tool \"update_org_member\" description is only 15 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_org_member_groups",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"update_org_member_groups\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "remove_org_member",
+      "rule": "description_too_short",
+      "detail": "Tool \"remove_org_member\" description is only 15 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "reinvite_org_member",
+      "rule": "description_too_short",
+      "detail": "Tool \"reinvite_org_member\" description is only 18 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "revoke_org_member",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"revoke_org_member\" uses vague action words (access) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "list_org_groups",
+      "rule": "description_too_short",
+      "detail": "Tool \"list_org_groups\" description is only 15 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_org_group",
+      "rule": "description_too_short",
+      "detail": "Tool \"get_org_group\" description is only 16 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "create_org_group",
+      "rule": "description_too_short",
+      "detail": "Tool \"create_org_group\" description is only 14 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_org_group",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"update_org_group\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_org_group",
+      "rule": "description_too_short",
+      "detail": "Tool \"update_org_group\" description is only 14 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "delete_org_group",
+      "rule": "description_too_short",
+      "detail": "Tool \"delete_org_group\" description is only 14 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_org_group_members",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"update_org_group_members\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "list_org_policies",
+      "rule": "description_too_short",
+      "detail": "Tool \"list_org_policies\" description is only 17 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_org_policy",
+      "rule": "description_too_short",
+      "detail": "Tool \"get_org_policy\" description is only 17 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_org_policy",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"update_org_policy\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_org_policy",
+      "rule": "description_too_short",
+      "detail": "Tool \"update_org_policy\" description is only 15 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_org_events",
+      "rule": "description_too_short",
+      "detail": "Tool \"get_org_events\" description is only 15 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "update_org_subscription",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"update_org_subscription\" uses vague action words (manage, update) without specific operations. LLMs will interpret this as the broadest possible action on sensitive resources (secret)."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_org_subscription",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"update_org_subscription\" references secret without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "create_item + edit_item",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"create_item\" and \"edit_item\" have 86% description overlap. LLM may choose between them unpredictably."
+    }
+  ]
+}

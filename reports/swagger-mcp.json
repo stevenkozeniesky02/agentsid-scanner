@@ -1,0 +1,109 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T14:27:03.484Z",
+  "server": {
+    "name": "swagger-mcp",
+    "version": "1.0.8"
+  },
+  "toolCount": 5,
+  "grade": {
+    "overall": "F",
+    "score": 6,
+    "categories": {
+      "permissions": "B",
+      "validation": "D",
+      "auth": "B",
+      "hallucination": "A"
+    }
+  },
+  "summary": {
+    "CRITICAL": 1,
+    "HIGH": 1,
+    "MEDIUM": 6,
+    "LOW": 2,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 3,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 1,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "CRITICAL",
+      "tool": "execute_api_request",
+      "rule": "dangerous_tool_execution",
+      "detail": "Tool \"execute_api_request\" classified as execution — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "fetch_swagger_info",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"fetch_swagger_info\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "fetch_swagger_info",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"fetch_swagger_info\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_endpoints",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"list_endpoints\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_endpoints",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_endpoints\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_endpoint_details",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_endpoint_details\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "execute_api_request",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"execute_api_request\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "validate_api_response",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"validate_api_response\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "fetch_swagger_info",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"fetch_swagger_info\" uses vague action words (do) without specific operations. LLMs will interpret this as the broadest possible action."
+    }
+  ]
+}

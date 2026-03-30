@@ -1,0 +1,579 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T14:31:10.554Z",
+  "server": {
+    "name": "git-mcp",
+    "version": "1.0.0"
+  },
+  "toolCount": 36,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "validation": "F",
+      "auth": "B",
+      "permissions": "A",
+      "output": "A",
+      "hallucination": "F"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 5,
+    "MEDIUM": 52,
+    "LOW": 20,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 0,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "git_undo_commit",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"git_undo_commit\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_undo_commit",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_undo_commit\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "git_revert",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"git_revert\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_revert",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_revert\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "git_discard_changes",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"git_discard_changes\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_discard_changes",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_discard_changes\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "git_unstage",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"git_unstage\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_unstage",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_unstage\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "git_undo_merge",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"git_undo_merge\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_undo_merge",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_undo_merge\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_reset",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_reset\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_squash",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_squash\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "git_amend",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"git_amend\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_amend",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_amend\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "git_stage",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"git_stage\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_stage",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_stage\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_commit",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_commit\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_create_branch",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_create_branch\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "git_list_branches",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"git_list_branches\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_list_branches",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_list_branches\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_checkout",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_checkout\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_delete_branch",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_delete_branch\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_move_changes",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_move_changes\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_cherry_pick",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_cherry_pick\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_merge",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_merge\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_rebase",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_rebase\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "git_pull",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"git_pull\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_pull",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_pull\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "git_push",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"git_push\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_push",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_push\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "git_fetch",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"git_fetch\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_fetch",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_fetch\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "git_update_branch",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"git_update_branch\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_update_branch",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_update_branch\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "git_stash",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"git_stash\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_stash",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_stash\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "git_remote",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"git_remote\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_remote",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_remote\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "git_log",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"git_log\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_log",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_log\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_show",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_show\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_blame",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_blame\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "git_diff",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"git_diff\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_diff",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_diff\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_search",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_search\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_file_history",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_file_history\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "git_status",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"git_status\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_status",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_status\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "git_reflog",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"git_reflog\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_reflog",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_reflog\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_recover_commit",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_recover_commit\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_recover_branch",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_recover_branch\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "git_find_lost",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"git_find_lost\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_find_lost",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_find_lost\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "git_reset_to_reflog",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"git_reset_to_reflog\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "*",
+      "rule": "large_tool_surface",
+      "detail": "Server exposes 36 tools — large attack surface without per-tool permission controls"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "git_file_history",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"git_file_history\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "git_undo_commit",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"git_undo_commit\" uses vague action words (do, use, change) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "git_revert",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"git_revert\" uses vague action words (do, change) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "git_discard_changes",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"git_discard_changes\" uses vague action words (change) without specific operations. LLMs will interpret this as the broadest possible action on sensitive resources (file)."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "git_unstage",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"git_unstage\" uses vague action words (change) without specific operations. LLMs will interpret this as the broadest possible action on sensitive resources (file)."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "git_unstage",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"git_unstage\" references file without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "git_undo_merge",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"git_undo_merge\" uses vague action words (use) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "git_squash",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"git_squash\" references message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "git_amend",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"git_amend\" uses vague action words (change) without specific operations. LLMs will interpret this as the broadest possible action on sensitive resources (message)."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "git_amend",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"git_amend\" references message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "git_stage",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"git_stage\" uses vague action words (change) without specific operations. LLMs will interpret this as the broadest possible action on sensitive resources (file)."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "git_pull",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"git_pull\" uses vague action words (use, change) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "git_fetch",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"git_fetch\" uses vague action words (change) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "git_update_branch",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"git_update_branch\" uses vague action words (change, update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "git_show",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"git_show\" uses vague action words (change) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "git_blame",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"git_blame\" references file without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "git_diff",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"git_diff\" uses vague action words (change) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "git_search",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"git_search\" references message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "git_status",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"git_status\" references file without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "git_reflog",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"git_reflog\" uses vague action words (use) without specific operations. LLMs will interpret this as the broadest possible action."
+    }
+  ]
+}

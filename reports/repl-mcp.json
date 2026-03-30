@@ -1,0 +1,208 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T14:31:11.808Z",
+  "server": {
+    "name": "repl-mcp",
+    "version": "0.4.3"
+  },
+  "toolCount": 12,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "permissions": "D",
+      "validation": "F",
+      "output": "A",
+      "hallucination": "C"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 1,
+    "MEDIUM": 19,
+    "LOW": 4,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 5,
+    "mutation": 2,
+    "destructive": 1,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0,
+    "external_action": 2
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_session",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_session\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "send_input_to_session",
+      "rule": "dangerous_tool_external_action",
+      "detail": "Tool \"send_input_to_session\" classified as external_action — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "send_signal_to_session",
+      "rule": "dangerous_tool_external_action",
+      "detail": "Tool \"send_signal_to_session\" classified as external_action — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "destroy_repl_session",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"destroy_repl_session\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "set_session_ready",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"set_session_ready\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "create_session",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"create_session\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_session",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_session\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "send_input_to_session",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"send_input_to_session\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "send_signal_to_session",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"send_signal_to_session\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_repl_sessions",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_repl_sessions\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_session_details",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_session_details\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "destroy_repl_session",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"destroy_repl_session\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_repl_configurations",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_repl_configurations\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "set_session_ready",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"set_session_ready\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "wait_for_session",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"wait_for_session\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "mark_session_failed",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"mark_session_failed\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_full_output",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_full_output\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_clean_text",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_clean_text\""
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "set_session_ready",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"set_session_ready\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "send_input_to_session",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"send_input_to_session\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "list_repl_sessions",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"list_repl_sessions\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "list_repl_configurations",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"list_repl_configurations\" references config without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "mark_session_failed",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"mark_session_failed\" uses vague action words (use) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "list_repl_sessions + get_session_details",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"list_repl_sessions\" and \"get_session_details\" have 67% description overlap. LLM may choose between them unpredictably."
+    }
+  ]
+}

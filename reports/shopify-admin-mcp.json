@@ -1,0 +1,628 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T15:15:24.914Z",
+  "server": {
+    "name": "shopify-admin-mcp",
+    "version": "1.0.0"
+  },
+  "toolCount": 35,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "validation": "F",
+      "auth": "B",
+      "permissions": "A",
+      "output": "A",
+      "hallucination": "F"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 1,
+    "MEDIUM": 58,
+    "LOW": 25,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 35,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_products",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_products\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_products",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_products\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_product",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_product\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_product_variants",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_product_variants\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_product_tags",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_product_tags\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_product_tags",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_product_tags\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_product_types",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_product_types\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_product_types",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_product_types\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_product_vendors",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_product_vendors\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_product_vendors",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_product_vendors\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_products_count",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_products_count\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_products_count",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_products_count\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_orders",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_orders\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_orders",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_orders\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_order",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_order\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_orders_count",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_orders_count\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_orders_count",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_orders_count\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_abandoned_checkouts",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_abandoned_checkouts\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_abandoned_checkouts",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_abandoned_checkouts\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_abandoned_checkouts_count",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_abandoned_checkouts_count\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_abandoned_checkouts_count",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_abandoned_checkouts_count\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_customers",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_customers\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_customers",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_customers\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_customer",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_customer\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_customers_count",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_customers_count\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_customers_count",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_customers_count\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_segments",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_segments\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_segments",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_segments\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_segment",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_segment\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_segment_members",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_segment_members\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_marketing_activities",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_marketing_activities\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_marketing_activities",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_marketing_activities\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_marketing_activity",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_marketing_activity\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_marketing_events",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_marketing_events\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_marketing_events",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_marketing_events\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_marketing_event",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_marketing_event\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_discounts",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_discounts\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_discounts",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_discounts\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_discount",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_discount\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_code_discounts",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_code_discounts\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_code_discounts",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_code_discounts\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_automatic_discounts",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_automatic_discounts\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_automatic_discounts",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_automatic_discounts\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_collections",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_collections\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_collections",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_collections\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_collection",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_collection\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_collections_count",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_collections_count\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_collections_count",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_collections_count\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_inventory_items",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_inventory_items\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_inventory_items",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_inventory_items\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_inventory_item",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_inventory_item\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_locations",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_locations\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_locations",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_locations\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_location",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_location\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_shop",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"get_shop\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_shop",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_shop\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_shop_locales",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"get_shop_locales\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_shop_locales",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_shop_locales\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "*",
+      "rule": "large_tool_surface",
+      "detail": "Server exposes 35 tools — large attack surface without per-tool permission controls"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "get_locations",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"get_locations\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "get_location",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"get_location\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_product",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"get_product\" references setting without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_customers",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"get_customers\" references email without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_collection",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"get_collection\" references setting without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_locations",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"get_locations\" references setting without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_shop_locales",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"get_shop_locales\" references config without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_products + get_collections",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_products\" and \"get_collections\" have 62% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_product + get_marketing_event",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_product\" and \"get_marketing_event\" have 63% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_products_count + get_orders_count",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_products_count\" and \"get_orders_count\" have 86% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_products_count + get_customers_count",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_products_count\" and \"get_customers_count\" have 86% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_products_count + get_collections_count",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_products_count\" and \"get_collections_count\" have 86% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_orders + get_customers",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_orders\" and \"get_customers\" have 64% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_order + get_marketing_event",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_order\" and \"get_marketing_event\" have 63% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_orders_count + get_customers_count",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_orders_count\" and \"get_customers_count\" have 86% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_orders_count + get_collections_count",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_orders_count\" and \"get_collections_count\" have 86% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_customer + get_marketing_event",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_customer\" and \"get_marketing_event\" have 63% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_customers_count + get_collections_count",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_customers_count\" and \"get_collections_count\" have 86% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_marketing_activity + get_marketing_event",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_marketing_activity\" and \"get_marketing_event\" have 75% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_marketing_event + get_discount",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_marketing_event\" and \"get_discount\" have 63% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_marketing_event + get_collection",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_marketing_event\" and \"get_collection\" have 63% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_marketing_event + get_inventory_item",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_marketing_event\" and \"get_inventory_item\" have 63% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_marketing_event + get_location",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_marketing_event\" and \"get_location\" have 63% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_inventory_item + get_location",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_inventory_item\" and \"get_location\" have 78% description overlap. LLM may choose between them unpredictably."
+    }
+  ]
+}

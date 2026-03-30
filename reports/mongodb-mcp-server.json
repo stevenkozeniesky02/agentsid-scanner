@@ -3,41 +3,429 @@
     "name": "agentsid-scanner",
     "version": "0.1.0"
   },
-  "scannedAt": "2026-03-29T19:42:00.767Z",
+  "scannedAt": "2026-03-30T14:13:26.737Z",
   "server": {
-    "name": "unknown",
-    "version": "?"
+    "name": "MongoDB MCP Server",
+    "version": "1.9.0"
   },
-  "toolCount": 0,
+  "toolCount": 28,
   "grade": {
-    "overall": "B",
-    "score": 85,
+    "overall": "F",
+    "score": 0,
     "categories": {
-      "auth": "B"
+      "permissions": "F",
+      "validation": "F",
+      "auth": "B",
+      "hallucination": "F"
     }
   },
   "summary": {
     "CRITICAL": 0,
-    "HIGH": 1,
-    "MEDIUM": 0,
-    "LOW": 0,
+    "HIGH": 6,
+    "MEDIUM": 45,
+    "LOW": 5,
     "INFO": 0
   },
   "riskProfile": {
-    "read_only": 0,
-    "mutation": 0,
-    "destructive": 0,
+    "read_only": 5,
+    "mutation": 4,
+    "destructive": 4,
     "execution": 0,
     "privilege": 0,
     "financial": 0
   },
   "findings": [
     {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create-collection",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create-collection\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create-index",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create-index\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete-many",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete-many\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "drop-collection",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"drop-collection\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "drop-database",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"drop-database\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "drop-index",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"drop-index\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "insert-many",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"insert-many\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update-many",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update-many\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "aggregate",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"aggregate\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "collection-indexes",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"collection-indexes\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "collection-schema",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"collection-schema\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "collection-storage-size",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"collection-storage-size\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "connect",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"connect\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "count",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"count\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create-collection",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create-collection\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create-index",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create-index\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "db-stats",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"db-stats\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "delete-many",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"delete-many\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "drop-collection",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"drop-collection\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "drop-database",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"drop-database\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "drop-index",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"drop-index\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "explain",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"explain\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "export",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"export\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "find",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"find\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "insert-many",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"insert-many\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list-collections",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list-collections\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list-databases",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"list-databases\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list-databases",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list-databases\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "mongodb-logs",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"mongodb-logs\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "rename-collection",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"rename-collection\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update-many",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update-many\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "atlas-local-create-deployment",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"atlas-local-create-deployment\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "atlas-local-create-deployment",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"atlas-local-create-deployment\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "atlas-local-list-deployments",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"atlas-local-list-deployments\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "atlas-local-list-deployments",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"atlas-local-list-deployments\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list-knowledge-sources",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"list-knowledge-sources\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list-knowledge-sources",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list-knowledge-sources\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "search-knowledge",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"search-knowledge\""
+    },
+    {
       "category": "auth",
       "severity": "HIGH",
       "tool": "*",
       "rule": "no_auth_tools",
       "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "*",
+      "rule": "large_tool_surface",
+      "detail": "Server exposes 28 tools — large attack surface without per-tool permission controls"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "aggregate",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"aggregate\" uses vague action words (run) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "connect",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"connect\" references user, config, server, cluster without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "create-collection",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"create-collection\" references database without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "db-stats",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"db-stats\" uses vague action words (use) without specific operations. LLMs will interpret this as the broadest possible action on sensitive resources (database)."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "db-stats",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"db-stats\" references database without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "delete-many",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"delete-many\" uses vague action words (do) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "drop-collection",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"drop-collection\" references database without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "drop-database",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"drop-database\" references file, database without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "drop-index",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"drop-index\" references database without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "list-collections",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"list-collections\" references database without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "list-databases",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"list-databases\" references database without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "rename-collection",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"rename-collection\" references database without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "atlas-local-connect-deployment",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"atlas-local-connect-deployment\" references deployment without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "atlas-local-create-deployment",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"atlas-local-create-deployment\" references user, deployment without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "atlas-local-delete-deployment",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"atlas-local-delete-deployment\" references deployment without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "atlas-local-list-deployments",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"atlas-local-list-deployments\" references deployment without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
     }
   ]
 }

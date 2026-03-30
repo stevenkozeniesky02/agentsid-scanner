@@ -1,0 +1,180 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T15:07:26.679Z",
+  "server": {
+    "name": "vercel-mcp",
+    "version": "1.0.0"
+  },
+  "toolCount": 7,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "permissions": "B",
+      "validation": "D",
+      "auth": "B",
+      "output": "A",
+      "hallucination": "F"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 2,
+    "MEDIUM": 15,
+    "LOW": 3,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 5,
+    "mutation": 0,
+    "destructive": 1,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "deleteDeployment",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"deleteDeployment\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "getDeploymentEvents",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"getDeploymentEvents\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "getDeployment",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"getDeployment\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "cancelDeployment",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"cancelDeployment\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "listDeploymentFiles",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"listDeploymentFiles\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "getDeploymentFileContents",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"getDeploymentFileContents\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "getDeployments",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"getDeployments\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "getDeployments",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"getDeployments\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "deleteDeployment",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"deleteDeployment\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "listDeploymentFiles",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"listDeploymentFiles\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "getDeploymentFileContents",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"getDeploymentFileContents\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "getDeploymentEvents",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"getDeploymentEvents\" references deployment without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "getDeployment",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"getDeployment\" references deployment without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "cancelDeployment",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"cancelDeployment\" references deployment without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "listDeploymentFiles",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"listDeploymentFiles\" references file, deployment without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "getDeploymentFileContents",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"getDeploymentFileContents\" references file, deployment without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "getDeployments",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"getDeployments\" references deployment without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "getDeployments",
+      "rule": "description_too_short",
+      "detail": "Tool \"getDeployments\" description is only 17 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "deleteDeployment",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"deleteDeployment\" references deployment without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    }
+  ]
+}

@@ -1,0 +1,474 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T15:26:09.557Z",
+  "server": {
+    "name": "joplin-server",
+    "version": "0.1.0"
+  },
+  "toolCount": 32,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "injection": "A",
+      "permissions": "B",
+      "validation": "F",
+      "auth": "B",
+      "hallucination": "F"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 7,
+    "MEDIUM": 49,
+    "LOW": 6,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 15,
+    "mutation": 5,
+    "destructive": 5,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "injection",
+      "severity": "MEDIUM",
+      "tool": "search_notes",
+      "rule": "excessive_description_length",
+      "detail": "Tool description is 1179 chars — unusually long, may contain hidden instructions"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_notebook",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_notebook\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_notebook",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_notebook\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete_notebook",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete_notebook\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_note",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_note\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_note",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_note\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete_note",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete_note\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "remove_tags_from_note",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"remove_tags_from_note\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete_tag",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete_tag\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_resource",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_resource\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete_resource",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete_resource\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_notebooks",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_notebooks\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_notebooks",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_notebooks\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_notebook",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_notebook\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_notebook_notes",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_notebook_notes\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update_notebook",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update_notebook\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "delete_notebook",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"delete_notebook\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_notebook_by_id",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_notebook_by_id\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "move_note_to_notebook",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"move_note_to_notebook\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_all_notes",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_all_notes\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_all_notes",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_all_notes\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "search_notes",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"search_notes\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_note",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_note\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_note",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_note\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update_note",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update_note\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "append_to_note",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"append_to_note\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "prepend_to_note",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"prepend_to_note\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "delete_note",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"delete_note\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "add_tags_to_note",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"add_tags_to_note\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "remove_tags_from_note",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"remove_tags_from_note\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_tags",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_tags\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_tags",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_tags\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "rename_tag",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"rename_tag\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "delete_tag",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"delete_tag\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_tag_by_id",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_tag_by_id\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_notes_by_tag",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_notes_by_tag\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_notes_by_tag",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_notes_by_tag\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_all_resources",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_all_resources\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_all_resources",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_all_resources\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_resource_metadata",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_resource_metadata\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_note_attachments",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_note_attachments\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_resource_notes",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_resource_notes\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "download_attachment",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"download_attachment\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "upload_attachment",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"upload_attachment\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update_resource",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update_resource\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "delete_resource",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"delete_resource\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_all_revisions",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_all_revisions\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_all_revisions",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_all_revisions\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_revision",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_revision\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "*",
+      "rule": "large_tool_surface",
+      "detail": "Server exposes 32 tools — large attack surface without per-tool permission controls"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_notebook",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"update_notebook\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_note",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"update_note\" uses vague action words (do, use, modify, update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "remove_tags_from_note",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"remove_tags_from_note\" uses vague action words (do) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "list_all_resources",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"list_all_resources\" references file without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "download_attachment",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"download_attachment\" references file without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "upload_attachment",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"upload_attachment\" references file without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "update_resource",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"update_resource\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action on sensitive resources (file)."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_resource",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"update_resource\" references file without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "list_notebooks + list_tags",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"list_notebooks\" and \"list_tags\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_notebook_notes + list_all_notes",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_notebook_notes\" and \"list_all_notes\" have 75% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_notebook_notes + list_all_revisions",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_notebook_notes\" and \"list_all_revisions\" have 63% description overlap. LLM may choose between them unpredictably."
+    }
+  ]
+}

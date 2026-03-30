@@ -1,0 +1,179 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T16:35:43.552Z",
+  "server": {
+    "name": "reminders-mcp",
+    "version": "1.0.0"
+  },
+  "toolCount": 13,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "permissions": "D",
+      "validation": "F",
+      "auth": "B",
+      "hallucination": "B"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 3,
+    "MEDIUM": 15,
+    "LOW": 2,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 3,
+    "mutation": 3,
+    "destructive": 2,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_reminder_list",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_reminder_list\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete_reminder_list",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete_reminder_list\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_reminder",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_reminder\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_reminder",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_reminder\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete_reminder",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete_reminder\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_reminder_lists",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"list_reminder_lists\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_reminder_lists",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_reminder_lists\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "delete_reminder_list",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"delete_reminder_list\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "rename_reminder_list",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"rename_reminder_list\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_reminders",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_reminders\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_reminders",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_reminders\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_reminder",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_reminder\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_reminder",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_reminder\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update_reminder",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update_reminder\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "delete_reminder",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"delete_reminder\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "complete_reminder",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"complete_reminder\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_reminder",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"update_reminder\" uses vague action words (change, update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "batch_update_reminders",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"batch_update_reminders\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "batch_create_reminders + batch_update_reminders",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"batch_create_reminders\" and \"batch_update_reminders\" have 71% description overlap. LLM may choose between them unpredictably."
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T15:22:20.373Z",
+  "server": {
+    "name": "reddit-mcp",
+    "version": "1.0.0"
+  },
+  "toolCount": 6,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "validation": "D",
+      "auth": "B",
+      "hallucination": "D"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 1,
+    "MEDIUM": 12,
+    "LOW": 0,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 6,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_subreddit",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_subreddit\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "search_posts",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"search_posts\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_submission",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_submission\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_comments_by_submission",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_comments_by_submission\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_comment",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_comment\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "search_subreddits",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"search_subreddits\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_subreddit",
+      "rule": "description_too_short",
+      "detail": "Tool \"get_subreddit\" description is only 15 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "search_posts",
+      "rule": "description_too_short",
+      "detail": "Tool \"search_posts\" description is only 17 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_submission",
+      "rule": "description_too_short",
+      "detail": "Tool \"get_submission\" description is only 4 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_comments_by_submission",
+      "rule": "description_too_short",
+      "detail": "Tool \"get_comments_by_submission\" description is only 7 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_comment",
+      "rule": "description_too_short",
+      "detail": "Tool \"get_comment\" description is only 4 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "search_subreddits",
+      "rule": "description_too_short",
+      "detail": "Tool \"search_subreddits\" description is only 19 chars. LLM will hallucinate capabilities based on the name alone."
+    }
+  ]
+}

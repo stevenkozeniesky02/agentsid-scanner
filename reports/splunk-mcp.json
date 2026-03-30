@@ -1,0 +1,220 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T15:14:52.655Z",
+  "server": {
+    "name": "splunk-mcp",
+    "version": "0.3.0"
+  },
+  "toolCount": 11,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "validation": "F",
+      "auth": "B",
+      "hallucination": "B"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 1,
+    "MEDIUM": 14,
+    "LOW": 11,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 7,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "search_splunk",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"search_splunk\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "search_splunk",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"search_splunk\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_indexes",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"list_indexes\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_indexes",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_indexes\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_index_info",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"get_index_info\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_index_info",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_index_info\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_saved_searches",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"list_saved_searches\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_saved_searches",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_saved_searches\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "current_user",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"current_user\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "current_user",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"current_user\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_users",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"list_users\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_users",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_users\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_kvstore_collections",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"list_kvstore_collections\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_kvstore_collections",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_kvstore_collections\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "health_check",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"health_check\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "health_check",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"health_check\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_indexes_and_sourcetypes",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"get_indexes_and_sourcetypes\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_indexes_and_sourcetypes",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_indexes_and_sourcetypes\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "ping",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"ping\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "ping",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"ping\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "health",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"health\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "health",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"health\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "current_user",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"current_user\" references user, role without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "ping",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"ping\" references server without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "health_check + health",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"health_check\" and \"health\" have 83% description overlap. LLM may choose between them unpredictably."
+    }
+  ]
+}

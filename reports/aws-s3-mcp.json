@@ -1,0 +1,72 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T15:12:29.298Z",
+  "server": {
+    "name": "s3-mcp-server",
+    "version": "0.4.0"
+  },
+  "toolCount": 3,
+  "grade": {
+    "overall": "D",
+    "score": 58,
+    "categories": {
+      "validation": "C",
+      "auth": "B"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 1,
+    "MEDIUM": 3,
+    "LOW": 1,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 3,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list-buckets",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"list-buckets\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list-buckets",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list-buckets\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list-objects",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list-objects\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-object",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get-object\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    }
+  ]
+}

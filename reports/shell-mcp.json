@@ -1,0 +1,80 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T15:25:46.684Z",
+  "server": {
+    "name": "shell",
+    "version": "0.0.1"
+  },
+  "toolCount": 2,
+  "grade": {
+    "overall": "F",
+    "score": 38,
+    "categories": {
+      "permissions": "B",
+      "validation": "B",
+      "auth": "B"
+    }
+  },
+  "summary": {
+    "CRITICAL": 1,
+    "HIGH": 1,
+    "MEDIUM": 2,
+    "LOW": 2,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 0,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 1,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "CRITICAL",
+      "tool": "execute",
+      "rule": "dangerous_tool_execution",
+      "detail": "Tool \"execute\" classified as execution — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "execute",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"execute\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "execute",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"execute\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "clearShellContext",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"clearShellContext\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "clearShellContext",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"clearShellContext\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    }
+  ]
+}

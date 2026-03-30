@@ -1,0 +1,264 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T15:20:53.853Z",
+  "server": {
+    "name": "stitch",
+    "version": "1.0.0"
+  },
+  "toolCount": 14,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "permissions": "B",
+      "validation": "F",
+      "auth": "B",
+      "secrets": "B",
+      "hallucination": "F"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 2,
+    "MEDIUM": 27,
+    "LOW": 3,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 7,
+    "mutation": 3,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_project",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_project\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_design_system",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_design_system\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_design_system",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_design_system\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "create_project",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"create_project\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_project",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_project\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_project",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_project\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_projects",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_projects\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_projects",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_projects\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_screens",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_screens\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_screen",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_screen\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "generate_screen_from_text",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"generate_screen_from_text\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "edit_screens",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"edit_screens\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "generate_variants",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"generate_variants\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_design_system",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_design_system\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update_design_system",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update_design_system\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_design_systems",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_design_systems\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_design_systems",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_design_systems\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "apply_design_system",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"apply_design_system\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "fetch_screen_code",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"fetch_screen_code\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "fetch_screen_image",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"fetch_screen_image\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "create_design_system",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"create_design_system\" may expose secrets in its output based on description"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "create_project",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"create_project\" references container without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "list_projects",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"list_projects\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "edit_screens",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"edit_screens\" uses vague action words (process, do) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "create_design_system",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"create_design_system\" references user, config without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_design_system",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"update_design_system\" references user, config without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "apply_design_system",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"apply_design_system\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "fetch_screen_code",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"fetch_screen_code\" uses vague action words (use) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "generate_screen_from_text + edit_screens",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"generate_screen_from_text\" and \"edit_screens\" have 81% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "edit_screens + generate_variants",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"edit_screens\" and \"generate_variants\" have 75% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "create_design_system + update_design_system",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"create_design_system\" and \"update_design_system\" have 96% description overlap. LLM may choose between them unpredictably."
+    }
+  ]
+}

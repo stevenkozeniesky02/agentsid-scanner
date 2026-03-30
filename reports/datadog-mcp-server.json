@@ -1,0 +1,151 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T15:14:54.787Z",
+  "server": {
+    "name": "datadog",
+    "version": "1.0.0",
+    "description": "MCP Server for Datadog API, enabling interaction with Datadog resources"
+  },
+  "toolCount": 10,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "validation": "F",
+      "auth": "B",
+      "hallucination": "B"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 1,
+    "MEDIUM": 9,
+    "LOW": 6,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 9,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get-monitors",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get-monitors\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-monitors",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get-monitors\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get-dashboards",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get-dashboards\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-dashboard",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get-dashboard\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get-metrics",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get-metrics\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-metrics",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get-metrics\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-metric-metadata",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get-metric-metadata\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-events",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get-events\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get-incidents",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get-incidents\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-incidents",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get-incidents\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "search-logs",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"search-logs\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "search-logs",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"search-logs\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "aggregate-logs",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"aggregate-logs\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get-monitors",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"get-monitors\" uses vague action words (do, use, control) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get-metric-metadata",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"get-metric-metadata\" uses vague action words (use) without specific operations. LLMs will interpret this as the broadest possible action."
+    }
+  ]
+}

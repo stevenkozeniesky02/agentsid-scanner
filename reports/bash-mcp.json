@@ -1,0 +1,109 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T15:25:46.685Z",
+  "server": {
+    "name": "bash-mcp",
+    "version": "1.0.0"
+  },
+  "toolCount": 4,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "permissions": "D",
+      "validation": "C",
+      "auth": "B",
+      "hallucination": "B"
+    }
+  },
+  "summary": {
+    "CRITICAL": 2,
+    "HIGH": 1,
+    "MEDIUM": 6,
+    "LOW": 1,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 1,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 2,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "CRITICAL",
+      "tool": "run",
+      "rule": "dangerous_tool_execution",
+      "detail": "Tool \"run\" classified as execution — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "CRITICAL",
+      "tool": "run_background",
+      "rule": "dangerous_tool_execution",
+      "detail": "Tool \"run_background\" classified as execution — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "run",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"run\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "run_background",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"run_background\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "kill_background",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"kill_background\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_background",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"list_background\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_background",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_background\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "run_background",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"run_background\" uses vague action words (run) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "kill_background",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"kill_background\" uses vague action words (process) without specific operations. LLMs will interpret this as the broadest possible action."
+    }
+  ]
+}

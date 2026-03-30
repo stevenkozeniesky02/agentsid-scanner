@@ -1,0 +1,655 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T15:24:44.324Z",
+  "server": {
+    "name": "Notion API",
+    "version": "1.0.0"
+  },
+  "toolCount": 22,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "validation": "F",
+      "auth": "B",
+      "permissions": "A",
+      "hallucination": "F"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 3,
+    "MEDIUM": 82,
+    "LOW": 3,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 0,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-get-user",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-get-user\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "API-get-users",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"API-get-users\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-get-users",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-get-users\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "API-get-self",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"API-get-self\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-get-self",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-get-self\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "API-post-search",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"API-post-search\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-post-search",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-post-search\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-get-block-children",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-get-block-children\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-patch-block-children",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-patch-block-children\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-block",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-retrieve-a-block\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-update-a-block",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-update-a-block\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-delete-a-block",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-delete-a-block\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-page",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-retrieve-a-page\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-patch-page",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-patch-page\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-post-page",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-post-page\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-page-property",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-retrieve-a-page-property\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-comment",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-retrieve-a-comment\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-query-data-source",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-query-data-source\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-data-source",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-retrieve-a-data-source\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-update-a-data-source",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-update-a-data-source\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-create-a-data-source",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-create-a-data-source\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-list-data-source-templates",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-list-data-source-templates\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-database",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-retrieve-a-database\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "API-move-page",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"API-move-page\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "*",
+      "rule": "large_tool_surface",
+      "detail": "Server exposes 22 tools — large attack surface without per-tool permission controls"
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "API-get-user",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"API-get-user\" uses vague action words (use) without specific operations. LLMs will interpret this as the broadest possible action on sensitive resources (user)."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-get-user",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"API-get-user\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-get-users",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"API-get-users\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "API-get-self",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"API-get-self\" uses vague action words (use) without specific operations. LLMs will interpret this as the broadest possible action on sensitive resources (user)."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-get-self",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"API-get-self\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-update-a-block",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"API-update-a-block\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-patch-page",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"API-patch-page\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-update-a-data-source",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"API-update-a-data-source\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-database",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"API-retrieve-a-database\" references database without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-get-self + API-get-block-children",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-get-self\" and \"API-get-block-children\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-get-self + API-retrieve-a-block",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-get-self\" and \"API-retrieve-a-block\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-get-self + API-retrieve-a-page",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-get-self\" and \"API-retrieve-a-page\" have 100% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-get-self + API-retrieve-a-page-property",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-get-self\" and \"API-retrieve-a-page-property\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-get-self + API-retrieve-a-comment",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-get-self\" and \"API-retrieve-a-comment\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-get-self + API-retrieve-a-data-source",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-get-self\" and \"API-retrieve-a-data-source\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-get-self + API-retrieve-a-database",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-get-self\" and \"API-retrieve-a-database\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-get-block-children + API-patch-block-children",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-get-block-children\" and \"API-patch-block-children\" have 86% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-get-block-children + API-retrieve-a-block",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-get-block-children\" and \"API-retrieve-a-block\" have 100% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-get-block-children + API-update-a-block",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-get-block-children\" and \"API-update-a-block\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-get-block-children + API-delete-a-block",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-get-block-children\" and \"API-delete-a-block\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-get-block-children + API-retrieve-a-page",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-get-block-children\" and \"API-retrieve-a-page\" have 100% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-get-block-children + API-retrieve-a-page-property",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-get-block-children\" and \"API-retrieve-a-page-property\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-get-block-children + API-retrieve-a-comment",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-get-block-children\" and \"API-retrieve-a-comment\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-get-block-children + API-retrieve-a-data-source",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-get-block-children\" and \"API-retrieve-a-data-source\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-get-block-children + API-retrieve-a-database",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-get-block-children\" and \"API-retrieve-a-database\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-patch-block-children + API-retrieve-a-block",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-patch-block-children\" and \"API-retrieve-a-block\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-patch-block-children + API-update-a-block",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-patch-block-children\" and \"API-update-a-block\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-patch-block-children + API-delete-a-block",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-patch-block-children\" and \"API-delete-a-block\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-block + API-update-a-block",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-retrieve-a-block\" and \"API-update-a-block\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-block + API-delete-a-block",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-retrieve-a-block\" and \"API-delete-a-block\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-block + API-retrieve-a-page",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-retrieve-a-block\" and \"API-retrieve-a-page\" have 100% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-block + API-retrieve-a-page-property",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-retrieve-a-block\" and \"API-retrieve-a-page-property\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-block + API-retrieve-a-comment",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-retrieve-a-block\" and \"API-retrieve-a-comment\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-block + API-retrieve-a-data-source",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-retrieve-a-block\" and \"API-retrieve-a-data-source\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-block + API-retrieve-a-database",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-retrieve-a-block\" and \"API-retrieve-a-database\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-update-a-block + API-delete-a-block",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-update-a-block\" and \"API-delete-a-block\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-update-a-block + API-patch-page",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-update-a-block\" and \"API-patch-page\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-update-a-block + API-update-a-data-source",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-update-a-block\" and \"API-update-a-data-source\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-page + API-retrieve-a-page-property",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-retrieve-a-page\" and \"API-retrieve-a-page-property\" have 100% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-page + API-retrieve-a-comment",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-retrieve-a-page\" and \"API-retrieve-a-comment\" have 100% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-page + API-retrieve-a-data-source",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-retrieve-a-page\" and \"API-retrieve-a-data-source\" have 100% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-page + API-retrieve-a-database",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-retrieve-a-page\" and \"API-retrieve-a-database\" have 100% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-patch-page + API-update-a-data-source",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-patch-page\" and \"API-update-a-data-source\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-post-page + API-create-a-comment",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-post-page\" and \"API-create-a-comment\" have 100% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-post-page + API-create-a-data-source",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-post-page\" and \"API-create-a-data-source\" have 100% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-page-property + API-retrieve-a-comment",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-retrieve-a-page-property\" and \"API-retrieve-a-comment\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-page-property + API-retrieve-a-data-source",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-retrieve-a-page-property\" and \"API-retrieve-a-data-source\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-page-property + API-retrieve-a-database",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-retrieve-a-page-property\" and \"API-retrieve-a-database\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-comment + API-retrieve-a-data-source",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-retrieve-a-comment\" and \"API-retrieve-a-data-source\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-comment + API-retrieve-a-database",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-retrieve-a-comment\" and \"API-retrieve-a-database\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-create-a-comment + API-create-a-data-source",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-create-a-comment\" and \"API-create-a-data-source\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-query-data-source + API-retrieve-a-data-source",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-query-data-source\" and \"API-retrieve-a-data-source\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-query-data-source + API-update-a-data-source",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-query-data-source\" and \"API-update-a-data-source\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-query-data-source + API-create-a-data-source",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-query-data-source\" and \"API-create-a-data-source\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-query-data-source + API-list-data-source-templates",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-query-data-source\" and \"API-list-data-source-templates\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-data-source + API-update-a-data-source",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-retrieve-a-data-source\" and \"API-update-a-data-source\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-data-source + API-create-a-data-source",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-retrieve-a-data-source\" and \"API-create-a-data-source\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-data-source + API-list-data-source-templates",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-retrieve-a-data-source\" and \"API-list-data-source-templates\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-retrieve-a-data-source + API-retrieve-a-database",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-retrieve-a-data-source\" and \"API-retrieve-a-database\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-update-a-data-source + API-create-a-data-source",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-update-a-data-source\" and \"API-create-a-data-source\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-update-a-data-source + API-list-data-source-templates",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-update-a-data-source\" and \"API-list-data-source-templates\" have 83% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "API-create-a-data-source + API-list-data-source-templates",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"API-create-a-data-source\" and \"API-list-data-source-templates\" have 83% description overlap. LLM may choose between them unpredictably."
+    }
+  ]
+}

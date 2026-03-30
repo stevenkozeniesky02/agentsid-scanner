@@ -1,0 +1,81 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T15:25:07.743Z",
+  "server": {
+    "name": "pdf-server",
+    "version": "0.0.1"
+  },
+  "toolCount": 3,
+  "grade": {
+    "overall": "F",
+    "score": 38,
+    "categories": {
+      "permissions": "B",
+      "validation": "B",
+      "auth": "B",
+      "hallucination": "A"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 2,
+    "MEDIUM": 4,
+    "LOW": 0,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 0,
+    "mutation": 0,
+    "destructive": 1,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "remove-pdf-pages",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"remove-pdf-pages\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "remove-pdf-pages",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"remove-pdf-pages\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "add-text-watermark",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"add-text-watermark\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "merge-pdfs",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"merge-pdfs\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "merge-pdfs",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"merge-pdfs\" references file without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    }
+  ]
+}

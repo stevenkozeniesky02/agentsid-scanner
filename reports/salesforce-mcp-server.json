@@ -1,0 +1,340 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T15:13:38.239Z",
+  "server": {
+    "name": "salesforce-mcp-server",
+    "version": "0.1.0"
+  },
+  "toolCount": 25,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "permissions": "F",
+      "validation": "F",
+      "auth": "B",
+      "hallucination": "D"
+    }
+  },
+  "summary": {
+    "CRITICAL": 3,
+    "HIGH": 2,
+    "MEDIUM": 28,
+    "LOW": 10,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 16,
+    "mutation": 2,
+    "destructive": 1,
+    "execution": 2,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_apex_class",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_apex_class\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_apex_class",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_apex_class\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete_apex_class",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete_apex_class\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "CRITICAL",
+      "tool": "execute_tooling_query",
+      "rule": "dangerous_tool_execution",
+      "detail": "Tool \"execute_tooling_query\" classified as execution — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "CRITICAL",
+      "tool": "run_tests",
+      "rule": "dangerous_tool_execution",
+      "detail": "Tool \"run_tests\" classified as execution — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_apex_classes",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_apex_classes\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_apex_classes",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_apex_classes\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_apex_class",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_apex_class\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_apex_class",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_apex_class\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update_apex_class",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update_apex_class\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "delete_apex_class",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"delete_apex_class\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "search_async_apex_jobs",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"search_async_apex_jobs\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "search_async_apex_jobs",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"search_async_apex_jobs\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_apex_triggers",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_apex_triggers\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_apex_triggers",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_apex_triggers\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_apex_trigger",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_apex_trigger\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_apex_pages",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_apex_pages\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_apex_pages",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_apex_pages\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_apex_page",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_apex_page\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "execute_tooling_query",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"execute_tooling_query\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "describe_tooling_object",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"describe_tooling_object\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_code_coverage",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_code_coverage\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_code_coverage",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_code_coverage\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "run_tests",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"run_tests\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_symbol_table",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_symbol_table\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_debug_logs",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_debug_logs\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "validate_syntax",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"validate_syntax\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "check_apex_sharing",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"check_apex_sharing\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "analyze_soql_performance",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"analyze_soql_performance\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_org_info",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"get_org_info\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_org_info",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_org_info\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_org_limits",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"get_org_limits\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_org_limits",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_org_limits\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "call_rest_api",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"call_rest_api\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_sobjects_list",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"get_sobjects_list\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_sobjects_list",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_sobjects_list\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "describe_sobject",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"describe_sobject\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "*",
+      "rule": "large_tool_surface",
+      "detail": "Server exposes 25 tools — large attack surface without per-tool permission controls"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_apex_class",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"update_apex_class\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "CRITICAL",
+      "tool": "execute_tooling_query",
+      "rule": "implicit_authority_escalation",
+      "detail": "Tool \"execute_tooling_query\" has dangerous capabilities but is described as a \"tool\". LLM will underestimate the risk and use it without caution."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "run_tests",
+      "rule": "description_too_short",
+      "detail": "Tool \"run_tests\" description is only 18 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "analyze_soql_performance",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"analyze_soql_performance\" uses vague action words (perform) without specific operations. LLMs will interpret this as the broadest possible action."
+    }
+  ]
+}

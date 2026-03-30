@@ -1,0 +1,743 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T14:11:36.272Z",
+  "server": {
+    "name": "mcp-grafana",
+    "version": "v0.11.3+dirty"
+  },
+  "toolCount": 50,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "injection": "A",
+      "permissions": "D",
+      "validation": "F",
+      "auth": "B",
+      "output": "A",
+      "secrets": "D",
+      "hallucination": "F"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 5,
+    "MEDIUM": 75,
+    "LOW": 20,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 41,
+    "mutation": 5,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "injection",
+      "severity": "MEDIUM",
+      "tool": "get_panel_image",
+      "rule": "encoded_payload",
+      "detail": "Tool description contains potential prompt injection pattern: \"encoded_payload\"",
+      "evidence": "Render a Grafana dashboard panel or full dashboard as a PNG image. Returns the image as base64 encoded data. Requires the Grafana Image Renderer service to be installed. Use this for generating visual"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_annotation",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_annotation\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_folder",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_folder\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_incident",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_incident\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_annotation",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_annotation\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_dashboard",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_dashboard\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "add_activity_to_incident",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"add_activity_to_incident\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "add_activity_to_incident",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"add_activity_to_incident\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "alerting_manage_routing",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"alerting_manage_routing\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "alerting_manage_rules",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"alerting_manage_rules\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "create_annotation",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"create_annotation\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_annotation",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_annotation\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_folder",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_folder\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "create_incident",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"create_incident\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_incident",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_incident\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "fetch_pyroscope_profile",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"fetch_pyroscope_profile\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "find_error_pattern_logs",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"find_error_pattern_logs\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "find_slow_requests",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"find_slow_requests\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "generate_deeplink",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"generate_deeplink\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_alert_group",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_alert_group\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_annotation_tags",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_annotation_tags\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_annotation_tags",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_annotation_tags\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_annotations",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_annotations\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_annotations",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_annotations\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_assertions",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_assertions\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_current_oncall_users",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_current_oncall_users\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_dashboard_by_uid",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_dashboard_by_uid\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_dashboard_panel_queries",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_dashboard_panel_queries\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_dashboard_property",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_dashboard_property\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_dashboard_summary",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_dashboard_summary\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_datasource",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_datasource\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_datasource",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_datasource\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_incident",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_incident\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_incident",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_incident\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_oncall_shift",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_oncall_shift\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_panel_image",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_panel_image\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_sift_analysis",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_sift_analysis\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_sift_investigation",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_sift_investigation\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_alert_groups",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_alert_groups\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_alert_groups",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_alert_groups\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_datasources",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_datasources\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_datasources",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_datasources\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_incidents",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_incidents\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_incidents",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_incidents\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_loki_label_names",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_loki_label_names\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_loki_label_values",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_loki_label_values\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_oncall_schedules",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_oncall_schedules\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_oncall_schedules",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_oncall_schedules\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_oncall_teams",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_oncall_teams\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_oncall_users",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_oncall_users\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_oncall_users",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_oncall_users\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_prometheus_label_names",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_prometheus_label_names\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_prometheus_label_values",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_prometheus_label_values\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_prometheus_metric_metadata",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_prometheus_metric_metadata\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_prometheus_metric_names",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_prometheus_metric_names\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_pyroscope_label_names",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_pyroscope_label_names\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_pyroscope_label_values",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_pyroscope_label_values\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_pyroscope_profile_types",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_pyroscope_profile_types\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_sift_investigations",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_sift_investigations\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "query_loki_logs",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"query_loki_logs\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "query_loki_patterns",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"query_loki_patterns\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "query_loki_stats",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"query_loki_stats\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "query_prometheus",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"query_prometheus\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "query_prometheus_histogram",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"query_prometheus_histogram\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "search_dashboards",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"search_dashboards\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "search_dashboards",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"search_dashboards\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "search_folders",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"search_folders\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "search_folders",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"search_folders\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "update_annotation",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"update_annotation\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update_annotation",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update_annotation\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "update_dashboard",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"update_dashboard\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update_dashboard",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update_dashboard\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "*",
+      "rule": "large_tool_surface",
+      "detail": "Server exposes 50 tools — large attack surface without per-tool permission controls"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "fetch_pyroscope_profile",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"fetch_pyroscope_profile\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "list_alert_groups",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"list_alert_groups\" may expose secrets in its output based on description"
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "list_loki_label_names",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"list_loki_label_names\" may expose secrets in its output based on description"
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "list_pyroscope_label_names",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"list_pyroscope_label_names\" may expose secrets in its output based on description"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "list_pyroscope_profile_types",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"list_pyroscope_profile_types\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "add_activity_to_incident",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"add_activity_to_incident\" uses vague action words (use) without specific operations. LLMs will interpret this as the broadest possible action on sensitive resources (user)."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "add_activity_to_incident",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"add_activity_to_incident\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "alerting_manage_rules",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"alerting_manage_rules\" references config, setting, notification without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "fetch_pyroscope_profile",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"fetch_pyroscope_profile\" references file without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_dashboard_panel_queries",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"get_dashboard_panel_queries\" uses vague action words (process) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_panel_image",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"get_panel_image\" uses vague action words (use) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "list_datasources",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"list_datasources\" references config without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "list_oncall_teams",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"list_oncall_teams\" references config without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "list_pyroscope_profile_types",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"list_pyroscope_profile_types\" references file without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_annotation",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"update_annotation\" uses vague action words (change, update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_dashboard",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"update_dashboard\" references message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_alert_group + get_oncall_shift",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_alert_group\" and \"get_oncall_shift\" have 71% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_alert_group + list_alert_groups",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_alert_group\" and \"list_alert_groups\" have 100% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_alert_group + list_oncall_users",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_alert_group\" and \"list_oncall_users\" have 71% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "list_alert_groups + list_oncall_teams",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"list_alert_groups\" and \"list_oncall_teams\" have 70% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "list_loki_label_names + list_pyroscope_label_names",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"list_loki_label_names\" and \"list_pyroscope_label_names\" have 81% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "list_loki_label_names + list_pyroscope_label_values",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"list_loki_label_names\" and \"list_pyroscope_label_values\" have 62% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "list_oncall_teams + list_oncall_users",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"list_oncall_teams\" and \"list_oncall_users\" have 80% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "list_prometheus_label_names + list_prometheus_label_values",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"list_prometheus_label_names\" and \"list_prometheus_label_values\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "list_pyroscope_label_names + list_pyroscope_label_values",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"list_pyroscope_label_names\" and \"list_pyroscope_label_values\" have 81% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "search_dashboards + search_folders",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"search_dashboards\" and \"search_folders\" have 89% description overlap. LLM may choose between them unpredictably."
+    }
+  ]
+}

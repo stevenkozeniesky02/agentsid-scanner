@@ -1,0 +1,81 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T15:25:36.390Z",
+  "server": {
+    "name": "shell-server",
+    "version": "0.1.0"
+  },
+  "toolCount": 1,
+  "grade": {
+    "overall": "F",
+    "score": 33,
+    "categories": {
+      "permissions": "B",
+      "validation": "B",
+      "auth": "B",
+      "hallucination": "B"
+    }
+  },
+  "summary": {
+    "CRITICAL": 1,
+    "HIGH": 1,
+    "MEDIUM": 3,
+    "LOW": 1,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 0,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 1,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "CRITICAL",
+      "tool": "run_command",
+      "rule": "dangerous_tool_execution",
+      "detail": "Tool \"run_command\" classified as execution — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "run_command",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"run_command\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "run_command",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"run_command\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "run_command",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"run_command\" uses vague action words (run) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "run_command",
+      "rule": "description_too_short",
+      "detail": "Tool \"run_command\" description is only 19 chars. LLM will hallucinate capabilities based on the name alone."
+    }
+  ]
+}

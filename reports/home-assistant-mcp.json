@@ -1,0 +1,129 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T15:20:51.110Z",
+  "server": {
+    "name": "homeassistant",
+    "version": "1.0.0"
+  },
+  "toolCount": 5,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "validation": "D",
+      "auth": "B",
+      "hallucination": "F"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 7,
+    "MEDIUM": 5,
+    "LOW": 1,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 2,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_devices",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_devices\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_devices",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_devices\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "control_device",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"control_device\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "turn_on",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"turn_on\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "turn_off",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"turn_off\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_state",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_state\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "list_devices",
+      "rule": "no_description",
+      "detail": "Tool \"list_devices\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "control_device",
+      "rule": "ambiguous_tool_name",
+      "detail": "Tool name \"control_device\" is ambiguous — \"control\" could mean read, create, update, or delete. LLM may choose the most destructive interpretation."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "control_device",
+      "rule": "no_description",
+      "detail": "Tool \"control_device\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "turn_on",
+      "rule": "no_description",
+      "detail": "Tool \"turn_on\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "turn_off",
+      "rule": "no_description",
+      "detail": "Tool \"turn_off\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "get_state",
+      "rule": "no_description",
+      "detail": "Tool \"get_state\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    }
+  ]
+}

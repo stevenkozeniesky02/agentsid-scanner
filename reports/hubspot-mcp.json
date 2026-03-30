@@ -1,0 +1,733 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T15:13:35.108Z",
+  "server": {
+    "name": "hubspot-mcp",
+    "version": "1.0.0"
+  },
+  "toolCount": 47,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "permissions": "F",
+      "validation": "F",
+      "auth": "B",
+      "output": "A",
+      "hallucination": "F"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 6,
+    "MEDIUM": 78,
+    "LOW": 15,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 24,
+    "mutation": 14,
+    "destructive": 5,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_contact",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_contact\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_contact",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_contact\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete_contact",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete_contact\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_company",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_company\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_company",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_company\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete_company",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete_company\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_deal",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_deal\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_deal",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_deal\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete_deal",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete_deal\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_ticket",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_ticket\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_ticket",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_ticket\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete_ticket",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete_ticket\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_association",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_association\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete_association",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete_association\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_note",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_note\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_task",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_task\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_call",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_call\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_meeting",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_meeting\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_meeting",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_meeting\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_contacts",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_contacts\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_contacts",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_contacts\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_contact",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_contact\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_contact",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_contact\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update_contact",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update_contact\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "delete_contact",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"delete_contact\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "search_contacts",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"search_contacts\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "search_contacts",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"search_contacts\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_companies",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_companies\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_companies",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_companies\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_company",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_company\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_company",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_company\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update_company",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update_company\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "delete_company",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"delete_company\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "search_companies",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"search_companies\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "search_companies",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"search_companies\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_deals",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_deals\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_deals",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_deals\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_deal",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_deal\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_deal",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_deal\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update_deal",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update_deal\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "delete_deal",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"delete_deal\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "search_deals",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"search_deals\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "search_deals",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"search_deals\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_tickets",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_tickets\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_tickets",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_tickets\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_ticket",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_ticket\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_ticket",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_ticket\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update_ticket",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update_ticket\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "delete_ticket",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"delete_ticket\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "search_tickets",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"search_tickets\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "search_tickets",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"search_tickets\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_pipeline",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_pipeline\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_associations",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_associations\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_association",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_association\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "delete_association",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"delete_association\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_property",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_property\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_owners",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_owners\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_owners",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_owners\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_owner",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_owner\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_notes",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_notes\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_notes",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_notes\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_note",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_note\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_tasks",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_tasks\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_tasks",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_tasks\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_task",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_task\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_calls",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_calls\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_calls",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_calls\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_call",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_call\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_emails",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_emails\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_emails",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_emails\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_meetings",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_meetings\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_meetings",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_meetings\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_meeting",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_meeting\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update_meeting",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update_meeting\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "*",
+      "rule": "large_tool_surface",
+      "detail": "Server exposes 47 tools — large attack surface without per-tool permission controls"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "batch_read",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"batch_read\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_contact",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"get_contact\" references email without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_contact",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"update_contact\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_company",
+      "rule": "description_too_short",
+      "detail": "Tool \"get_company\" description is only 19 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_company",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"update_company\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_deal",
+      "rule": "description_too_short",
+      "detail": "Tool \"get_deal\" description is only 16 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "create_deal",
+      "rule": "description_too_short",
+      "detail": "Tool \"create_deal\" description is only 17 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_deal",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"update_deal\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_ticket",
+      "rule": "description_too_short",
+      "detail": "Tool \"get_ticket\" description is only 18 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "create_ticket",
+      "rule": "description_too_short",
+      "detail": "Tool \"create_ticket\" description is only 19 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_ticket",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"update_ticket\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "list_owners",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"list_owners\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_owner",
+      "rule": "description_too_short",
+      "detail": "Tool \"get_owner\" description is only 18 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "list_notes",
+      "rule": "description_too_short",
+      "detail": "Tool \"list_notes\" description is only 14 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "list_tasks",
+      "rule": "description_too_short",
+      "detail": "Tool \"list_tasks\" description is only 14 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "create_task",
+      "rule": "description_too_short",
+      "detail": "Tool \"create_task\" description is only 13 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "list_calls",
+      "rule": "description_too_short",
+      "detail": "Tool \"list_calls\" description is only 14 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "create_call",
+      "rule": "description_too_short",
+      "detail": "Tool \"create_call\" description is only 10 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "list_emails",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"list_emails\" references email without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "list_meetings",
+      "rule": "description_too_short",
+      "detail": "Tool \"list_meetings\" description is only 17 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "create_meeting",
+      "rule": "description_too_short",
+      "detail": "Tool \"create_meeting\" description is only 13 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_meeting",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"update_meeting\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "batch_update",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"batch_update\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    }
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T15:12:27.837Z",
+  "server": {
+    "name": "gmail-mcp-server",
+    "version": "1.0.24"
+  },
+  "toolCount": 14,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "injection": "B",
+      "permissions": "B",
+      "validation": "F",
+      "output": "A",
+      "hallucination": "F"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 1,
+    "MEDIUM": 25,
+    "LOW": 7,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 0,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0,
+    "credential_access": 1
+  },
+  "findings": [
+    {
+      "category": "injection",
+      "severity": "MEDIUM",
+      "tool": "gmail_send_email",
+      "rule": "encoded_payload",
+      "detail": "Tool description contains potential prompt injection pattern: \"encoded_payload\"",
+      "evidence": "Send an email message with support for HTML content, attachments, and international characters. Supports both plain text and HTML emails with proper multipart structure. For attachments: use base64 en"
+    },
+    {
+      "category": "injection",
+      "severity": "MEDIUM",
+      "tool": "gmail_get_attachment",
+      "rule": "encoded_payload",
+      "detail": "Tool description contains potential prompt injection pattern: \"encoded_payload\"",
+      "evidence": "Download Gmail attachment and automatically save to local file system. Base64 content is decoded to binary file and saved with unique timestamped filename. Returns full file path and file:// URL for d"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "gmail_authenticate",
+      "rule": "dangerous_tool_credential_access",
+      "detail": "Tool \"gmail_authenticate\" classified as credential_access — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gmail_send_email",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gmail_send_email\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gmail_read_email",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gmail_read_email\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "gmail_search_emails",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"gmail_search_emails\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gmail_search_emails",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gmail_search_emails\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "analyze_conversation",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"analyze_conversation\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gmail_mark_email",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gmail_mark_email\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gmail_move_email",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gmail_move_email\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gmail_delete_email",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gmail_delete_email\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gmail_list_attachments",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gmail_list_attachments\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gmail_get_attachment",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gmail_get_attachment\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gmail_draft",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"gmail_draft\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gmail_logout",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"gmail_logout\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "gmail_logout",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"gmail_logout\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gmail_system_status",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"gmail_system_status\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "gmail_system_status",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"gmail_system_status\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "gmail_performance_metrics",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"gmail_performance_metrics\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "gmail_performance_metrics",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"gmail_performance_metrics\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "gmail_authenticate",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"gmail_authenticate\""
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "gmail_read_email",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"gmail_read_email\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "gmail_authenticate",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"gmail_authenticate\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gmail_send_email",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"gmail_send_email\" references file, email, message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gmail_read_email",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"gmail_read_email\" references email, message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gmail_search_emails",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"gmail_search_emails\" references email without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "analyze_conversation",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"analyze_conversation\" references email without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gmail_mark_email",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"gmail_mark_email\" references email without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gmail_move_email",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"gmail_move_email\" references email without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gmail_list_attachments",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"gmail_list_attachments\" references file, message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gmail_get_attachment",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"gmail_get_attachment\" references file without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gmail_draft",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"gmail_draft\" references email without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "gmail_logout",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"gmail_logout\" references account, credential without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    }
+  ]
+}

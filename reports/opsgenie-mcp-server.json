@@ -1,0 +1,111 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T15:21:36.819Z",
+  "server": {
+    "name": "opsgenie-mcp-server",
+    "version": "1.0.0",
+    "capabilities": {
+      "resources": {},
+      "tools": {}
+    }
+  },
+  "toolCount": 8,
+  "grade": {
+    "overall": "F",
+    "score": 18,
+    "categories": {
+      "validation": "F",
+      "auth": "B"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 1,
+    "MEDIUM": 8,
+    "LOW": 1,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 0,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "opsgenie_list_alerts",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"opsgenie_list_alerts\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "opsgenie_list_alerts",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"opsgenie_list_alerts\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "opsgenie_create_alert",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"opsgenie_create_alert\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "opsgenie_acknowledge_alert",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"opsgenie_acknowledge_alert\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "opsgenie_close_alert",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"opsgenie_close_alert\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "opsgenie_list_alert_notes",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"opsgenie_list_alert_notes\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "opsgenie_add_note",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"opsgenie_add_note\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "opsgenie_list_alert_logs",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"opsgenie_list_alert_logs\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "opsgenie_add_details",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"opsgenie_add_details\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    }
+  ]
+}

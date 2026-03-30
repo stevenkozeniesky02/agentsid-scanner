@@ -1,0 +1,785 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T14:57:11.693Z",
+  "server": {
+    "name": "quickbooks-mcp",
+    "version": "1.0.0"
+  },
+  "toolCount": 34,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "injection": "B",
+      "permissions": "F",
+      "validation": "F",
+      "secrets": "F",
+      "output": "A",
+      "hallucination": "F"
+    }
+  },
+  "summary": {
+    "CRITICAL": 7,
+    "HIGH": 11,
+    "MEDIUM": 81,
+    "LOW": 7,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 15,
+    "mutation": 8,
+    "destructive": 1,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 6,
+    "credential_access": 1
+  },
+  "findings": [
+    {
+      "category": "injection",
+      "severity": "CRITICAL",
+      "tool": "edit_deposit",
+      "rule": "security_bypass",
+      "detail": "Tool description contains potential prompt injection pattern: \"security_bypass\"",
+      "evidence": "Modify an existing deposit. Can update date, memo, deposit account, department, and/or lines. CRITICAL for line changes: The QB Deposit API does NOT replace lines - it merges them. Lines WITH line_id "
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "qbo_authenticate",
+      "rule": "dangerous_tool_credential_access",
+      "detail": "Tool \"qbo_authenticate\" classified as credential_access — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_journal_entry",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_journal_entry\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "CRITICAL",
+      "tool": "create_bill",
+      "rule": "dangerous_tool_financial",
+      "detail": "Tool \"create_bill\" classified as financial — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_bill",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_bill\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "CRITICAL",
+      "tool": "get_bill",
+      "rule": "dangerous_tool_financial",
+      "detail": "Tool \"get_bill\" classified as financial — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "CRITICAL",
+      "tool": "edit_bill",
+      "rule": "dangerous_tool_financial",
+      "detail": "Tool \"edit_bill\" classified as financial — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_expense",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_expense\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_sales_receipt",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_sales_receipt\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "CRITICAL",
+      "tool": "create_invoice",
+      "rule": "dangerous_tool_financial",
+      "detail": "Tool \"create_invoice\" classified as financial — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_invoice",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_invoice\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "CRITICAL",
+      "tool": "get_invoice",
+      "rule": "dangerous_tool_financial",
+      "detail": "Tool \"get_invoice\" classified as financial — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "CRITICAL",
+      "tool": "edit_invoice",
+      "rule": "dangerous_tool_financial",
+      "detail": "Tool \"edit_invoice\" classified as financial — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_deposit",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_deposit\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_vendor_credit",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_vendor_credit\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete_entity",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete_entity\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_customer",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_customer\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "qbo_authenticate",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"qbo_authenticate\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "qbo_authenticate",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"qbo_authenticate\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_company_info",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"get_company_info\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_company_info",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_company_info\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "query",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"query\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_accounts",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_accounts\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_accounts",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_accounts\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_profit_loss",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_profit_loss\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_profit_loss",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_profit_loss\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_balance_sheet",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_balance_sheet\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_balance_sheet",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_balance_sheet\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_trial_balance",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_trial_balance\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_trial_balance",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_trial_balance\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "query_account_transactions",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"query_account_transactions\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "account_period_summary",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"account_period_summary\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_journal_entry",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_journal_entry\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_journal_entry",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_journal_entry\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "edit_journal_entry",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"edit_journal_entry\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_bill",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_bill\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_bill",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_bill\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "edit_bill",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"edit_bill\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_expense",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_expense\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "edit_expense",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"edit_expense\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_expense",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_expense\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_sales_receipt",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_sales_receipt\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "edit_sales_receipt",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"edit_sales_receipt\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_sales_receipt",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_sales_receipt\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_invoice",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_invoice\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_invoice",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_invoice\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "edit_invoice",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"edit_invoice\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_deposit",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_deposit\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_deposit",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_deposit\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "edit_deposit",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"edit_deposit\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_vendor_credit",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_vendor_credit\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_vendor_credit",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_vendor_credit\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "edit_vendor_credit",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"edit_vendor_credit\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "delete_entity",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"delete_entity\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_customer",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_customer\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_customer",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_customer\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "edit_customer",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"edit_customer\""
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "*",
+      "rule": "large_tool_surface",
+      "detail": "Server exposes 34 tools — large attack surface without per-tool permission controls"
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "qbo_authenticate",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"qbo_authenticate\" may expose secrets in its output based on description"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "qbo_authenticate",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"qbo_authenticate\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "get_journal_entry",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"get_journal_entry\" may expose secrets in its output based on description"
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "get_bill",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"get_bill\" may expose secrets in its output based on description"
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "get_expense",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"get_expense\" may expose secrets in its output based on description"
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "get_sales_receipt",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"get_sales_receipt\" may expose secrets in its output based on description"
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "get_invoice",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"get_invoice\" may expose secrets in its output based on description"
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "get_deposit",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"get_deposit\" may expose secrets in its output based on description"
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "get_vendor_credit",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"get_vendor_credit\" may expose secrets in its output based on description"
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "get_customer",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"get_customer\" may expose secrets in its output based on description"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "query",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"query\" references file, account without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "list_accounts",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"list_accounts\" references user, account without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "account_period_summary",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"account_period_summary\" references account without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "create_journal_entry",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"create_journal_entry\" references account without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_journal_entry",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"get_journal_entry\" references file without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_bill",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"get_bill\" references account without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_expense",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"get_expense\" references account, payment without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_sales_receipt",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"get_sales_receipt\" references account without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "create_sales_receipt",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"create_sales_receipt\" references account without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "create_deposit",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"create_deposit\" references account without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_deposit",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"get_deposit\" references account without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "create_vendor_credit",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"create_vendor_credit\" references account without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_vendor_credit",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"get_vendor_credit\" references account without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "create_customer",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"create_customer\" references setting without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "edit_customer",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"edit_customer\" references payment without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_journal_entry + get_bill",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_journal_entry\" and \"get_bill\" have 62% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_bill + get_expense",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_bill\" and \"get_expense\" have 69% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_bill + get_sales_receipt",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_bill\" and \"get_sales_receipt\" have 77% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_bill + get_invoice",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_bill\" and \"get_invoice\" have 69% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_bill + get_deposit",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_bill\" and \"get_deposit\" have 77% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_bill + get_vendor_credit",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_bill\" and \"get_vendor_credit\" have 85% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_bill + get_customer",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_bill\" and \"get_customer\" have 62% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "edit_bill + edit_sales_receipt",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"edit_bill\" and \"edit_sales_receipt\" have 65% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "edit_bill + edit_invoice",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"edit_bill\" and \"edit_invoice\" have 62% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "edit_bill + edit_vendor_credit",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"edit_bill\" and \"edit_vendor_credit\" have 95% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_sales_receipt + get_invoice",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_sales_receipt\" and \"get_invoice\" have 86% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_sales_receipt + get_deposit",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_sales_receipt\" and \"get_deposit\" have 69% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_sales_receipt + get_vendor_credit",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_sales_receipt\" and \"get_vendor_credit\" have 63% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "edit_sales_receipt + edit_invoice",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"edit_sales_receipt\" and \"edit_invoice\" have 80% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "edit_sales_receipt + edit_vendor_credit",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"edit_sales_receipt\" and \"edit_vendor_credit\" have 70% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "create_sales_receipt + create_invoice",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"create_sales_receipt\" and \"create_invoice\" have 61% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "create_sales_receipt + create_vendor_credit",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"create_sales_receipt\" and \"create_vendor_credit\" have 61% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_invoice + get_deposit",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_invoice\" and \"get_deposit\" have 64% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_invoice + get_vendor_credit",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_invoice\" and \"get_vendor_credit\" have 64% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_invoice + get_customer",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_invoice\" and \"get_customer\" have 64% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "edit_invoice + edit_vendor_credit",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"edit_invoice\" and \"edit_vendor_credit\" have 61% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "create_deposit + create_vendor_credit",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"create_deposit\" and \"create_vendor_credit\" have 63% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_deposit + get_vendor_credit",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_deposit\" and \"get_vendor_credit\" have 88% description overlap. LLM may choose between them unpredictably."
+    }
+  ]
+}

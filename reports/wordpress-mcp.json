@@ -1,0 +1,116 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T15:15:15.585Z",
+  "server": {
+    "name": "WordPress MCP",
+    "version": "1.0.0"
+  },
+  "toolCount": 5,
+  "grade": {
+    "overall": "F",
+    "score": 10,
+    "categories": {
+      "permissions": "B",
+      "validation": "C",
+      "auth": "B",
+      "hallucination": "B"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 1,
+    "MEDIUM": 9,
+    "LOW": 1,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 2,
+    "mutation": 2,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create-post",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create-post\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update-post",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update-post\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "search-posts",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"search-posts\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create-post",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create-post\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update-post",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update-post\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "wordpress-block-types-schema",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"wordpress-block-types-schema\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "wordpress-block-types-schema",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"wordpress-block-types-schema\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "search-posts",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"search-posts\" references key without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update-post",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"update-post\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "wordpress-block-types-schema",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"wordpress-block-types-schema\" uses vague action words (use) without specific operations. LLMs will interpret this as the broadest possible action."
+    }
+  ]
+}

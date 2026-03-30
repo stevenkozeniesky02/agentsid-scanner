@@ -1,0 +1,270 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T15:23:24.682Z",
+  "server": {
+    "name": "linear-server",
+    "version": "0.1.0"
+  },
+  "toolCount": 24,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "permissions": "B",
+      "validation": "F",
+      "hallucination": "F"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 1,
+    "MEDIUM": 28,
+    "LOW": 4,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 0,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0,
+    "credential_access": 1
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "linear_auth_callback",
+      "rule": "dangerous_tool_credential_access",
+      "detail": "Tool \"linear_auth_callback\" classified as credential_access — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "linear_auth_callback",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"linear_auth_callback\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "linear_create_issue",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"linear_create_issue\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "linear_edit_issue",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"linear_edit_issue\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "linear_search_issues",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"linear_search_issues\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "linear_search_issues",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"linear_search_issues\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "linear_get_issue",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"linear_get_issue\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "linear_get_teams",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"linear_get_teams\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "linear_get_teams",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"linear_get_teams\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "linear_get_user",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"linear_get_user\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "linear_get_user",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"linear_get_user\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "linear_delete_issue",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"linear_delete_issue\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "linear_get_project",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"linear_get_project\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "linear_list_projects",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"linear_list_projects\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "linear_create_comment",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"linear_create_comment\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "linear_update_comment",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"linear_update_comment\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "linear_delete_comment",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"linear_delete_comment\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "linear_resolve_comment",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"linear_resolve_comment\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "linear_unresolve_comment",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"linear_unresolve_comment\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "linear_create_customer_need_from_attachment",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"linear_create_customer_need_from_attachment\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "linear_get_project_milestones",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"linear_get_project_milestones\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "linear_create_project_milestone",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"linear_create_project_milestone\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "linear_update_project_milestone",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"linear_update_project_milestone\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "linear_delete_project_milestone",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"linear_delete_project_milestone\""
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "*",
+      "rule": "large_tool_surface",
+      "detail": "Server exposes 24 tools — large attack surface without per-tool permission controls"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "linear_auth_callback",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"linear_auth_callback\" uses vague action words (handle) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "linear_bulk_update_issues",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"linear_bulk_update_issues\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "linear_get_user",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"linear_get_user\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "linear_delete_issue",
+      "rule": "description_too_short",
+      "detail": "Tool \"linear_delete_issue\" description is only 15 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "linear_update_comment",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"linear_update_comment\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "linear_delete_comment",
+      "rule": "description_too_short",
+      "detail": "Tool \"linear_delete_comment\" description is only 17 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "linear_resolve_comment",
+      "rule": "description_too_short",
+      "detail": "Tool \"linear_resolve_comment\" description is only 18 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "linear_update_project_milestone",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"linear_update_project_milestone\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    }
+  ]
+}

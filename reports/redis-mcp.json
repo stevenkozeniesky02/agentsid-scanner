@@ -1,0 +1,172 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T15:11:59.240Z",
+  "server": {
+    "name": "redis-server",
+    "version": "1.0.0"
+  },
+  "toolCount": 13,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "permissions": "A",
+      "validation": "F",
+      "auth": "B",
+      "hallucination": "C"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 1,
+    "MEDIUM": 18,
+    "LOW": 0,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 1,
+    "mutation": 1,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "set",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"set\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "hmset",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"hmset\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "hget",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"hget\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "hgetall",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"hgetall\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "scan",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"scan\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "set",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"set\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "del",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"del\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "zadd",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"zadd\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "zrange",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"zrange\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "zrangebyscore",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"zrangebyscore\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "zrem",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"zrem\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "sadd",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"sadd\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "smembers",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"smembers\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "scan",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"scan\" references key without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get",
+      "rule": "description_too_short",
+      "detail": "Tool \"get\" description is only 16 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "del",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"del\" references key without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "del",
+      "rule": "description_too_short",
+      "detail": "Tool \"del\" description is only 12 chars. LLM will hallucinate capabilities based on the name alone."
+    }
+  ]
+}

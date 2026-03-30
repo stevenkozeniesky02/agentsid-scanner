@@ -1,0 +1,132 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T15:08:26.175Z",
+  "server": {
+    "name": "twilio-mcp",
+    "version": "1.0.0"
+  },
+  "toolCount": 5,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "permissions": "B",
+      "validation": "C",
+      "auth": "B",
+      "output": "A",
+      "hallucination": "C"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 1,
+    "MEDIUM": 10,
+    "LOW": 2,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 3,
+    "mutation": 1,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0,
+    "external_action": 1
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "send_sms",
+      "rule": "dangerous_tool_external_action",
+      "detail": "Tool \"send_sms\" classified as external_action — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_conversation",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_conversation\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "send_sms",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"send_sms\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_inbound_messages",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_inbound_messages\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_inbound_messages",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_inbound_messages\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_conversation_thread",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_conversation_thread\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_message_status",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_message_status\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "get_conversation_thread",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"get_conversation_thread\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "send_sms",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"send_sms\" references message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_inbound_messages",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"get_inbound_messages\" references message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_conversation_thread",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"get_conversation_thread\" references message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_message_status",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"get_message_status\" references message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    }
+  ]
+}

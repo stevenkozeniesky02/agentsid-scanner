@@ -1,0 +1,1054 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T15:12:46.226Z",
+  "server": {
+    "name": "trello-mcp",
+    "version": "1.0.0"
+  },
+  "toolCount": 45,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "validation": "F",
+      "auth": "B",
+      "permissions": "A",
+      "hallucination": "F"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 2,
+    "MEDIUM": 139,
+    "LOW": 4,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 0,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "trello_list_boards",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"trello_list_boards\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_get_board",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_get_board\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_create_board",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_create_board\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_get_board_labels",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_get_board_labels\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_get_board_members",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_get_board_members\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_update_board",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_update_board\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_create_list",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_create_list\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_update_list",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_update_list\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_get_list_cards",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_get_list_cards\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_archive_all_cards",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_archive_all_cards\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_move_all_cards",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_move_all_cards\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_move_list",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_move_list\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_get_card",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_get_card\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_create_card",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_create_card\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_update_card",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_update_card\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_delete_card",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_delete_card\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_search_cards",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_search_cards\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_add_comment",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_add_comment\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_get_card_comments",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_get_card_comments\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_update_comment",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_update_comment\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_delete_comment",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_delete_comment\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_add_card_label",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_add_card_label\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_remove_card_label",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_remove_card_label\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_assign_member",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_assign_member\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_remove_member",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_remove_member\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_add_attachment",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_add_attachment\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_get_attachments",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_get_attachments\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_delete_attachment",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_delete_attachment\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_copy_card",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_copy_card\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_create_label",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_create_label\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_update_label",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_update_label\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_delete_label",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_delete_label\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_create_checklist",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_create_checklist\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_update_checklist",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_update_checklist\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_delete_checklist",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_delete_checklist\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_get_checklist",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_get_checklist\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_add_checklist_item",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_add_checklist_item\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_update_checklist_item",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_update_checklist_item\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_delete_checklist_item",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_delete_checklist_item\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_copy_checklist",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_copy_checklist\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_get_me",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"trello_get_me\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "trello_get_me",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"trello_get_me\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_get_member",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_get_member\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "trello_get_member_boards",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"trello_get_member_boards\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_get_member_boards",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_get_member_boards\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "trello_get_member_cards",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"trello_get_member_cards\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_get_member_cards",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_get_member_cards\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "trello_search_members",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"trello_search_members\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "*",
+      "rule": "large_tool_surface",
+      "detail": "Server exposes 45 tools — large attack surface without per-tool permission controls"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_get_board_members",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"trello_get_board_members\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_update_board",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"trello_update_board\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_archive_all_cards",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"trello_archive_all_cards\" references message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_move_all_cards",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"trello_move_all_cards\" references message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_move_list",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"trello_move_list\" references message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_add_comment",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"trello_add_comment\" references message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "trello_update_comment",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"trello_update_comment\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action on sensitive resources (message)."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_update_comment",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"trello_update_comment\" references message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_delete_comment",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"trello_delete_comment\" references message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_add_card_label",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"trello_add_card_label\" references message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_remove_card_label",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"trello_remove_card_label\" references message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_assign_member",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"trello_assign_member\" references message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_remove_member",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"trello_remove_member\" references message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_delete_attachment",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"trello_delete_attachment\" references message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_update_label",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"trello_update_label\" uses vague action words (use, update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_delete_label",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"trello_delete_label\" references message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_delete_checklist",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"trello_delete_checklist\" references message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_update_checklist_item",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"trello_update_checklist_item\" references message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_delete_checklist_item",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"trello_delete_checklist_item\" references message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_get_me",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"trello_get_me\" references user, email without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_get_member",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"trello_get_member\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_get_member_boards",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"trello_get_member_boards\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_get_member_cards",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"trello_get_member_cards\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_get_board_labels + trello_get_board_members",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_get_board_labels\" and \"trello_get_board_members\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_get_board_labels + trello_create_label",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_get_board_labels\" and \"trello_create_label\" have 70% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_get_board_members + trello_search_members",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_get_board_members\" and \"trello_search_members\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_update_board + trello_update_list",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_update_board\" and \"trello_update_list\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_update_board + trello_update_card",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_update_board\" and \"trello_update_card\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_create_list + trello_create_card",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_create_list\" and \"trello_create_card\" have 73% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_create_list + trello_create_checklist",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_create_list\" and \"trello_create_checklist\" have 80% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_create_list + trello_add_checklist_item",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_create_list\" and \"trello_add_checklist_item\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_update_list + trello_update_card",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_update_list\" and \"trello_update_card\" have 64% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_update_list + trello_update_checklist",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_update_list\" and \"trello_update_checklist\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_get_list_cards + trello_archive_all_cards",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_get_list_cards\" and \"trello_archive_all_cards\" have 63% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_get_list_cards + trello_get_card",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_get_list_cards\" and \"trello_get_card\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_archive_all_cards + trello_move_all_cards",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_archive_all_cards\" and \"trello_move_all_cards\" have 75% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_archive_all_cards + trello_move_list",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_archive_all_cards\" and \"trello_move_list\" have 63% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_move_all_cards + trello_move_list",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_move_all_cards\" and \"trello_move_list\" have 70% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_create_card + trello_create_checklist",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_create_card\" and \"trello_create_checklist\" have 63% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_update_card + trello_update_checklist",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_update_card\" and \"trello_update_checklist\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_delete_card + trello_add_comment",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_delete_card\" and \"trello_add_comment\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_delete_card + trello_delete_comment",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_delete_card\" and \"trello_delete_comment\" have 70% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_delete_card + trello_add_card_label",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_delete_card\" and \"trello_add_card_label\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_delete_card + trello_remove_card_label",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_delete_card\" and \"trello_remove_card_label\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_delete_card + trello_remove_member",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_delete_card\" and \"trello_remove_member\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_delete_card + trello_delete_attachment",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_delete_card\" and \"trello_delete_attachment\" have 78% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_delete_card + trello_delete_checklist",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_delete_card\" and \"trello_delete_checklist\" have 75% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_search_cards + trello_search_members",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_search_cards\" and \"trello_search_members\" have 64% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_add_comment + trello_update_comment",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_add_comment\" and \"trello_update_comment\" have 89% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_add_comment + trello_delete_comment",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_add_comment\" and \"trello_delete_comment\" have 78% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_add_comment + trello_add_card_label",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_add_comment\" and \"trello_add_card_label\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_add_comment + trello_remove_card_label",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_add_comment\" and \"trello_remove_card_label\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_add_comment + trello_assign_member",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_add_comment\" and \"trello_assign_member\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_add_comment + trello_remove_member",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_add_comment\" and \"trello_remove_member\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_add_comment + trello_delete_attachment",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_add_comment\" and \"trello_delete_attachment\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_add_comment + trello_delete_checklist",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_add_comment\" and \"trello_delete_checklist\" have 63% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_get_card_comments + trello_get_attachments",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_get_card_comments\" and \"trello_get_attachments\" have 71% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_get_card_comments + trello_create_checklist",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_get_card_comments\" and \"trello_create_checklist\" have 63% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_update_comment + trello_delete_comment",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_update_comment\" and \"trello_delete_comment\" have 90% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_update_comment + trello_add_card_label",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_update_comment\" and \"trello_add_card_label\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_update_comment + trello_remove_card_label",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_update_comment\" and \"trello_remove_card_label\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_update_comment + trello_remove_member",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_update_comment\" and \"trello_remove_member\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_update_comment + trello_delete_attachment",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_update_comment\" and \"trello_delete_attachment\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_update_comment + trello_delete_checklist",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_update_comment\" and \"trello_delete_checklist\" have 63% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_delete_comment + trello_add_card_label",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_delete_comment\" and \"trello_add_card_label\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_delete_comment + trello_remove_card_label",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_delete_comment\" and \"trello_remove_card_label\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_delete_comment + trello_remove_member",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_delete_comment\" and \"trello_remove_member\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_delete_comment + trello_delete_attachment",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_delete_comment\" and \"trello_delete_attachment\" have 78% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_delete_comment + trello_delete_checklist",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_delete_comment\" and \"trello_delete_checklist\" have 75% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_add_card_label + trello_remove_card_label",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_add_card_label\" and \"trello_remove_card_label\" have 89% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_add_card_label + trello_assign_member",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_add_card_label\" and \"trello_assign_member\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_add_card_label + trello_remove_member",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_add_card_label\" and \"trello_remove_member\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_add_card_label + trello_delete_attachment",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_add_card_label\" and \"trello_delete_attachment\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_add_card_label + trello_delete_label",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_add_card_label\" and \"trello_delete_label\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_add_card_label + trello_delete_checklist",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_add_card_label\" and \"trello_delete_checklist\" have 63% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_remove_card_label + trello_assign_member",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_remove_card_label\" and \"trello_assign_member\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_remove_card_label + trello_remove_member",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_remove_card_label\" and \"trello_remove_member\" have 78% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_remove_card_label + trello_delete_attachment",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_remove_card_label\" and \"trello_delete_attachment\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_remove_card_label + trello_delete_label",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_remove_card_label\" and \"trello_delete_label\" have 78% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_remove_card_label + trello_delete_checklist",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_remove_card_label\" and \"trello_delete_checklist\" have 63% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_assign_member + trello_remove_member",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_assign_member\" and \"trello_remove_member\" have 89% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_assign_member + trello_delete_attachment",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_assign_member\" and \"trello_delete_attachment\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_assign_member + trello_delete_checklist",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_assign_member\" and \"trello_delete_checklist\" have 63% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_remove_member + trello_delete_attachment",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_remove_member\" and \"trello_delete_attachment\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_remove_member + trello_delete_checklist",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_remove_member\" and \"trello_delete_checklist\" have 63% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_add_attachment + trello_create_checklist",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_add_attachment\" and \"trello_create_checklist\" have 64% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_get_attachments + trello_create_checklist",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_get_attachments\" and \"trello_create_checklist\" have 71% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_delete_attachment + trello_delete_checklist",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_delete_attachment\" and \"trello_delete_checklist\" have 75% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_copy_card + trello_copy_checklist",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_copy_card\" and \"trello_copy_checklist\" have 64% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_delete_label + trello_delete_checklist",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_delete_label\" and \"trello_delete_checklist\" have 63% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_update_checklist + trello_update_checklist_item",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_update_checklist\" and \"trello_update_checklist_item\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_delete_checklist + trello_update_checklist_item",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_delete_checklist\" and \"trello_update_checklist_item\" have 63% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_delete_checklist + trello_delete_checklist_item",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_delete_checklist\" and \"trello_delete_checklist_item\" have 88% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_update_checklist_item + trello_delete_checklist_item",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_update_checklist_item\" and \"trello_delete_checklist_item\" have 67% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "trello_get_member_boards + trello_get_member_cards",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"trello_get_member_boards\" and \"trello_get_member_cards\" have 82% description overlap. LLM may choose between them unpredictably."
+    }
+  ]
+}

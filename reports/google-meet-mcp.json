@@ -1,0 +1,130 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T16:35:42.351Z",
+  "server": {
+    "name": "google-meet",
+    "version": "0.1.0"
+  },
+  "toolCount": 6,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "permissions": "C",
+      "validation": "D",
+      "auth": "B",
+      "hallucination": "A"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 2,
+    "MEDIUM": 9,
+    "LOW": 2,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 2,
+    "mutation": 2,
+    "destructive": 1,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_meeting",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_meeting\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_meeting",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_meeting\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete_meeting",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete_meeting\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "create_meeting",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"create_meeting\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_meeting",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_meeting\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "schedule_meeting",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"schedule_meeting\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_meetings",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_meetings\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_meetings",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_meetings\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_meeting",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_meeting\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update_meeting",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update_meeting\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "delete_meeting",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"delete_meeting\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_meeting",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"update_meeting\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    }
+  ]
+}

@@ -3,10 +3,10 @@
     "name": "agentsid-scanner",
     "version": "0.1.0"
   },
-  "scannedAt": "2026-03-29T19:45:08.896Z",
+  "scannedAt": "2026-03-30T14:13:28.296Z",
   "server": {
     "name": "n8n-documentation-mcp",
-    "version": "2.41.3"
+    "version": "2.41.4"
   },
   "toolCount": 7,
   "grade": {

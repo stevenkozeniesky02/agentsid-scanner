@@ -1,0 +1,854 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T14:52:25.339Z",
+  "server": {
+    "name": "sendgrid-mcp",
+    "version": "1.0.0"
+  },
+  "toolCount": 57,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "permissions": "F",
+      "validation": "F",
+      "auth": "B",
+      "secrets": "B",
+      "output": "A",
+      "hallucination": "F"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 13,
+    "MEDIUM": 88,
+    "LOW": 15,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 24,
+    "mutation": 16,
+    "destructive": 9,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0,
+    "external_action": 1
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_automation_settings",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_automation_settings\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_automation_step",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_automation_step\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete_automation",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete_automation\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_email_list",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_email_list\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_email_list",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_email_list\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete_email_list",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete_email_list\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_contact",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_contact\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_contact_with_lists",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_contact_with_lists\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_custom_field",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_custom_field\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_custom_field",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_custom_field\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete_custom_field",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete_custom_field\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_sender",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_sender\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete_contact",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete_contact\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "remove_contact_from_lists",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"remove_contact_from_lists\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_contact",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_contact\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete_sender",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete_sender\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_segment",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_segment\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete_segment",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete_segment\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "send_mail",
+      "rule": "dangerous_tool_external_action",
+      "detail": "Tool \"send_mail\" classified as external_action — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_template",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_template\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_template",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_template\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete_template",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete_template\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_template_version",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_template_version\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_template_version",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_template_version\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete_template_version",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete_template_version\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_html_template",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_html_template\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_automations",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_automations\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_automation",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_automation\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update_automation_settings",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update_automation_settings\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update_automation_step",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update_automation_step\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "delete_automation",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"delete_automation\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "open_automation_creator",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"open_automation_creator\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "open_automation_creator",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"open_automation_creator\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "open_automation_editor",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"open_automation_editor\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_single_sends",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_single_sends\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "open_single_send_creator",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"open_single_send_creator\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "open_single_send_creator",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"open_single_send_creator\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "open_single_send_stats",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"open_single_send_stats\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_email_lists",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_email_lists\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_email_list",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_email_list\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update_email_list",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update_email_list\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "delete_email_list",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"delete_email_list\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_segments",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"list_segments\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_segments",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_segments\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "open_segment_creator",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"open_segment_creator\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "open_segment_creator",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"open_segment_creator\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "open_csv_uploader",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"open_csv_uploader\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "open_csv_uploader",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"open_csv_uploader\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_custom_fields",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"list_custom_fields\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_custom_fields",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_custom_fields\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_custom_field",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_custom_field\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update_custom_field",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update_custom_field\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "delete_custom_field",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"delete_custom_field\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_senders",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"list_senders\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_senders",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_senders\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_sender",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_sender\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "remove_contact_from_lists",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"remove_contact_from_lists\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_contact",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_contact\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "search_contacts",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"search_contacts\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_contacts",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_contacts\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_contacts",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_contacts\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "delete_sender",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"delete_sender\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update_segment",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update_segment\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "delete_segment",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"delete_segment\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "send_mail",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"send_mail\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_scopes",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"get_scopes\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_scopes",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_scopes\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_global_stats",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_global_stats\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_stats_by_browser",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_stats_by_browser\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_stats_by_client_type",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_stats_by_client_type\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_stats_by_device_type",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_stats_by_device_type\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_stats_by_country",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_stats_by_country\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_stats_by_mailbox_provider",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_stats_by_mailbox_provider\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_category_stats",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_category_stats\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_subuser_stats",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_subuser_stats\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_stats_overview",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_stats_overview\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_templates",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_templates\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_templates",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_templates\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_template",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_template\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_template",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_template\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update_template",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update_template\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "delete_template",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"delete_template\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_template_version",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_template_version\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_template_version",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_template_version\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update_template_version",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update_template_version\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "delete_template_version",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"delete_template_version\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_html_template",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_html_template\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "open_template_editor",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"open_template_editor\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "open_template_editor",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"open_template_editor\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "*",
+      "rule": "large_tool_surface",
+      "detail": "Server exposes 57 tools — large attack surface without per-tool permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "excessive_tool_surface",
+      "detail": "Server exposes 57 tools — excessive attack surface, strongly recommends per-agent tool scoping"
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "get_scopes",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"get_scopes\" may expose secrets in its output based on description"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "get_category_stats",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"get_category_stats\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_automation_settings",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"update_automation_settings\" references setting without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "list_email_lists",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"list_email_lists\" references email without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "create_email_list",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"create_email_list\" references account, email without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_email_list",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"update_email_list\" references email without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "delete_email_list",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"delete_email_list\" references account, email without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "create_contact",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"create_contact\" references account without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_custom_field",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"update_custom_field\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_contact",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"update_contact\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_segment",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"update_segment\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "send_mail",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"send_mail\" references email without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_scopes",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"get_scopes\" references permission, key without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_global_stats",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"get_global_stats\" references account, email without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_stats_by_browser",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"get_stats_by_browser\" references email without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_stats_by_client_type",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"get_stats_by_client_type\" references email without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_stats_by_device_type",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"get_stats_by_device_type\" references email without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_stats_by_country",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"get_stats_by_country\" references email without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_stats_by_mailbox_provider",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"get_stats_by_mailbox_provider\" references email without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "get_subuser_stats",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"get_subuser_stats\" uses vague action words (use) without specific operations. LLMs will interpret this as the broadest possible action on sensitive resources (user, email)."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_stats_overview",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"get_stats_overview\" references email without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_template",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"update_template\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "create_template_version",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"create_template_version\" references setting without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_template_version",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"update_template_version\" references setting without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    }
+  ]
+}

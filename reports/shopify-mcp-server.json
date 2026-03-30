@@ -1,0 +1,214 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T14:48:26.611Z",
+  "server": {
+    "name": "shopify-tools",
+    "version": "1.0.0"
+  },
+  "toolCount": 15,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "permissions": "B",
+      "validation": "B",
+      "auth": "B",
+      "hallucination": "C"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 2,
+    "MEDIUM": 18,
+    "LOW": 5,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 10,
+    "mutation": 2,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create-discount",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create-discount\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create-draft-order",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create-draft-order\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-products",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get-products\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-products-by-collection",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get-products-by-collection\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get-customers",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get-customers\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-customers",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get-customers\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "tag-customer",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"tag-customer\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get-orders",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get-orders\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-orders",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get-orders\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-order",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get-order\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create-discount",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create-discount\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create-draft-order",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create-draft-order\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "complete-draft-order",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"complete-draft-order\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get-collections",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get-collections\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-collections",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get-collections\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-shop",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"get-shop\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get-shop",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get-shop\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-shop-details",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"get-shop-details\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get-shop-details",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get-shop-details\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "manage-webhook",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"manage-webhook\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get-collections",
+      "rule": "description_too_short",
+      "detail": "Tool \"get-collections\" description is only 19 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get-shop",
+      "rule": "description_too_short",
+      "detail": "Tool \"get-shop\" description is only 16 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "manage-webhook",
+      "rule": "ambiguous_tool_name",
+      "detail": "Tool name \"manage-webhook\" is ambiguous — \"manage\" could mean read, create, update, or delete. LLM may choose the most destructive interpretation."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "manage-webhook",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"manage-webhook\" references webhook without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T14:18:03.595Z",
+  "server": {
+    "name": "terraform-registry-mcp",
+    "version": "0.13.0"
+  },
+  "toolCount": 10,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "validation": "F",
+      "auth": "B"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 1,
+    "MEDIUM": 10,
+    "LOW": 4,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 1,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "providerDetails",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"providerDetails\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "providerDetails",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"providerDetails\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "resourceUsage",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"resourceUsage\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "resourceUsage",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"resourceUsage\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "moduleSearch",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"moduleSearch\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "moduleSearch",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"moduleSearch\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "listDataSources",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"listDataSources\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "resourceArgumentDetails",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"resourceArgumentDetails\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "moduleDetails",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"moduleDetails\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "functionDetails",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"functionDetails\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "providerGuides",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"providerGuides\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "policySearch",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"policySearch\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "policySearch",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"policySearch\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "policyDetails",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"policyDetails\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    }
+  ]
+}

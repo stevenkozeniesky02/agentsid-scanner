@@ -1,0 +1,318 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T15:12:25.669Z",
+  "server": {
+    "name": "discord-mcp",
+    "version": "2.4.0"
+  },
+  "toolCount": 19,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "validation": "F",
+      "auth": "B",
+      "hallucination": "F"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 1,
+    "MEDIUM": 34,
+    "LOW": 5,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 0,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "discord_send_message",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"discord_send_message\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "discord_edit_message",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"discord_edit_message\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "discord_delete_message",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"discord_delete_message\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "discord_add_reaction",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"discord_add_reaction\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "discord_remove_reaction",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"discord_remove_reaction\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "discord_get_message_history",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"discord_get_message_history\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "discord_search_messages",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"discord_search_messages\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "discord_get_message",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"discord_get_message\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "discord_list_attachments",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"discord_list_attachments\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "discord_download_attachment",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"discord_download_attachment\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "discord_cleanup_download",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"discord_cleanup_download\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "discord_get_channel",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"discord_get_channel\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "discord_get_dm_channels",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"discord_get_dm_channels\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "discord_get_dm_channels",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"discord_get_dm_channels\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "discord_create_dm",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"discord_create_dm\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "discord_get_friends",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"discord_get_friends\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "discord_get_friends",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"discord_get_friends\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "discord_add_friend",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"discord_add_friend\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "discord_add_friend",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"discord_add_friend\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "discord_remove_friend",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"discord_remove_friend\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "discord_update_presence",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"discord_update_presence\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "discord_clear_presence",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"discord_clear_presence\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "discord_clear_presence",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"discord_clear_presence\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "discord_send_message",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"discord_send_message\" references file, message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "discord_edit_message",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"discord_edit_message\" references message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "discord_delete_message",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"discord_delete_message\" references message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "discord_delete_message",
+      "rule": "description_too_short",
+      "detail": "Tool \"discord_delete_message\" description is only 16 chars. LLM will hallucinate capabilities based on the name alone."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "discord_add_reaction",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"discord_add_reaction\" references message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "discord_remove_reaction",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"discord_remove_reaction\" references message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "discord_get_message_history",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"discord_get_message_history\" references message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "discord_search_messages",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"discord_search_messages\" references message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "discord_list_attachments",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"discord_list_attachments\" references message without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "discord_download_attachment",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"discord_download_attachment\" references file without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "discord_cleanup_download",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"discord_cleanup_download\" references file without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "discord_get_dm_channels",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"discord_get_dm_channels\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "discord_create_dm",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"discord_create_dm\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "discord_get_friends",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"discord_get_friends\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "discord_add_friend",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"discord_add_friend\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "discord_update_presence",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"discord_update_presence\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    }
+  ]
+}

@@ -1,0 +1,418 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T16:35:49.293Z",
+  "server": {
+    "name": "ticktick-mcp",
+    "version": "0.1.0"
+  },
+  "toolCount": 22,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "permissions": "F",
+      "validation": "F",
+      "secrets": "B",
+      "hallucination": "F"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 9,
+    "MEDIUM": 37,
+    "LOW": 8,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 9,
+    "mutation": 4,
+    "destructive": 2,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0,
+    "credential_access": 5
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "auth_get_authorization_url",
+      "rule": "dangerous_tool_credential_access",
+      "detail": "Tool \"auth_get_authorization_url\" classified as credential_access — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "auth_exchange_code",
+      "rule": "dangerous_tool_credential_access",
+      "detail": "Tool \"auth_exchange_code\" classified as credential_access — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "auth_status",
+      "rule": "dangerous_tool_credential_access",
+      "detail": "Tool \"auth_status\" classified as credential_access — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "auth_refresh_token",
+      "rule": "dangerous_tool_credential_access",
+      "detail": "Tool \"auth_refresh_token\" classified as credential_access — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "auth_logout",
+      "rule": "dangerous_tool_credential_access",
+      "detail": "Tool \"auth_logout\" classified as credential_access — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_project",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_project\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_project",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_project\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete_project",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete_project\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_task",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_task\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_task",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_task\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete_task",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete_task\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "auth_get_authorization_url",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"auth_get_authorization_url\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "auth_get_authorization_url",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"auth_get_authorization_url\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "auth_exchange_code",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"auth_exchange_code\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "auth_status",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"auth_status\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "auth_status",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"auth_status\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "auth_refresh_token",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"auth_refresh_token\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "auth_refresh_token",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"auth_refresh_token\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "auth_logout",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"auth_logout\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "auth_logout",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"auth_logout\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_user",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"get_user\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_user",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_user\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_projects",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_projects\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_projects",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_projects\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_project",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_project\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_project_by_id",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_project_by_id\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_project",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_project\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update_project",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update_project\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "delete_project",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"delete_project\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_tasks_in_project",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_tasks_in_project\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_task",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_task\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update_task",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update_task\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "complete_task",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"complete_task\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "delete_task",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"delete_task\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_task",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_task\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_tasks_due_soon",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_tasks_due_soon\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_tasks_due_soon",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_tasks_due_soon\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "search_tasks",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"search_tasks\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_high_priority_tasks",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_high_priority_tasks\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_high_priority_tasks",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_high_priority_tasks\""
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "*",
+      "rule": "large_tool_surface",
+      "detail": "Server exposes 22 tools — large attack surface without per-tool permission controls"
+    },
+    {
+      "category": "secrets",
+      "severity": "HIGH",
+      "tool": "auth_status",
+      "rule": "potential_secret_exposure",
+      "detail": "Tool \"auth_status\" may expose secrets in its output based on description"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "auth_exchange_code",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"auth_exchange_code\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "auth_status",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"auth_status\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "auth_refresh_token",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"auth_refresh_token\" uses vague action words (access) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "auth_logout",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"auth_logout\" uses vague action words (use) without specific operations. LLMs will interpret this as the broadest possible action on sensitive resources (user)."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "auth_logout",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"auth_logout\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_user",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"get_user\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_project",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"update_project\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_task",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"update_task\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "search_tasks",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"search_tasks\" references key without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_tasks_due_soon + search_tasks",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_tasks_due_soon\" and \"search_tasks\" have 63% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_tasks_due_soon + get_high_priority_tasks",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get_tasks_due_soon\" and \"get_high_priority_tasks\" have 63% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "search_tasks + get_high_priority_tasks",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"search_tasks\" and \"get_high_priority_tasks\" have 63% description overlap. LLM may choose between them unpredictably."
+    }
+  ]
+}

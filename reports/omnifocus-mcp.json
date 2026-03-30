@@ -1,0 +1,130 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T16:35:41.019Z",
+  "server": {
+    "name": "OmniFocus MCP",
+    "version": "1.6.1"
+  },
+  "toolCount": 11,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "permissions": "B",
+      "validation": "D",
+      "auth": "B",
+      "hallucination": "B"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 2,
+    "MEDIUM": 8,
+    "LOW": 3,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 4,
+    "mutation": 0,
+    "destructive": 1,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "remove_item",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"remove_item\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "dump_database",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"dump_database\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "add_omnifocus_task",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"add_omnifocus_task\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "add_project",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"add_project\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "remove_item",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"remove_item\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "edit_item",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"edit_item\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "query_omnifocus",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"query_omnifocus\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_perspectives",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_perspectives\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_perspective_view",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_perspective_view\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_tags",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_tags\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "dump_database",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"dump_database\" references database without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "batch_add_items + batch_remove_items",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"batch_add_items\" and \"batch_remove_items\" have 100% description overlap. LLM may choose between them unpredictably."
+    }
+  ]
+}

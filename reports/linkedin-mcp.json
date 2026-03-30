@@ -1,0 +1,180 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T15:22:32.034Z",
+  "server": {
+    "name": "LinkedInMCP",
+    "version": "1.0.0",
+    "description": "Serveur MCP pour interagir avec LinkedIn"
+  },
+  "toolCount": 7,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "permissions": "B",
+      "validation": "F",
+      "hallucination": "F"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 8,
+    "MEDIUM": 7,
+    "LOW": 5,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 0,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0,
+    "credential_access": 1
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "linkedin_check_auth",
+      "rule": "dangerous_tool_credential_access",
+      "detail": "Tool \"linkedin_check_auth\" classified as credential_access — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "linkedin_login",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"linkedin_login\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "linkedin_login",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"linkedin_login\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "linkedin_callback",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"linkedin_callback\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "linkedin_check_auth",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"linkedin_check_auth\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "linkedin_check_auth",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"linkedin_check_auth\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "linkedin_logout",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"linkedin_logout\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "linkedin_logout",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"linkedin_logout\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "linkedin_create_post",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"linkedin_create_post\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "linkedin_get_person_urn",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"linkedin_get_person_urn\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "linkedin_get_person_urn",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"linkedin_get_person_urn\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "linkedin_diagnostic_user_info",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"linkedin_diagnostic_user_info\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "linkedin_diagnostic_user_info",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"linkedin_diagnostic_user_info\""
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "linkedin_login",
+      "rule": "no_description",
+      "detail": "Tool \"linkedin_login\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "linkedin_callback",
+      "rule": "no_description",
+      "detail": "Tool \"linkedin_callback\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "linkedin_check_auth",
+      "rule": "no_description",
+      "detail": "Tool \"linkedin_check_auth\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "linkedin_logout",
+      "rule": "no_description",
+      "detail": "Tool \"linkedin_logout\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "linkedin_create_post",
+      "rule": "no_description",
+      "detail": "Tool \"linkedin_create_post\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "linkedin_get_person_urn",
+      "rule": "no_description",
+      "detail": "Tool \"linkedin_get_person_urn\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "linkedin_diagnostic_user_info",
+      "rule": "no_description",
+      "detail": "Tool \"linkedin_diagnostic_user_info\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    }
+  ]
+}

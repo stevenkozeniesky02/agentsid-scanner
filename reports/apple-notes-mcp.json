@@ -1,0 +1,496 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T15:26:08.990Z",
+  "server": {
+    "name": "apple-notes",
+    "version": "1.3.1",
+    "description": "MCP server for managing Apple Notes - create, search, update, and organize notes"
+  },
+  "toolCount": 23,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "permissions": "F",
+      "validation": "F",
+      "auth": "B",
+      "output": "A",
+      "hallucination": "F"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 26,
+    "MEDIUM": 26,
+    "LOW": 13,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 13,
+    "mutation": 3,
+    "destructive": 2,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create-note",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create-note\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update-note",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update-note\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete-note",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete-note\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create-folder",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create-folder\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete-folder",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete-folder\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create-note",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create-note\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "search-notes",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"search-notes\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get-note-content",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get-note-content\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-note-content",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get-note-content\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-note-by-id",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get-note-by-id\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-note-details",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get-note-details\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update-note",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update-note\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "delete-note",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"delete-note\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "delete-note",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"delete-note\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "move-note",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"move-note\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list-notes",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list-notes\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list-notes",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list-notes\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list-folders",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list-folders\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list-folders",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list-folders\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create-folder",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create-folder\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "delete-folder",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"delete-folder\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list-accounts",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"list-accounts\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list-accounts",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list-accounts\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list-shared-notes",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"list-shared-notes\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list-shared-notes",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list-shared-notes\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-sync-status",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"get-sync-status\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get-sync-status",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get-sync-status\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "health-check",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"health-check\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "health-check",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"health-check\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-notes-stats",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"get-notes-stats\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get-notes-stats",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get-notes-stats\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list-attachments",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list-attachments\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list-attachments",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list-attachments\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "batch-move-notes",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"batch-move-notes\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "export-notes-json",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"export-notes-json\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "export-notes-json",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"export-notes-json\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get-note-markdown",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get-note-markdown\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-note-markdown",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get-note-markdown\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-checklist-state",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get-checklist-state\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "*",
+      "rule": "large_tool_surface",
+      "detail": "Server exposes 23 tools — large attack surface without per-tool permission controls"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "get-note-content",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"get-note-content\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "create-note",
+      "rule": "no_description",
+      "detail": "Tool \"create-note\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "search-notes",
+      "rule": "no_description",
+      "detail": "Tool \"search-notes\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "get-note-content",
+      "rule": "no_description",
+      "detail": "Tool \"get-note-content\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "get-note-by-id",
+      "rule": "no_description",
+      "detail": "Tool \"get-note-by-id\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "get-note-details",
+      "rule": "no_description",
+      "detail": "Tool \"get-note-details\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "update-note",
+      "rule": "no_description",
+      "detail": "Tool \"update-note\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "delete-note",
+      "rule": "no_description",
+      "detail": "Tool \"delete-note\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "move-note",
+      "rule": "no_description",
+      "detail": "Tool \"move-note\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "list-notes",
+      "rule": "no_description",
+      "detail": "Tool \"list-notes\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "list-folders",
+      "rule": "no_description",
+      "detail": "Tool \"list-folders\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "create-folder",
+      "rule": "no_description",
+      "detail": "Tool \"create-folder\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "delete-folder",
+      "rule": "no_description",
+      "detail": "Tool \"delete-folder\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "list-accounts",
+      "rule": "no_description",
+      "detail": "Tool \"list-accounts\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "list-shared-notes",
+      "rule": "no_description",
+      "detail": "Tool \"list-shared-notes\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "get-sync-status",
+      "rule": "no_description",
+      "detail": "Tool \"get-sync-status\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "health-check",
+      "rule": "no_description",
+      "detail": "Tool \"health-check\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "get-notes-stats",
+      "rule": "no_description",
+      "detail": "Tool \"get-notes-stats\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "list-attachments",
+      "rule": "no_description",
+      "detail": "Tool \"list-attachments\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "batch-delete-notes",
+      "rule": "no_description",
+      "detail": "Tool \"batch-delete-notes\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "batch-move-notes",
+      "rule": "no_description",
+      "detail": "Tool \"batch-move-notes\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "export-notes-json",
+      "rule": "no_description",
+      "detail": "Tool \"export-notes-json\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "get-note-markdown",
+      "rule": "no_description",
+      "detail": "Tool \"get-note-markdown\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "get-checklist-state",
+      "rule": "no_description",
+      "detail": "Tool \"get-checklist-state\" has no description. LLM will infer behavior entirely from the name — unpredictable tool usage."
+    }
+  ]
+}

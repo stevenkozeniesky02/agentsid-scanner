@@ -1,0 +1,375 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T15:23:36.645Z",
+  "server": {
+    "name": "trello-server",
+    "version": "1.0.0"
+  },
+  "toolCount": 25,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "permissions": "F",
+      "validation": "F",
+      "auth": "B",
+      "hallucination": "D"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 4,
+    "MEDIUM": 36,
+    "LOW": 8,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 11,
+    "mutation": 5,
+    "destructive": 2,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_card_details",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_card_details\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "set_active_board",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"set_active_board\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "set_active_workspace",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"set_active_workspace\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "remove_member_from_card",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"remove_member_from_card\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "create_label",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"create_label\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "update_label",
+      "rule": "dangerous_tool_mutation",
+      "detail": "Tool \"update_label\" classified as mutation — requires permission controls"
+    },
+    {
+      "category": "permissions",
+      "severity": "HIGH",
+      "tool": "delete_label",
+      "rule": "dangerous_tool_destructive",
+      "detail": "Tool \"delete_label\" classified as destructive — requires permission controls"
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_cards_by_list_id",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_cards_by_list_id\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_lists",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_lists\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_lists",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_lists\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_recent_activity",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_recent_activity\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_recent_activity",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_recent_activity\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "add_card_to_list",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"add_card_to_list\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update_card_details",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update_card_details\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "archive_card",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"archive_card\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "move_card",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"move_card\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "add_list_to_board",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"add_list_to_board\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "archive_list",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"archive_list\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_my_cards",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"get_my_cards\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_my_cards",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_my_cards\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "attach_image_to_card",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"attach_image_to_card\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_boards",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"list_boards\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_boards",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_boards\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "set_active_board",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"set_active_board\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_workspaces",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"list_workspaces\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "list_workspaces",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"list_workspaces\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "set_active_workspace",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"set_active_workspace\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "list_boards_in_workspace",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"list_boards_in_workspace\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_active_board_info",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"get_active_board_info\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_active_board_info",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_active_board_info\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_board_members",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_board_members\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_board_members",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_board_members\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "assign_member_to_card",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"assign_member_to_card\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "remove_member_from_card",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"remove_member_from_card\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get_board_labels",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get_board_labels\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_board_labels",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_board_labels\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "create_label",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"create_label\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "update_label",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"update_label\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "delete_label",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"delete_label\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get_card_history",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get_card_history\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "*",
+      "rule": "large_tool_surface",
+      "detail": "Server exposes 25 tools — large attack surface without per-tool permission controls"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_card_details",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"update_card_details\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    },
+    {
+      "category": "hallucination",
+      "severity": "HIGH",
+      "tool": "get_my_cards",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"get_my_cards\" uses vague action words (use) without specific operations. LLMs will interpret this as the broadest possible action on sensitive resources (user)."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get_my_cards",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"get_my_cards\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "list_boards",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"list_boards\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "list_workspaces",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"list_workspaces\" references user without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "update_label",
+      "rule": "vague_description_over_privilege",
+      "detail": "Tool \"update_label\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action."
+    }
+  ]
+}

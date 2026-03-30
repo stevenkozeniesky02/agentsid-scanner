@@ -1,0 +1,276 @@
+{
+  "scanner": {
+    "name": "agentsid-scanner",
+    "version": "0.1.0"
+  },
+  "scannedAt": "2026-03-30T15:13:38.443Z",
+  "server": {
+    "name": "pipedrive-mcp",
+    "version": "1.0.0",
+    "capabilities": {
+      "resources": {},
+      "tools": {},
+      "prompts": {}
+    }
+  },
+  "toolCount": 35,
+  "grade": {
+    "overall": "F",
+    "score": 0,
+    "categories": {
+      "validation": "F",
+      "auth": "B",
+      "permissions": "A",
+      "output": "A",
+      "hallucination": "C"
+    }
+  },
+  "summary": {
+    "CRITICAL": 0,
+    "HIGH": 1,
+    "MEDIUM": 20,
+    "LOW": 12,
+    "INFO": 0
+  },
+  "riskProfile": {
+    "read_only": 35,
+    "mutation": 0,
+    "destructive": 0,
+    "execution": 0,
+    "privilege": 0,
+    "financial": 0
+  },
+  "findings": [
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get-deals",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get-deals\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "search-deals",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"search-deals\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-deal-updates",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"get-deal-updates\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-persons",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"get-persons\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get-persons",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get-persons\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "search-persons",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"search-persons\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-organizations",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"get-organizations\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get-organizations",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get-organizations\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "search-organizations",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"search-organizations\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-pipelines",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"get-pipelines\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get-pipelines",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get-pipelines\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "search-leads",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"search-leads\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "search-all",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"search-all\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-notes",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"get-notes\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get-notes",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get-notes\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get-activities",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get-activities\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-products",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"get-products\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get-products",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get-products\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "search-products",
+      "rule": "unbounded_strings",
+      "detail": "String parameters without length limits or pattern validation in tool \"search-products\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-files",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"get-files\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get-files",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get-files\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-stages",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"get-stages\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get-stages",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get-stages\""
+    },
+    {
+      "category": "validation",
+      "severity": "MEDIUM",
+      "tool": "get-recents",
+      "rule": "empty_schema",
+      "detail": "Schema defined but no properties specified in tool \"get-recents\""
+    },
+    {
+      "category": "validation",
+      "severity": "LOW",
+      "tool": "get-recents",
+      "rule": "no_required_fields",
+      "detail": "No required fields — all input is optional in tool \"get-recents\""
+    },
+    {
+      "category": "auth",
+      "severity": "HIGH",
+      "tool": "*",
+      "rule": "no_auth_tools",
+      "detail": "Server exposes no authentication-related tools — may accept unauthenticated connections"
+    },
+    {
+      "category": "permissions",
+      "severity": "MEDIUM",
+      "tool": "*",
+      "rule": "large_tool_surface",
+      "detail": "Server exposes 35 tools — large attack surface without per-tool permission controls"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "get-files",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"get-files\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "output",
+      "severity": "LOW",
+      "tool": "get-file",
+      "rule": "unfiltered_file_output",
+      "detail": "File reading tool \"get-file\" may output sensitive file contents without filtering"
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get-files",
+      "rule": "missing_scope_boundary",
+      "detail": "Tool \"get-files\" references file without specifying scope boundaries. LLM will attempt to access the broadest possible scope."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get-activities + get-activities-by-person",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get-activities\" and \"get-activities-by-person\" have 70% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get-activities + get-activities-by-organization",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get-activities\" and \"get-activities-by-organization\" have 70% description overlap. LLM may choose between them unpredictably."
+    },
+    {
+      "category": "hallucination",
+      "severity": "MEDIUM",
+      "tool": "get-activities-by-person + get-activities-by-organization",
+      "rule": "conflicting_tool_descriptions",
+      "detail": "Tools \"get-activities-by-person\" and \"get-activities-by-organization\" have 90% description overlap. LLM may choose between them unpredictably."
+    }
+  ]
+}
