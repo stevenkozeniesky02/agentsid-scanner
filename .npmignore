@@ -1,0 +1,8 @@
+reports/
+scripts/
+tests/
+data/
+*.test.mjs
+*.spec.mjs
+.env
+.env.*
