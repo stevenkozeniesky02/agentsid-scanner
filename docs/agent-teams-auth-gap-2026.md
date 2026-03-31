@@ -1,10 +1,8 @@
-# The Multi-Agent Auth Gap: Four Security Gaps in Agent Orchestration
+# The Multi-Agent Auth Gap: Four Structural Security Gaps in Agent Orchestration
 
-**An analysis of agent-to-agent security in multi-agent AI systems**
+**An industry-wide analysis of agent-to-agent security across five major frameworks**
 
 AgentsID Research · March 2026
-
-> **Update:** This report has been updated with live behavioral evidence collected by spawning an actual Agent Team and observing the mailbox structure directly. All findings in Section 2 are now backed by observable artifacts.
 
 ---
 
@@ -12,7 +10,9 @@ AgentsID Research · March 2026
 
 Our previous report, *The State of MCP Server Security — 2026*, documented the security gap at the tool-definition layer: MCP servers expose tools with no per-tool authorization, no input schema validation, and no agent identity mechanism. This report documents a second, deeper gap: the security architecture of multi-agent systems themselves.
 
-Analysis of the Claude Code Agent Teams architecture reveals four structural auth gaps that exist regardless of MCP server security posture: (1) agent identities are display names, not cryptographic identities; (2) credentials are inherited wholesale by sub-agents, not scoped; (3) agent-to-agent communication is mediated by filesystem trust, not cryptographic verification; and (4) there is no mechanism for an orchestrator agent to scope a sub-agent's tool access.
+Analysis across five production multi-agent frameworks — Claude Code Agent Teams, Microsoft AutoGen, CrewAI, LangGraph, and OpenAI Agents SDK — reveals four structural auth gaps that appear in every framework examined: (1) agent identities are display names or role strings, not cryptographic identities; (2) credentials are inherited by sub-agents without scoping; (3) agent-to-agent communication is unauthenticated; and (4) there is no mechanism to scope a sub-agent's tool access at delegation time.
+
+These gaps are not implementation bugs in any single product. They reflect a consistent design pattern across the industry: inter-agent security is treated as the developer's responsibility, with no enforcement primitives in the framework itself. This report documents each gap, provides live behavioral evidence from Claude Code Agent Teams, maps the pattern across frameworks, and cites two production CVEs (CVE-2025-68664 CVSS 9.3, CrewAI CVSS 9.2) that demonstrate real-world exploitation of these structural properties.
 
 These gaps are not implementation bugs — they are design prioritizations. The architecture explicitly accepts several of these as known risks. This report describes each gap, its exploitability, and the authorization layer that closes it.
 
@@ -330,7 +330,90 @@ The MCP specification's OAuth 2.1 framework (March 2025) addresses transport-lev
 
 ---
 
-## 6. Recommendations
+## 6. Industry-Wide Pattern: Five Frameworks, Same Four Gaps
+
+The four gaps documented for Claude Code Agent Teams are not unique to that architecture. Comparative analysis across five production multi-agent frameworks reveals the same structural pattern in each.
+
+### 6.1 Agent Identity
+
+| Framework | Identity Type | Cryptographic? |
+|-----------|--------------|----------------|
+| Claude Code Agent Teams | `name@team` string | No |
+| Microsoft AutoGen | `{type, key}` proto strings | No |
+| CrewAI | Role string (e.g., `"Researcher"`) | No |
+| LangGraph | Graph node name string | No |
+| OpenAI Agents SDK | Name string (default: `"Agent"`) | No |
+| Microsoft Semantic Kernel | `{id, name, type}` strings | No (Entra = external Azure layer) |
+
+Every framework represents agent identity as a human-readable string. None issue cryptographic tokens at spawn time. The OpenAI Swarm default agent name is literally `"Agent"` — name collisions are not just possible, they are the default state.
+
+### 6.2 Message Authentication
+
+| Framework | Sender Field | Signed? | Verification? |
+|-----------|-------------|---------|---------------|
+| Claude Code Agent Teams | `from` string (self-declared) | No | No |
+| Microsoft AutoGen | `source: AgentId` (optional in proto) | No | No |
+| CrewAI | Not present (LLM tool call) | No | No |
+| LangGraph | Not present (shared state mutation) | No | No |
+| OpenAI Agents SDK | `sender: agent.name` (runtime-assigned) | No | No |
+| Microsoft Semantic Kernel | Execution context only (no field) | No | No |
+
+AutoGen's protobuf definition marks the `source` field as `optional` — messages can legally arrive with no declared sender whatsoever. CrewAI and LangGraph have no inter-agent message envelope at all; agent communication is LLM function calls and shared state mutations respectively.
+
+### 6.3 Credential and Tool Scoping
+
+No framework provides a mechanism for a parent agent to restrict a child agent's tool access at delegation time. The consistent pattern:
+
+- **AutoGen**: Official documentation states *"the authentication part should be application code."*
+- **CrewAI**: `allow_delegation: False` (now default) controls whether delegation occurs at all — binary, not scoped. Credentials pass as environment variables across the full agent context.
+- **LangGraph**: Tools bound at graph construction time. No runtime enforcement. Documented: *"once one agent hands work to another, there isn't a great default story for scoped delegation and tool-level enforcement."*
+- **OpenAI Agents SDK**: Tools bound at instantiation. Official docs explicitly state: *"Handoffs run through the SDK's handoff pipeline rather than the normal function-tool pipeline, so **tool guardrails do not apply to the handoff call itself**."*
+- **Semantic Kernel**: Per-agent `Kernel` instances approximate tool isolation but are set at construction, not enforced at runtime. Design Decision 0032: *"managing secrets and api-keys is **out-of-scope**."*
+
+### 6.4 Production CVEs Confirming the Structural Risk
+
+The gaps above are not theoretical. Two production CVEs demonstrate exploitation of these structural properties:
+
+**CVE-2025-68664 "LangGrinch" — CVSS 9.3** (langchain-core < 0.3.81, patched December 2025)
+
+Root cause: LangChain's `dumps()`/`dumpd()` serialization did not escape dicts containing `"lc"` keys — the internal LangChain object marker. Attacker-controlled data in an upstream LLM response (e.g., in `additional_kwargs` or `response_metadata`) could inject a fake `"lc"` structure:
+
+```python
+attacker_payload = {
+    "user_data": {
+        "lc": 1,
+        "type": "secret",
+        "id": ["OPENAI_API_KEY"]
+    }
+}
+serialized = dumps(attacker_payload)      # Did NOT escape the lc marker
+deserialized = load(serialized, secrets_from_env=True)
+print(deserialized["user_data"])          # Leaked actual API key from env
+```
+
+Attack chain: upstream agent's LLM output → contains injected `"lc"` structure → downstream agent deserializes it → API keys extracted or arbitrary class instantiated. This is Gap 2 (ambient credential access) exploited via Gap 3 (unauthenticated inter-agent data flow). 12 vulnerable execution paths identified.
+
+**CrewAI Internal GitHub Token Exposure — CVSS 9.2** (disclosed November 2025, Noma Security)
+
+Root cause: Static credentials passed as environment variables across the full agent execution context, combined with improper exception handling in a provisioning flow. An internal admin GitHub token with full repository access was leaked in an exception response. The structural cause — credentials ambient across the entire agent context with no per-agent scoping — is Gap 2.
+
+### 6.5 The Consistent Industry Response
+
+Every framework examined reaches the same conclusion in its documentation:
+
+> *"Developers are encouraged to implement authentication, security and other features required for deployed applications."* — AutoGen
+
+> *"The authentication part should be application code."* — AutoGen GitHub Discussion #4656
+
+> *"Managing secrets and api-keys is out-of-scope."* — Semantic Kernel Decision 0032
+
+> *"Guardrails should be coupled with robust authentication and authorization protocols."* — OpenAI Agents SDK
+
+The frameworks provide agent orchestration plumbing. Security is fully delegated to the application layer. No framework provides enforcement primitives — cryptographic identity, message signing, scoped delegation — as first-class features.
+
+---
+
+## 7. Recommendations
 
 ### For Multi-Agent System Builders
 
@@ -354,36 +437,49 @@ The MCP specification's OAuth 2.1 framework (March 2025) addresses transport-lev
 
 ---
 
-## 7. Conclusion
+## 8. Conclusion
 
-Our prior report found that 71% of MCP servers scored F on security — a gap at the tool-definition layer. This report identifies a second layer of gap: the agent coordination layer above MCP, where multi-agent systems orchestrate tool calls across agent boundaries.
+Our prior report found that 71% of MCP servers scored F on security — a gap at the tool-definition layer. This report identifies a second, deeper layer: the agent coordination layer above MCP, where multi-agent systems orchestrate tool calls across agent boundaries.
 
-The four gaps in the Agent Teams architecture — display-name identities, ambient credential inheritance, filesystem-trust mailboxes, and no per-tool scoping — are not unique to Claude Code. They reflect the current state of the art in multi-agent coordination: a young architecture that has not yet developed the identity and authorization infrastructure that service mesh architectures took years to build for microservices.
+The four gaps — display-name identities, ambient credential inheritance, unauthenticated inter-agent communication, and no per-tool scoping at delegation time — appear consistently across every major multi-agent framework examined. This is not a finding about any single vendor. It is a finding about the current state of the art.
 
-The trajectory is clear. The same evolution that took microservices from "services calling each other via HTTP" to "mTLS, service accounts, RBAC, and distributed audit trails" will happen for agent orchestration. The question is how many production incidents occur before that infrastructure exists.
+Two production CVEs confirm that these are not theoretical risks. CVE-2025-68664 demonstrated that unauthenticated inter-agent data flow enables API key extraction via serialization injection. The CrewAI credential exposure (CVSS 9.2) demonstrated that ambient credential inheritance converts a single exception handler bug into a full admin token leak.
 
-The MCP specification defines how agents discover and call tools. A future revision should define how agents identify themselves to each other, how permissions narrow across delegation chains, and what a verifiable agent-level audit entry looks like. Until that revision exists, the authorization layer must be built at the application level — in the proxy between the agent and the tool.
+Our live injection test against Claude Code Agent Teams produced a finding that was more instructive than a simple success or failure: the model's safety training blocked direct payload execution, but could not prevent identity confusion. The orchestrator terminated a legitimate agent based on forged messages — denial of service via false attribution, with no technical enforcement mechanism to distinguish injected messages from legitimate ones.
 
----
+The same evolution that took microservices from "services calling each other via HTTP" to mTLS, service accounts, RBAC, and distributed audit trails is coming for agent orchestration. The question is whether that infrastructure is built proactively or after a sequence of production incidents forces the issue.
 
-## Methodology Note
-
-The findings in this report are based on direct behavioral observation of Claude Code v2.1.87 Agent Teams. Evidence was collected by:
-
-1. Spawning a live team (`test-team`) with one member (`researcher`) using the experimental Agent Teams feature (`CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`)
-2. Inspecting the filesystem artifacts written to `~/.claude/teams/test-team/` — config.json and inbox files
-3. Writing a message to the team-lead's inbox from an external process claiming to be from a non-existent identity (`anthropic-system`)
-4. Observing that the message was accepted into the inbox without rejection, verification, or error
-
-All artifacts are reproducible by anyone with Claude Code v2.1.87 and the Agent Teams flag enabled. No proprietary source code was used or referenced in this analysis.
-
-The injection test confirmed that the only defense against mailbox injection is the receiving agent's model-level reasoning — the team-lead in our test identified the message as suspicious because it self-described as an injection. A real attack payload would not do this.
+The MCP specification defines how agents discover and call tools. A future revision — or a parallel agent coordination specification — should define how agents identify themselves to each other, how permissions narrow across delegation chains, and what a verifiable agent-level audit entry looks like. Until that specification exists, the enforcement layer must be built at the application level, in the proxy between the agent and the tool.
 
 ---
 
-## Related Work
+## Methodology
 
-- *The State of MCP Server Security — 2026* — AgentsID Research, March 2026. github.com/stevenkozeniesky02/agentsid-scanner/blob/master/docs/state-of-agent-security-2026.md
+**Claude Code Agent Teams (live behavioral testing):**
+Evidence collected by spawning a live `test-team` with Claude Code v2.1.87 (`CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`), inspecting filesystem artifacts at `~/.claude/teams/test-team/`, and performing three injection tests against a running team. All artifacts (config.json schema, inbox message schema, injection results) are reproducible by anyone with Claude Code v2.1.87 and the Agent Teams flag enabled. No proprietary source code was used.
+
+**Framework comparison:**
+Evidence from publicly available documentation, GitHub source code, GitHub issues and discussions, security advisories, and third-party security research. Sources cited in the References section.
+
+---
+
+## References
+
+**CVEs and Security Advisories**
+- CVE-2025-68664 "LangGrinch" — langchain-core deserialization vulnerability, CVSS 9.3. [GitHub Advisory GHSA-c67j-w6g6-q2cm](https://github.com/advisories/GHSA-c67j-w6g6-q2cm)
+- CVE-2025-68665 — LangChain JS companion vulnerability, CVSS 8.6.
+- CrewAI internal GitHub token exposure, CVSS 9.2 — [Noma Security disclosure](https://noma.security/blog/uncrew-the-risk-behind-a-leaked-internal-github-token-at-crewai/)
+
+**Framework Documentation**
+- AutoGen Agent Identity: microsoft.github.io/autogen/stable/user-guide/core-user-guide/core-concepts/agent-identity-and-lifecycle.html
+- AutoGen Issue #4103 (insecure gRPC channel): github.com/microsoft/autogen/issues/4103
+- AutoGen Discussion #4656 (auth delegation): github.com/microsoft/autogen/discussions/4656
+- OpenAI Agents SDK — Handoffs (guardrail gap): openai.github.io/openai-agents-python/handoffs/
+- Semantic Kernel Decision 0032 (secrets out-of-scope): github.com/microsoft/semantic-kernel/blob/main/docs/decisions/0032-agents.md
+- Semantic Kernel AgentGroupChat.cs (AllowDangerouslySetContent): github.com/microsoft/semantic-kernel/blob/main/dotnet/src/Agents/Core/AgentGroupChat.cs
+
+**Related AgentsID Research**
+- *The State of MCP Server Security — 2026* — AgentsID Research, March 2026
 - AgentsID Permission Specification — agentsid.dev/spec
 - MCP Authorization Specification — modelcontextprotocol.io
 
