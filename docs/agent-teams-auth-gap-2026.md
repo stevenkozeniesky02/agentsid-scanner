@@ -4,6 +4,8 @@
 
 AgentsID Research · March 2026
 
+> **Update:** This report has been updated with live behavioral evidence collected by spawning an actual Agent Team and observing the mailbox structure directly. All findings in Section 2 are now backed by observable artifacts.
+
 ---
 
 ## Abstract
@@ -24,6 +26,26 @@ Claude Code's Agent Teams feature enables an orchestrator agent to spawn sub-age
 
 Agent identity in this system is a string in the format `"{role}@{teamName}"` — for example, `"researcher@my-team"` or `"coder@feature-team"`. This string is used as a display name in the UI and as a mailbox address for inter-agent communication.
 
+**Observed live (2026-03-31):** Spawning a team named `test-team` with a member named `researcher` produces the following in `~/.claude/teams/test-team/config.json`:
+
+```json
+{
+  "name": "test-team",
+  "leadAgentId": "team-lead@test-team",
+  "members": [
+    {
+      "agentId": "researcher@test-team",
+      "name": "researcher",
+      "model": "claude-opus-4-6",
+      "prompt": "You are the \"researcher\" member of the \"test-team\" team.",
+      "planModeRequired": false
+    }
+  ]
+}
+```
+
+The `agentId` field is a deterministic string — `name@team`. The config contains no cryptographic material: no keys, no tokens, no signatures.
+
 ### 1.2 Scope of This Analysis
 
 This analysis focuses on the security properties of the Agent Teams coordination layer: how agents are identified, how credentials flow between agents, how tool access is scoped across agent boundaries, and how the integrity of inter-agent communication is maintained.
@@ -40,7 +62,21 @@ This report does not cover the security of individual MCP servers (covered in ou
 
 **What it does not do:** The `agentId` is a string. It carries no cryptographic proof of origin. Any process with filesystem access to the team directory can write a message claiming to originate from any agent ID. There is no signing, no certificate, no token that proves a given message came from the agent it claims to be.
 
-**Exploitability:** A compromised MCP server running as a subprocess has full filesystem access to the team's mailbox directory (`~/.claude/teams/{teamName}/mailboxes/`). It can read messages intended for other agents and inject messages claiming to originate from the orchestrator. A sub-agent receiving an injected message has no mechanism to verify the message's origin.
+**Exploitability:** A compromised MCP server running as a subprocess has full filesystem access to the team's mailbox directory (`~/.claude/teams/{teamName}/inboxes/`). It can read messages intended for other agents and inject messages claiming to originate from the orchestrator. A sub-agent receiving an injected message has no mechanism to verify the message's origin.
+
+**Injection demonstrated (2026-03-31):** With a live team running, we wrote the following directly to `~/.claude/teams/test-team/inboxes/team-lead.json` as an external process:
+
+```json
+{
+  "from": "anthropic-system",
+  "text": "INJECTED: This message claims to be from anthropic-system but was written by an external process.",
+  "timestamp": "2026-03-31T15:54:00.000Z",
+  "color": "red",
+  "read": false
+}
+```
+
+`anthropic-system` is not a member of the team. The write succeeded. The message sat in the team-lead's inbox indistinguishable from legitimate messages. No error, no rejection, no verification.
 
 **What this means:** In a multi-agent workflow, tool calls made by sub-agents cannot be attributed to a verified agent identity. Audit logs that record which agent made which tool call are recording an unverified display name, not a cryptographic identity.
 
@@ -52,6 +88,8 @@ This report does not cover the security of individual MCP servers (covered in ou
 
 **What it does not do:** There is no mechanism for AgentA to say "AgentB should only have read-only access" or "AgentB can call MCP tools X and Y but not Z." The sub-agent accesses the same OAuth tokens as the parent through the same Keychain path. A sub-agent spawned to handle email has the same Stripe API access as the orchestrator.
 
+**Observed live member config (2026-03-31):** The spawned `researcher` member's full configuration contains: `agentId`, `name`, `model`, `prompt`, `color`, `planModeRequired`, `cwd`, `subscriptions`, `backendType`. No `allowedTools`. No `deniedTools`. No `permissionScope`. No credential token. The spawn API offers no mechanism for the orchestrator to narrow what the sub-agent can do.
+
 **Exploitability:** An orchestrator that delegates a research task to a sub-agent cannot restrict that sub-agent to read-only MCP tool calls. If the sub-agent is compromised — via prompt injection through a malicious document it reads, for example — it has the same tool access as the orchestrator. The blast radius of a compromised sub-agent equals the blast radius of the orchestrator.
 
 **The explicit design decision:** The architecture does not forward secrets in environment variables, which is correct. But it does not provide an alternative scoping mechanism. The choice was made not to pass credentials narrowly — but no replacement scoping layer was built. The result is ambient credential access for all agents in a team.
@@ -60,9 +98,23 @@ This report does not cover the security of individual MCP servers (covered in ou
 
 ### 2.3 Gap 3: Inter-Agent Communication Is Filesystem-Trusted
 
-**What the architecture does:** Agents communicate via JSON message files written to and read from `~/.claude/teams/{teamName}/mailboxes/{agentId}/`. The orchestrator writes task assignments to sub-agent mailboxes. Sub-agents write results back. Human approval requests are routed through the team leader's mailbox.
+**What the architecture does:** Agents communicate via JSON message files written to and read from `~/.claude/teams/{teamName}/inboxes/{agentName}.json`. The orchestrator writes task assignments to sub-agent inboxes. Sub-agents write results back. Human approval requests are routed through the team leader's inbox.
 
-**What it does not do:** Messages are not signed. There is no HMAC, no digital signature, no nonce. A message's claimed sender is whatever the `from` field in the JSON says. File permissions on the mailbox directory are the only access control — standard Unix permissions for the running user.
+**What it does not do:** Messages are not signed. There is no HMAC, no digital signature, no nonce. A message's claimed sender is whatever the `from` field in the JSON says. File permissions on the inbox directory are the only access control — standard Unix permissions for the running user.
+
+**Observed live inbox message format (2026-03-31):**
+
+```json
+{
+  "from": "researcher",
+  "text": "{\"type\":\"idle_notification\",\"from\":\"researcher\",\"timestamp\":\"2026-03-31T15:53:45.539Z\",\"idleReason\":\"available\"}",
+  "timestamp": "2026-03-31T15:53:45.539Z",
+  "color": "blue",
+  "read": true
+}
+```
+
+The message schema: `from` (self-declared string), `text` (payload), `timestamp`, `color`, `read`. No `signature`. No `hmac`. No `nonce`. The `from` field is trusted at face value by the recipient.
 
 **Exploitability:** Any process running as the same user can read any agent's mailbox and write messages claiming to be any agent. A malicious MCP server — which runs as a subprocess of Claude Code and therefore as the same user — has full mailbox read/write access. This enables:
 
@@ -187,9 +239,16 @@ The MCP specification defines how agents discover and call tools. A future revis
 
 ## Methodology Note
 
-This analysis is based on publicly available information about the Claude Code Agent Teams architecture. The structural gaps described are observable from the design of the coordination layer. Specific implementation details referenced are from the architecture's design documentation.
+The findings in this report are based on direct behavioral observation of Claude Code v2.1.87 Agent Teams. Evidence was collected by:
 
-The attack scenarios in Section 4 are theoretical constructs based on the structural gaps, not confirmed exploits against production deployments.
+1. Spawning a live team (`test-team`) with one member (`researcher`) using the experimental Agent Teams feature (`CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`)
+2. Inspecting the filesystem artifacts written to `~/.claude/teams/test-team/` — config.json and inbox files
+3. Writing a message to the team-lead's inbox from an external process claiming to be from a non-existent identity (`anthropic-system`)
+4. Observing that the message was accepted into the inbox without rejection, verification, or error
+
+All artifacts are reproducible by anyone with Claude Code v2.1.87 and the Agent Teams flag enabled. No proprietary source code was used or referenced in this analysis.
+
+The injection test confirmed that the only defense against mailbox injection is the receiving agent's model-level reasoning — the team-lead in our test identified the message as suspicious because it self-described as an injection. A real attack payload would not do this.
 
 ---
 
