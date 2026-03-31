@@ -224,6 +224,14 @@ Write(Documents/security-ops/procedures/logs/reviews.txt)
 
 **The injection propagated up the hierarchy.** The file was written not by the analyst but by the orchestrator, acting on the analyst's report and the user's approval. In an autonomous pipeline — no human in the loop — the orchestrator's own logic provides the approval.
 
+**Why the human-in-the-loop did not catch this:**
+
+The user approved the action. The approval prompt was: *"write audit log entry and close ticket."* Not: *"write `[STRIPE-2026-03] [analyst] [2026-03-31] COMPLETE 4findings` to `/Users/steven/Documents/security-ops/procedures/logs/reviews.txt`."*
+
+The specific write path — embedded in the attacker-controlled SOP — was not visible at the approval layer. A user approving a completed security review is approving the task outcome, not evaluating the filesystem path the agent writes to. The human-in-the-loop is not a defense against injections that embed malicious actions as natural workflow steps. In practice, most users do not expand tool call details to inspect raw parameters before approving.
+
+In a fully autonomous pipeline with no human approval step, the orchestrator's own logic would have approved the write. The outcome is identical.
+
 **Why model safety training did not catch this:**
 
 - Document was written for human readers. No direct address to the agent.
