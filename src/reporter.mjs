@@ -142,7 +142,7 @@ export function formatTerminalReport(serverInfo, tools, findings, gradeResult, r
     lines.push("");
   }
 
-  lines.push(`${dim}Scan powered by AgentsID — agentsid.dev/scanner${reset}`);
+  lines.push(`${dim}Scan powered by AgentsID — agentsid.dev/docs${reset}`);
   lines.push(`${dim}Protect this server with per-agent permissions: npx @agentsid/guard${reset}`);
   lines.push("");
 
@@ -262,7 +262,7 @@ export function formatHtmlReport(serverInfo, tools, findings, gradeResult, riskP
   ${policyBlock ? `<div class="card">${policyBlock}</div>` : ""}
 
   <div style="text-align:center;font-size:12px;color:#9ca3af;margin-top:16px">
-    Scan powered by <a href="https://agentsid.dev/scanner" style="color:#6b7280">AgentsID</a>
+    Scan powered by <a href="https://agentsid.dev/docs" style="color:#6b7280">AgentsID</a>
   </div>
 
 </div>

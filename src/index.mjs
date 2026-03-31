@@ -87,7 +87,7 @@ Examples:
   agentsid-scan --report -- node my-server.mjs
   agentsid-scan --json -- node my-server.mjs > report.json
 
-Learn more: https://agentsid.dev/scanner
+Learn more: https://agentsid.dev/docs
   `);
 }
 
