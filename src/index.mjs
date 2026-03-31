@@ -18,13 +18,17 @@
  *   agentsid-scan --json -- python -m my_mcp_server > report.json
  */
 
+import fs from "fs";
 import { scanStdio, scanHttp } from "./scanner.mjs";
+import { formatTerminalReport, formatHtmlReport } from "./reporter.mjs";
 
 // ─── Parse Args ───
 
 const args = process.argv.slice(2);
 let url = null;
 let json = false;
+let policy = false;
+let report = false;
 let command = null;
 let env = {};
 
@@ -33,6 +37,10 @@ for (let i = 0; i < args.length; i++) {
     url = args[++i];
   } else if (args[i] === "--json") {
     json = true;
+  } else if (args[i] === "--policy") {
+    policy = true;
+  } else if (args[i] === "--report") {
+    report = true;
   } else if (args[i] === "--env" && args[i + 1]) {
     const [k, v] = args[++i].split("=");
     env[k] = v;
@@ -56,13 +64,18 @@ AgentsID Security Scanner v0.1.0
 The Lighthouse of agent security.
 
 Usage:
-  agentsid-scan -- <command>         Scan a local MCP server (stdio)
-  agentsid-scan --url <url>          Scan a remote MCP server (HTTP)
-  agentsid-scan --json -- <command>  Output JSON report
+  agentsid-scan -- <command>                     Scan a local MCP server (stdio)
+  agentsid-scan --url <url>                      Scan a remote MCP server (HTTP)
+  agentsid-scan --json -- <command>              Output JSON report
+  agentsid-scan --policy -- <command>            Scan + write agentsid.json policy file
+  agentsid-scan --report -- <command>            Scan + write report.html (air-gap safe)
+  agentsid-scan --policy --report -- <command>   Write both agentsid.json and report.html
 
 Options:
   --url <url>         Remote MCP server URL
   --json              Output JSON instead of terminal report
+  --policy            Generate agentsid.json policy file after scan
+  --report            Generate self-contained report.html after scan
   --env KEY=VALUE     Set environment variable for the server
   --help, -h          Show this help
 
@@ -70,6 +83,8 @@ Examples:
   agentsid-scan -- npx @modelcontextprotocol/server-filesystem ./
   agentsid-scan -- npx @playwright/mcp-server
   agentsid-scan --url https://mcp.example.com/mcp
+  agentsid-scan --policy -- node my-server.mjs
+  agentsid-scan --report -- node my-server.mjs
   agentsid-scan --json -- node my-server.mjs > report.json
 
 Learn more: https://agentsid.dev/scanner
@@ -91,14 +106,57 @@ async function main() {
   }
 
   try {
-    let report;
+    // --policy and --report need JSON internally to extract structured data.
+    const useJson = json || policy || report;
+
+    let rawReport;
     if (url) {
-      report = await scanHttp(url, { json, timeout: 30000 });
+      rawReport = await scanHttp(url, { json: useJson, policy, timeout: 30000 });
     } else {
-      report = await scanStdio(command, { env, json, timeout: 15000 });
+      rawReport = await scanStdio(command, { env, json: useJson, policy, timeout: 15000 });
     }
 
-    console.log(report);
+    if (policy || report) {
+      const parsed = JSON.parse(rawReport);
+
+      if (policy && parsed.mapPolicy) {
+        fs.writeFileSync("agentsid.json", JSON.stringify(parsed.mapPolicy, null, 2));
+        console.error("✓ agentsid.json written");
+      }
+
+      if (report) {
+        const { server, toolCount, findings, grade: g, riskProfile, mapPolicy: mp } = parsed;
+        const gradeResult = {
+          letter: g.overall,
+          score: g.score,
+          categoryGrades: g.categories,
+          totalFindings: findings.length,
+          critical: findings.filter((f) => f.severity === "CRITICAL").length,
+          high: findings.filter((f) => f.severity === "HIGH").length,
+          counts: findings.reduce((acc, f) => ({ ...acc, [f.severity]: (acc[f.severity] || 0) + 1 }), {}),
+        };
+        const htmlOut = formatHtmlReport(server, Array(toolCount).fill({}), findings, gradeResult, riskProfile, mp);
+        fs.writeFileSync("report.html", htmlOut);
+        console.error("✓ report.html written");
+      }
+
+      if (!json) {
+        const { server, toolCount, findings, grade: g, riskProfile } = parsed;
+        const gradeResult = {
+          letter: g.overall,
+          score: g.score,
+          categoryGrades: g.categories,
+          totalFindings: findings.length,
+          critical: findings.filter((f) => f.severity === "CRITICAL").length,
+          high: findings.filter((f) => f.severity === "HIGH").length,
+          counts: findings.reduce((acc, f) => ({ ...acc, [f.severity]: (acc[f.severity] || 0) + 1 }), {}),
+        };
+        console.log(formatTerminalReport(server, Array(toolCount).fill({}), findings, gradeResult, riskProfile));
+        return;
+      }
+    }
+
+    console.log(rawReport);
   } catch (err) {
     console.error(`Scan failed: ${err.message}`);
     process.exit(1);

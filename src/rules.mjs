@@ -101,7 +101,8 @@ export function scanToolNames(tools) {
     const name = tool.name || "";
 
     for (const rule of DANGEROUS_TOOL_PATTERNS) {
-      if (rule.pattern.test(name)) {
+      const match = rule.pattern.exec(name);
+      if (match) {
         riskProfile[rule.risk] = (riskProfile[rule.risk] || 0) + 1;
 
         if (rule.severity !== "INFO") {
@@ -111,6 +112,7 @@ export function scanToolNames(tools) {
             tool: name,
             rule: `dangerous_tool_${rule.risk}`,
             detail: `Tool "${name}" classified as ${rule.risk} — requires permission controls`,
+            evidence: match[0],
           });
         }
       }

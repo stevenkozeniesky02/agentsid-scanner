@@ -15,7 +15,8 @@ import {
   scanHallucinationRisks,
 } from "./rules.mjs";
 import { grade } from "./grader.mjs";
-import { formatTerminalReport, formatJsonReport } from "./reporter.mjs";
+import { formatTerminalReport, formatJsonReport, formatHtmlReport } from "./reporter.mjs";
+import { buildMapPolicy, enrichDescription } from "./policy.mjs";
 
 /**
  * Scan an MCP server by spawning it as a subprocess (stdio transport).
@@ -23,7 +24,7 @@ import { formatTerminalReport, formatJsonReport } from "./reporter.mjs";
  * @param {object} options — { env, timeout, json }
  */
 export async function scanStdio(command, options = {}) {
-  const { env = {}, timeout = 30000, json = false } = options;
+  const { env = {}, timeout = 30000, json = false, policy = false, html = false } = options;
 
   const parts = command.split(/\s+/);
   const proc = spawn(parts[0], parts.slice(1), {
@@ -34,7 +35,7 @@ export async function scanStdio(command, options = {}) {
   const result = await communicateWithServer(proc, timeout);
   proc.kill();
 
-  return generateReport(result.serverInfo, result.tools, json);
+  return generateReport(result.serverInfo, result.tools, json, policy, html);
 }
 
 /**
@@ -43,7 +44,7 @@ export async function scanStdio(command, options = {}) {
  * @param {object} options — { headers, timeout, json }
  */
 export async function scanHttp(url, options = {}) {
-  const { headers = {}, timeout = 30000, json = false } = options;
+  const { headers = {}, timeout = 30000, json = false, policy = false, html = false } = options;
 
   // For HTTP transport, we send JSON-RPC over HTTP
   const initResponse = await fetchRpc(url, "initialize", {
@@ -61,7 +62,7 @@ export async function scanHttp(url, options = {}) {
   const toolsResponse = await fetchRpc(url, "tools/list", {}, headers, timeout);
   const tools = toolsResponse?.result?.tools || [];
 
-  return generateReport(serverInfo, tools, json);
+  return generateReport(serverInfo, tools, json, policy, html);
 }
 
 /**
@@ -71,9 +72,9 @@ export async function scanHttp(url, options = {}) {
  * @param {object} options — { serverName, json }
  */
 export function scanToolDefinitions(tools, options = {}) {
-  const { serverName = "static-analysis", json = false } = options;
+  const { serverName = "static-analysis", json = false, policy = false, html = false } = options;
   const serverInfo = { name: serverName, version: "static" };
-  return generateReport(serverInfo, tools, json);
+  return generateReport(serverInfo, tools, json, policy, html);
 }
 
 // ─── Internal ───
@@ -178,7 +179,7 @@ async function fetchRpc(url, method, params, headers, timeout) {
   }
 }
 
-function generateReport(serverInfo, tools, json) {
+function generateReport(serverInfo, tools, json, includePolicy, html) {
   // Run all scan rules
   const descriptionFindings = scanToolDescriptions(tools);
   const { findings: nameFindings, riskProfile } = scanToolNames(tools);
@@ -200,9 +201,21 @@ function generateReport(serverInfo, tools, json) {
   // Grade
   const gradeResult = grade(allFindings);
 
+  // Build policy if requested
+  const mapPolicy = includePolicy ? buildMapPolicy(allFindings) : null;
+
+  // Enrich finding descriptions
+  const enrichedFindings = allFindings.map((f) => ({
+    ...f,
+    detail: enrichDescription(f.rule, f.tool, f.detail),
+  }));
+
   // Format report
   if (json) {
-    return formatJsonReport(serverInfo, tools, allFindings, gradeResult, riskProfile);
+    return formatJsonReport(serverInfo, tools, enrichedFindings, gradeResult, riskProfile, mapPolicy);
   }
-  return formatTerminalReport(serverInfo, tools, allFindings, gradeResult, riskProfile);
+  if (html) {
+    return formatHtmlReport(serverInfo, tools, enrichedFindings, gradeResult, riskProfile, mapPolicy);
+  }
+  return formatTerminalReport(serverInfo, tools, enrichedFindings, gradeResult, riskProfile, mapPolicy);
 }
