@@ -29,6 +29,7 @@ let url = null;
 let json = false;
 let policy = false;
 let report = false;
+let audit = false;
 let command = null;
 let env = {};
 
@@ -41,6 +42,8 @@ for (let i = 0; i < args.length; i++) {
     policy = true;
   } else if (args[i] === "--report") {
     report = true;
+  } else if (args[i] === "--audit") {
+    audit = true;
   } else if (args[i] === "--env" && args[i + 1]) {
     const [k, v] = args[++i].split("=");
     env[k] = v;
@@ -69,13 +72,15 @@ Usage:
   agentsid-scan --json -- <command>              Output JSON report
   agentsid-scan --policy -- <command>            Scan + write agentsid.json policy file
   agentsid-scan --report -- <command>            Scan + write report.html (air-gap safe)
-  agentsid-scan --policy --report -- <command>   Write both agentsid.json and report.html
+  agentsid-scan --audit -- <command>             Scan + check supply chain (npm advisories + known malicious)
+  agentsid-scan --policy --report --audit -- <command>   Full scan with all outputs
 
 Options:
   --url <url>         Remote MCP server URL
   --json              Output JSON instead of terminal report
   --policy            Generate agentsid.json policy file after scan
   --report            Generate self-contained report.html after scan
+  --audit             Check dependencies for known vulnerabilities and malicious packages
   --env KEY=VALUE     Set environment variable for the server
   --help, -h          Show this help
 
@@ -85,6 +90,7 @@ Examples:
   agentsid-scan --url https://mcp.example.com/mcp
   agentsid-scan --policy -- node my-server.mjs
   agentsid-scan --report -- node my-server.mjs
+  agentsid-scan --audit -- npx @some/mcp-server
   agentsid-scan --json -- node my-server.mjs > report.json
 
 Learn more: https://agentsid.dev/docs
@@ -109,11 +115,15 @@ async function main() {
     // --policy and --report need JSON internally to extract structured data.
     const useJson = json || policy || report;
 
+    if (audit && !json) {
+      console.error("   Auditing supply chain...");
+    }
+
     let rawReport;
     if (url) {
       rawReport = await scanHttp(url, { json: useJson, policy, timeout: 30000 });
     } else {
-      rawReport = await scanStdio(command, { env, json: useJson, policy, timeout: 15000 });
+      rawReport = await scanStdio(command, { env, json: useJson, policy, audit, timeout: 15000 });
     }
 
     if (policy || report) {

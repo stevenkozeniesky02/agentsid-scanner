@@ -17,6 +17,7 @@ import {
 import { grade } from "./grader.mjs";
 import { formatTerminalReport, formatJsonReport, formatHtmlReport } from "./reporter.mjs";
 import { buildMapPolicy, enrichDescription } from "./policy.mjs";
+import { auditSupplyChain } from "./audit.mjs";
 
 /**
  * Scan an MCP server by spawning it as a subprocess (stdio transport).
@@ -24,7 +25,7 @@ import { buildMapPolicy, enrichDescription } from "./policy.mjs";
  * @param {object} options — { env, timeout, json }
  */
 export async function scanStdio(command, options = {}) {
-  const { env = {}, timeout = 30000, json = false, policy = false, html = false } = options;
+  const { env = {}, timeout = 30000, json = false, policy = false, html = false, audit = false } = options;
 
   const parts = command.split(/\s+/);
   const proc = spawn(parts[0], parts.slice(1), {
@@ -35,7 +36,8 @@ export async function scanStdio(command, options = {}) {
   const result = await communicateWithServer(proc, timeout);
   proc.kill();
 
-  return generateReport(result.serverInfo, result.tools, json, policy, html);
+  const supplyChainFindings = audit ? await auditSupplyChain(command) : [];
+  return generateReport(result.serverInfo, result.tools, json, policy, html, supplyChainFindings);
 }
 
 /**
@@ -45,6 +47,7 @@ export async function scanStdio(command, options = {}) {
  */
 export async function scanHttp(url, options = {}) {
   const { headers = {}, timeout = 30000, json = false, policy = false, html = false } = options;
+  // Supply chain audit not supported for HTTP transport — no package to resolve
 
   // For HTTP transport, we send JSON-RPC over HTTP
   const initResponse = await fetchRpc(url, "initialize", {
@@ -74,7 +77,7 @@ export async function scanHttp(url, options = {}) {
 export function scanToolDefinitions(tools, options = {}) {
   const { serverName = "static-analysis", json = false, policy = false, html = false } = options;
   const serverInfo = { name: serverName, version: "static" };
-  return generateReport(serverInfo, tools, json, policy, html);
+  return generateReport(serverInfo, tools, json, policy, html, []);
 }
 
 // ─── Internal ───
@@ -179,7 +182,7 @@ async function fetchRpc(url, method, params, headers, timeout) {
   }
 }
 
-function generateReport(serverInfo, tools, json, includePolicy, html) {
+function generateReport(serverInfo, tools, json, includePolicy, html, supplyChainFindings = []) {
   // Run all scan rules
   const descriptionFindings = scanToolDescriptions(tools);
   const { findings: nameFindings, riskProfile } = scanToolNames(tools);
@@ -188,8 +191,9 @@ function generateReport(serverInfo, tools, json, includePolicy, html) {
   const outputFindings = scanOutputSafety(tools);
   const hallucinationFindings = scanHallucinationRisks(tools);
 
-  // Combine all findings
+  // Combine all findings — supply chain findings prepended so CRITICAL ones surface first
   const allFindings = [
+    ...supplyChainFindings,
     ...descriptionFindings,
     ...nameFindings,
     ...schemaFindings,
