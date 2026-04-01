@@ -8,6 +8,23 @@
  * Severity levels: CRITICAL, HIGH, MEDIUM, LOW, INFO
  */
 
+// ─── Deobfuscation ───
+// Strip Unicode characters commonly used to hide payloads in tool descriptions.
+// Returns sanitized text. Caller should compare to original to detect obfuscation.
+
+function sanitizeDescription(text) {
+  if (!text) return text;
+  return text
+    // Unicode tag block U+E0000-U+E007F — invisible characters used to encode hidden text
+    .replace(/[\u{E0000}-\u{E007F}]/gu, "")
+    // Zero-width characters
+    .replace(/[\u200B\u200C\u200D\uFEFF]/g, "")
+    // Variation selectors U+FE00-U+FE0F
+    .replace(/[\uFE00-\uFE0F]/g, "")
+    // BiDi control characters — used to reverse text direction to hide content
+    .replace(/[\u202A-\u202E\u2066-\u2069\u200E\u200F]/g, "");
+}
+
 // ─── Tool Description Injection Patterns ───
 // These patterns in tool descriptions can manipulate LLM behavior.
 
@@ -61,31 +78,45 @@ export function scanToolDescriptions(tools) {
   const findings = [];
 
   for (const tool of tools) {
-    const desc = (tool.description || "").toLowerCase();
+    const raw = tool.description || "";
+    const sanitized = sanitizeDescription(raw);
     const name = tool.name || "";
 
-    // Check for injection patterns in description
+    // Detect hidden characters — sanitized text differs from raw
+    if (sanitized !== raw) {
+      const hiddenCount = [...raw].length - [...sanitized].length;
+      findings.push({
+        category: "injection",
+        severity: "CRITICAL",
+        tool: name,
+        rule: "hidden_characters",
+        detail: `Tool description contains ${hiddenCount} hidden Unicode character(s) — payload may be concealed using tag block, zero-width, or BiDi characters`,
+        evidence: `raw length: ${raw.length} → sanitized length: ${sanitized.length}`,
+      });
+    }
+
+    // Run injection patterns against sanitized text (reveals hidden payloads)
     for (const rule of INJECTION_PATTERNS) {
-      if (rule.pattern.test(tool.description || "")) {
+      if (rule.pattern.test(sanitized)) {
         findings.push({
           category: "injection",
           severity: rule.severity,
           tool: name,
           rule: rule.name,
           detail: `Tool description contains potential prompt injection pattern: "${rule.name}"`,
-          evidence: (tool.description || "").substring(0, 200),
+          evidence: sanitized.substring(0, 200),
         });
       }
     }
 
     // Check for excessively long descriptions (injection hiding)
-    if ((tool.description || "").length > 1000) {
+    if (sanitized.length > 1000) {
       findings.push({
         category: "injection",
         severity: "MEDIUM",
         tool: name,
         rule: "excessive_description_length",
-        detail: `Tool description is ${(tool.description || "").length} chars — unusually long, may contain hidden instructions`,
+        detail: `Tool description is ${sanitized.length} chars — unusually long, may contain hidden instructions`,
       });
     }
   }
@@ -358,6 +389,97 @@ export function scanHallucinationRisks(tools) {
           detail: `Tools "${tools[i].name}" and "${tools[j].name}" have ${Math.round(overlapRatio * 100)}% description overlap. LLM may choose between them unpredictably.`,
         });
       }
+    }
+  }
+
+  return findings;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// TOXIC DATA FLOW DETECTION
+//
+// Identifies dangerous capability combinations across tools on a
+// single server. A server with both an external reader and a
+// network sender creates an exfiltration path even if no single
+// tool is malicious on its own.
+// ═══════════════════════════════════════════════════════════════
+
+function classifyToolCapabilities(tool) {
+  const name = (tool.name || "").toLowerCase();
+  const desc = (tool.description || "").toLowerCase();
+  const text = `${name} ${desc}`;
+  const caps = new Set();
+
+  if (/\b(email|inbox|gmail|outlook|slack|discord|teams|github|gitlab|jira|linear|notion|asana|calendar|feed|rss|sms|whatsapp|telegram|message|notification)\b/.test(text))
+    caps.add("external_reader");
+
+  if (/\b(secret|password|credential|api.?key|private.?key|keychain|vault|\.env|aws.?credential|ssh.?key|access.?token)\b/.test(text))
+    caps.add("credential_reader");
+
+  if (/^(write|save|create|append|overwrite|put)/.test(name) || /_(write|save|put)$/.test(name) || /write.{0,20}(file|disk|path)/.test(text))
+    caps.add("file_writer");
+
+  if (/^(read|get|fetch|download|export|load)/.test(name) && /\b(file|document|content|data|database)\b/.test(text))
+    caps.add("data_reader");
+
+  if (/\b(send.?email|send.?message|send.?slack|post.{0,10}(to|request)|upload|submit|forward|http.?request|make.?request|webhook)\b/.test(text) || /^(send|email|post|notify|alert|push|transmit)\b/.test(name))
+    caps.add("network_sender");
+
+  if (/\b(execute|exec|shell|bash|terminal|run.?command|eval|subprocess|spawn)\b/.test(text) || /^(exec|shell|bash|run|terminal|command)\b/.test(name))
+    caps.add("code_executor");
+
+  return caps;
+}
+
+const TOXIC_COMBINATIONS = [
+  {
+    a: "external_reader", b: "network_sender", severity: "CRITICAL",
+    desc: "Server can read external sources (email/Slack/GitHub) and send to external destinations — data relay/exfiltration path",
+  },
+  {
+    a: "credential_reader", b: "network_sender", severity: "CRITICAL",
+    desc: "Server can access credentials and send data externally — credential exfiltration path",
+  },
+  {
+    a: "external_reader", b: "code_executor", severity: "CRITICAL",
+    desc: "Server can read external content and execute code — prompt injection to RCE path",
+  },
+  {
+    a: "data_reader", b: "network_sender", severity: "HIGH",
+    desc: "Server can read local files and send data externally — local data exfiltration path",
+  },
+  {
+    a: "external_reader", b: "file_writer", severity: "HIGH",
+    desc: "Server can read external content and write to local filesystem — external content staging path",
+  },
+  {
+    a: "credential_reader", b: "file_writer", severity: "HIGH",
+    desc: "Server can access credentials and write to local filesystem — credential staging path",
+  },
+];
+
+export function scanToxicDataFlows(tools) {
+  const findings = [];
+
+  // Map each capability to the tools that have it
+  const capToTools = {};
+  for (const tool of tools) {
+    for (const cap of classifyToolCapabilities(tool)) {
+      if (!capToTools[cap]) capToTools[cap] = [];
+      capToTools[cap].push(tool.name);
+    }
+  }
+
+  for (const combo of TOXIC_COMBINATIONS) {
+    if (capToTools[combo.a] && capToTools[combo.b]) {
+      findings.push({
+        category: "data-flow",
+        severity: combo.severity,
+        tool: "*",
+        rule: "toxic_data_flow",
+        detail: combo.desc,
+        evidence: `${combo.a}: [${capToTools[combo.a].join(", ")}] + ${combo.b}: [${capToTools[combo.b].join(", ")}]`,
+      });
     }
   }
 

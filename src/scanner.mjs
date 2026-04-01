@@ -13,6 +13,7 @@ import {
   scanAuthIndicators,
   scanOutputSafety,
   scanHallucinationRisks,
+  scanToxicDataFlows,
 } from "./rules.mjs";
 import { grade } from "./grader.mjs";
 import { formatTerminalReport, formatJsonReport, formatHtmlReport } from "./reporter.mjs";
@@ -190,10 +191,12 @@ function generateReport(serverInfo, tools, json, includePolicy, html, supplyChai
   const authFindings = scanAuthIndicators(tools, serverInfo);
   const outputFindings = scanOutputSafety(tools);
   const hallucinationFindings = scanHallucinationRisks(tools);
+  const toxicFlowFindings = scanToxicDataFlows(tools);
 
-  // Combine all findings — supply chain findings prepended so CRITICAL ones surface first
+  // Combine all findings — supply chain and toxic flows first so CRITICALs surface early
   const allFindings = [
     ...supplyChainFindings,
+    ...toxicFlowFindings,
     ...descriptionFindings,
     ...nameFindings,
     ...schemaFindings,
