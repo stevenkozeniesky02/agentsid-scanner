@@ -109,17 +109,19 @@ agentsid-scan --json -- npx @some/mcp-server > report.json
 agentsid-scan --env API_KEY=xxx --env DB_URL=postgres://... -- node server.mjs
 ```
 
-## Grading
+## Grading (v2 — normalized + capped)
 
 Starts at 100 points. Deductions per finding:
 
-| Severity | Deduction | Example |
-|----------|-----------|---------|
-| CRITICAL | -25 | Shell execution tool with no auth |
-| HIGH | -15 | Tool exposes credentials in output |
-| MEDIUM | -8 | String params without length limits |
-| LOW | -3 | Optional-only input parameters |
-| INFO | 0 | Read-only tool detected |
+| Severity | Deduction | Normalization | Cap |
+|----------|-----------|---------------|-----|
+| CRITICAL | -25 each | Absolute — always hits full | Uncapped |
+| HIGH | -15 each | Absolute — always hits full | -45 max |
+| MEDIUM | -8 each | Divided by √(tool count) | -25 max |
+| LOW | -3 each | Divided by √(tool count) | -15 max |
+| INFO | 0 | — | — |
+
+MEDIUM and LOW findings are normalized by tool count so a per-tool issue (e.g. missing `maxLength` on every input) doesn't compound linearly with server size. A 50-tool server with 50 LOWs scores the same as a 5-tool server with 5 LOWs. CRITICALs and HIGHs stay absolute — real vulnerabilities hurt regardless of server size.
 
 | Grade | Score | Meaning |
 |-------|-------|---------|
@@ -194,11 +196,21 @@ const report = scanToolDefinitions(myToolArray, { json: true });
 
 Found a pattern we're not detecting? Open an issue or PR. The rule engine is in `src/rules.mjs` — adding a new pattern is one regex.
 
+## Research
+
+- [The State of MCP Server Security — 2026](docs/state-of-agent-security-2026.md) — 15,983 servers scanned, 72.6% scored below 60
+- [Weaponized by Design](docs/census-2026/weaponized-by-design.md) — Toxic flow taxonomy, 5 attack patterns in production MCP servers
+- [The Multi-Agent Auth Gap](docs/agent-teams-auth-gap-2026.md) — 4 structural gaps across 5 frameworks
+- [The A2A Security Gap](docs/a2a-security-gaps-2026.md) — 6 structural vulnerabilities in Google's Agent2Agent protocol
+
+All 15,982 servers scored and searchable: [agentsid.dev/registry](https://agentsid.dev/registry)
+
 ## Links
 
 - [AgentsID](https://agentsid.dev) — Identity & auth for AI agents
 - [AgentsID Guard](https://github.com/stevenkozeniesky02/shell-guard) — 50-tool protected MCP server
 - [Documentation](https://agentsid.dev/docs)
+- [MCP Registry](https://agentsid.dev/registry) — 15,982 servers scored
 
 ## License
 
