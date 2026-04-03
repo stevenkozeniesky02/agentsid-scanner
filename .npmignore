@@ -1,8 +1,62 @@
+# Reports and data
 reports/
+registry-index.json
 scripts/
 tests/
 data/
+docs/
+
+# Test files
 *.test.mjs
 *.spec.mjs
+
+# Env
 .env
 .env.*
+
+# Databases and caches
+*.db
+*.sqlite3
+*.session
+*.duckdb
+.cache/
+documents/.cache/
+
+# Logs
+*.log
+log.txt
+logs/
+mcp_logs/
+
+# Server artifacts left from scans
+*.bsp
+mcp_*.log
+mcp_*.json
+mcp-all/
+outputs/
+wrox-project-sync/
+todos/
+document/
+
+# Dev tooling
+.devcontainer/
+.codeforge/
+.claude/
+.engram/
+.knowledgebase/
+.mcp-observatory/
+.mcp-vm-blackbox/
+.sce/
+
+# Misc scan artifacts
+report.html
+keystore.json
+mcp_config.json
+mcp_ssh_hosts.toml
+agent.json
+agentsid.json
+test_session.session
+music_library.json
+output.log
+emails.duckdb
+mitm_mcp_traffic.db

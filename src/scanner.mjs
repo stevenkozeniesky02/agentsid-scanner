@@ -32,10 +32,11 @@ export async function scanStdio(command, options = {}) {
   const proc = spawn(parts[0], parts.slice(1), {
     env: { ...process.env, ...env },
     stdio: ["pipe", "pipe", "pipe"],
+    detached: true, // own process group so we can kill npx + its children together
   });
 
   const result = await communicateWithServer(proc, timeout);
-  proc.kill();
+  killProc(proc);
 
   const supplyChainFindings = audit ? await auditSupplyChain(command) : [];
   return generateReport(result.serverInfo, result.tools, json, policy, html, supplyChainFindings);
@@ -82,6 +83,13 @@ export function scanToolDefinitions(tools, options = {}) {
 }
 
 // ─── Internal ───
+
+function killProc(proc) {
+  try { process.kill(-proc.pid, "SIGKILL"); } catch {} // kill process group (npx + children)
+  proc.stdout.destroy();
+  proc.stderr.destroy();
+  proc.stdin.destroy();
+}
 
 async function communicateWithServer(proc, timeout) {
   return new Promise((resolve, reject) => {
@@ -205,8 +213,8 @@ function generateReport(serverInfo, tools, json, includePolicy, html, supplyChai
     ...hallucinationFindings,
   ];
 
-  // Grade
-  const gradeResult = grade(allFindings);
+  // Grade (pass tool count for per-tool normalization)
+  const gradeResult = grade(allFindings, tools.length);
 
   // Build policy if requested
   const mapPolicy = includePolicy ? buildMapPolicy(allFindings) : null;

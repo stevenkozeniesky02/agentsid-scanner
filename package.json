@@ -1,6 +1,6 @@
 {
   "name": "@agentsid/scanner",
-  "version": "0.1.1",
+  "version": "0.2.1",
   "description": "Security scanner for MCP servers. Grades authentication, permissions, input validation, and tool safety. The Lighthouse of agent security.",
   "type": "module",
   "main": "src/index.mjs",
@@ -30,8 +30,9 @@
     "url": "https://github.com/stevenkozeniesky02/agentsid-scanner"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.0.0",
     "@actions/core": "^1.10.0",
-    "@actions/github": "^6.0.0"
+    "@actions/github": "^6.0.0",
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "better-sqlite3": "^12.8.0"
   }
 }
