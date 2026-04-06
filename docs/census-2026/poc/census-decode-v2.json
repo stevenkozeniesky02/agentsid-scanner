@@ -1,0 +1,5029 @@
+{
+  "meta": {
+    "generatedAt": "2026-04-05T17:47:56.540Z",
+    "workers": 6,
+    "timeoutMs": 30000,
+    "scannerVersion": "v2-expanded-fields",
+    "fieldCoverage": [
+      "tool.name",
+      "tool.description",
+      "tool.title",
+      "tool.inputSchema (recursive: properties, items, titles, const, default, pattern, format, examples, enum)",
+      "tool.outputSchema (recursive)",
+      "tool.annotations",
+      "prompt.name",
+      "prompt.description",
+      "prompt.arguments[].name/description",
+      "resource.name/description/title/uri/uriTemplate/mimeType",
+      "resourceTemplate.name/description/title/uri/uriTemplate/mimeType",
+      "server.name/title/description/version/instructions"
+    ]
+  },
+  "classSummary": {
+    "stripped_by_scanner": {
+      "variation_selector_basic": 240
+    },
+    "blind_spot": {}
+  },
+  "fieldSummary": {
+    "tool.description": 186,
+    "tool.inputSchema.properties.yolo.description": 16,
+    "prompt.arguments[7].description": 7,
+    "prompt.arguments[5].description": 7,
+    "prompt.arguments[8].description": 1,
+    "prompt.arguments[6].description": 1,
+    "resource.description": 5,
+    "resource.name": 2,
+    "tool.inputSchema.properties.force.description": 2,
+    "tool.inputSchema.properties.disableModalityDetection.description": 10,
+    "tool.inputSchema.properties.query.description": 3
+  },
+  "objectTypeSummary": {
+    "tool": 217,
+    "prompt": 16,
+    "resource": 7
+  },
+  "counters": {
+    "scanned": 3471,
+    "errors": 294,
+    "withHits": 62,
+    "withBlindSpotHits": 0,
+    "withPrompts": 461,
+    "withResources": 434,
+    "withResourceTemplates": 318
+  },
+  "servers": [
+    {
+      "reportKey": "npm-@ateam-ai-mcp",
+      "package": "@ateam-ai/mcp",
+      "id": "npm:@ateam-ai/mcp",
+      "command": "npx -y @ateam-ai/mcp",
+      "runtime": "node",
+      "toolCount": 33,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 59,
+          "context": " in one step. ⚠️ HEAVIEST OPER"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 109,
+          "context": "point commit. ⚠️ DESTRUCTIVE —"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 52,
+          "context": " definitions. ⚠️ HEAVY OPERATI"
+        }
+      ]
+    },
+    {
+      "reportKey": "npm-@cexll-codex-mcp-server",
+      "package": "@cexll/codex-mcp-server",
+      "id": "npm:@cexll/codex-mcp-server",
+      "command": "npx -y @cexll/codex-mcp-server",
+      "runtime": "node",
+      "toolCount": 8,
+      "promptCount": 8,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.inputSchema.properties.yolo.description",
+          "objectType": "tool",
+          "offset": 1,
+          "context": "⚠️ Bypass all sa"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.inputSchema.properties.yolo.description",
+          "objectType": "tool",
+          "offset": 1,
+          "context": "⚠️ Bypass all sa"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "prompt.arguments[7].description",
+          "objectType": "prompt",
+          "offset": 1,
+          "context": "⚠️ Bypass all sa"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "prompt.arguments[5].description",
+          "objectType": "prompt",
+          "offset": 1,
+          "context": "⚠️ Bypass all sa"
+        }
+      ]
+    },
+    {
+      "reportKey": "npm-@etheaven-codex-mcp-server",
+      "package": "@etheaven/codex-mcp-server",
+      "id": "npm:@etheaven/codex-mcp-server",
+      "command": "npx -y @etheaven/codex-mcp-server",
+      "runtime": "node",
+      "toolCount": 8,
+      "promptCount": 8,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.inputSchema.properties.yolo.description",
+          "objectType": "tool",
+          "offset": 1,
+          "context": "⚠️ Bypass all sa"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.inputSchema.properties.yolo.description",
+          "objectType": "tool",
+          "offset": 1,
+          "context": "⚠️ Bypass all sa"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "prompt.arguments[8].description",
+          "objectType": "prompt",
+          "offset": 1,
+          "context": "⚠️ Bypass all sa"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "prompt.arguments[6].description",
+          "objectType": "prompt",
+          "offset": 1,
+          "context": "⚠️ Bypass all sa"
+        }
+      ]
+    },
+    {
+      "reportKey": "npm-@elliotding-ai-agent-mcp",
+      "package": "@elliotding/ai-agent-mcp",
+      "id": "npm:@elliotding/ai-agent-mcp",
+      "command": "npx -y @elliotding/ai-agent-mcp",
+      "runtime": "node",
+      "toolCount": 7,
+      "promptCount": 1,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 876,
+          "context": "ed content. \n\n⚠️ CRITICAL: HAN"
+        }
+      ]
+    },
+    {
+      "reportKey": "npm-@fastmcp-me-codex-mcp-server",
+      "package": "@fastmcp-me/codex-mcp-server",
+      "id": "npm:@fastmcp-me/codex-mcp-server",
+      "command": "npx -y @fastmcp-me/codex-mcp-server",
+      "runtime": "node",
+      "toolCount": 8,
+      "promptCount": 8,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.inputSchema.properties.yolo.description",
+          "objectType": "tool",
+          "offset": 1,
+          "context": "⚠️ Bypass all sa"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.inputSchema.properties.yolo.description",
+          "objectType": "tool",
+          "offset": 1,
+          "context": "⚠️ Bypass all sa"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "prompt.arguments[7].description",
+          "objectType": "prompt",
+          "offset": 1,
+          "context": "⚠️ Bypass all sa"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "prompt.arguments[5].description",
+          "objectType": "prompt",
+          "offset": 1,
+          "context": "⚠️ Bypass all sa"
+        }
+      ]
+    },
+    {
+      "reportKey": "npm-@fastmcp-me-claude-faf-mcp",
+      "package": "@fastmcp-me/claude-faf-mcp",
+      "id": "npm:@fastmcp-me/claude-faf-mcp",
+      "command": "npx -y @fastmcp-me/claude-faf-mcp",
+      "runtime": "node",
+      "toolCount": 39,
+      "promptCount": 0,
+      "resourceCount": 3,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 63,
+          "context": " can TRUST! 🧡⚡️"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 2,
+          "context": "🖼️ FAF Display -"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 2,
+          "context": "🏎️ Interactive p"
+        }
+      ]
+    },
+    {
+      "reportKey": "npm-@fastmcp-me-mcp-server-inkdropapp",
+      "package": "@fastmcp-me/mcp-server-inkdropapp",
+      "id": "npm:@fastmcp-me/mcp-server-inkdropapp",
+      "command": "npx -y @fastmcp-me/mcp-server-inkdropapp",
+      "runtime": "node",
+      "toolCount": 11,
+      "promptCount": 1,
+      "resourceCount": 0,
+      "resourceTemplateCount": 1,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 2760,
+          "context": "unctions\"`\n\n- ⛔️ Won't work  \n"
+        }
+      ]
+    },
+    {
+      "reportKey": "npm-@iflow-mcp-cexll-codex-mcp-server",
+      "package": "@iflow-mcp/cexll-codex-mcp-server",
+      "id": "npm:@iflow-mcp/cexll-codex-mcp-server",
+      "command": "npx -y @iflow-mcp/cexll-codex-mcp-server",
+      "runtime": "node",
+      "toolCount": 8,
+      "promptCount": 8,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.inputSchema.properties.yolo.description",
+          "objectType": "tool",
+          "offset": 1,
+          "context": "⚠️ Bypass all sa"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.inputSchema.properties.yolo.description",
+          "objectType": "tool",
+          "offset": 1,
+          "context": "⚠️ Bypass all sa"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "prompt.arguments[7].description",
+          "objectType": "prompt",
+          "offset": 1,
+          "context": "⚠️ Bypass all sa"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "prompt.arguments[5].description",
+          "objectType": "prompt",
+          "offset": 1,
+          "context": "⚠️ Bypass all sa"
+        }
+      ]
+    },
+    {
+      "reportKey": "npm-@iflow-mcp-inkdropapp-mcp-server",
+      "package": "@iflow-mcp/inkdropapp-mcp-server",
+      "id": "npm:@iflow-mcp/inkdropapp-mcp-server",
+      "command": "npx -y @iflow-mcp/inkdropapp-mcp-server",
+      "runtime": "node",
+      "toolCount": 11,
+      "promptCount": 1,
+      "resourceCount": 0,
+      "resourceTemplateCount": 1,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 2760,
+          "context": "unctions\"`\n\n- ⛔️ Won't work  \n"
+        }
+      ]
+    },
+    {
+      "reportKey": "npm-@inkdropapp-mcp-server",
+      "package": "@inkdropapp/mcp-server",
+      "id": "npm:@inkdropapp/mcp-server",
+      "command": "npx -y @inkdropapp/mcp-server",
+      "runtime": "node",
+      "toolCount": 12,
+      "promptCount": 1,
+      "resourceCount": 0,
+      "resourceTemplateCount": 1,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 2748,
+          "context": "unctions\"`\n\n- ⛔️ Won't work\n  "
+        }
+      ]
+    },
+    {
+      "reportKey": "npm-@mseep-railway-mcp",
+      "package": "@mseep/railway-mcp",
+      "id": "npm:@mseep/railway-mcp",
+      "command": "npx -y @mseep/railway-mcp",
+      "runtime": "node",
+      "toolCount": 36,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 100,
+          "context": "al templates\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 224,
+          "context": "availability\n\n⚠️ Not for:\n  × "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 100,
+          "context": "st practices\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 242,
+          "context": "goDB, Redis)\n\n⚠️ Not for:\n  × "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 72,
+          "context": " environment\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 47,
+          "context": "or a service\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 159,
+          "context": "vious states\n\n⚠️ Not for:\n  × "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 43,
+          "context": "c deployment\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 150,
+          "context": "build output\n\n⚠️ Not for:\n  × "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 49,
+          "context": "a deployment\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 172,
+          "context": "ent failures\n\n⚠️ Not for:\n  × "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 65,
+          "context": "or a service\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 42,
+          "context": "or a service\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 147,
+          "context": "PS endpoints\n\n⚠️ Not for:\n  × "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 47,
+          "context": "able for use\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 40,
+          "context": "onfiguration\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 137,
+          "context": "ng endpoints\n\n⚠️ Not for:\n  × "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 39,
+          "context": "om a service\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 134,
+          "context": "n management\n\n⚠️ Not for:\n  × "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 50,
+          "context": "lway account\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 66,
+          "context": "lway project\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 37,
+          "context": "lway project\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 149,
+          "context": "oject spaces\n\n⚠️ Not for:\n  × "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 55,
+          "context": "ts resources\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 128,
+          "context": "est projects\n\n⚠️ Not for:\n  × "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 56,
+          "context": "lway project\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 58,
+          "context": "ific service\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 54,
+          "context": "b repository\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 178,
+          "context": "ted projects\n\n⚠️ Not for:\n  × "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 49,
+          "context": "Docker image\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 165,
+          "context": "requirements\n\n⚠️ Not for:\n  × "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 41,
+          "context": "onfiguration\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 153,
+          "context": "onfiguration\n\n⚠️ Not for:\n  × "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 40,
+          "context": "om a project\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 140,
+          "context": "organization\n\n⚠️ Not for:\n  × "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 52,
+          "context": " environment\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 157,
+          "context": "ntime issues\n\n⚠️ Not for:\n  × "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 69,
+          "context": " environment\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 45,
+          "context": "or a service\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 153,
+          "context": "TCP services\n\n⚠️ Not for:\n  × "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 27,
+          "context": " a TCP proxy\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 114,
+          "context": "oint cleanup\n\n⚠️ Not for:\n  × "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 53,
+          "context": "or a service\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 49,
+          "context": "ent variable\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 157,
+          "context": "vice secrets\n\n⚠️ Not for:\n  × "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 66,
+          "context": " environment\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 164,
+          "context": "n management\n\n⚠️ Not for:\n  × "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 69,
+          "context": "bles at once\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 185,
+          "context": "tion updates\n\n⚠️ Not for:\n  × "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 60,
+          "context": "t to another\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 154,
+          "context": " duplication\n\n⚠️ Not for:\n  × "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 113,
+          "context": "t variables)\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 196,
+          "context": "onfiguration\n\n⚠️ Not for:\n  × "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 38,
+          "context": "in a project\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 53,
+          "context": "or a service\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 155,
+          "context": "file storage\n\n⚠️ Not for:\n  × "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 39,
+          "context": "om a service\n\n⚡️ Best for:\n  ✓"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 125,
+          "context": "e management\n\n⚠️ Not for:\n  × "
+        }
+      ]
+    },
+    {
+      "reportKey": "npm-@nothing1024-codex-mcp-server",
+      "package": "@nothing1024/codex-mcp-server",
+      "id": "npm:@nothing1024/codex-mcp-server",
+      "command": "npx -y @nothing1024/codex-mcp-server",
+      "runtime": "node",
+      "toolCount": 8,
+      "promptCount": 8,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.inputSchema.properties.yolo.description",
+          "objectType": "tool",
+          "offset": 1,
+          "context": "⚠️ Bypass all sa"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.inputSchema.properties.yolo.description",
+          "objectType": "tool",
+          "offset": 1,
+          "context": "⚠️ Bypass all sa"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "prompt.arguments[7].description",
+          "objectType": "prompt",
+          "offset": 1,
+          "context": "⚠️ Bypass all sa"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "prompt.arguments[5].description",
+          "objectType": "prompt",
+          "offset": 1,
+          "context": "⚠️ Bypass all sa"
+        }
+      ]
+    },
+    {
+      "reportKey": "npm-@panaalexandrucristian88-codex-mcp-server",
+      "package": "@panaalexandrucristian88/codex-mcp-server",
+      "id": "npm:@panaalexandrucristian88/codex-mcp-server",
+      "command": "npx -y @panaalexandrucristian88/codex-mcp-server",
+      "runtime": "node",
+      "toolCount": 8,
+      "promptCount": 8,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.inputSchema.properties.yolo.description",
+          "objectType": "tool",
+          "offset": 1,
+          "context": "⚠️ Bypass all sa"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.inputSchema.properties.yolo.description",
+          "objectType": "tool",
+          "offset": 1,
+          "context": "⚠️ Bypass all sa"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "prompt.arguments[7].description",
+          "objectType": "prompt",
+          "offset": 1,
+          "context": "⚠️ Bypass all sa"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "prompt.arguments[5].description",
+          "objectType": "prompt",
+          "offset": 1,
+          "context": "⚠️ Bypass all sa"
+        }
+      ]
+    },
+    {
+      "reportKey": "npm-@rockship-code-memory-mcp",
+      "package": "@rockship/code-memory-mcp",
+      "id": "npm:@rockship/code-memory-mcp",
+      "command": "npx -y @rockship/code-memory-mcp",
+      "runtime": "node",
+      "toolCount": 6,
+      "promptCount": 3,
+      "resourceCount": 1,
+      "resourceTemplateCount": 1,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 74,
+          "context": "mory system.\n\n⚠️ BEFORE CREATI"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 2,
+          "context": "🗑️ DELETE MEMORY"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 77,
+          "context": "ED: memory_id\n⚠️ WARNING: Perm"
+        }
+      ]
+    },
+    {
+      "reportKey": "npm-@slinerodev-github-releases-mcp",
+      "package": "@slinerodev/github-releases-mcp",
+      "id": "npm:@slinerodev/github-releases-mcp",
+      "command": "npx -y @slinerodev/github-releases-mcp",
+      "runtime": "node",
+      "toolCount": 5,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 185,
+          "context": "or versions, 🗓️ for dates, 📝"
+        }
+      ]
+    },
+    {
+      "reportKey": "npm-@thedaviddias-mcp-llms-txt-explorer",
+      "package": "@thedaviddias/mcp-llms-txt-explorer",
+      "id": "npm:@thedaviddias/mcp-llms-txt-explorer",
+      "command": "npx -y @thedaviddias/mcp-llms-txt-explorer",
+      "runtime": "node",
+      "toolCount": 2,
+      "promptCount": 0,
+      "resourceCount": 642,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "resource.description",
+          "objectType": "resource",
+          "offset": 23,
+          "context": "aclean gibt`s ✔️ Waschmittel ✔"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "resource.description",
+          "objectType": "resource",
+          "offset": 38,
+          "context": "️ Waschmittel ✔️ Putztücher ✔️"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "resource.description",
+          "objectType": "resource",
+          "offset": 52,
+          "context": "✔️ Putztücher ✔️ Spezialreinig"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "resource.description",
+          "objectType": "resource",
+          "offset": 71,
+          "context": "ezialreiniger ✔️ Reiniger Konz"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "resource.name",
+          "objectType": "resource",
+          "offset": 8,
+          "context": "Zap.ts ⚡️"
+        }
+      ]
+    },
+    {
+      "reportKey": "npm-@trishchuk-codex-mcp-tool",
+      "package": "@trishchuk/codex-mcp-tool",
+      "id": "npm:@trishchuk/codex-mcp-tool",
+      "command": "npx -y @trishchuk/codex-mcp-tool",
+      "runtime": "node",
+      "toolCount": 13,
+      "promptCount": 13,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.inputSchema.properties.yolo.description",
+          "objectType": "tool",
+          "offset": 1,
+          "context": "⚠️ Bypass all sa"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.inputSchema.properties.yolo.description",
+          "objectType": "tool",
+          "offset": 1,
+          "context": "⚠️ Bypass all sa"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "prompt.arguments[7].description",
+          "objectType": "prompt",
+          "offset": 1,
+          "context": "⚠️ Bypass all sa"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "prompt.arguments[5].description",
+          "objectType": "prompt",
+          "offset": 1,
+          "context": "⚠️ Bypass all sa"
+        }
+      ]
+    },
+    {
+      "reportKey": "npm-@vreme-temporal-mcp",
+      "package": "@vreme/temporal-mcp",
+      "id": "npm:@vreme/temporal-mcp",
+      "command": "npx -y @vreme/temporal-mcp",
+      "runtime": "node",
+      "toolCount": 68,
+      "promptCount": 0,
+      "resourceCount": 1,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 308,
+          "context": " observances. ⚠️ DO NOT use th"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 397,
+          "context": "time instead. ⚠️ Slower than s"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 304,
+          "context": "e this date'. ⚠️ Overkill for "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 2,
+          "context": "🗣️ TEMPORAL PHRA"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 1,
+          "context": "⚠️ CONFLICT CHEC"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 2,
+          "context": "🌫️ FUZZY TIME FR"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 2,
+          "context": "🌫️ FUZZY TIME FR"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 2,
+          "context": "🌫️ FUZZY TIME IN"
+        }
+      ]
+    },
+    {
+      "reportKey": "npm-@zkl2333-fs-mcp-server",
+      "package": "@zkl2333/fs-mcp-server",
+      "id": "npm:@zkl2333/fs-mcp-server",
+      "command": "npx -y @zkl2333/fs-mcp-server",
+      "runtime": "node",
+      "toolCount": 14,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.inputSchema.properties.force.description",
+          "objectType": "tool",
+          "offset": 1,
+          "context": "⚠️ 强制删除模式：跳过敏感文件"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.inputSchema.properties.force.description",
+          "objectType": "tool",
+          "offset": 1,
+          "context": "⚠️ 强制删除模式：跳过所有安全"
+        }
+      ]
+    },
+    {
+      "reportKey": "npm-appmake-mcp-client",
+      "package": "appmake-mcp-client",
+      "id": "npm:appmake-mcp-client",
+      "command": "npx -y appmake-mcp-client",
+      "runtime": "node",
+      "toolCount": 17,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 567,
+          "context": "OS 둘 다 만들어줘\"\n\n⚙️ **파라미터 설명**\n-"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 805,
+          "context": "이미지 URL (선택)\n\n⏱️ **소요 시간**: 약 "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 258,
+          "context": "/pem: 인증서 파일\n\n⚠️ **중요**: Claud"
+        }
+      ]
+    },
+    {
+      "reportKey": "npm-coaia-memory",
+      "package": "coaia-memory",
+      "id": "npm:coaia-memory",
+      "command": "npx -y coaia-memory",
+      "runtime": "node",
+      "toolCount": 13,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 1,
+          "context": "⚠️ DEPRECATED: U"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 1,
+          "context": "⚠️ DEPRECATED: U"
+        }
+      ]
+    },
+    {
+      "reportKey": "npm-codex-mcp",
+      "package": "codex-mcp",
+      "id": "npm:codex-mcp",
+      "command": "npx -y codex-mcp",
+      "runtime": "node",
+      "toolCount": 9,
+      "promptCount": 9,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.inputSchema.properties.yolo.description",
+          "objectType": "tool",
+          "offset": 1,
+          "context": "⚠️ Bypass all sa"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.inputSchema.properties.yolo.description",
+          "objectType": "tool",
+          "offset": 1,
+          "context": "⚠️ Bypass all sa"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "prompt.arguments[7].description",
+          "objectType": "prompt",
+          "offset": 1,
+          "context": "⚠️ Bypass all sa"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "prompt.arguments[5].description",
+          "objectType": "prompt",
+          "offset": 1,
+          "context": "⚠️ Bypass all sa"
+        }
+      ]
+    },
+    {
+      "reportKey": "npm-iwgt",
+      "package": "iwgt",
+      "id": "npm:iwgt",
+      "command": "npx -y iwgt",
+      "runtime": "node",
+      "toolCount": 13,
+      "promptCount": 0,
+      "resourceCount": 12,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 594,
+          "context": "з настроек\n5. ⚠️ SCSS: Первая "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 760,
+          "context": "вет текста\n6. ⚠️ ИКОНКИ: Фильт"
+        }
+      ]
+    },
+    {
+      "reportKey": "npm-scenario.com-mcp-server",
+      "package": "scenario.com-mcp-server",
+      "id": "npm:scenario.com-mcp-server",
+      "command": "npx -y scenario.com-mcp-server",
+      "runtime": "node",
+      "toolCount": 107,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.inputSchema.properties.disableModalityDetection.description",
+          "objectType": "tool",
+          "offset": 459,
+          "context": "s a scribble\n\n⚠️ For models of"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.inputSchema.properties.disableModalityDetection.description",
+          "objectType": "tool",
+          "offset": 580,
+          "context": "ays disabled. ⚠️"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.inputSchema.properties.disableModalityDetection.description",
+          "objectType": "tool",
+          "offset": 459,
+          "context": "s a scribble\n\n⚠️ For models of"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.inputSchema.properties.disableModalityDetection.description",
+          "objectType": "tool",
+          "offset": 580,
+          "context": "ays disabled. ⚠️"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.inputSchema.properties.disableModalityDetection.description",
+          "objectType": "tool",
+          "offset": 459,
+          "context": "s a scribble\n\n⚠️ For models of"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.inputSchema.properties.disableModalityDetection.description",
+          "objectType": "tool",
+          "offset": 580,
+          "context": "ays disabled. ⚠️"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.inputSchema.properties.disableModalityDetection.description",
+          "objectType": "tool",
+          "offset": 459,
+          "context": "s a scribble\n\n⚠️ For models of"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.inputSchema.properties.disableModalityDetection.description",
+          "objectType": "tool",
+          "offset": 580,
+          "context": "ays disabled. ⚠️"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.inputSchema.properties.disableModalityDetection.description",
+          "objectType": "tool",
+          "offset": 459,
+          "context": "s a scribble\n\n⚠️ For models of"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.inputSchema.properties.disableModalityDetection.description",
+          "objectType": "tool",
+          "offset": 580,
+          "context": "ays disabled. ⚠️"
+        }
+      ]
+    },
+    {
+      "reportKey": "npm-verodat-design-mcp-server",
+      "package": "verodat-design-mcp-server",
+      "id": "npm:verodat-design-mcp-server",
+      "command": "npx -y verodat-design-mcp-server",
+      "runtime": "node",
+      "toolCount": 9,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 995,
+          "context": "     \n        ⚠️ IMPORTANT: Fi"
+        }
+      ]
+    },
+    {
+      "reportKey": "npm-verodat-manage-mcp-server",
+      "package": "verodat-manage-mcp-server",
+      "id": "npm:verodat-manage-mcp-server",
+      "command": "npx -y verodat-manage-mcp-server",
+      "runtime": "node",
+      "toolCount": 10,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 956,
+          "context": "     \n        ⚠️ IMPORTANT: Fi"
+        }
+      ]
+    },
+    {
+      "reportKey": "npm-xmo-data-mcp-server",
+      "package": "xmo-data-mcp-server",
+      "id": "npm:xmo-data-mcp-server",
+      "command": "npx -y xmo-data-mcp-server",
+      "runtime": "node",
+      "toolCount": 6,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 43,
+          "context": "径、时间范围和采样间隔。\n\n⚠️ 使用建议：\n- 查询 7 "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 47,
+          "context": "范围数据查询和数据预览。\n\n⚠️ 使用建议：\n- 推荐用于 "
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-ai-odoofinder-mcp",
+      "package": "ai-odoofinder-mcp",
+      "id": "pypi:ai-odoofinder-mcp",
+      "command": "uvx ai-odoofinder-mcp",
+      "runtime": "python",
+      "toolCount": 1,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.inputSchema.properties.query.description",
+          "objectType": "tool",
+          "offset": 38,
+          "context": "OCA modules.\n\n⚠️ IMPORTANT - I"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.inputSchema.properties.query.description",
+          "objectType": "tool",
+          "offset": 1596,
+          "context": "tturapa sdi\"\n\n⚠️ For localizat"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.inputSchema.properties.query.description",
+          "objectType": "tool",
+          "offset": 1645,
+          "context": "words maximum\n⚠️ The l10n_XX_ "
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-aimusic-mcp",
+      "package": "aimusic-mcp",
+      "id": "pypi:aimusic-mcp",
+      "command": "uvx aimusic-mcp",
+      "runtime": "python",
+      "toolCount": 4,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 412,
+          "context": "endship\"\n\n    ⚠️ COST WARNING:"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 339,
+          "context": "e: folk\"\n\n    ⚠️ COST WARNING:"
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-api-connecter-mcp",
+      "package": "api-connecter-mcp",
+      "id": "pypi:api-connecter-mcp",
+      "command": "uvx api-connecter-mcp",
+      "runtime": "python",
+      "toolCount": 5,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 3,
+          "context": "\n👁️ API数据预览工具 - 预"
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-apifox-write-mcp",
+      "package": "apifox-write-mcp",
+      "id": "pypi:apifox-write-mcp",
+      "command": "uvx apifox-write-mcp",
+      "runtime": "python",
+      "toolCount": 1,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 158,
+          "context": "ble options.\n\n⚠️ IMPORTANT: To"
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-article-mcp",
+      "package": "article-mcp",
+      "id": "pypi:article-mcp",
+      "command": "uvx article-mcp",
+      "runtime": "python",
+      "toolCount": 5,
+      "promptCount": 0,
+      "resourceCount": 4,
+      "resourceTemplateCount": 1,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 28,
+          "context": "文献并获取 PMCID。\n\n⚠️ 此工具只返回元数据（标题、"
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-bw-mcp",
+      "package": "bw-mcp",
+      "id": "pypi:bw-mcp",
+      "command": "uvx bw-mcp",
+      "runtime": "python",
+      "toolCount": 6,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 1,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 79,
+          "context": "mas apply.\n\n[🛡️ ACID & WAL RE"
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-claude-vault-mcp",
+      "package": "claude-vault-mcp",
+      "id": "pypi:claude-vault-mcp",
+      "command": "uvx claude-vault-mcp",
+      "runtime": "python",
+      "toolCount": 10,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 146,
+          "context": "t variables.\n\n⚠️ IMPORTANT: Th"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 173,
+          "context": " operations.\n\n⚠️ IMPORTANT: Af"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 51,
+          "context": "r a service.\n\n⚠️ SECURITY: Web"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 70,
+          "context": "nding to AI.\n\n⚠️ SECURITY: Web"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 63,
+          "context": "kenize them.\n\n⚠️ SECURITY: Web"
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-code-search-mcp",
+      "package": "code-search-mcp",
+      "id": "pypi:code-search-mcp",
+      "command": "uvx code-search-mcp",
+      "runtime": "python",
+      "toolCount": 15,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 15,
+          "context": "按文件名或路径搜索文件。\n\n⚠️ 使用前必须先调用 inde"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 23,
+          "context": "数、类、方法、变量等）。\n\n⚠️ 使用前必须先调用 inde"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 21,
+          "context": "行全文搜索（FTS5）。\n\n⚠️ 使用前必须先调用 inde"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 19,
+          "context": "的代码结构（顶层符号）。\n\n⚠️ 需要已通过 index_r"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 18,
+          "context": "具调用日志（可观测性）。\n\n⚠️ 警告：返回数据量大，谨慎使"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 12,
+          "context": "获取智能搜索建议。\n\n⚠️ 需要先调用 index_r"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 87,
+          "context": "索策略\n- 避免无效调用\n\n⚠️ 重要：此工具会自动处理索引"
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-conan-mcp",
+      "package": "conan-mcp",
+      "id": "pypi:conan-mcp",
+      "command": "uvx conan-mcp",
+      "runtime": "python",
+      "toolCount": 7,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 6,
+          "context": "\n    ⚠️ WARNING: This"
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-data-wise-jupyter-mcp-server",
+      "package": "data-wise-jupyter-mcp-server",
+      "id": "pypi:data-wise-jupyter-mcp-server",
+      "command": "uvx data-wise-jupyter-mcp-server",
+      "runtime": "python",
+      "toolCount": 8,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 189,
+          "context": "）\n- \"delete\": ⚠️ 删除笔记本（需要path）"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 322,
+          "context": "delete_cell\": ⚠️ 删除单元格（需要path和"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 157,
+          "context": "）\n- \"delete\": ⚠️ 删除文件或目录（path为"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 131,
+          "context": "秒\n            ⚠️ 对于长时间运行的任务（如大"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 193,
+          "context": "秒\n            ⚠️ 对于长时间运行的任务（如H"
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-enhanced-mcp-tools",
+      "package": "enhanced-mcp-tools",
+      "id": "pypi:enhanced-mcp-tools",
+      "command": "uvx enhanced-mcp-tools",
+      "runtime": "python",
+      "toolCount": 71,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 2,
+          "context": "🛠️ Set up and co"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 1,
+          "context": "⚙️ Configure asc"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 1,
+          "context": "☁️ Upload record"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 56,
+          "context": "ng patterns. 🛡️ LLM SAFETY: A"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 57,
+          "context": "ir contents. 🛡️ LLM SAFETY: A"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 77,
+          "context": "ith preview. 🛡️ LLM SAFETY: A"
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-figmin-mcp",
+      "package": "figmin-mcp",
+      "id": "pypi:figmin-mcp",
+      "command": "uvx figmin-mcp",
+      "runtime": "python",
+      "toolCount": 6,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 298,
+          "context": "ou messages.\n\n⚠️  CRITICAL — Y"
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-foreman-mcp-server",
+      "package": "foreman-mcp-server",
+      "id": "pypi:foreman-mcp-server",
+      "command": "uvx foreman-mcp-server",
+      "runtime": "python",
+      "toolCount": 29,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 65,
+          "context": "d filtering.\n\n⚠️  CONTEXT WARN"
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-freshrelease-mcp",
+      "package": "freshrelease-mcp",
+      "id": "pypi:freshrelease-mcp",
+      "command": "uvx freshrelease-mcp",
+      "runtime": "python",
+      "toolCount": 26,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 1031,
+          "context": "lution\n   \n   ⏭️ OTHER FIELD T"
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-fro-wang-academic-tools-mcp",
+      "package": "fro-wang-academic-tools-mcp",
+      "id": "pypi:fro-wang-academic-tools-mcp",
+      "command": "uvx fro-wang-academic-tools-mcp",
+      "runtime": "python",
+      "toolCount": 22,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 62,
+          "context": " as full.md.\n\n⚠️  WARNING: Thi"
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-git-project-xray-mcp",
+      "package": "git-project-xray-mcp",
+      "id": "pypi:git-project-xray-mcp",
+      "command": "uvx git-project-xray-mcp",
+      "runtime": "python",
+      "toolCount": 3,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 2,
+          "context": "🗺️ STEP 1: Map t"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 1350,
+          "context": " symbols.\"\n}\n\n⚠️ IMPORTANT: Th"
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-gitmem-mcp",
+      "package": "gitmem-mcp",
+      "id": "pypi:gitmem-mcp",
+      "command": "uvx gitmem-mcp",
+      "runtime": "python",
+      "toolCount": 15,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 828,
+          "context": "\n             ⚠️ IMPORTANT: Li"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 117,
+          "context": "t[str, Any]\n\n🕸️ Build an impo"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 85,
+          "context": "t[str, Any]\n\n🗑️ Remove a file"
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-glossmod-mcp",
+      "package": "glossmod-mcp",
+      "id": "pypi:glossmod-mcp",
+      "command": "uvx glossmod-mcp",
+      "runtime": "python",
+      "toolCount": 4,
+      "promptCount": 3,
+      "resourceCount": 2,
+      "resourceTemplateCount": 1,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 11,
+          "context": "\n获取游戏列表。\n\n⚠️ 重要：这是所有游戏相关查询"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 16,
+          "context": "获取指定游戏的详细信息。\n\n⚠️ 前置条件：game_id "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 14,
+          "context": "\n获取 Mod 列表。\n\n⚠️ 前置条件：必须先使用 ge"
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-google-colab-mcp",
+      "package": "google-colab-mcp",
+      "id": "pypi:google-colab-mcp",
+      "command": "uvx google-colab-mcp",
+      "runtime": "python",
+      "toolCount": 19,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 1,
+          "context": "⚠️ Execute Pytho"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 1,
+          "context": "⚠️ Install a Pyt"
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-hass-mcp-li",
+      "package": "hass-mcp-li",
+      "id": "pypi:hass-mcp-li",
+      "command": "uvx hass-mcp-li",
+      "runtime": "python",
+      "toolCount": 12,
+      "promptCount": 7,
+      "resourceCount": 1,
+      "resourceTemplateCount": 4,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 26,
+          "context": "me Assistant\n\n⚠️ WARNING: Temp"
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-hass-mcp",
+      "package": "hass-mcp",
+      "id": "pypi:hass-mcp",
+      "command": "uvx hass-mcp",
+      "runtime": "python",
+      "toolCount": 12,
+      "promptCount": 7,
+      "resourceCount": 1,
+      "resourceTemplateCount": 4,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 26,
+          "context": "me Assistant\n\n⚠️ WARNING: Temp"
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-iflow-mcp_arlanrakh-talk-to-girlfriend-ai",
+      "package": "iflow-mcp_arlanrakh-talk-to-girlfriend-ai",
+      "id": "pypi:iflow-mcp_arlanrakh-talk-to-girlfriend-ai",
+      "command": "uvx iflow-mcp_arlanrakh-talk-to-girlfriend-ai",
+      "runtime": "python",
+      "toolCount": 85,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 168,
+          "context": "(e.g., \"👍\", \"❤️\", \"🔥\", \"😂\","
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-iflow-mcp_diaaaj-a-mem",
+      "package": "iflow-mcp_diaaaj-a-mem",
+      "id": "pypi:iflow-mcp_diaaaj-a-mem",
+      "command": "uvx iflow-mcp_diaaaj-a-mem",
+      "runtime": "python",
+      "toolCount": 8,
+      "promptCount": 3,
+      "resourceCount": 5,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 1164,
+          "context": " background.\n\n⚠️ **REMEMBER:**"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 1108,
+          "context": "nt memories.\n\n⚠️ **AFTER COMPL"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 736,
+          "context": "ull content.\n\n⚠️ **AFTER COMPL"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "resource.name",
+          "objectType": "resource",
+          "offset": 1,
+          "context": "⚠️ CRITICAL: Rea"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "resource.description",
+          "objectType": "resource",
+          "offset": 1,
+          "context": "⚠️ MANDATORY: Re"
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-iflow-mcp_skyworkai-mureka-mcp",
+      "package": "iflow-mcp_skyworkai-mureka-mcp",
+      "id": "pypi:iflow-mcp_skyworkai-mureka-mcp",
+      "command": "uvx iflow-mcp_skyworkai-mureka-mcp",
+      "runtime": "python",
+      "toolCount": 4,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 105,
+          "context": "rectly.\n    \n ⚠️ COST WARNING:"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 194,
+          "context": "top.\n    \n    ⚠️ COST WARNING:"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 220,
+          "context": "top.\n    \n    ⚠️ COST WARNING:"
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-langsmith-mcp-server",
+      "package": "langsmith-mcp-server",
+      "id": "pypi:langsmith-mcp-server",
+      "command": "uvx langsmith-mcp-server",
+      "runtime": "python",
+      "toolCount": 15,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 498,
+          "context": " budget.\n\n---\n⚙️ PARAMETERS (r"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 2805,
+          "context": "S\n-----------\n1️⃣ Get latest 1"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 2901,
+          "context": "root=\"true\")\n\n2️⃣ Get errored "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 3010,
+          "context": "rror=\"true\")\n\n3️⃣ Runs > 5s wi"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 3169,
+          "context": "imental\"))')\n\n4️⃣ All runs for"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 670,
+          "context": "ect data\n\n---\n⚙️ PARAMETERS\n--"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 2386,
+          "context": "\n------------\n1️⃣ **List first"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 2480,
+          "context": "mit=\"5\")\n```\n\n2️⃣ **Search for"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 2605,
+          "context": "it=\"10\")\n```\n\n3️⃣ **Get full p"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 2707,
+          "context": "=\"true\")\n```\n\n4️⃣ **Find a spe"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 737,
+          "context": "k stats)\n\n---\n⚙️ PARAMETERS\n--"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 2464,
+          "context": "\n------------\n1️⃣ **List exper"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 2616,
+          "context": "94528f\")\n```\n\n2️⃣ **List exper"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 2756,
+          "context": "imit=10)\n```\n\n3️⃣ **Find exper"
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-lightdash-mcp",
+      "package": "lightdash-mcp",
+      "id": "pypi:lightdash-mcp",
+      "command": "uvx lightdash-mcp",
+      "runtime": "python",
+      "toolCount": 28,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 99,
+          "context": "nfiguration.\n\n⚠️  CRITICAL: Ch"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 6211,
+          "context": "}\n   }\n   \n   ⚠️  Common mista"
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-linkedin-mcp-server",
+      "package": "linkedin-mcp-server",
+      "id": "pypi:linkedin-mcp-server",
+      "command": "uvx linkedin-mcp-server",
+      "runtime": "python",
+      "toolCount": 17,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 28,
+          "context": "'s text.\n\n    ⚠️ IMPORTANT: Li"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 1091,
+          "context": "\n            \"⚠️ Old post dele"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 1704,
+          "context": "   - Returns \"⚠️ Old post dele"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 152,
+          "context": "s and shares.\n⚠️ NOTE: This en"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 1660,
+          "context": "ctivity\n    - ⚠️ This permissi"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 217,
+          "context": "dexed fields.\n⚠️ NOTE: This en"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 1933,
+          "context": "issions\n    - ⚠️ Standard API "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 211,
+          "context": " information. ⚠️ NOTE: Job\nsea"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 199,
+          "context": " information. ⚠️ NOTE:\nPeople "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 2014,
+          "context": "issions\n    - ⚠️ These permiss"
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-m4-mcp",
+      "package": "m4-mcp",
+      "id": "pypi:m4-mcp",
+      "command": "uvx m4-mcp",
+      "runtime": "python",
+      "toolCount": 8,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 57,
+          "context": "stay data.\n\n**⚠️ Note:** This "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 44,
+          "context": "s quickly.\n\n**⚠️ Note:** This "
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 55,
+          "context": "dmissions.\n\n**⚠️ Note:** This "
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-mcp-code-editor",
+      "package": "mcp-code-editor",
+      "id": "pypi:mcp-code-editor",
+      "command": "uvx mcp-code-editor",
+      "runtime": "python",
+      "toolCount": 16,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 1,
+          "context": "✏️ INTELLIGENT F"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 95,
+          "context": "y analysis.\n\n🛡️ SMART PROTECT"
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-mcp-coroot",
+      "package": "mcp-coroot",
+      "id": "pypi:mcp-coroot",
+      "command": "uvx mcp-coroot",
+      "runtime": "python",
+      "toolCount": 61,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 148,
+          "context": "ependencies.\n\n⚠️ WARNING: This"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 223,
+          "context": "portunities.\n\n⚠️ WARNING: This"
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-mcp-imrs-game-manager",
+      "package": "mcp-imrs-game-manager",
+      "id": "pypi:mcp-imrs-game-manager",
+      "command": "uvx mcp-imrs-game-manager",
+      "runtime": "python",
+      "toolCount": 1,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 67,
+          "context": " timeout 問題。\n\n⚠️ 重要：questionTy"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 192,
+          "context": "礎知識測驗\n- \"多選\" (☑️): 不超過6個選項，適合進"
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-mia-simexp-mcp",
+      "package": "mia-simexp-mcp",
+      "id": "pypi:mia-simexp-mcp",
+      "command": "uvx mia-simexp-mcp",
+      "runtime": "python",
+      "toolCount": 34,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 48,
+          "context": "rs or groups (♠️ Nyro, 🌿 Aure"
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-microsoft-fabric-mcp",
+      "package": "microsoft-fabric-mcp",
+      "id": "pypi:microsoft-fabric-mcp",
+      "command": "uvx microsoft-fabric-mcp",
+      "runtime": "python",
+      "toolCount": 27,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 96,
+          "context": "(READ-ONLY).\n\n⚠️  SECURITY LIM"
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-mureka-mcp",
+      "package": "mureka-mcp",
+      "id": "pypi:mureka-mcp",
+      "command": "uvx mureka-mcp",
+      "runtime": "python",
+      "toolCount": 4,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 105,
+          "context": "rectly.\n    \n ⚠️ COST WARNING:"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 194,
+          "context": "top.\n    \n    ⚠️ COST WARNING:"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 220,
+          "context": "top.\n    \n    ⚠️ COST WARNING:"
+        }
+      ]
+    },
+    {
+      "reportKey": "pypi-my-mcp-casper",
+      "package": "my-mcp-casper",
+      "id": "pypi:my-mcp-casper",
+      "command": "uvx my-mcp-casper",
+      "runtime": "python",
+      "toolCount": 11,
+      "promptCount": 0,
+      "resourceCount": 0,
+      "resourceTemplateCount": 0,
+      "hits": [
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 62,
+          "context": "s models.\n    ⚠️ IMPORTANT: DO"
+        },
+        {
+          "cp": 65039,
+          "cpHex": "U+FE0F",
+          "klass": "variation_selector_basic",
+          "category": "stripped_by_scanner",
+          "field": "tool.description",
+          "objectType": "tool",
+          "offset": 54,
+          "context": "profiles.\n    ⚠️ IMPORTANT: DO"
+        }
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "reportKey": "aiondadotcom-mcp-ssh",
+      "package": "mcp-ssh",
+      "command": "npx -y mcp-ssh",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "aws-s3-mcp",
+      "package": "s3-mcp-server",
+      "command": "uvx s3-mcp-server",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "apple-notes-mcp",
+      "package": "notes-mcp",
+      "command": "uvx notes-mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "bash-mcp",
+      "package": "mcp",
+      "command": "uvx mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "binance-mcp",
+      "package": "binance-mcp",
+      "command": "uvx binance-mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "chrome-local-mcp",
+      "package": "local-mcp",
+      "command": "uvx local-mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "bitwarden-mcp",
+      "package": "mcp",
+      "command": "uvx mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "e2b-mcp-server",
+      "package": "e2b-mcp-server",
+      "command": "uvx e2b-mcp-server",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "agentsid-mcp-scanner",
+      "package": "mcp-scanner",
+      "command": "npx -y mcp-scanner",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "gitlab-mcp-agent-server",
+      "package": "gitlab-mcp-server",
+      "command": "uvx gitlab-mcp-server",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "gitlab-mcp",
+      "package": "gitlab-mcp",
+      "command": "uvx gitlab-mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "eslint-mcp",
+      "package": "mcp",
+      "command": "uvx mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "hubspot-mcp-community",
+      "package": "mcp-community",
+      "command": "uvx mcp-community",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "figma-mcp",
+      "package": "figma-mcp",
+      "command": "uvx figma-mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "iflow-mcp-server-github",
+      "package": "github-mcp-server",
+      "command": "uvx github-mcp-server",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "hubspot-mcp",
+      "package": "mcp",
+      "command": "uvx mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "joplin-mcp",
+      "package": "mcp",
+      "command": "uvx mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "linkedin-mcp",
+      "package": "mcp",
+      "command": "uvx mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "mcp-server-slack",
+      "package": "slack-mcp",
+      "command": "uvx slack-mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "mcp-server-docker",
+      "package": "mcp-server-docker",
+      "command": "uvx mcp-server-docker",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "modelcontextprotocol-server-github",
+      "package": "github-mcp-server",
+      "command": "uvx github-mcp-server",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "linear-mcp-server",
+      "package": "linear-mcp-server",
+      "command": "npx -y linear-mcp-server",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "n8n-mcp",
+      "package": "mcp",
+      "command": "uvx mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "mcp-linear",
+      "package": "linear-mcp-server",
+      "command": "npx -y linear-mcp-server",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "notionhq-notion-mcp-server",
+      "package": "notion-mcp-server",
+      "command": "npx -y notion-mcp-server",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "npm-@iflow-mcp-alibabacloud-dataworks-mcp-server",
+      "package": "@iflow-mcp/alibabacloud-dataworks-mcp-server",
+      "command": "npx -y @iflow-mcp/alibabacloud-dataworks-mcp-server",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "npm-@iflow-mcp-mcp-magic-ui",
+      "package": "@iflow-mcp/mcp-magic-ui",
+      "command": "npx -y @iflow-mcp/mcp-magic-ui",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "npm-@leehaohao-hello-fastmcp",
+      "package": "@leehaohao/hello-fastmcp",
+      "command": "npx -y @leehaohao/hello-fastmcp",
+      "error": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"serverInfo\",\n      \"name\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"serverInfo\",\n      \"version\"\n    ]"
+    },
+    {
+      "reportKey": "npm-@mingai-mcp",
+      "package": "@mingai/mcp",
+      "command": "npx -y @mingai/mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "npm-@sparrowengg-twigs-ai-mcp",
+      "package": "@sparrowengg/twigs-ai-mcp",
+      "command": "npx -y @sparrowengg/twigs-ai-mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "npm-@weppy-roblox-mcp",
+      "package": "@weppy/roblox-mcp",
+      "command": "npx -y @weppy/roblox-mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "npm-pentest-mcp",
+      "package": "pentest-mcp",
+      "command": "npx -y pentest-mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "npm-rest-countries-mcp",
+      "package": "rest-countries-mcp",
+      "command": "npx -y rest-countries-mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "openapi-mcp-server",
+      "package": "openapi-mcp-server",
+      "command": "uvx openapi-mcp-server",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "nx-mcp",
+      "package": "mcp",
+      "command": "uvx mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "omnifocus-mcp",
+      "package": "mcp",
+      "command": "uvx mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "pdf-mcp",
+      "package": "mcp",
+      "command": "uvx mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "playwright-mcp",
+      "package": "mcp",
+      "command": "uvx mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "pipedrive-mcp",
+      "package": "pipedrive-mcp",
+      "command": "uvx pipedrive-mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "pypi-chuk-mcp-telnet-client",
+      "package": "chuk-mcp-telnet-client",
+      "command": "uvx chuk-mcp-telnet-client",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "pypi-devops-practices-mcp",
+      "package": "devops-practices-mcp",
+      "command": "uvx devops-practices-mcp",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-flamapy-mcp",
+      "package": "flamapy-mcp",
+      "command": "uvx flamapy-mcp",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-ghidra-api-mcp",
+      "package": "ghidra-api-mcp",
+      "command": "uvx ghidra-api-mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "pypi-gsc-bing-mcp",
+      "package": "gsc-bing-mcp",
+      "command": "uvx gsc-bing-mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "pypi-grafeo-mcp",
+      "package": "grafeo-mcp",
+      "command": "uvx grafeo-mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "pypi-hacki-mcp",
+      "package": "hacki-mcp",
+      "command": "uvx hacki-mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "pypi-ida-api-mcp",
+      "package": "ida-api-mcp",
+      "command": "uvx ida-api-mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "pypi-mcp-browser-tools",
+      "package": "mcp-browser-tools",
+      "command": "uvx mcp-browser-tools",
+      "error": "MCP error -32602: Invalid request parameters"
+    },
+    {
+      "reportKey": "pypi-mcp-oignon",
+      "package": "mcp-oignon",
+      "command": "uvx mcp-oignon",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-okx",
+      "package": "mcp-okx",
+      "command": "uvx mcp-okx",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-ollama-python",
+      "package": "mcp-ollama-python",
+      "command": "uvx mcp-ollama-python",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-ollama",
+      "package": "mcp-ollama",
+      "command": "uvx mcp-ollama",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-on-demand-tools",
+      "package": "mcp-on-demand-tools",
+      "command": "uvx mcp-on-demand-tools",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-open-data-hk",
+      "package": "mcp-open-data-hk",
+      "command": "uvx mcp-open-data-hk",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-openrouter",
+      "package": "mcp-openrouter",
+      "command": "uvx mcp-openrouter",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-openstack-ops",
+      "package": "mcp-openstack-ops",
+      "command": "uvx mcp-openstack-ops",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-openweather",
+      "package": "mcp-openweather",
+      "command": "uvx mcp-openweather",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-openwebui-demo",
+      "package": "mcp-openwebui-demo",
+      "command": "uvx mcp-openwebui-demo",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-orchestration-gateway",
+      "package": "mcp-orchestration-gateway",
+      "command": "uvx mcp-orchestration-gateway",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-orchestrator",
+      "package": "mcp-orchestrator",
+      "command": "uvx mcp-orchestrator",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-organizze",
+      "package": "mcp-organizze",
+      "command": "uvx mcp-organizze",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-outline",
+      "package": "mcp-outline",
+      "command": "uvx mcp-outline",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-package-hero",
+      "package": "mcp-package-hero",
+      "command": "uvx mcp-package-hero",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-pandoc-md2pptx",
+      "package": "mcp-pandoc-md2pptx",
+      "command": "uvx mcp-pandoc-md2pptx",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-pandoc",
+      "package": "mcp-pandoc",
+      "command": "uvx mcp-pandoc",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-panther",
+      "package": "mcp-panther",
+      "command": "uvx mcp-panther",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-pdb",
+      "package": "mcp-pdb",
+      "command": "uvx mcp-pdb",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-pdf-forms",
+      "package": "mcp-pdf-forms",
+      "command": "uvx mcp-pdf-forms",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-pdf-pro",
+      "package": "mcp-pdf-pro",
+      "command": "uvx mcp-pdf-pro",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-pdf-reader",
+      "package": "mcp-pdf-reader",
+      "command": "uvx mcp-pdf-reader",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-pdf-vision",
+      "package": "mcp-pdf-vision",
+      "command": "uvx mcp-pdf-vision",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-perforce",
+      "package": "mcp-perforce",
+      "command": "uvx mcp-perforce",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-personal-assistant",
+      "package": "mcp-personal-assistant",
+      "command": "uvx mcp-personal-assistant",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-pfsense",
+      "package": "mcp-pfsense",
+      "command": "uvx mcp-pfsense",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-pg2ck",
+      "package": "mcp-pg2ck",
+      "command": "uvx mcp-pg2ck",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-pkm-logseq",
+      "package": "mcp-pkm-logseq",
+      "command": "uvx mcp-pkm-logseq",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-play-windows-sound",
+      "package": "mcp-play-windows-sound",
+      "command": "uvx mcp-play-windows-sound",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-playwright-scraper",
+      "package": "mcp-playwright-scraper",
+      "command": "uvx mcp-playwright-scraper",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-playwright-tools",
+      "package": "mcp-playwright-tools",
+      "command": "uvx mcp-playwright-tools",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-playwright",
+      "package": "mcp-playwright",
+      "command": "uvx mcp-playwright",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-pokemon-server-csdemo",
+      "package": "mcp-pokemon-server-csdemo",
+      "command": "uvx mcp-pokemon-server-csdemo",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-pokemon-server-zyq",
+      "package": "mcp-pokemon-server-zyq",
+      "command": "uvx mcp-pokemon-server-zyq",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-pokemon-server",
+      "package": "mcp-pokemon-server",
+      "command": "uvx mcp-pokemon-server",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-polaris-ai-datainsight",
+      "package": "mcp-polaris-ai-datainsight",
+      "command": "uvx mcp-polaris-ai-datainsight",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-postgresql-ops",
+      "package": "mcp-postgresql-ops",
+      "command": "uvx mcp-postgresql-ops",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-postgresql-server",
+      "package": "mcp-postgresql-server",
+      "command": "uvx mcp-postgresql-server",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-prediction-markets",
+      "package": "mcp-prediction-markets",
+      "command": "uvx mcp-prediction-markets",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-proxmox",
+      "package": "mcp-proxmox",
+      "command": "uvx mcp-proxmox",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-proxy-exec",
+      "package": "mcp-proxy-exec",
+      "command": "uvx mcp-proxy-exec",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-ptm-ppt-generator",
+      "package": "mcp-ptm-ppt-generator",
+      "command": "uvx mcp-ptm-ppt-generator",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-pyautogui",
+      "package": "mcp-pyautogui",
+      "command": "uvx mcp-pyautogui",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-pyright",
+      "package": "mcp-pyright",
+      "command": "uvx mcp-pyright",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-pyrunner",
+      "package": "mcp-pyrunner",
+      "command": "uvx mcp-pyrunner",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-pystub",
+      "package": "mcp-pystub",
+      "command": "uvx mcp-pystub",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-pytest-runner",
+      "package": "mcp-pytest-runner",
+      "command": "uvx mcp-pytest-runner",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-python-bitcoinlib",
+      "package": "mcp-python-bitcoinlib",
+      "command": "uvx mcp-python-bitcoinlib",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-python-env-debugger",
+      "package": "mcp-python-env-debugger",
+      "command": "uvx mcp-python-env-debugger",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-python-exec-sandbox",
+      "package": "mcp-python-exec-sandbox",
+      "command": "uvx mcp-python-exec-sandbox",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-python-exec",
+      "package": "mcp-python-exec",
+      "command": "uvx mcp-python-exec",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-python-interpreter",
+      "package": "mcp-python-interpreter",
+      "command": "uvx mcp-python-interpreter",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-python-repl",
+      "package": "mcp-python-repl",
+      "command": "uvx mcp-python-repl",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-python-sandbox",
+      "package": "mcp-python-sandbox",
+      "command": "uvx mcp-python-sandbox",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-python",
+      "package": "mcp-python",
+      "command": "uvx mcp-python",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-quality-pypi",
+      "package": "mcp-quality-pypi",
+      "command": "uvx mcp-quality-pypi",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-read-only-argocd",
+      "package": "mcp-read-only-argocd",
+      "command": "uvx mcp-read-only-argocd",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-read-only-grafana",
+      "package": "mcp-read-only-grafana",
+      "command": "uvx mcp-read-only-grafana",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-read-pdf",
+      "package": "mcp-read-pdf",
+      "command": "uvx mcp-read-pdf",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-recall-md",
+      "package": "mcp-recall-md",
+      "command": "uvx mcp-recall-md",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-recommender",
+      "package": "mcp-recommender",
+      "command": "uvx mcp-recommender",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-reddit",
+      "package": "mcp-reddit",
+      "command": "uvx mcp-reddit",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-redis-server",
+      "package": "mcp-redis-server",
+      "command": "uvx mcp-redis-server",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-refactoring",
+      "package": "mcp-refactoring",
+      "command": "uvx mcp-refactoring",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-release-guardian",
+      "package": "mcp-release-guardian",
+      "command": "uvx mcp-release-guardian",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-remote-control",
+      "package": "mcp-remote-control",
+      "command": "uvx mcp-remote-control",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-remote-ssh",
+      "package": "mcp-remote-ssh",
+      "command": "uvx mcp-remote-ssh",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-renderlytic",
+      "package": "mcp-renderlytic",
+      "command": "uvx mcp-renderlytic",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-request-tracker-crunchtools",
+      "package": "mcp-request-tracker-crunchtools",
+      "command": "uvx mcp-request-tracker-crunchtools",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-request",
+      "package": "mcp-request",
+      "command": "uvx mcp-request",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-requests",
+      "package": "mcp-requests",
+      "command": "uvx mcp-requests",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-rfc-editor",
+      "package": "mcp-rfc-editor",
+      "command": "uvx mcp-rfc-editor",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-rlm-proxy",
+      "package": "mcp-rlm-proxy",
+      "command": "uvx mcp-rlm-proxy",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-rlm-server",
+      "package": "mcp-rlm-server",
+      "command": "uvx mcp-rlm-server",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-roblox-docs",
+      "package": "mcp-roblox-docs",
+      "command": "uvx mcp-roblox-docs",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-ros2-logs",
+      "package": "mcp-ros2-logs",
+      "command": "uvx mcp-ros2-logs",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-rs232",
+      "package": "mcp-rs232",
+      "command": "uvx mcp-rs232",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-run-python-code",
+      "package": "mcp-run-python-code",
+      "command": "uvx mcp-run-python-code",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-ry-server",
+      "package": "mcp-ry-server",
+      "command": "uvx mcp-ry-server",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-s3-server",
+      "package": "mcp-s3-server",
+      "command": "uvx mcp-s3-server",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-salesforce",
+      "package": "mcp-salesforce",
+      "command": "uvx mcp-salesforce",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-sandbox-toolkit",
+      "package": "mcp-sandbox-toolkit",
+      "command": "uvx mcp-sandbox-toolkit",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-sap-demo",
+      "package": "mcp-sap-demo",
+      "command": "uvx mcp-sap-demo",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-scheche-demo",
+      "package": "mcp-scheche-demo",
+      "command": "uvx mcp-scheche-demo",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-schema-server",
+      "package": "mcp-schema-server",
+      "command": "uvx mcp-schema-server",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-scholarly",
+      "package": "mcp-scholarly",
+      "command": "uvx mcp-scholarly",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-screen-operation",
+      "package": "mcp-screen-operation",
+      "command": "uvx mcp-screen-operation",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-screenshot-server",
+      "package": "mcp-screenshot-server",
+      "command": "uvx mcp-screenshot-server",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-search-demo-test",
+      "package": "mcp-search-demo-test",
+      "command": "uvx mcp-search-demo-test",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-search-linkup",
+      "package": "mcp-search-linkup",
+      "command": "uvx mcp-search-linkup",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-searxng",
+      "package": "mcp-searxng",
+      "command": "uvx mcp-searxng",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-security-audit",
+      "package": "mcp-security-audit",
+      "command": "uvx mcp-security-audit",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-seedream",
+      "package": "mcp-seedream",
+      "command": "uvx mcp-seedream",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-semantic-intelligence",
+      "package": "mcp-semantic-intelligence",
+      "command": "uvx mcp-semantic-intelligence",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-semantic-search",
+      "package": "mcp-semantic-search",
+      "command": "uvx mcp-semantic-search",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-semclone",
+      "package": "mcp-semclone",
+      "command": "uvx mcp-semclone",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-seniverse-weather-galaxy",
+      "package": "mcp-seniverse-weather-galaxy",
+      "command": "uvx mcp-seniverse-weather-galaxy",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-seniverse-weather-mqslllddyy-1",
+      "package": "mcp-seniverse-weather-mqslllddyy-1",
+      "command": "uvx mcp-seniverse-weather-mqslllddyy-1",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-seniverse-weather-pengliu",
+      "package": "mcp-seniverse-weather-pengliu",
+      "command": "uvx mcp-seniverse-weather-pengliu",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-seniverse-weather-server",
+      "package": "mcp-seniverse-weather-server",
+      "command": "uvx mcp-seniverse-weather-server",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-seniverse-weather-sunw",
+      "package": "mcp-seniverse-weather-sunw",
+      "command": "uvx mcp-seniverse-weather-sunw",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-seniverse-weather-zy",
+      "package": "mcp-seniverse-weather-zy",
+      "command": "uvx mcp-seniverse-weather-zy",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-seniverse-weather",
+      "package": "mcp-seniverse-weather",
+      "command": "uvx mcp-seniverse-weather",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-serial-hid-kvm",
+      "package": "mcp-serial-hid-kvm",
+      "command": "uvx mcp-serial-hid-kvm",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-serper-search",
+      "package": "mcp-serper-search",
+      "command": "uvx mcp-serper-search",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-12306",
+      "package": "mcp-server-12306",
+      "command": "uvx mcp-server-12306",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-2",
+      "package": "mcp-server-2",
+      "command": "uvx mcp-server-2",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-again",
+      "package": "mcp-server-again",
+      "command": "uvx mcp-server-again",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-aidd",
+      "package": "mcp-server-aidd",
+      "command": "uvx mcp-server-aidd",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-aidrac",
+      "package": "mcp-server-aidrac",
+      "command": "uvx mcp-server-aidrac",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-ainternet",
+      "package": "mcp-server-ainternet",
+      "command": "uvx mcp-server-ainternet",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-airoom",
+      "package": "mcp-server-airoom",
+      "command": "uvx mcp-server-airoom",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-aistudio",
+      "package": "mcp-server-aistudio",
+      "command": "uvx mcp-server-aistudio",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-alteryx",
+      "package": "mcp-server-alteryx",
+      "command": "uvx mcp-server-alteryx",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-analyzer",
+      "package": "mcp-server-analyzer",
+      "command": "uvx mcp-server-analyzer",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-anki",
+      "package": "mcp-server-anki",
+      "command": "uvx mcp-server-anki",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-apache-airflow",
+      "package": "mcp-server-apache-airflow",
+      "command": "uvx mcp-server-apache-airflow",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-as",
+      "package": "mcp-server-as",
+      "command": "uvx mcp-server-as",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-ascom",
+      "package": "mcp-server-ascom",
+      "command": "uvx mcp-server-ascom",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-baidu-digitalhuman",
+      "package": "mcp-server-baidu-digitalhuman",
+      "command": "uvx mcp-server-baidu-digitalhuman",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-baidu-maps-enhanced",
+      "package": "mcp-server-baidu-maps-enhanced",
+      "command": "uvx mcp-server-baidu-maps-enhanced",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-baidu-maps",
+      "package": "mcp-server-baidu-maps",
+      "command": "uvx mcp-server-baidu-maps",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-baige",
+      "package": "mcp-server-baige",
+      "command": "uvx mcp-server-baige",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-bedrock-image",
+      "package": "mcp-server-bedrock-image",
+      "command": "uvx mcp-server-bedrock-image",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-beehiiv",
+      "package": "mcp-server-beehiiv",
+      "command": "uvx mcp-server-beehiiv",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-biliscribe",
+      "package": "mcp-server-biliscribe",
+      "command": "uvx mcp-server-biliscribe",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-bitbucket",
+      "package": "mcp-server-bitbucket",
+      "command": "uvx mcp-server-bitbucket",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-bmi-calculator",
+      "package": "mcp-server-bmi-calculator",
+      "command": "uvx mcp-server-bmi-calculator",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-bridge",
+      "package": "mcp-server-bridge",
+      "command": "uvx mcp-server-bridge",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-browser",
+      "package": "mcp-server-browser",
+      "command": "uvx mcp-server-browser",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-builder",
+      "package": "mcp-server-builder",
+      "command": "uvx mcp-server-builder",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-calculator",
+      "package": "mcp-server-calculator",
+      "command": "uvx mcp-server-calculator",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-canyougrab",
+      "package": "mcp-server-canyougrab",
+      "command": "uvx mcp-server-canyougrab",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-chatgpt-app",
+      "package": "mcp-server-chatgpt-app",
+      "command": "uvx mcp-server-chatgpt-app",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-code-assist",
+      "package": "mcp-server-code-assist",
+      "command": "uvx mcp-server-code-assist",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-coindesk",
+      "package": "mcp-server-coindesk",
+      "command": "uvx mcp-server-coindesk",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-colab-exec",
+      "package": "mcp-server-colab-exec",
+      "command": "uvx mcp-server-colab-exec",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-collector",
+      "package": "mcp-server-collector",
+      "command": "uvx mcp-server-collector",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-consignspace",
+      "package": "mcp-server-consignspace",
+      "command": "uvx mcp-server-consignspace",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-context-in",
+      "package": "mcp-server-context-in",
+      "command": "uvx mcp-server-context-in",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-converter",
+      "package": "mcp-server-converter",
+      "command": "uvx mcp-server-converter",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-coverage-report",
+      "package": "mcp-server-coverage-report",
+      "command": "uvx mcp-server-coverage-report",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-creator",
+      "package": "mcp-server-creator",
+      "command": "uvx mcp-server-creator",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-currency-history",
+      "package": "mcp-server-currency-history",
+      "command": "uvx mcp-server-currency-history",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-cvm",
+      "package": "mcp-server-cvm",
+      "command": "uvx mcp-server-cvm",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-danchoicloud",
+      "package": "mcp-server-danchoicloud",
+      "command": "uvx mcp-server-danchoicloud",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-database",
+      "package": "mcp-server-database",
+      "command": "uvx mcp-server-database",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-dbase",
+      "package": "mcp-server-dbase",
+      "command": "uvx mcp-server-dbase",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-decoder",
+      "package": "mcp-server-decoder",
+      "command": "uvx mcp-server-decoder",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-demo-8",
+      "package": "mcp-server-demo-8",
+      "command": "uvx mcp-server-demo-8",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-demo-9",
+      "package": "mcp-server-demo-9",
+      "command": "uvx mcp-server-demo-9",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-demo-lei",
+      "package": "mcp-server-demo-lei",
+      "command": "uvx mcp-server-demo-lei",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-demo2025",
+      "package": "mcp-server-demo2025",
+      "command": "uvx mcp-server-demo2025",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-dexcom-health",
+      "package": "mcp-server-dexcom-health",
+      "command": "uvx mcp-server-dexcom-health",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-dexscreener",
+      "package": "mcp-server-dexscreener",
+      "command": "uvx mcp-server-dexscreener",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-diff-python",
+      "package": "mcp-server-diff-python",
+      "command": "uvx mcp-server-diff-python",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-dnspod",
+      "package": "mcp-server-dnspod",
+      "command": "uvx mcp-server-dnspod",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-dongjunqaq",
+      "package": "mcp-server-dongjunqaq",
+      "command": "uvx mcp-server-dongjunqaq",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-email",
+      "package": "mcp-server-email",
+      "command": "uvx mcp-server-email",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-endstone",
+      "package": "mcp-server-endstone",
+      "command": "uvx mcp-server-endstone",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-esignatures",
+      "package": "mcp-server-esignatures",
+      "command": "uvx mcp-server-esignatures",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-everything-search",
+      "package": "mcp-server-everything-search",
+      "command": "uvx mcp-server-everything-search",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-everything-wrong",
+      "package": "mcp-server-everything-wrong",
+      "command": "uvx mcp-server-everything-wrong",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-feedback",
+      "package": "mcp-server-feedback",
+      "command": "uvx mcp-server-feedback",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-fetch-louiscklaw",
+      "package": "mcp-server-fetch-louiscklaw",
+      "command": "uvx mcp-server-fetch-louiscklaw",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-fetch-python",
+      "package": "mcp-server-fetch-python",
+      "command": "uvx mcp-server-fetch-python",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-fetch-save",
+      "package": "mcp-server-fetch-save",
+      "command": "uvx mcp-server-fetch-save",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-fetch-tom",
+      "package": "mcp-server-fetch-tom",
+      "command": "uvx mcp-server-fetch-tom",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-fetch",
+      "package": "mcp-server-fetch",
+      "command": "uvx mcp-server-fetch",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-fetch2",
+      "package": "mcp-server-fetch2",
+      "command": "uvx mcp-server-fetch2",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-file-finder",
+      "package": "mcp-server-file-finder",
+      "command": "uvx mcp-server-file-finder",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-flow",
+      "package": "mcp-server-flow",
+      "command": "uvx mcp-server-flow",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-for-odoo-drk",
+      "package": "mcp-server-for-odoo-drk",
+      "command": "uvx mcp-server-for-odoo-drk",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-for-powershell",
+      "package": "mcp-server-for-powershell",
+      "command": "uvx mcp-server-for-powershell",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-freesearch",
+      "package": "mcp-server-freesearch",
+      "command": "uvx mcp-server-freesearch",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-gaokao",
+      "package": "mcp-server-gaokao",
+      "command": "uvx mcp-server-gaokao",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-gcodeclean",
+      "package": "mcp-server-gcodeclean",
+      "command": "uvx mcp-server-gcodeclean",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-gemini-bridge",
+      "package": "mcp-server-gemini-bridge",
+      "command": "uvx mcp-server-gemini-bridge",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-git",
+      "package": "mcp-server-git",
+      "command": "uvx mcp-server-git",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-glk",
+      "package": "mcp-server-glk",
+      "command": "uvx mcp-server-glk",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-google-news",
+      "package": "mcp-server-google-news",
+      "command": "uvx mcp-server-google-news",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-google-patents",
+      "package": "mcp-server-google-patents",
+      "command": "uvx mcp-server-google-patents",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-google-scholar",
+      "package": "mcp-server-google-scholar",
+      "command": "uvx mcp-server-google-scholar",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-googlesearch",
+      "package": "mcp-server-googlesearch",
+      "command": "uvx mcp-server-googlesearch",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-greeter",
+      "package": "mcp-server-greeter",
+      "command": "uvx mcp-server-greeter",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-grist",
+      "package": "mcp-server-grist",
+      "command": "uvx mcp-server-grist",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-gxb",
+      "package": "mcp-server-gxb",
+      "command": "uvx mcp-server-gxb",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-hacker-news",
+      "package": "mcp-server-hacker-news",
+      "command": "uvx mcp-server-hacker-news",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-hatena-weekly",
+      "package": "mcp-server-hatena-weekly",
+      "command": "uvx mcp-server-hatena-weekly",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-hch",
+      "package": "mcp-server-hch",
+      "command": "uvx mcp-server-hch",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-helm",
+      "package": "mcp-server-helm",
+      "command": "uvx mcp-server-helm",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-http-request",
+      "package": "mcp-server-http-request",
+      "command": "uvx mcp-server-http-request",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-hyperplexity",
+      "package": "mcp-server-hyperplexity",
+      "command": "uvx mcp-server-hyperplexity",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-ida",
+      "package": "mcp-server-ida",
+      "command": "uvx mcp-server-ida",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-if",
+      "package": "mcp-server-if",
+      "command": "uvx mcp-server-if",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-ipinfo",
+      "package": "mcp-server-ipinfo",
+      "command": "uvx mcp-server-ipinfo",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-jerryni-demo",
+      "package": "mcp-server-jerryni-demo",
+      "command": "uvx mcp-server-jerryni-demo",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-jis",
+      "package": "mcp-server-jis",
+      "command": "uvx mcp-server-jis",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-jl",
+      "package": "mcp-server-jl",
+      "command": "uvx mcp-server-jl",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-jupyter",
+      "package": "mcp-server-jupyter",
+      "command": "uvx mcp-server-jupyter",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-kenxue",
+      "package": "mcp-server-kenxue",
+      "command": "uvx mcp-server-kenxue",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-kicad",
+      "package": "mcp-server-kicad",
+      "command": "uvx mcp-server-kicad",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-kubernetes",
+      "package": "mcp-server-kubernetes",
+      "command": "uvx mcp-server-kubernetes",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-ladybug",
+      "package": "mcp-server-ladybug",
+      "command": "uvx mcp-server-ladybug",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-lark-doc",
+      "package": "mcp-server-lark-doc",
+      "command": "uvx mcp-server-lark-doc",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-lark-docx",
+      "package": "mcp-server-lark-docx",
+      "command": "uvx mcp-server-lark-docx",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-larksuite-doc",
+      "package": "mcp-server-larksuite-doc",
+      "command": "uvx mcp-server-larksuite-doc",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-mac-brightness",
+      "package": "mcp-server-mac-brightness",
+      "command": "uvx mcp-server-mac-brightness",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-macos-defaults",
+      "package": "mcp-server-macos-defaults",
+      "command": "uvx mcp-server-macos-defaults",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-math",
+      "package": "mcp-server-math",
+      "command": "uvx mcp-server-math",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-max",
+      "package": "mcp-server-max",
+      "command": "uvx mcp-server-max",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-mikrotik",
+      "package": "mcp-server-mikrotik",
+      "command": "uvx mcp-server-mikrotik",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-mineru-bach",
+      "package": "mcp-server-mineru-bach",
+      "command": "uvx mcp-server-mineru-bach",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-mm1",
+      "package": "mcp-server-mm1",
+      "command": "uvx mcp-server-mm1",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-monday-qi",
+      "package": "mcp-server-monday-qi",
+      "command": "uvx mcp-server-monday-qi",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-moralis-bacar",
+      "package": "mcp-server-moralis-bacar",
+      "command": "uvx mcp-server-moralis-bacar",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-mql5",
+      "package": "mcp-server-mql5",
+      "command": "uvx mcp-server-mql5",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-mteam",
+      "package": "mcp-server-mteam",
+      "command": "uvx mcp-server-mteam",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-mturk",
+      "package": "mcp-server-mturk",
+      "command": "uvx mcp-server-mturk",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-my-lark-doc",
+      "package": "mcp-server-my-lark-doc",
+      "command": "uvx mcp-server-my-lark-doc",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-my-larksuite-doc",
+      "package": "mcp-server-my-larksuite-doc",
+      "command": "uvx mcp-server-my-larksuite-doc",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-nbotbb",
+      "package": "mcp-server-nbotbb",
+      "command": "uvx mcp-server-nbotbb",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-neo4j",
+      "package": "mcp-server-neo4j",
+      "command": "uvx mcp-server-neo4j",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-nhentai",
+      "package": "mcp-server-nhentai",
+      "command": "uvx mcp-server-nhentai",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-notify",
+      "package": "mcp-server-notify",
+      "command": "uvx mcp-server-notify",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-notion",
+      "package": "mcp-server-notion",
+      "command": "uvx mcp-server-notion",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-nucleus",
+      "package": "mcp-server-nucleus",
+      "command": "uvx mcp-server-nucleus",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "pypi-mcp-server-office",
+      "package": "mcp-server-office",
+      "command": "uvx mcp-server-office",
+      "error": "connect timeout"
+    },
+    {
+      "reportKey": "quickbooks-mcp",
+      "package": "quickbooks-mcp",
+      "command": "uvx quickbooks-mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "redis-mcp",
+      "package": "mcp",
+      "command": "uvx mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "reminders-mcp",
+      "package": "mcp",
+      "command": "uvx mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "remotion-mcp",
+      "package": "mcp",
+      "command": "uvx mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "sendgrid-mcp",
+      "package": "mcp",
+      "command": "uvx mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "shell-mcp",
+      "package": "mcp",
+      "command": "uvx mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "repl-mcp",
+      "package": "repl-mcp",
+      "command": "uvx repl-mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "splunk-mcp",
+      "package": "mcp",
+      "command": "uvx mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "stitch-mcp",
+      "package": "mcp",
+      "command": "uvx mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "strapi-mcp",
+      "package": "mcp",
+      "command": "uvx mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "tavily-mcp",
+      "package": "tavily-mcp",
+      "command": "uvx tavily-mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "swagger-mcp",
+      "package": "swagger-mcp",
+      "command": "uvx swagger-mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "ticktick-mcp",
+      "package": "ticktick-mcp",
+      "command": "uvx ticktick-mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "twilio-mcp",
+      "package": "mcp",
+      "command": "uvx mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "vercel-mcp",
+      "package": "mcp",
+      "command": "uvx mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "wordpress-mcp",
+      "package": "mcp",
+      "command": "uvx mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "youtube-mcp",
+      "package": "mcp",
+      "command": "uvx mcp",
+      "error": "MCP error -32000: Connection closed"
+    },
+    {
+      "reportKey": "pypi-mnemo-mcp",
+      "package": "mnemo-mcp",
+      "command": "uvx mnemo-mcp",
+      "error": "connect timeout"
+    }
+  ]
+}

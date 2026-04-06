@@ -1,1 +1,28 @@
 node_modules/
+.env
+.DS_Store
+.cache/
+*.log
+
+# Engram AI agent memory
+.engram/
+.database-mcp/
+
+# IDE / agent scaffolding
+.claude/
+.codeforge/
+.cursor/
+.debug-thinking-mcp/
+.jac/
+.knowledgebase/
+.mcp-observatory/
+.mcp-vm-blackbox/
+.memorious/
+.ng-annotate/
+.sce/
+.aceflow/
+.devcontainer/
+CLAUDE.md
+agent.json
+agentsid.json
+api_data_storage/

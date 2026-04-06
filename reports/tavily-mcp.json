@@ -10,8 +10,8 @@
   },
   "toolCount": 5,
   "grade": {
-    "overall": "D",
-    "score": 45,
+    "overall": "C",
+    "score": 67,
     "categories": {
       "validation": "C",
       "auth": "B"
