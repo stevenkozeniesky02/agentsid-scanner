@@ -16,6 +16,7 @@ import {
   scanToxicDataFlows,
 } from "./rules.mjs";
 import { grade } from "./grader.mjs";
+import { applyMitigations } from "./mitigations.mjs";
 import { formatTerminalReport, formatJsonReport, formatHtmlReport } from "./reporter.mjs";
 import { buildMapPolicy, enrichDescription } from "./policy.mjs";
 import { auditSupplyChain } from "./audit.mjs";
@@ -202,7 +203,7 @@ function generateReport(serverInfo, tools, json, includePolicy, html, supplyChai
   const toxicFlowFindings = scanToxicDataFlows(tools);
 
   // Combine all findings — supply chain and toxic flows first so CRITICALs surface early
-  const allFindings = [
+  const rawFindings = [
     ...supplyChainFindings,
     ...toxicFlowFindings,
     ...descriptionFindings,
@@ -212,6 +213,9 @@ function generateReport(serverInfo, tools, json, includePolicy, html, supplyChai
     ...outputFindings,
     ...hallucinationFindings,
   ];
+
+  // Apply mitigations — adjust severity and add confidence scores
+  const allFindings = applyMitigations(rawFindings, tools, serverInfo);
 
   // Grade (pass tool count for per-tool normalization)
   const gradeResult = grade(allFindings, tools.length);

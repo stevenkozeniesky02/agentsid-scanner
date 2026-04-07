@@ -3,6 +3,7 @@ reports/
 registry-index.json
 scripts/
 tests/
+test/
 data/
 docs/
 

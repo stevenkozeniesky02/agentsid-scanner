@@ -37,6 +37,13 @@ const SEVERITY_DEDUCTIONS = {
   INFO: 0,
 };
 
+// Confidence multipliers — low-confidence findings hurt less.
+const CONFIDENCE_MULTIPLIERS = {
+  high: 1.0,
+  medium: 0.7,
+  low: 0.3,
+};
+
 // Maximum total deduction per severity tier.
 // CRITICAL is uncapped — each one matters.
 const SEVERITY_CAPS = {
@@ -56,12 +63,15 @@ export function grade(findings, toolCount = 1) {
 
   for (const finding of findings) {
     const sev = finding.severity || "INFO";
+    const confidence = finding.confidence || "high";
+    const multiplier = CONFIDENCE_MULTIPLIERS[confidence] ?? 1.0;
+
     counts[sev] = (counts[sev] || 0) + 1;
-    rawTierDeductions[sev] += SEVERITY_DEDUCTIONS[sev] || 0;
+    rawTierDeductions[sev] += (SEVERITY_DEDUCTIONS[sev] || 0) * multiplier;
 
     const cat = finding.category || "other";
     if (!categoryScores[cat]) categoryScores[cat] = 100;
-    categoryScores[cat] -= SEVERITY_DEDUCTIONS[sev] || 0;
+    categoryScores[cat] -= (SEVERITY_DEDUCTIONS[sev] || 0) * multiplier;
   }
 
   // Normalize MEDIUM and LOW by sqrt(tool count) — dampens the pile-up
