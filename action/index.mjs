@@ -129,10 +129,10 @@ ${report.grade.score < 60 ? `### Recommendations
 1. Add per-tool permission controls — [AgentsID Docs](https://agentsid.dev/docs)
 2. Implement input validation on tool parameters
 3. Add authentication to server endpoints
-4. Use [AgentsID Guard](https://github.com/stevenkozeniesky02/shell-guard) for built-in protection` : ""}
+4. Use [AgentsID Guard](https://github.com/AgentsID-dev/shell-guard) for built-in protection` : ""}
 
 ---
-<sub>Scanned by [AgentsID Security Scanner](https://github.com/stevenkozeniesky02/agentsid-scanner) · [Fix your grade](https://agentsid.dev/docs)</sub>`;
+<sub>Scanned by [AgentsID Security Scanner](https://github.com/AgentsID-dev/agentsid-scanner) · [Fix your grade](https://agentsid.dev/docs)</sub>`;
 
         // Check for existing comment and update it
         const { data: comments } = await octokit.rest.issues.listComments({

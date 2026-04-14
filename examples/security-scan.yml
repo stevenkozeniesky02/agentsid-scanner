@@ -9,7 +9,7 @@
 #   2. Update the server-command to match your MCP server
 #   3. Push — the scan runs on every PR
 #
-# Learn more: https://github.com/stevenkozeniesky02/agentsid-scanner
+# Learn more: https://github.com/AgentsID-dev/agentsid-scanner
 
 name: MCP Security Scan
 
@@ -37,7 +37,7 @@ jobs:
         run: npm ci
 
       - name: Run AgentsID Security Scanner
-        uses: stevenkozeniesky02/agentsid-scanner@master
+        uses: AgentsID-dev/agentsid-scanner@master
         with:
           # Option 1: Scan by starting your MCP server
           server-command: 'node src/index.mjs'

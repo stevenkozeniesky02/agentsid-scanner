@@ -40,7 +40,7 @@ This report makes three contributions:
 
 ### 2.1 Scanner Design
 
-We built an automated scanner (open-source, available at github.com/stevenkozeniesky02/agentsid-scanner) that connects to MCP servers via the stdio transport protocol, performs the standard MCP handshake (initialize → notifications/initialized → tools/list), and analyzes the returned tool definitions.
+We built an automated scanner (open-source, available at github.com/AgentsID-dev/agentsid-scanner) that connects to MCP servers via the stdio transport protocol, performs the standard MCP handshake (initialize → notifications/initialized → tools/list), and analyzes the returned tool definitions.
 
 The scanner evaluates seven categories of security risk:
 
@@ -349,8 +349,8 @@ Until the ecosystem addresses identity, permissions, and audit at the tool level
 
 The scanner, grading methodology, and all 100 scan reports are open-source and publicly available:
 
-- **Scanner**: github.com/stevenkozeniesky02/agentsid-scanner
-- **Scan data**: github.com/stevenkozeniesky02/agentsid-scanner/tree/master/reports
+- **Scanner**: github.com/AgentsID-dev/agentsid-scanner
+- **Scan data**: github.com/AgentsID-dev/agentsid-scanner/tree/master/reports
 - **Scanner methodology**: Documented in src/rules.mjs, src/grader.mjs
 
 To reproduce any scan: `npx @agentsid/scanner -- npx <package-name>`
@@ -364,7 +364,7 @@ The recommendations in Sections 6.1–6.3 are not theoretical. We built open-sou
 | Recommendation | Implementation | Status |
 |----------------|---------------|--------|
 | Per-tool authorization standard (§6.2.1) | **AgentsID Permission Specification** — 14 constraint types (schedule, rate limit, data classification, budget, sequence, session, risk score, IP allowlist, chain depth, cooldown, anomaly detection, approval gates) for defining what an agent can do at tool-level granularity. Open RFC at agentsid.dev/spec. | Published, open for comment |
-| Input schema validation (§6.2.2) | **AgentsID Security Scanner** — the tool used to produce this report. Evaluates tool schemas, descriptions, injection patterns, and hallucination-based vulnerabilities. | Open-source: github.com/stevenkozeniesky02/agentsid-scanner |
+| Input schema validation (§6.2.2) | **AgentsID Security Scanner** — the tool used to produce this report. Evaluates tool schemas, descriptions, injection patterns, and hallucination-based vulnerabilities. | Open-source: github.com/AgentsID-dev/agentsid-scanner |
 | Audit log format (§6.2.3) | **Tamper-evident audit chain** — SHA-256 hash chain with agent identity, tool name, parameters, result, and timestamp per entry. Implemented in the AgentsID platform. | In production |
 | Agent identity (§6.2.4) | **HMAC-SHA256 self-validating tokens** — agents receive tokens that encode identity and delegation chain without requiring a central lookup on every call. | In production |
 | Delegation semantics (§6.2.5) | **Scope-narrowing delegation protocol** — parent agents can delegate subsets of their permissions to child agents, with cascading revocation. Children cannot escalate beyond parent scope. | In production |

@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="https://agentsid.dev"><img src="https://img.shields.io/badge/by-AgentsID-f59e0b?style=flat-square" alt="AgentsID" /></a>
-  <a href="https://github.com/stevenkozeniesky02/agentsid-scanner/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-f59e0b?style=flat-square" alt="License" /></a>
+  <a href="https://github.com/AgentsID-dev/agentsid-scanner/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-f59e0b?style=flat-square" alt="License" /></a>
 </p>
 
 ---
@@ -167,7 +167,7 @@ The scanner tells you what's wrong. Here's how to fix it:
 npm install @agentsid/guard
 ```
 
-[AgentsID Guard](https://github.com/stevenkozeniesky02/shell-guard) validates every tool call against permission rules before execution. 50 tools, 16 categories, all protected.
+[AgentsID Guard](https://github.com/AgentsID-dev/shell-guard) validates every tool call against permission rules before execution. 50 tools, 16 categories, all protected.
 
 ### Or add the SDK to your existing server
 
@@ -208,7 +208,7 @@ All 15,982 servers scored and searchable: [agentsid.dev/registry](https://agents
 ## Links
 
 - [AgentsID](https://agentsid.dev) — Identity & auth for AI agents
-- [AgentsID Guard](https://github.com/stevenkozeniesky02/shell-guard) — 50-tool protected MCP server
+- [AgentsID Guard](https://github.com/AgentsID-dev/shell-guard) — 50-tool protected MCP server
 - [Documentation](https://agentsid.dev/docs)
 - [MCP Registry](https://agentsid.dev/registry) — 15,982 servers scored
 
