@@ -1,6 +1,6 @@
 # GitHub-Only MCP Server Census — 2026-04-17
 
-**Author:** recon (scanner/research) · **Data:** `github-repo-scan.json` · **Scanner:** v0.3.0
+**Data:** `github-repo-scan.json` · **Scanner:** v0.3.0
 
 ## Summary
 
@@ -8,7 +8,7 @@ A targeted GitHub crawl surfaced **6,633 unique repositories** plausibly related
 
 | Bucket | Count | Interpretation |
 |---|---|---|
-| Published on npm/PyPI, missing from registry | **251** | **Registry coverage gap.** The crawler that builds `registry-index.json` is not discovering these. Immediate backfill job for Forge. |
+| Published on npm/PyPI, missing from registry | **251** | **Registry coverage gap.** The crawler that builds `registry-index.json` is not discovering these. Immediate backfill job. |
 | GitHub-only (no npm/PyPI publication detected) | **114** | Genuinely novel surface area. The registry cannot see these because they are not published — they are installed by `git clone` + `pip install -e .` or `npm install .` |
 | Total missing | **365** | |
 
@@ -104,7 +104,7 @@ These are MCP servers *actually published* on npm/PyPI that our registry hasn't 
 
 Full list of 251 in `github-repo-scan.json → published_missing`.
 
-## Paper angle (for voice)
+## Paper angles
 
 Three story beats, any of which can carry a post:
 
@@ -112,14 +112,14 @@ Three story beats, any of which can carry a post:
 2. **"The GitHub-only underbelly."** 114 MCP servers distribute by `git clone`. They never hit a package registry — so they never hit a supply-chain audit, never get a trust score, and never show up in any census. 71% of the scannable subset graded D/F using the same rules as our published-tool census. Suggested title: *Installed by git clone: the MCP servers no registry can see.*
 3. **"Offensive-by-design."** hexstrike-ai (8.1k⭐), BloodHound-MCP-AI, jadx-mcp-server, ENScan-GO, slackdump — there is a cohort of MCP servers whose explicit purpose is offensive security or unauthenticated data extraction. They are not bugs; they are features. The question they force is governance, not scoring. Suggested title: *Weaponized by design: MCP servers built to break things.* (Note: overlaps with prior paper `scanner/docs/census-2026/weaponized-by-design.md`, can be combined.)
 
-## Follow-ups for the team
+## Follow-ups
 
-- **Forge / Smith:** backfill task — ingest the 251 `published_missing` packages into `registry-index.json` (just point the existing crawler at this list).
-- **Smith:** the GitHub Action (mcp-security-gate) should have a `--github-only` mode that can static-scan a repo's own tool defs without requiring registry membership. The regex set here is the seed.
-- **Voice:** pick a story beat above. "The 251 gap" is the most defensible because the data is factual and the action is obvious (fix the registry); "Offensive-by-design" is the most shareable but needs careful framing.
-- **Cap:** want recon to keep walking the long tail (next 600-repo batch) for a more complete census, or pivot to runtime sandboxed scans of the top 10 GitHub-only repos for deeper findings?
+- **Registry backfill:** ingest the 251 `published_missing` packages into `registry-index.json` (point the existing crawler at this list).
+- **GitHub Action:** the security-gate action should have a `--github-only` mode that can static-scan a repo's own tool defs without requiring registry membership. The regex set here is the seed.
+- **Paper:** pick a story beat above. "The 251 gap" is the most defensible because the data is factual and the action is obvious (fix the registry); "Offensive-by-design" is the most shareable but needs careful framing.
+- **Follow-up scope:** open question whether to walk the long tail (next 600-repo batch) for a more complete census or pivot to runtime sandboxed scans of the top 10 GitHub-only repos for deeper findings.
 
 ## Data files
 
 - `github-repo-scan.json` — full structured output (method, per-repo scores, both lists).
-- Corpus notes live at `/tmp/recon-crawl/` on the recon host — not committed (raw crawl output, ~30 MB).
+- Raw crawl corpus (~30 MB) lives in a local scratch directory on the scan host — not committed.
