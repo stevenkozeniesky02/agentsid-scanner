@@ -5,9 +5,10 @@
     "confirmed_mcp_repos": 371,
     "published_missing_from_registry": 251,
     "github_only": 114,
-    "statically_scanned": 28,
-    "extraction": "regex patterns on tool registration sites (@mcp.tool, server.tool, mcp.NewTool)",
-    "grader_version": "0.3.0 (same calibration as 15,983-server registry-index.json)"
+    "statically_scanned": 55,
+    "extraction": "regex patterns on tool registration sites (@mcp.tool, server.tool, mcp.NewTool, add_tool). Covers Python, TypeScript, JavaScript, Go, Rust.",
+    "grader_version": "0.3.0 (same calibration as 15,983-server registry-index.json)",
+    "pass": "second \u2014 expanded to full 114-repo github-only list"
   },
   "supplement": [
     {
@@ -195,6 +196,69 @@
           "tool": "concurrent_operation",
           "detail": "Tool \"concurrent_operation\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
           "confidence": "high"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "JoeanAmier/XHS-Downloader",
+      "slug": "joeanamier-xhs-downloader",
+      "pkg": "XHS-Downloader",
+      "stars": 10829,
+      "category": "python-mcp",
+      "toolCount": 2,
+      "score": 57,
+      "grade": "D",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "B",
+        "auth": "B",
+        "hallucination": "B"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 2,
+        "MEDIUM": 3,
+        "LOW": 2,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "download_detail",
+          "detail": "Tool \"download_detail\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get_detail_data",
+          "detail": "Schema defined but no properties specified in tool \"get_detail_data\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "download_detail",
+          "detail": "Schema defined but no properties specified in tool \"download_detail\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "hallucination",
+          "tool": "get_detail_data",
+          "detail": "Tool \"get_detail_data\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "low"
         }
       ],
       "scannedAt": "2026-04-17",
@@ -745,6 +809,69 @@
           "tool": "run_in_terminal_cmd",
           "detail": "Tool \"run_in_terminal_cmd\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
           "confidence": "high"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "TencentCloudBase/CloudBase-MCP",
+      "slug": "tencentcloudbase-cloudbase-mcp",
+      "pkg": "cloudbase-ai-toolkit",
+      "stars": 992,
+      "category": "node-mcp",
+      "toolCount": 2,
+      "score": 72,
+      "grade": "C",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "B",
+        "auth": "B",
+        "hallucination": "A"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 1,
+        "MEDIUM": 3,
+        "LOW": 2,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "queryCloudRun",
+          "detail": "Schema defined but no properties specified in tool \"queryCloudRun\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "manageCloudRun",
+          "detail": "Schema defined but no properties specified in tool \"manageCloudRun\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "hallucination",
+          "tool": "manageCloudRun",
+          "detail": "Tool \"manageCloudRun\" uses vague action words (run) without specific operations. LLMs will interpret this as the broadest possible action.",
+          "confidence": "low"
+        },
+        {
+          "severity": "LOW",
+          "category": "validation",
+          "tool": "queryCloudRun",
+          "detail": "No required fields \u2014 all input is optional in tool \"queryCloudRun\"",
+          "confidence": "medium"
         }
       ],
       "scannedAt": "2026-04-17",
@@ -1760,6 +1887,1575 @@
           "category": "validation",
           "tool": "get_server_prompts",
           "detail": "Schema defined but no properties specified in tool \"get_server_prompts\"",
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "elusznik/mcp-server-code-execution-mode",
+      "slug": "elusznik-mcp-server-code-execution-mode",
+      "pkg": "mcp-server-code-execution-mode",
+      "stars": 323,
+      "category": "python-mcp",
+      "toolCount": 1,
+      "score": 72,
+      "grade": "C",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "A",
+        "auth": "B",
+        "hallucination": "A"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 1,
+        "MEDIUM": 2,
+        "LOW": 1,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "echo",
+          "detail": "Schema defined but no properties specified in tool \"echo\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "hallucination",
+          "tool": "echo",
+          "detail": "Tool \"echo\" references message without specifying scope boundaries. LLM will attempt to access the broadest possible scope.",
+          "confidence": "medium"
+        },
+        {
+          "severity": "LOW",
+          "category": "validation",
+          "tool": "echo",
+          "detail": "No required fields \u2014 all input is optional in tool \"echo\"",
+          "confidence": "medium"
+        },
+        {
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "daobataotie/CAD-MCP",
+      "slug": "daobataotie-cad-mcp",
+      "pkg": "CAD-MCP",
+      "stars": 305,
+      "category": "python-mcp",
+      "toolCount": 11,
+      "score": 43,
+      "grade": "D",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "F",
+        "auth": "B",
+        "hallucination": "F"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 2,
+        "MEDIUM": 22,
+        "LOW": 11,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "process_command",
+          "detail": "Tool name \"process_command\" is ambiguous \u2014 \"process\" could mean read, create, update, or delete. LLM may choose the most destructive interpretation.",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "draw_line",
+          "detail": "Schema defined but no properties specified in tool \"draw_line\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "draw_circle",
+          "detail": "Schema defined but no properties specified in tool \"draw_circle\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "draw_arc",
+          "detail": "Schema defined but no properties specified in tool \"draw_arc\"",
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "Dakkshin/after-effects-mcp",
+      "slug": "dakkshin-after-effects-mcp",
+      "pkg": "after-effects-mcp",
+      "stars": 293,
+      "category": "node-mcp",
+      "toolCount": 13,
+      "score": 22,
+      "grade": "F",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "F",
+        "auth": "B",
+        "hallucination": "F"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 3,
+        "MEDIUM": 19,
+        "LOW": 13,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "setLayerKeyframe",
+          "detail": "Tool \"setLayerKeyframe\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "setLayerExpression",
+          "detail": "Tool \"setLayerExpression\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "run-script",
+          "detail": "Schema defined but no properties specified in tool \"run-script\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get-results",
+          "detail": "Schema defined but no properties specified in tool \"get-results\"",
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "gomarble-ai/facebook-ads-mcp-server",
+      "slug": "gomarble-ai-facebook-ads-mcp-server",
+      "pkg": "facebook-ads-mcp-server",
+      "stars": 269,
+      "category": "python-mcp",
+      "toolCount": 21,
+      "score": 50,
+      "grade": "D",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "F",
+        "auth": "B",
+        "permissions": "A",
+        "hallucination": "D"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 1,
+        "MEDIUM": 42,
+        "LOW": 22,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "list_ad_accounts",
+          "detail": "Schema defined but no properties specified in tool \"list_ad_accounts\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get_details_of_ad_account",
+          "detail": "Schema defined but no properties specified in tool \"get_details_of_ad_account\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get_adaccount_insights",
+          "detail": "Schema defined but no properties specified in tool \"get_adaccount_insights\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get_campaign_insights",
+          "detail": "Schema defined but no properties specified in tool \"get_campaign_insights\"",
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "joenorton/comfyui-mcp-server",
+      "slug": "joenorton-comfyui-mcp-server",
+      "pkg": "comfyui-mcp-server",
+      "stars": 282,
+      "category": "python-mcp",
+      "toolCount": 15,
+      "score": 22,
+      "grade": "F",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "F",
+        "auth": "B",
+        "hallucination": "F"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 8,
+        "MEDIUM": 23,
+        "LOW": 15,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "view_image",
+          "detail": "Tool \"view_image\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "set_defaults",
+          "detail": "Tool \"set_defaults\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "regenerate",
+          "detail": "Tool \"regenerate\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "cancel_job",
+          "detail": "Tool \"cancel_job\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "Shelpuk-AI-Technology-Consulting/kindly-web-search-mcp-server",
+      "slug": "shelpuk-ai-technology-consulting-kindly-web-search-mcp-server",
+      "pkg": "kindly-web-search-mcp-server",
+      "stars": 283,
+      "category": "python-mcp",
+      "toolCount": 2,
+      "score": 56,
+      "grade": "D",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "B",
+        "auth": "B",
+        "output": "A",
+        "hallucination": "B"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 2,
+        "MEDIUM": 3,
+        "LOW": 3,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "web_search",
+          "detail": "Tool \"web_search\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "web_search",
+          "detail": "Schema defined but no properties specified in tool \"web_search\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get_content",
+          "detail": "Schema defined but no properties specified in tool \"get_content\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "hallucination",
+          "tool": "get_content",
+          "detail": "Tool \"get_content\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "low"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "coleam00/remote-mcp-server-with-auth",
+      "slug": "coleam00-remote-mcp-server-with-auth",
+      "pkg": "remote-mcp-github-oauth",
+      "stars": 292,
+      "category": "node-mcp",
+      "toolCount": 4,
+      "score": 16,
+      "grade": "F",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "C",
+        "auth": "A",
+        "hallucination": "D",
+        "data-flow": "B"
+      },
+      "counts": {
+        "CRITICAL": 2,
+        "HIGH": 1,
+        "MEDIUM": 5,
+        "LOW": 5,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "CRITICAL",
+          "category": "hallucination",
+          "tool": "executeDatabase",
+          "detail": "Tool \"executeDatabase\" has dangerous capabilities but is described as a \"tool\". LLM will underestimate the risk and use it without caution.",
+          "confidence": "high"
+        },
+        {
+          "severity": "CRITICAL",
+          "category": "data-flow",
+          "tool": "*",
+          "detail": "Server can read external content and execute code \u2014 prompt injection to RCE path",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "calculate",
+          "detail": "Tool \"calculate\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "calculate",
+          "detail": "Schema defined but no properties specified in tool \"calculate\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "listTables",
+          "detail": "Schema defined but no properties specified in tool \"listTables\"",
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "ericzakariasson/uber-eats-mcp-server",
+      "slug": "ericzakariasson-uber-eats-mcp-server",
+      "pkg": "uber-eats-mcp-server",
+      "stars": 217,
+      "category": "python-mcp",
+      "toolCount": 2,
+      "score": 57,
+      "grade": "D",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "B",
+        "auth": "B",
+        "hallucination": "B"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 2,
+        "MEDIUM": 3,
+        "LOW": 2,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "order_food",
+          "detail": "Tool \"order_food\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "find_menu_options",
+          "detail": "Schema defined but no properties specified in tool \"find_menu_options\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "order_food",
+          "detail": "Schema defined but no properties specified in tool \"order_food\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "hallucination",
+          "tool": "find_menu_options",
+          "detail": "Tool \"find_menu_options\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "low"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "hellokaton/unsplash-mcp-server",
+      "slug": "hellokaton-unsplash-mcp-server",
+      "pkg": "unsplash-mcp-server",
+      "stars": 214,
+      "category": "python-mcp",
+      "toolCount": 1,
+      "score": 75,
+      "grade": "B",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "A",
+        "auth": "B",
+        "hallucination": "A"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 1,
+        "MEDIUM": 2,
+        "LOW": 1,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "search_photos",
+          "detail": "Schema defined but no properties specified in tool \"search_photos\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "hallucination",
+          "tool": "search_photos",
+          "detail": "Tool \"search_photos\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "low"
+        },
+        {
+          "severity": "LOW",
+          "category": "validation",
+          "tool": "search_photos",
+          "detail": "No required fields \u2014 all input is optional in tool \"search_photos\"",
+          "confidence": "medium"
+        },
+        {
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "Doriandarko/sora-mcp",
+      "slug": "doriandarko-sora-mcp",
+      "pkg": "sora-mcp-server",
+      "stars": 210,
+      "category": "node-mcp",
+      "toolCount": 7,
+      "score": 79,
+      "grade": "B",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "D",
+        "auth": "A"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 0,
+        "MEDIUM": 7,
+        "LOW": 8,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "create-video",
+          "detail": "Schema defined but no properties specified in tool \"create-video\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "remix-video",
+          "detail": "Schema defined but no properties specified in tool \"remix-video\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get-video-status",
+          "detail": "Schema defined but no properties specified in tool \"get-video-status\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "list-videos",
+          "detail": "Schema defined but no properties specified in tool \"list-videos\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "download-video",
+          "detail": "Schema defined but no properties specified in tool \"download-video\"",
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "zerodha/kite-mcp-server",
+      "slug": "zerodha-kite-mcp-server",
+      "pkg": null,
+      "stars": 251,
+      "category": "go-mcp",
+      "toolCount": 22,
+      "score": 65,
+      "grade": "C",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "F",
+        "permissions": "A",
+        "output": "A",
+        "hallucination": "C"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 0,
+        "MEDIUM": 31,
+        "LOW": 23,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get_profile",
+          "detail": "Schema defined but no properties specified in tool \"get_profile\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get_margins",
+          "detail": "Schema defined but no properties specified in tool \"get_margins\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get_holdings",
+          "detail": "Schema defined but no properties specified in tool \"get_holdings\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get_positions",
+          "detail": "Schema defined but no properties specified in tool \"get_positions\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get_trades",
+          "detail": "Schema defined but no properties specified in tool \"get_trades\"",
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "mvilanova/intervals-mcp-server",
+      "slug": "mvilanova-intervals-mcp-server",
+      "pkg": "intervals-mcp-server",
+      "stars": 225,
+      "category": "python-mcp",
+      "toolCount": 17,
+      "score": 21,
+      "grade": "F",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "F",
+        "auth": "B",
+        "hallucination": "F"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 8,
+        "MEDIUM": 27,
+        "LOW": 17,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "add_activity_message",
+          "detail": "Tool \"add_activity_message\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "create_custom_item",
+          "detail": "Tool \"create_custom_item\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "update_custom_item",
+          "detail": "Tool \"update_custom_item\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "delete_custom_item",
+          "detail": "Tool \"delete_custom_item\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "tiianhk/MaxMSP-MCP-Server",
+      "slug": "tiianhk-maxmsp-mcp-server",
+      "pkg": "MaxMSP-MCP-Server",
+      "stars": 202,
+      "category": "python-mcp",
+      "toolCount": 15,
+      "score": 22,
+      "grade": "F",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "F",
+        "auth": "B",
+        "hallucination": "F"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 10,
+        "MEDIUM": 21,
+        "LOW": 15,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "add_max_object",
+          "detail": "Tool \"add_max_object\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "remove_max_object",
+          "detail": "Tool \"remove_max_object\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "connect_max_objects",
+          "detail": "Tool \"connect_max_objects\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "disconnect_max_objects",
+          "detail": "Tool \"disconnect_max_objects\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "mpeirone/zabbix-mcp-server",
+      "slug": "mpeirone-zabbix-mcp-server",
+      "pkg": "zabbix-mcp-server",
+      "stars": 200,
+      "category": "python-mcp",
+      "toolCount": 44,
+      "score": 16,
+      "grade": "F",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "F",
+        "auth": "B",
+        "permissions": "A",
+        "hallucination": "F"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 45,
+        "MEDIUM": 45,
+        "LOW": 44,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "host_get",
+          "detail": "Tool \"host_get\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "host_create",
+          "detail": "Tool \"host_create\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "host_update",
+          "detail": "Tool \"host_update\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "host_delete",
+          "detail": "Tool \"host_delete\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "pwno-io/pwno-mcp",
+      "slug": "pwno-io-pwno-mcp",
+      "pkg": "pwno-mcp",
+      "stars": 244,
+      "category": "python-mcp",
+      "toolCount": 12,
+      "score": 24,
+      "grade": "F",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "F",
+        "auth": "B",
+        "hallucination": "F"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 7,
+        "MEDIUM": 18,
+        "LOW": 12,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "run_command",
+          "detail": "Tool \"run_command\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "spawn_process",
+          "detail": "Tool \"spawn_process\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "kill_process",
+          "detail": "Tool \"kill_process\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "execute_python_script",
+          "detail": "Tool \"execute_python_script\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "langfuse/mcp-server-langfuse",
+      "slug": "langfuse-mcp-server-langfuse",
+      "pkg": "mcp-server-langfuse",
+      "stars": 160,
+      "category": "node-mcp",
+      "toolCount": 2,
+      "score": 74,
+      "grade": "C",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "B",
+        "auth": "B"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 1,
+        "MEDIUM": 2,
+        "LOW": 2,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get-prompts",
+          "detail": "Schema defined but no properties specified in tool \"get-prompts\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get-prompt",
+          "detail": "Schema defined but no properties specified in tool \"get-prompt\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "LOW",
+          "category": "validation",
+          "tool": "get-prompts",
+          "detail": "No required fields \u2014 all input is optional in tool \"get-prompts\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "LOW",
+          "category": "validation",
+          "tool": "get-prompt",
+          "detail": "No required fields \u2014 all input is optional in tool \"get-prompt\"",
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "weaviate/mcp-server-weaviate",
+      "slug": "weaviate-mcp-server-weaviate",
+      "pkg": null,
+      "stars": 161,
+      "category": "go-mcp",
+      "toolCount": 2,
+      "score": 44,
+      "grade": "D",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "B",
+        "auth": "B",
+        "hallucination": "C"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 3,
+        "MEDIUM": 2,
+        "LOW": 2,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "weaviate-insert-one",
+          "detail": "Tool \"weaviate-insert-one\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "weaviate-query",
+          "detail": "Tool \"weaviate-query\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "weaviate-insert-one",
+          "detail": "Schema defined but no properties specified in tool \"weaviate-insert-one\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "weaviate-query",
+          "detail": "Schema defined but no properties specified in tool \"weaviate-query\"",
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "robcerda/monarch-mcp-server",
+      "slug": "robcerda-monarch-mcp-server",
+      "pkg": "monarch-mcp-server",
+      "stars": 160,
+      "category": "python-mcp",
+      "toolCount": 19,
+      "score": 18,
+      "grade": "F",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "F",
+        "output": "B",
+        "hallucination": "F"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 10,
+        "MEDIUM": 28,
+        "LOW": 24,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "setup_authentication",
+          "detail": "Tool \"setup_authentication\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "debug_session_loading",
+          "detail": "Tool \"debug_session_loading\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "create_transaction",
+          "detail": "Tool \"create_transaction\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "update_transaction",
+          "detail": "Tool \"update_transaction\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "create_transaction_category",
+          "detail": "Tool \"create_transaction_category\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "guangxiangdebizi/QMT-MCP",
+      "slug": "guangxiangdebizi-qmt-mcp",
+      "pkg": "QMT-MCP",
+      "stars": 158,
+      "category": "python-mcp",
+      "toolCount": 4,
+      "score": 40,
+      "grade": "D",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "C",
+        "auth": "B",
+        "hallucination": "D"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 5,
+        "MEDIUM": 4,
+        "LOW": 4,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "place_order",
+          "detail": "Tool \"place_order\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "cancel_order",
+          "detail": "Tool \"cancel_order\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "save_qmt_strategy",
+          "detail": "Tool \"save_qmt_strategy\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "generate_ma_strategy",
+          "detail": "Tool \"generate_ma_strategy\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "horw/esp-mcp",
+      "slug": "horw-esp-mcp",
+      "pkg": "esp-mcp",
+      "stars": 148,
+      "category": "python-mcp",
+      "toolCount": 7,
+      "score": 34,
+      "grade": "F",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "D",
+        "auth": "B",
+        "hallucination": "F"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 7,
+        "MEDIUM": 8,
+        "LOW": 7,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "build_esp_project",
+          "detail": "Tool \"build_esp_project\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "setup_project_esp_target",
+          "detail": "Tool \"setup_project_esp_target\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "create_esp_project",
+          "detail": "Tool \"create_esp_project\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "flash_esp_project",
+          "detail": "Tool \"flash_esp_project\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "puravparab/Gitingest-MCP",
+      "slug": "puravparab-gitingest-mcp",
+      "pkg": "gitingest-mcp",
+      "stars": 137,
+      "category": "python-mcp",
+      "toolCount": 3,
+      "score": 40,
+      "grade": "D",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "B",
+        "auth": "B",
+        "output": "A",
+        "hallucination": "D"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 4,
+        "MEDIUM": 3,
+        "LOW": 4,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "git_summary",
+          "detail": "Tool \"git_summary\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "git_tree",
+          "detail": "Tool \"git_tree\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "git_files",
+          "detail": "Tool \"git_files\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "git_summary",
+          "detail": "Schema defined but no properties specified in tool \"git_summary\"",
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "jdez427/claude-ipc-mcp",
+      "slug": "jdez427-claude-ipc-mcp",
+      "pkg": "claude-ipc-mcp",
+      "stars": 130,
+      "category": "python-mcp",
+      "toolCount": 9,
+      "score": 3,
+      "grade": "F",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "F",
+        "auth": "B",
+        "output": "A",
+        "hallucination": "C",
+        "data-flow": "D"
+      },
+      "counts": {
+        "CRITICAL": 2,
+        "HIGH": 1,
+        "MEDIUM": 14,
+        "LOW": 10,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "CRITICAL",
+          "category": "data-flow",
+          "tool": "*",
+          "detail": "Server can read external sources (email/Slack/GitHub) and send to external destinations \u2014 data relay/exfiltration path",
+          "confidence": "high"
+        },
+        {
+          "severity": "CRITICAL",
+          "category": "data-flow",
+          "tool": "*",
+          "detail": "Server can read external content and execute code \u2014 prompt injection to RCE path",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "register",
+          "detail": "Schema defined but no properties specified in tool \"register\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "send",
+          "detail": "Schema defined but no properties specified in tool \"send\"",
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "ConAcademy/buttplug-mcp",
+      "slug": "conacademy-buttplug-mcp",
+      "pkg": null,
+      "stars": 128,
+      "category": "go-mcp",
+      "toolCount": 1,
+      "score": 72,
+      "grade": "C",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "A",
+        "auth": "B",
+        "hallucination": "A"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 1,
+        "MEDIUM": 2,
+        "LOW": 1,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "device_vibrate",
+          "detail": "Schema defined but no properties specified in tool \"device_vibrate\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "hallucination",
+          "tool": "device_vibrate",
+          "detail": "Tool \"device_vibrate\" description is only 18 chars. LLM will hallucinate capabilities based on the name alone.",
+          "confidence": "medium"
+        },
+        {
+          "severity": "LOW",
+          "category": "validation",
+          "tool": "device_vibrate",
+          "detail": "No required fields \u2014 all input is optional in tool \"device_vibrate\"",
+          "confidence": "medium"
+        },
+        {
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "cobanov/teslamate-mcp",
+      "slug": "cobanov-teslamate-mcp",
+      "pkg": "teslamate-mcp",
+      "stars": 127,
+      "category": "python-mcp",
+      "toolCount": 2,
+      "score": 70,
+      "grade": "C",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "B",
+        "auth": "B",
+        "hallucination": "A"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 1,
+        "MEDIUM": 3,
+        "LOW": 2,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get_database_schema",
+          "detail": "Schema defined but no properties specified in tool \"get_database_schema\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "run_sql",
+          "detail": "Schema defined but no properties specified in tool \"run_sql\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "hallucination",
+          "tool": "get_database_schema",
+          "detail": "Tool \"get_database_schema\" references database without specifying scope boundaries. LLM will attempt to access the broadest possible scope.",
+          "confidence": "medium"
+        },
+        {
+          "severity": "LOW",
+          "category": "validation",
+          "tool": "get_database_schema",
+          "detail": "No required fields \u2014 all input is optional in tool \"get_database_schema\"",
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "docker/hub-mcp",
+      "slug": "docker-hub-mcp",
+      "pkg": "dockerhub-mcp-server",
+      "stars": 134,
+      "category": "node-mcp",
+      "toolCount": 13,
+      "score": 48,
+      "grade": "D",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "F",
+        "auth": "B",
+        "hallucination": "B"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 2,
+        "MEDIUM": 16,
+        "LOW": 13,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "updateRepositoryInfo",
+          "detail": "Tool \"updateRepositoryInfo\" uses vague action words (use, change, update) without specific operations. LLMs will interpret this as the broadest possible action on sensitive resources (user).",
+          "confidence": "low"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "listNamespaces",
+          "detail": "Schema defined but no properties specified in tool \"listNamespaces\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "getPersonalNamespace",
+          "detail": "Schema defined but no properties specified in tool \"getPersonalNamespace\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "listAllNamespacesMemberOf",
+          "detail": "Schema defined but no properties specified in tool \"listAllNamespacesMemberOf\"",
           "confidence": "medium"
         }
       ],

@@ -12,17 +12,21 @@ A targeted GitHub crawl surfaced **6,633 unique repositories** plausibly related
 | GitHub-only (no npm/PyPI publication detected) | **114** | Genuinely novel surface area. The registry cannot see these because they are not published — they are installed by `git clone` + `pip install -e .` or `npm install .` |
 | Total missing | **365** | |
 
-Of the 114 GitHub-only repos, 28 had tool definitions recoverable via static source analysis. When graded with the production scanner (same calibration as the public registry):
+Of the 114 GitHub-only repos, **55 had tool definitions recoverable via static source analysis** (after a second-pass extractor that added Go `server.AddTool` patterns, broader TS host identifiers, and a wider file budget). When graded with the production scanner (same calibration as the public registry):
 
 | Grade | Count | % |
 |---|---|---|
 | A | 0 | 0% |
-| B | 2 | 7% |
-| C | 6 | 21% |
-| D | 8 | 29% |
-| F | 12 | 43% |
+| B | 4 | 7% |
+| C | 12 | 22% |
+| D | 17 | 31% |
+| F | 22 | 40% |
 
-**71% graded D or F** — comparable to the distribution in the npm/PyPI registry, suggesting unpublished repos are not systematically safer or riskier than published ones. This refutes any "the bad ones are published, the good ones live on GitHub" hypothesis.
+**71% graded D or F** (39/55) — comparable to the distribution in the npm/PyPI registry, suggesting unpublished repos are not systematically safer or riskier than published ones. This refutes any "the bad ones are published, the good ones live on GitHub" hypothesis.
+
+**Two CRITICAL findings** in this expanded set (vs zero in the first-pass 28-repo sample):
+- `jdez427/claude-ipc-mcp` (130⭐, score 3/100, F) — 2 CRITICAL + 1 HIGH findings. Lowest score of any GitHub-only MCP server scanned.
+- `coleam00/remote-mcp-server-with-auth` (292⭐, score 16/100, F) — 2 CRITICAL findings on a server that markets itself as "with auth".
 
 ## Method
 
@@ -32,7 +36,7 @@ Of the 114 GitHub-only repos, 28 had tool definitions recoverable via static sou
 4. For each, fetched `package.json` / `pyproject.toml` / `requirements.txt` / `Cargo.toml` / `go.mod` via `raw.githubusercontent.com` to detect MCP SDK deps (`@modelcontextprotocol/sdk`, `mcp`, `fastmcp`, `mark3labs/mcp-go`). Classified 371 as confirmed MCP servers.
 5. Dedupe vs `registry-index.json` using slugified `owner-repo`, bare `repo`, and `name_from_manifest`.
 6. Published-status check: `npm view <pkg> version` for node repos, `pypi.org/pypi/<pkg>/json` HTTP 200 for Python.
-7. For the top 60 GitHub-only repos by stars, regex-extracted tool defs from prioritized source files (`server.tool(...)`, `@mcp.tool`, `mcp.NewTool(...)`, `registerTool(...)`). 28 yielded ≥1 tool.
+7. Regex-extracted tool defs from all 114 GitHub-only repos. Pattern set covers Python (`@mcp.tool`, `@server.tool`, `Tool(name=..., description=...)`), TypeScript/JavaScript (`server.tool(...)`, `registerTool(...)`, `addTool(...)`), Go (`mcp.NewTool(...)`, `server.AddTool(...)`), and Rust (`add_tool`, `register_tool`). 55 yielded ≥1 tool.
 8. Ran `scanToolDescriptions → scanToxicDataFlows → applyMitigations → grade` directly against extracted defs with `scanner/src/rules.mjs` v0.3.0.
 
 ### Limits worth naming
@@ -46,12 +50,19 @@ Of the 114 GitHub-only repos, 28 had tool definitions recoverable via static sou
 
 | Grade | Score | Stars | Repo | Tools | Signal |
 |---|---|---|---|---|---|
+| F | **3** | 130 | [jdez427/claude-ipc-mcp](https://github.com/jdez427/claude-ipc-mcp) | 9 | **2 CRITICAL** + 1 HIGH. Lowest score in the whole set. Inter-process-communication surface with no access controls. |
 | F | 15 | 8,149 | [0x4m4/hexstrike-ai](https://github.com/0x4m4/hexstrike-ai) | 150 | "MCP server that lets AI run offensive-security tooling." Every tool is a destructive/network op. 142 HIGH findings. |
 | F | 15 | 353 | [MorDavid/BloodHound-MCP-AI](https://github.com/MorDavid/BloodHound-MCP-AI) | 75 | BloodHound AD-enumeration bridge. By design invasive; no auth tools detected. |
+| F | 16 | 292 | [coleam00/remote-mcp-server-with-auth](https://github.com/coleam00/remote-mcp-server-with-auth) | 4 | **2 CRITICAL** on a server marketing itself as authenticated. Textbook irony. |
+| F | 16 | 200 | [mpeirone/zabbix-mcp-server](https://github.com/mpeirone/zabbix-mcp-server) | 44 | Monitoring-system bridge, 45 HIGH findings. |
 | F | 17 | 388 | [zinja-coder/jadx-mcp-server](https://github.com/zinja-coder/jadx-mcp-server) | 29 | APK reverse-engineering bridge. |
+| F | 18 | 160 | [robcerda/monarch-mcp-server](https://github.com/robcerda/monarch-mcp-server) | 19 | Personal-finance API bridge with 10 HIGH. |
 | F | 21 | 784 | [WJZ-P/gemini-skill](https://github.com/WJZ-P/gemini-skill) | 17 | |
 | F | 22 | 906 | [jjsantos01/qgis_mcp](https://github.com/jjsantos01/qgis_mcp) | 15 | QGIS driver — file/process access. |
 | F | 22 | 582 | [6551Team/opentwitter-mcp](https://github.com/6551Team/opentwitter-mcp) | 15 | |
+| F | 22 | 293 | [Dakkshin/after-effects-mcp](https://github.com/Dakkshin/after-effects-mcp) | 13 | Adobe After Effects driver. |
+| F | 22 | 282 | [joenorton/comfyui-mcp-server](https://github.com/joenorton/comfyui-mcp-server) | 15 | ComfyUI (Stable Diffusion workflow) bridge. |
+| F | 24 | 244 | [pwno-io/pwno-mcp](https://github.com/pwno-io/pwno-mcp) | 12 | Self-described "Pwn" server — another offensive-security cluster. |
 | F | 32 | 1,052 | [microsoft/lets-learn-mcp-python](https://github.com/microsoft/lets-learn-mcp-python) | 8 | Microsoft-branded teaching server. Worth flagging — students copy this pattern. |
 | F | 33 | 8,600 | [mark3labs/mcp-go](https://github.com/mark3labs/mcp-go) | 7 | Framework repo. The example server inside it grades F. |
 | F | 36 | 339 | [assafelovic/gptr-mcp](https://github.com/assafelovic/gptr-mcp) | 5 | gpt-researcher MCP bridge. |
@@ -62,9 +73,13 @@ Of the 114 GitHub-only repos, 28 had tool definitions recoverable via static sou
 
 | Grade | Repo | Why it matters |
 |---|---|---|
+| D(48) | [docker/hub-mcp](https://github.com/docker/hub-mcp) (134⭐) | Docker-maintained; 13 tools, 2 HIGH. |
 | D(58) | [IBM/mcp-context-forge](https://github.com/IBM/mcp-context-forge) (3,584⭐) | Vendor-branded "enterprise" MCP gateway, still grades D. |
+| C(72) | [TencentCloudBase/CloudBase-MCP](https://github.com/TencentCloudBase/CloudBase-MCP) (992⭐) | Tencent's cloud MCP bridge. |
+| C(74) | [langfuse/mcp-server-langfuse](https://github.com/langfuse/mcp-server-langfuse) (160⭐) | Langfuse observability. |
 | F(33) | [mark3labs/mcp-go](https://github.com/mark3labs/mcp-go) (8,600⭐) | The de-facto Go SDK. Example server sets a bad example. |
 | F(32) | [microsoft/lets-learn-mcp-python](https://github.com/microsoft/lets-learn-mcp-python) (1,052⭐) | Labeled `lets-learn` — influences every Python tutorial that follows. |
+| D(44) | [weaviate/mcp-server-weaviate](https://github.com/weaviate/mcp-server-weaviate) (161⭐) | Weaviate's own MCP bridge. |
 
 ## Registry coverage gap (published but missing — top 15 by stars)
 
