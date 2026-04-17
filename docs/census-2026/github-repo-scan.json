@@ -1,0 +1,3964 @@
+{
+  "generated": "2026-04-17",
+  "method": {
+    "corpus_size": 6633,
+    "confirmed_mcp_repos": 371,
+    "published_missing_from_registry": 251,
+    "github_only": 114,
+    "statically_scanned": 28,
+    "extraction": "regex patterns on tool registration sites (@mcp.tool, server.tool, mcp.NewTool)",
+    "grader_version": "0.3.0 (same calibration as 15,983-server registry-index.json)"
+  },
+  "supplement": [
+    {
+      "source": "github-static-scan",
+      "full_name": "0x4m4/hexstrike-ai",
+      "slug": "0x4m4-hexstrike-ai",
+      "pkg": "hexstrike-ai",
+      "stars": 8149,
+      "category": "python-mcp",
+      "toolCount": 150,
+      "score": 15,
+      "grade": "F",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "F",
+        "permissions": "B",
+        "output": "B",
+        "hallucination": "F"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 142,
+        "MEDIUM": 160,
+        "LOW": 157,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "permissions",
+          "tool": "*",
+          "detail": "Server exposes 150 tools \u2014 excessive attack surface, strongly recommends per-agent tool scoping",
+          "confidence": "medium"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "nmap_scan",
+          "detail": "Tool \"nmap_scan\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "gobuster_scan",
+          "detail": "Tool \"gobuster_scan\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "nuclei_scan",
+          "detail": "Tool \"nuclei_scan\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "prowler_scan",
+          "detail": "Tool \"prowler_scan\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "wgpsec/ENScan_GO",
+      "slug": "wgpsec-enscan-go",
+      "pkg": null,
+      "stars": 4332,
+      "category": "go-mcp",
+      "toolCount": 4,
+      "score": 61,
+      "grade": "C",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "C",
+        "auth": "B",
+        "hallucination": "B"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 1,
+        "MEDIUM": 7,
+        "LOW": 4,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "\u6839\u636e\u5173\u952e\u8bcd\u8be6\u7ec6\u4fe1\u606f",
+          "detail": "Schema defined but no properties specified in tool \"\u6839\u636e\u5173\u952e\u8bcd\u8be6\u7ec6\u4fe1\u606f\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "\u83b7\u53d6\u4f01\u4e1a\u8f6c\u6362MAP",
+          "detail": "Schema defined but no properties specified in tool \"\u83b7\u53d6\u4f01\u4e1a\u8f6c\u6362MAP\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "\u6839\u636ePID\u83b7\u53d6\u4f01\u4e1a\u57fa\u672c\u4fe1\u606f",
+          "detail": "Schema defined but no properties specified in tool \"\u6839\u636ePID\u83b7\u53d6\u4f01\u4e1a\u57fa\u672c\u4fe1\u606f\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "\u6839\u636epid\u5206\u9875\u83b7\u53d6\u4fe1\u606f",
+          "detail": "Schema defined but no properties specified in tool \"\u6839\u636epid\u5206\u9875\u83b7\u53d6\u4fe1\u606f\"",
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "mark3labs/mcp-go",
+      "slug": "mark3labs-mcp-go",
+      "pkg": null,
+      "stars": 8600,
+      "category": "go-mcp",
+      "toolCount": 7,
+      "score": 33,
+      "grade": "F",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "D",
+        "auth": "B",
+        "hallucination": "F"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 5,
+        "MEDIUM": 9,
+        "LOW": 7,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "cancellable_operation",
+          "detail": "Tool \"cancellable_operation\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "failing_operation",
+          "detail": "Tool \"failing_operation\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "self_cancel_operation",
+          "detail": "Tool \"self_cancel_operation\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "concurrent_operation",
+          "detail": "Tool \"concurrent_operation\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "excalidraw/excalidraw-mcp",
+      "slug": "excalidraw-excalidraw-mcp",
+      "pkg": "@mcp-demos/excalidraw-server",
+      "stars": 4026,
+      "category": "node-mcp",
+      "toolCount": 1,
+      "score": 75,
+      "grade": "B",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "A",
+        "auth": "B",
+        "output": "A"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 1,
+        "MEDIUM": 1,
+        "LOW": 2,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "read_me",
+          "detail": "Schema defined but no properties specified in tool \"read_me\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "LOW",
+          "category": "validation",
+          "tool": "read_me",
+          "detail": "No required fields \u2014 all input is optional in tool \"read_me\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "LOW",
+          "category": "output",
+          "tool": "read_me",
+          "detail": "File reading tool \"read_me\" may output sensitive file contents without filtering",
+          "confidence": "medium"
+        },
+        {
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "AmoyLab/Unla",
+      "slug": "amoylab-unla",
+      "pkg": null,
+      "stars": 2087,
+      "category": "go-mcp",
+      "toolCount": 1,
+      "score": 62,
+      "grade": "C",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "A",
+        "auth": "B",
+        "hallucination": "B"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 2,
+        "MEDIUM": 1,
+        "LOW": 1,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "notify",
+          "detail": "Tool \"notify\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "notify",
+          "detail": "Schema defined but no properties specified in tool \"notify\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "LOW",
+          "category": "validation",
+          "tool": "notify",
+          "detail": "No required fields \u2014 all input is optional in tool \"notify\"",
+          "confidence": "medium"
+        },
+        {
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "tradesdontlie/tradingview-mcp",
+      "slug": "tradesdontlie-tradingview-mcp",
+      "pkg": "tradingview-mcp",
+      "stars": 1933,
+      "category": "node-mcp",
+      "toolCount": 27,
+      "score": 48,
+      "grade": "D",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "F",
+        "auth": "B",
+        "permissions": "A",
+        "output": "A",
+        "hallucination": "F"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 1,
+        "MEDIUM": 41,
+        "LOW": 29,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "alert_create",
+          "detail": "Schema defined but no properties specified in tool \"alert_create\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "alert_list",
+          "detail": "Schema defined but no properties specified in tool \"alert_list\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "alert_delete",
+          "detail": "Schema defined but no properties specified in tool \"alert_delete\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "batch_run",
+          "detail": "Schema defined but no properties specified in tool \"batch_run\"",
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "glidea/zenfeed",
+      "slug": "glidea-zenfeed",
+      "pkg": null,
+      "stars": 1672,
+      "category": "go-mcp",
+      "toolCount": 7,
+      "score": 51,
+      "grade": "D",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "D",
+        "auth": "B",
+        "output": "A",
+        "hallucination": "C"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 2,
+        "MEDIUM": 11,
+        "LOW": 8,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "apply_app_config",
+          "detail": "Tool \"apply_app_config\" uses vague action words (update) without specific operations. LLMs will interpret this as the broadest possible action on sensitive resources (config).",
+          "confidence": "low"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "query",
+          "detail": "Schema defined but no properties specified in tool \"query\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "query_app_config_schema",
+          "detail": "Schema defined but no properties specified in tool \"query_app_config_schema\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "query_app_config",
+          "detail": "Schema defined but no properties specified in tool \"query_app_config\"",
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "IBM/mcp-context-forge",
+      "slug": "ibm-mcp-context-forge",
+      "pkg": null,
+      "stars": 3584,
+      "category": "rust-mcp",
+      "toolCount": 7,
+      "score": 58,
+      "grade": "D",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "D",
+        "auth": "B",
+        "hallucination": "B"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 1,
+        "MEDIUM": 10,
+        "LOW": 7,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get_system_time",
+          "detail": "Schema defined but no properties specified in tool \"get_system_time\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "convert_time",
+          "detail": "Schema defined but no properties specified in tool \"convert_time\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get_slow_time",
+          "detail": "Schema defined but no properties specified in tool \"get_slow_time\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "convert_slow_time",
+          "detail": "Schema defined but no properties specified in tool \"convert_slow_time\"",
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "isaacphi/mcp-language-server",
+      "slug": "isaacphi-mcp-language-server",
+      "pkg": null,
+      "stars": 1511,
+      "category": "go-mcp",
+      "toolCount": 8,
+      "score": 54,
+      "grade": "D",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "F",
+        "auth": "B",
+        "output": "A",
+        "hallucination": "B"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 1,
+        "MEDIUM": 13,
+        "LOW": 9,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "edit_file",
+          "detail": "Schema defined but no properties specified in tool \"edit_file\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "definition",
+          "detail": "Schema defined but no properties specified in tool \"definition\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "references",
+          "detail": "Schema defined but no properties specified in tool \"references\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "diagnostics",
+          "detail": "Schema defined but no properties specified in tool \"diagnostics\"",
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "harishsg993010/damn-vulnerable-MCP-server",
+      "slug": "harishsg993010-damn-vulnerable-mcp-server",
+      "pkg": "damn-vulnerable-MCP-server",
+      "stars": 1278,
+      "category": "python-mcp",
+      "toolCount": 3,
+      "score": 68,
+      "grade": "C",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "B",
+        "auth": "B",
+        "hallucination": "A"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 1,
+        "MEDIUM": 6,
+        "LOW": 3,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get_user_info",
+          "detail": "Schema defined but no properties specified in tool \"get_user_info\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get_company_data",
+          "detail": "Schema defined but no properties specified in tool \"get_company_data\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "search_company_database",
+          "detail": "Schema defined but no properties specified in tool \"search_company_database\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "hallucination",
+          "tool": "get_user_info",
+          "detail": "Tool \"get_user_info\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "low"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "cgoinglove/better-chatbot",
+      "slug": "cgoinglove-better-chatbot",
+      "pkg": "better-chatbot",
+      "stars": 1067,
+      "category": "node-mcp",
+      "toolCount": 1,
+      "score": 77,
+      "grade": "B",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "A",
+        "auth": "B"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 1,
+        "MEDIUM": 1,
+        "LOW": 1,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get_weather",
+          "detail": "Schema defined but no properties specified in tool \"get_weather\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "LOW",
+          "category": "validation",
+          "tool": "get_weather",
+          "detail": "No required fields \u2014 all input is optional in tool \"get_weather\"",
+          "confidence": "medium"
+        },
+        {
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "microsoft/lets-learn-mcp-python",
+      "slug": "microsoft-lets-learn-mcp-python",
+      "pkg": "mcp-python-demo",
+      "stars": 1052,
+      "category": "python-mcp",
+      "toolCount": 8,
+      "score": 32,
+      "grade": "F",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "F",
+        "hallucination": "F"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 5,
+        "MEDIUM": 10,
+        "LOW": 8,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "generate_and_create_exercises",
+          "detail": "Tool \"generate_and_create_exercises\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "create_exercise",
+          "detail": "Tool \"create_exercise\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "track_study_progress",
+          "detail": "Tool \"track_study_progress\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "start_study_buddy",
+          "detail": "Tool \"start_study_buddy\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "run_in_terminal_cmd",
+          "detail": "Tool \"run_in_terminal_cmd\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "negokaz/excel-mcp-server",
+      "slug": "negokaz-excel-mcp-server",
+      "pkg": "@negokaz/excel-mcp-server",
+      "stars": 920,
+      "category": "go-mcp",
+      "toolCount": 7,
+      "score": 61,
+      "grade": "C",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "D",
+        "auth": "B",
+        "output": "A",
+        "hallucination": "A"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 1,
+        "MEDIUM": 9,
+        "LOW": 8,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "excel_copy_sheet",
+          "detail": "Schema defined but no properties specified in tool \"excel_copy_sheet\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "excel_create_table",
+          "detail": "Schema defined but no properties specified in tool \"excel_create_table\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "excel_describe_sheets",
+          "detail": "Schema defined but no properties specified in tool \"excel_describe_sheets\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "excel_format_range",
+          "detail": "Schema defined but no properties specified in tool \"excel_format_range\"",
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "6551Team/opennews-mcp",
+      "slug": "6551team-opennews-mcp",
+      "pkg": "opennews-mcp",
+      "stars": 929,
+      "category": "python-mcp",
+      "toolCount": 13,
+      "score": 37,
+      "grade": "F",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "F",
+        "auth": "B",
+        "output": "A",
+        "hallucination": "D"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 2,
+        "MEDIUM": 25,
+        "LOW": 14,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "subscribe_latest_news",
+          "detail": "Tool \"subscribe_latest_news\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get_news_sources",
+          "detail": "Schema defined but no properties specified in tool \"get_news_sources\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "list_news_types",
+          "detail": "Schema defined but no properties specified in tool \"list_news_types\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get_news_categories",
+          "detail": "Schema defined but no properties specified in tool \"get_news_categories\"",
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "jjsantos01/qgis_mcp",
+      "slug": "jjsantos01-qgis-mcp",
+      "pkg": "qgis-mcp",
+      "stars": 906,
+      "category": "python-mcp",
+      "toolCount": 15,
+      "score": 22,
+      "grade": "F",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "F",
+        "auth": "B",
+        "hallucination": "F"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 11,
+        "MEDIUM": 20,
+        "LOW": 15,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "load_project",
+          "detail": "Tool \"load_project\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "create_new_project",
+          "detail": "Tool \"create_new_project\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "add_vector_layer",
+          "detail": "Tool \"add_vector_layer\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "add_raster_layer",
+          "detail": "Tool \"add_raster_layer\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "antfu/nuxt-mcp-dev",
+      "slug": "antfu-nuxt-mcp-dev",
+      "pkg": null,
+      "stars": 909,
+      "category": "node-mcp",
+      "toolCount": 2,
+      "score": 70,
+      "grade": "C",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "B",
+        "auth": "B",
+        "hallucination": "A"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 1,
+        "MEDIUM": 3,
+        "LOW": 2,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get-vite-config",
+          "detail": "Schema defined but no properties specified in tool \"get-vite-config\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get-vite-module-info",
+          "detail": "Schema defined but no properties specified in tool \"get-vite-module-info\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "hallucination",
+          "tool": "get-vite-config",
+          "detail": "Tool \"get-vite-config\" references config without specifying scope boundaries. LLM will attempt to access the broadest possible scope.",
+          "confidence": "medium"
+        },
+        {
+          "severity": "LOW",
+          "category": "validation",
+          "tool": "get-vite-config",
+          "detail": "No required fields \u2014 all input is optional in tool \"get-vite-config\"",
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "arben-adm/mcp-sequential-thinking",
+      "slug": "arben-adm-mcp-sequential-thinking",
+      "pkg": "sequential-thinking",
+      "stars": 881,
+      "category": "python-mcp",
+      "toolCount": 5,
+      "score": 38,
+      "grade": "F",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "C",
+        "hallucination": "F"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 6,
+        "MEDIUM": 5,
+        "LOW": 5,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "process_thought",
+          "detail": "Tool name \"process_thought\" is ambiguous \u2014 \"process\" could mean read, create, update, or delete. LLM may choose the most destructive interpretation.",
+          "confidence": "medium"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "process_thought",
+          "detail": "Tool \"process_thought\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "generate_summary",
+          "detail": "Tool \"generate_summary\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "clear_history",
+          "detail": "Tool \"clear_history\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "export_session",
+          "detail": "Tool \"export_session\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "coleam00/mcp-mem0",
+      "slug": "coleam00-mcp-mem0",
+      "pkg": "mem0-mcp",
+      "stars": 672,
+      "category": "python-mcp",
+      "toolCount": 3,
+      "score": 54,
+      "grade": "D",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "B",
+        "auth": "B",
+        "hallucination": "B"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 2,
+        "MEDIUM": 5,
+        "LOW": 3,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "save_memory",
+          "detail": "Tool \"save_memory\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "save_memory",
+          "detail": "Schema defined but no properties specified in tool \"save_memory\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get_all_memories",
+          "detail": "Schema defined but no properties specified in tool \"get_all_memories\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "search_memories",
+          "detail": "Schema defined but no properties specified in tool \"search_memories\"",
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "teddynote-lab/langgraph-mcp-agents",
+      "slug": "teddynote-lab-langgraph-mcp-agents",
+      "pkg": "langgraph-mcp-agents",
+      "stars": 694,
+      "category": "python-mcp",
+      "toolCount": 3,
+      "score": 54,
+      "grade": "D",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "B",
+        "auth": "B",
+        "hallucination": "B"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 2,
+        "MEDIUM": 5,
+        "LOW": 3,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "retrieve",
+          "detail": "Tool \"retrieve\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get_weather",
+          "detail": "Schema defined but no properties specified in tool \"get_weather\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "retrieve",
+          "detail": "Schema defined but no properties specified in tool \"retrieve\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get_current_time",
+          "detail": "Schema defined but no properties specified in tool \"get_current_time\"",
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "mrkrsl/web-search-mcp",
+      "slug": "mrkrsl-web-search-mcp",
+      "pkg": "web-search-mcp-server",
+      "stars": 771,
+      "category": "node-mcp",
+      "toolCount": 3,
+      "score": 70,
+      "grade": "C",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "B",
+        "auth": "B",
+        "output": "A"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 1,
+        "MEDIUM": 3,
+        "LOW": 4,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "full-web-search",
+          "detail": "Schema defined but no properties specified in tool \"full-web-search\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get-web-search-summaries",
+          "detail": "Schema defined but no properties specified in tool \"get-web-search-summaries\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get-single-web-page-content",
+          "detail": "Schema defined but no properties specified in tool \"get-single-web-page-content\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "LOW",
+          "category": "validation",
+          "tool": "full-web-search",
+          "detail": "No required fields \u2014 all input is optional in tool \"full-web-search\"",
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "WJZ-P/gemini-skill",
+      "slug": "wjz-p-gemini-skill",
+      "pkg": "gemini-skill",
+      "stars": 784,
+      "category": "node-mcp",
+      "toolCount": 17,
+      "score": 21,
+      "grade": "F",
+      "categoryGrades": {
+        "injection": "A",
+        "other": "A",
+        "validation": "F",
+        "hallucination": "F"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 4,
+        "MEDIUM": 20,
+        "LOW": 17,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "gemini_generate_image",
+          "detail": "Tool \"gemini_generate_image\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "gemini_send_message",
+          "detail": "Tool \"gemini_send_message\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "gemini_download_full_size_image",
+          "detail": "Tool \"gemini_download_full_size_image\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "gemini_share_latest_image",
+          "detail": "Tool \"gemini_share_latest_image\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "injection",
+          "tool": "gemini_extract_image",
+          "detail": "Tool description contains potential prompt injection pattern: \"encoded_payload\"",
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "mark3labs/mcp-filesystem-server",
+      "slug": "mark3labs-mcp-filesystem-server",
+      "pkg": null,
+      "stars": 631,
+      "category": "go-mcp",
+      "toolCount": 14,
+      "score": 47,
+      "grade": "D",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "F",
+        "auth": "B",
+        "output": "B",
+        "hallucination": "D"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 1,
+        "MEDIUM": 24,
+        "LOW": 24,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "read_file",
+          "detail": "Schema defined but no properties specified in tool \"read_file\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "write_file",
+          "detail": "Schema defined but no properties specified in tool \"write_file\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "list_directory",
+          "detail": "Schema defined but no properties specified in tool \"list_directory\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "create_directory",
+          "detail": "Schema defined but no properties specified in tool \"create_directory\"",
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "MorDavid/BloodHound-MCP-AI",
+      "slug": "mordavid-bloodhound-mcp-ai",
+      "pkg": "BloodHound-MCP-AI",
+      "stars": 353,
+      "category": "python-mcp",
+      "toolCount": 75,
+      "score": 15,
+      "grade": "F",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "F",
+        "auth": "B",
+        "permissions": "A",
+        "output": "A",
+        "hallucination": "F"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 10,
+        "MEDIUM": 142,
+        "LOW": 80,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "sp_app_role_grant",
+          "detail": "Tool \"sp_app_role_grant\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "templates_no_security_ext",
+          "detail": "Tool \"templates_no_security_ext\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "templates_with_user_san",
+          "detail": "Tool \"templates_with_user_san\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "onprem_users_direct_entra_roles",
+          "detail": "Tool \"onprem_users_direct_entra_roles\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "assafelovic/gptr-mcp",
+      "slug": "assafelovic-gptr-mcp",
+      "pkg": "gptr-mcp",
+      "stars": 339,
+      "category": "python-mcp",
+      "toolCount": 5,
+      "score": 36,
+      "grade": "F",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "C",
+        "auth": "B",
+        "hallucination": "D"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 4,
+        "MEDIUM": 7,
+        "LOW": 5,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "deep_research",
+          "detail": "Tool \"deep_research\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "quick_search",
+          "detail": "Tool \"quick_search\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "write_report",
+          "detail": "Tool \"write_report\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "deep_research",
+          "detail": "Schema defined but no properties specified in tool \"deep_research\"",
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "6551Team/opentwitter-mcp",
+      "slug": "6551team-opentwitter-mcp",
+      "pkg": "opentwitter-mcp",
+      "stars": 582,
+      "category": "python-mcp",
+      "toolCount": 15,
+      "score": 22,
+      "grade": "F",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "F",
+        "auth": "B",
+        "hallucination": "F"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 3,
+        "MEDIUM": 28,
+        "LOW": 15,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "add_twitter_watch",
+          "detail": "Tool \"add_twitter_watch\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "delete_twitter_watch",
+          "detail": "Tool \"delete_twitter_watch\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get_twitter_user",
+          "detail": "Schema defined but no properties specified in tool \"get_twitter_user\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get_twitter_user_by_id",
+          "detail": "Schema defined but no properties specified in tool \"get_twitter_user_by_id\"",
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "zinja-coder/jadx-mcp-server",
+      "slug": "zinja-coder-jadx-mcp-server",
+      "pkg": "jadx-mcp-server",
+      "stars": 388,
+      "category": "python-mcp",
+      "toolCount": 29,
+      "score": 17,
+      "grade": "F",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "F",
+        "auth": "B",
+        "permissions": "A",
+        "output": "B",
+        "hallucination": "F"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 9,
+        "MEDIUM": 50,
+        "LOW": 35,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "rename_class",
+          "detail": "Tool \"rename_class\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "rename_method",
+          "detail": "Tool \"rename_method\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "rename_field",
+          "detail": "Tool \"rename_field\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "rename_package",
+          "detail": "Tool \"rename_package\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "vkhanhqui/figma-mcp-go",
+      "slug": "vkhanhqui-figma-mcp-go",
+      "pkg": null,
+      "stars": 602,
+      "category": "go-mcp",
+      "toolCount": 26,
+      "score": 43,
+      "grade": "D",
+      "categoryGrades": {
+        "injection": "B",
+        "other": "A",
+        "validation": "F",
+        "permissions": "A",
+        "secrets": "B",
+        "hallucination": "B"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 2,
+        "MEDIUM": 33,
+        "LOW": 26,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "secrets",
+          "tool": "get_document",
+          "detail": "Tool \"get_document\" may expose secrets in its output based on description",
+          "confidence": "medium"
+        },
+        {
+          "severity": "HIGH",
+          "category": "secrets",
+          "tool": "get_design_context",
+          "detail": "Tool \"get_design_context\" may expose secrets in its output based on description",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "injection",
+          "tool": "get_screenshot",
+          "detail": "Tool description contains potential prompt injection pattern: \"encoded_payload\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "injection",
+          "tool": "save_screenshots",
+          "detail": "Tool description contains potential prompt injection pattern: \"encoded_payload\"",
+          "confidence": "medium"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get_document",
+          "detail": "Schema defined but no properties specified in tool \"get_document\"",
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    },
+    {
+      "source": "github-static-scan",
+      "full_name": "hemanth/paws-on-mcp",
+      "slug": "hemanth-paws-on-mcp",
+      "pkg": "paws-on-mcp",
+      "stars": 331,
+      "category": "python-mcp",
+      "toolCount": 6,
+      "score": 33,
+      "grade": "F",
+      "categoryGrades": {
+        "other": "A",
+        "validation": "D",
+        "auth": "B",
+        "hallucination": "D"
+      },
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 4,
+        "MEDIUM": 9,
+        "LOW": 6,
+        "INFO": 1
+      },
+      "topFindings": [
+        {
+          "severity": "HIGH",
+          "category": "auth",
+          "tool": "*",
+          "detail": "Server exposes no authentication-related tools \u2014 may accept unauthenticated connections",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "create_sampling_request",
+          "detail": "Tool \"create_sampling_request\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "analyze_hackernews_trends_with_ai",
+          "detail": "Tool \"analyze_hackernews_trends_with_ai\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "HIGH",
+          "category": "hallucination",
+          "tool": "code_review_with_ai",
+          "detail": "Tool \"code_review_with_ai\" has no description. LLM will infer behavior entirely from the name \u2014 unpredictable tool usage.",
+          "confidence": "high"
+        },
+        {
+          "severity": "MEDIUM",
+          "category": "validation",
+          "tool": "get_server_prompts",
+          "detail": "Schema defined but no properties specified in tool \"get_server_prompts\"",
+          "confidence": "medium"
+        }
+      ],
+      "scannedAt": "2026-04-17",
+      "scanMethod": "static-regex-extraction"
+    }
+  ],
+  "published_missing": [
+    {
+      "full_name": "GLips/Figma-Context-MCP",
+      "pkg": "figma-developer-mcp",
+      "category": "node-mcp",
+      "stars": 14408
+    },
+    {
+      "full_name": "tadata-org/fastapi_mcp",
+      "pkg": "fastapi-mcp",
+      "category": "python-mcp",
+      "stars": 11811
+    },
+    {
+      "full_name": "yusufkaraaslan/Skill_Seekers",
+      "pkg": "skill-seekers",
+      "category": "python-mcp",
+      "stars": 12868
+    },
+    {
+      "full_name": "Upsonic/Upsonic",
+      "pkg": "upsonic",
+      "category": "python-mcp",
+      "stars": 7829
+    },
+    {
+      "full_name": "mksglu/context-mode",
+      "pkg": "context-mode",
+      "category": "node-mcp",
+      "stars": 7437
+    },
+    {
+      "full_name": "LaurieWired/GhidraMCP",
+      "pkg": "GhidraMCP",
+      "category": "python-mcp",
+      "stars": 8443
+    },
+    {
+      "full_name": "getsentry/XcodeBuildMCP",
+      "pkg": "xcodebuildmcp",
+      "category": "node-mcp",
+      "stars": 5234
+    },
+    {
+      "full_name": "CursorTouch/Windows-MCP",
+      "pkg": "windows-mcp",
+      "category": "python-mcp",
+      "stars": 5139
+    },
+    {
+      "full_name": "sooperset/mcp-atlassian",
+      "pkg": "mcp-atlassian",
+      "category": "python-mcp",
+      "stars": 4963
+    },
+    {
+      "full_name": "grab/cursor-talk-to-figma-mcp",
+      "pkg": "cursor-talk-to-figma-mcp",
+      "category": "node-mcp",
+      "stars": 6661
+    },
+    {
+      "full_name": "assafelovic/gpt-researcher",
+      "pkg": "gpt-researcher",
+      "category": "python-mcp",
+      "stars": 26511
+    },
+    {
+      "full_name": "antvis/mcp-server-chart",
+      "pkg": "@antv/mcp-server-chart",
+      "category": "node-mcp",
+      "stars": 3973
+    },
+    {
+      "full_name": "evalstate/fast-agent",
+      "pkg": "fast-agent-mcp",
+      "category": "python-mcp",
+      "stars": 3747
+    },
+    {
+      "full_name": "haris-musa/excel-mcp-server",
+      "pkg": "excel-mcp-server",
+      "category": "python-mcp",
+      "stars": 3708
+    },
+    {
+      "full_name": "browserbase/mcp-server-browserbase",
+      "pkg": "@browserbasehq/mcp",
+      "category": "node-mcp",
+      "stars": 3266
+    },
+    {
+      "full_name": "nerding-io/n8n-nodes-mcp",
+      "pkg": "n8n-nodes-mcp",
+      "category": "node-mcp",
+      "stars": 3006
+    },
+    {
+      "full_name": "zcaceres/markdownify-mcp",
+      "pkg": "mcp-markdownify-server",
+      "category": "node-mcp",
+      "stars": 2589
+    },
+    {
+      "full_name": "brightdata/brightdata-mcp",
+      "pkg": "@brightdata/mcp",
+      "category": "node-mcp",
+      "stars": 2301
+    },
+    {
+      "full_name": "ahujasid/ableton-mcp",
+      "pkg": "ableton-mcp",
+      "category": "python-mcp",
+      "stars": 2413
+    },
+    {
+      "full_name": "open-webui/mcpo",
+      "pkg": "mcpo",
+      "category": "python-mcp",
+      "stars": 4140
+    },
+    {
+      "full_name": "samanhappy/mcphub",
+      "pkg": "@samanhappy/mcphub",
+      "category": "node-mcp",
+      "stars": 2017
+    },
+    {
+      "full_name": "punitarani/fli",
+      "pkg": "flights",
+      "category": "python-mcp",
+      "stars": 2055
+    },
+    {
+      "full_name": "cjo4m06/mcp-shrimp-task-manager",
+      "pkg": "mcp-shrimp-task-manager",
+      "category": "node-mcp",
+      "stars": 2084
+    },
+    {
+      "full_name": "OpenAgentPlatform/Dive",
+      "pkg": "dive",
+      "category": "node-mcp",
+      "stars": 1772
+    },
+    {
+      "full_name": "yctimlin/mcp_excalidraw",
+      "pkg": "mcp-excalidraw-server",
+      "category": "node-mcp",
+      "stars": 1763
+    },
+    {
+      "full_name": "ForLoopCodes/contextplus",
+      "pkg": "contextplus",
+      "category": "node-mcp",
+      "stars": 1769
+    },
+    {
+      "full_name": "atilaahmettaner/tradingview-mcp",
+      "pkg": "tradingview-mcp-server",
+      "category": "python-mcp",
+      "stars": 1930
+    },
+    {
+      "full_name": "leonardsellem/n8n-mcp-server",
+      "pkg": "@leonardsellem/n8n-mcp-server",
+      "category": "node-mcp",
+      "stars": 1602
+    },
+    {
+      "full_name": "54yyyu/zotero-mcp",
+      "pkg": "zotero-mcp-server",
+      "category": "python-mcp",
+      "stars": 2576
+    },
+    {
+      "full_name": "IBM/mcp-cli",
+      "pkg": "mcp-cli",
+      "category": "python-mcp",
+      "stars": 1944
+    },
+    {
+      "full_name": "GongRzhe/Office-Word-MCP-Server",
+      "pkg": "office-word-mcp-server",
+      "category": "python-mcp",
+      "stars": 1864
+    },
+    {
+      "full_name": "benborla/mcp-server-mysql",
+      "pkg": "@benborla29/mcp-server-mysql",
+      "category": "node-mcp",
+      "stars": 1550
+    },
+    {
+      "full_name": "chrisryugj/korean-law-mcp",
+      "pkg": "korean-law-mcp",
+      "category": "node-mcp",
+      "stars": 1467
+    },
+    {
+      "full_name": "GongRzhe/Office-PowerPoint-MCP-Server",
+      "pkg": "office-powerpoint-mcp-server",
+      "category": "python-mcp",
+      "stars": 1644
+    },
+    {
+      "full_name": "jxnxts/mcp-brasil",
+      "pkg": "mcp-brasil",
+      "category": "python-mcp",
+      "stars": 1381
+    },
+    {
+      "full_name": "southleft/figma-console-mcp",
+      "pkg": "figma-console-mcp",
+      "category": "node-mcp",
+      "stars": 1519
+    },
+    {
+      "full_name": "qdrant/mcp-server-qdrant",
+      "pkg": "mcp-server-qdrant",
+      "category": "python-mcp",
+      "stars": 1354
+    },
+    {
+      "full_name": "Dicklesworthstone/mcp_agent_mail",
+      "pkg": "mcp-agent-mail",
+      "category": "python-mcp",
+      "stars": 1884
+    },
+    {
+      "full_name": "llmsresearch/paperbanana",
+      "pkg": "paperbanana",
+      "category": "python-mcp",
+      "stars": 1329
+    },
+    {
+      "full_name": "MiniMax-AI/MiniMax-MCP",
+      "pkg": "minimax-mcp",
+      "category": "python-mcp",
+      "stars": 1424
+    },
+    {
+      "full_name": "stickerdaniel/linkedin-mcp-server",
+      "pkg": "linkedin-scraper-mcp",
+      "category": "python-mcp",
+      "stars": 1590
+    },
+    {
+      "full_name": "taylorwilsdon/google_workspace_mcp",
+      "pkg": "workspace-mcp",
+      "category": "python-mcp",
+      "stars": 2135
+    },
+    {
+      "full_name": "svnscha/mcp-windbg",
+      "pkg": "mcp-windbg",
+      "category": "python-mcp",
+      "stars": 1227
+    },
+    {
+      "full_name": "chunkhound/chunkhound",
+      "pkg": "chunkhound",
+      "category": "python-mcp",
+      "stars": 1221
+    },
+    {
+      "full_name": "caol64/wenyan-mcp",
+      "pkg": "@wenyan-md/mcp",
+      "category": "node-mcp",
+      "stars": 1183
+    },
+    {
+      "full_name": "robotmcp/ros-mcp-server",
+      "pkg": "ros-mcp",
+      "category": "python-mcp",
+      "stars": 1166
+    },
+    {
+      "full_name": "vmoranv/jshookmcp",
+      "pkg": "@jshookmcp/jshook",
+      "category": "node-mcp",
+      "stars": 1252
+    },
+    {
+      "full_name": "philschmid/mcp-cli",
+      "pkg": "mcp-cli",
+      "category": "node-mcp",
+      "stars": 1100
+    },
+    {
+      "full_name": "gyoridavid/short-video-maker",
+      "pkg": "short-video-maker",
+      "category": "node-mcp",
+      "stars": 1083
+    },
+    {
+      "full_name": "ref-tools/ref-tools-mcp",
+      "pkg": "ref-tools-mcp",
+      "category": "node-mcp",
+      "stars": 1082
+    },
+    {
+      "full_name": "kimsungwhee/apple-docs-mcp",
+      "pkg": "@kimsungwhee/apple-docs-mcp",
+      "category": "node-mcp",
+      "stars": 1225
+    },
+    {
+      "full_name": "mbailey/voicemode",
+      "pkg": "voice-mode",
+      "category": "python-mcp",
+      "stars": 1066
+    },
+    {
+      "full_name": "evilsocket/nerve",
+      "pkg": "nerve-adk",
+      "category": "python-mcp",
+      "stars": 1317
+    },
+    {
+      "full_name": "jae-jae/fetcher-mcp",
+      "pkg": "fetcher-mcp",
+      "category": "node-mcp",
+      "stars": 1024
+    },
+    {
+      "full_name": "arabold/docs-mcp-server",
+      "pkg": "@arabold/docs-mcp-server",
+      "category": "node-mcp",
+      "stars": 1242
+    },
+    {
+      "full_name": "iannuttall/mcp-boilerplate",
+      "pkg": "mcp-boilerplate",
+      "category": "node-mcp",
+      "stars": 1018
+    },
+    {
+      "full_name": "nickclyde/duckduckgo-mcp-server",
+      "pkg": "duckduckgo-mcp-server",
+      "category": "python-mcp",
+      "stars": 991
+    },
+    {
+      "full_name": "langchain-ai/mcpdoc",
+      "pkg": "mcpdoc",
+      "category": "python-mcp",
+      "stars": 976
+    },
+    {
+      "full_name": "massgen/MassGen",
+      "pkg": "massgen",
+      "category": "python-mcp",
+      "stars": 953
+    },
+    {
+      "full_name": "JetBrains/mcp-jetbrains",
+      "pkg": "@jetbrains/mcp-proxy",
+      "category": "node-mcp",
+      "stars": 948
+    },
+    {
+      "full_name": "pathintegral-institute/mcpm.sh",
+      "pkg": "mcpm",
+      "category": "python-mcp",
+      "stars": 927
+    },
+    {
+      "full_name": "openags/paper-search-mcp",
+      "pkg": "paper-search-mcp",
+      "category": "python-mcp",
+      "stars": 1153
+    },
+    {
+      "full_name": "cisco-ai-defense/mcp-scanner",
+      "pkg": "cisco-ai-mcp-scanner",
+      "category": "python-mcp",
+      "stars": 889
+    },
+    {
+      "full_name": "rinadelph/Agent-MCP",
+      "pkg": "Agent-MCP",
+      "category": "python-mcp",
+      "stars": 1218
+    },
+    {
+      "full_name": "suekou/mcp-notion-server",
+      "pkg": "@suekou/mcp-notion-server",
+      "category": "node-mcp",
+      "stars": 880
+    },
+    {
+      "full_name": "zaidmukaddam/scira-mcp-chat",
+      "pkg": "mcp-chat",
+      "category": "node-mcp",
+      "stars": 832
+    },
+    {
+      "full_name": "AI-QL/tuui",
+      "pkg": "tuui",
+      "category": "node-mcp",
+      "stars": 1140
+    },
+    {
+      "full_name": "cryxnet/DeepMCPAgent",
+      "pkg": "deepmcpagent",
+      "category": "python-mcp",
+      "stars": 812
+    },
+    {
+      "full_name": "golf-mcp/golf",
+      "pkg": "golf-mcp",
+      "category": "python-mcp",
+      "stars": 819
+    },
+    {
+      "full_name": "Azure-Samples/AI-Gateway",
+      "pkg": "AI-Gateway",
+      "category": "python-mcp",
+      "stars": 903
+    },
+    {
+      "full_name": "Joooook/12306-mcp",
+      "pkg": "12306-mcp",
+      "category": "node-mcp",
+      "stars": 784
+    },
+    {
+      "full_name": "browser-use/vibetest-use",
+      "pkg": "vibetest",
+      "category": "python-mcp",
+      "stars": 787
+    },
+    {
+      "full_name": "rohitg00/kubectl-mcp-server",
+      "pkg": "kubectl-mcp-server",
+      "category": "python-mcp",
+      "stars": 869
+    },
+    {
+      "full_name": "brave/brave-search-mcp-server",
+      "pkg": "@brave/brave-search-mcp-server",
+      "category": "node-mcp",
+      "stars": 906
+    },
+    {
+      "full_name": "cyberkaida/reverse-engineering-assistant",
+      "pkg": "reverse-engineering-assistant",
+      "category": "python-mcp",
+      "stars": 705
+    },
+    {
+      "full_name": "LSTM-Kirigaya/openmcp-client",
+      "pkg": "openmcp",
+      "category": "node-mcp",
+      "stars": 738
+    },
+    {
+      "full_name": "alexander-zuev/supabase-mcp-server",
+      "pkg": "supabase-mcp-server",
+      "category": "python-mcp",
+      "stars": 817
+    },
+    {
+      "full_name": "SylphxAI/pdf-reader-mcp",
+      "pkg": "@sylphx/pdf-reader-mcp",
+      "category": "node-mcp",
+      "stars": 648
+    },
+    {
+      "full_name": "Wh0am123/MCP-Kali-Server",
+      "pkg": "MCP-Kali-Server",
+      "category": "python-mcp",
+      "stars": 640
+    },
+    {
+      "full_name": "vercel/next-devtools-mcp",
+      "pkg": "next-devtools-mcp",
+      "category": "node-mcp",
+      "stars": 723
+    },
+    {
+      "full_name": "jasonjmcghee/WebMCP",
+      "pkg": "@jason.today/webmcp",
+      "category": "node-mcp",
+      "stars": 636
+    },
+    {
+      "full_name": "Softeria/ms-365-mcp-server",
+      "pkg": "@softeria/ms-365-mcp-server",
+      "category": "node-mcp",
+      "stars": 627
+    },
+    {
+      "full_name": "ktnyt/cclsp",
+      "pkg": "cclsp",
+      "category": "node-mcp",
+      "stars": 618
+    },
+    {
+      "full_name": "ihor-sokoliuk/mcp-searxng",
+      "pkg": "mcp-searxng",
+      "category": "node-mcp",
+      "stars": 660
+    },
+    {
+      "full_name": "karanb192/reddit-mcp-buddy",
+      "pkg": "reddit-mcp-buddy",
+      "category": "node-mcp",
+      "stars": 608
+    },
+    {
+      "full_name": "mnemox-ai/tradememory-protocol",
+      "pkg": "tradememory-protocol",
+      "category": "python-mcp",
+      "stars": 604
+    },
+    {
+      "full_name": "neka-nat/freecad-mcp",
+      "pkg": "freecad-mcp",
+      "category": "python-mcp",
+      "stars": 738
+    },
+    {
+      "full_name": "alpacahq/alpaca-mcp-server",
+      "pkg": "alpaca-mcp-server",
+      "category": "python-mcp",
+      "stars": 654
+    },
+    {
+      "full_name": "cso1z/Feishu-MCP",
+      "pkg": "feishu-mcp",
+      "category": "node-mcp",
+      "stars": 603
+    },
+    {
+      "full_name": "GoogleCloudPlatform/cloud-run-mcp",
+      "pkg": "@google-cloud/cloud-run-mcp",
+      "category": "node-mcp",
+      "stars": 591
+    },
+    {
+      "full_name": "jau123/MeiGen-AI-Design-MCP",
+      "pkg": "meigen",
+      "category": "node-mcp",
+      "stars": 581
+    },
+    {
+      "full_name": "arinspunk/claude-talk-to-figma-mcp",
+      "pkg": "claude-talk-to-figma-mcp",
+      "category": "node-mcp",
+      "stars": 574
+    },
+    {
+      "full_name": "line/line-bot-mcp-server",
+      "pkg": "@line/line-bot-mcp-server",
+      "category": "node-mcp",
+      "stars": 575
+    },
+    {
+      "full_name": "docling-project/docling-mcp",
+      "pkg": "docling-mcp",
+      "category": "python-mcp",
+      "stars": 576
+    },
+    {
+      "full_name": "whchien/ai-trader",
+      "pkg": "ai-trader",
+      "category": "python-mcp",
+      "stars": 595
+    },
+    {
+      "full_name": "yuniko-software/minecraft-mcp-server",
+      "pkg": "minecraft-mcp-server",
+      "category": "node-mcp",
+      "stars": 546
+    },
+    {
+      "full_name": "marcoaapfortes/Mantic.sh",
+      "pkg": "mantic.sh",
+      "category": "node-mcp",
+      "stars": 545
+    },
+    {
+      "full_name": "stuzero/pg-mcp-server",
+      "pkg": "pg-mcp",
+      "category": "python-mcp",
+      "stars": 537
+    },
+    {
+      "full_name": "cohnen/mcp-google-ads",
+      "pkg": "mcp-google-ads",
+      "category": "python-mcp",
+      "stars": 548
+    },
+    {
+      "full_name": "chroma-core/chroma-mcp",
+      "pkg": "chroma-mcp",
+      "category": "python-mcp",
+      "stars": 535
+    },
+    {
+      "full_name": "freestylefly/mcp-server-weread",
+      "pkg": "mcp-server-weread",
+      "category": "node-mcp",
+      "stars": 531
+    },
+    {
+      "full_name": "web-agent-master/google-search",
+      "pkg": "google-search-cli",
+      "category": "node-mcp",
+      "stars": 583
+    },
+    {
+      "full_name": "kimtaeyoon83/mcp-server-youtube-transcript",
+      "pkg": "@kimtaeyoon83/mcp-server-youtube-transcript",
+      "category": "node-mcp",
+      "stars": 524
+    },
+    {
+      "full_name": "PV-Bhat/vibe-check-mcp-server",
+      "pkg": "@pv-bhat/vibe-check-mcp",
+      "category": "node-mcp",
+      "stars": 481
+    },
+    {
+      "full_name": "cyanheads/atlas-mcp-server",
+      "pkg": "atlas-mcp-server",
+      "category": "node-mcp",
+      "stars": 470
+    },
+    {
+      "full_name": "peakmojo/applescript-mcp",
+      "pkg": "@peakmojo/applescript-mcp",
+      "category": "node-mcp",
+      "stars": 448
+    },
+    {
+      "full_name": "MxIris-Reverse-Engineering/ida-mcp-server",
+      "pkg": "mcp-server-ida",
+      "category": "python-mcp",
+      "stars": 534
+    },
+    {
+      "full_name": "openbnb-org/mcp-server-airbnb",
+      "pkg": "@openbnb/mcp-server-airbnb",
+      "category": "node-mcp",
+      "stars": 424
+    },
+    {
+      "full_name": "tuannvm/codex-mcp-server",
+      "pkg": "codex-mcp-server",
+      "category": "node-mcp",
+      "stars": 423
+    },
+    {
+      "full_name": "MHaggis/Security-Detections-MCP",
+      "pkg": "security-detections-mcp",
+      "category": "node-mcp",
+      "stars": 405
+    },
+    {
+      "full_name": "nicobailon/pi-mcp-adapter",
+      "pkg": "pi-mcp-adapter",
+      "category": "node-mcp",
+      "stars": 404
+    },
+    {
+      "full_name": "pab1it0/prometheus-mcp-server",
+      "pkg": "prometheus_mcp_server",
+      "category": "python-mcp",
+      "stars": 416
+    },
+    {
+      "full_name": "NightTrek/Software-planning-mcp",
+      "pkg": "software-planning-tool",
+      "category": "node-mcp",
+      "stars": 394
+    },
+    {
+      "full_name": "abhiz123/todoist-mcp-server",
+      "pkg": "@abhiz123/todoist-mcp-server",
+      "category": "node-mcp",
+      "stars": 387
+    },
+    {
+      "full_name": "ashwwwin/automation-mcp",
+      "pkg": "automation-mcp",
+      "category": "node-mcp",
+      "stars": 386
+    },
+    {
+      "full_name": "f2c-ai/f2c-mcp",
+      "pkg": "@f2c/mcp",
+      "category": "node-mcp",
+      "stars": 386
+    },
+    {
+      "full_name": "jobsonlook/xhs-mcp",
+      "pkg": "jobson-xhs-mcp",
+      "category": "python-mcp",
+      "stars": 475
+    },
+    {
+      "full_name": "mcp-servers-for-revit/revit-mcp",
+      "pkg": "revit-mcp",
+      "category": "node-mcp",
+      "stars": 390
+    },
+    {
+      "full_name": "motherduckdb/mcp-server-motherduck",
+      "pkg": "mcp-server-motherduck",
+      "category": "python-mcp",
+      "stars": 466
+    },
+    {
+      "full_name": "anyproto/anytype-mcp",
+      "pkg": "@anyproto/anytype-mcp",
+      "category": "node-mcp",
+      "stars": 382
+    },
+    {
+      "full_name": "formulahendry/mcp-server-spec-driven-development",
+      "pkg": "mcp-server-spec-driven-development",
+      "category": "node-mcp",
+      "stars": 428
+    },
+    {
+      "full_name": "vibheksoni/stealth-browser-mcp",
+      "pkg": "stealth-browser-mcp",
+      "category": "python-mcp",
+      "stars": 475
+    },
+    {
+      "full_name": "dbt-labs/dbt-mcp",
+      "pkg": "dbt-mcp",
+      "category": "python-mcp",
+      "stars": 539
+    },
+    {
+      "full_name": "joshrutkowski/applescript-mcp",
+      "pkg": "applescript-mcp",
+      "category": "node-mcp",
+      "stars": 376
+    },
+    {
+      "full_name": "graphlit/graphlit-mcp-server",
+      "pkg": "graphlit-mcp-server",
+      "category": "node-mcp",
+      "stars": 374
+    },
+    {
+      "full_name": "ttommyth/interactive-mcp",
+      "pkg": "interactive-mcp",
+      "category": "node-mcp",
+      "stars": 342
+    },
+    {
+      "full_name": "zinja-coder/apktool-mcp-server",
+      "pkg": "apktool-mcp-server",
+      "category": "python-mcp",
+      "stars": 362
+    },
+    {
+      "full_name": "tae0y/real-estate-mcp",
+      "pkg": "real_estate",
+      "category": "python-mcp",
+      "stars": 339
+    },
+    {
+      "full_name": "wshobson/maverick-mcp",
+      "pkg": "maverick_mcp",
+      "category": "python-mcp",
+      "stars": 490
+    },
+    {
+      "full_name": "teelaitila/deep-research-mcp",
+      "pkg": "open-deep-research",
+      "category": "node-mcp",
+      "stars": 321
+    },
+    {
+      "full_name": "mcpdotdirect/evm-mcp-server",
+      "pkg": "@mcpdotdirect/evm-mcp-server",
+      "category": "node-mcp",
+      "stars": 373
+    },
+    {
+      "full_name": "DMontgomery40/deepseek-mcp-server",
+      "pkg": "deepseek-mcp-server",
+      "category": "node-mcp",
+      "stars": 316
+    },
+    {
+      "full_name": "recursechat/mcp-server-apple-shortcuts",
+      "pkg": "mcp-server-apple-shortcuts",
+      "category": "node-mcp",
+      "stars": 316
+    },
+    {
+      "full_name": "gts360/django-mcp-server",
+      "pkg": "django-mcp-server",
+      "category": "python-mcp",
+      "stars": 314
+    },
+    {
+      "full_name": "zhongweili/nanobanana-mcp-server",
+      "pkg": "nanobanana-mcp-server",
+      "category": "python-mcp",
+      "stars": 311
+    },
+    {
+      "full_name": "StuMason/coolify-mcp",
+      "pkg": "@masonator/coolify-mcp",
+      "category": "node-mcp",
+      "stars": 315
+    },
+    {
+      "full_name": "sunriseapps/imagesorcery-mcp",
+      "pkg": "imagesorcery-mcp",
+      "category": "python-mcp",
+      "stars": 304
+    },
+    {
+      "full_name": "appium/appium-mcp",
+      "pkg": "appium-mcp",
+      "category": "node-mcp",
+      "stars": 321
+    },
+    {
+      "full_name": "Tiberriver256/mcp-server-azure-devops",
+      "pkg": "@tiberriver256/mcp-server-azure-devops",
+      "category": "node-mcp",
+      "stars": 363
+    },
+    {
+      "full_name": "JoshuaRileyDev/app-store-connect-mcp-server",
+      "pkg": "appstore-connect-mcp-server",
+      "category": "node-mcp",
+      "stars": 316
+    },
+    {
+      "full_name": "wrale/mcp-server-tree-sitter",
+      "pkg": "mcp-server-tree-sitter",
+      "category": "python-mcp",
+      "stars": 292
+    },
+    {
+      "full_name": "JackKuo666/Google-Scholar-MCP-Server",
+      "pkg": "mcp-server-google-scholar",
+      "category": "python-mcp",
+      "stars": 289
+    },
+    {
+      "full_name": "mrgoonie/human-mcp",
+      "pkg": "@goonnguyen/human-mcp",
+      "category": "node-mcp",
+      "stars": 284
+    },
+    {
+      "full_name": "8beeeaaat/touchdesigner-mcp",
+      "pkg": "touchdesigner-mcp-server",
+      "category": "node-mcp",
+      "stars": 280
+    },
+    {
+      "full_name": "juehang/vscode-mcp-server",
+      "pkg": "vscode-mcp-server",
+      "category": "node-mcp",
+      "stars": 348
+    },
+    {
+      "full_name": "Wildcard-Official/deepcontext-mcp",
+      "pkg": "@wildcard-ai/deepcontext",
+      "category": "node-mcp",
+      "stars": 274
+    },
+    {
+      "full_name": "onebirdrocks/ebook-mcp",
+      "pkg": "ebook-mcp",
+      "category": "python-mcp",
+      "stars": 358
+    },
+    {
+      "full_name": "VikashLoomba/MCP-Server-Playwright",
+      "pkg": "@automatalabs/mcp-server-playwright",
+      "category": "node-mcp",
+      "stars": 284
+    },
+    {
+      "full_name": "RealMikeChong/ultra-mcp",
+      "pkg": "ultra-mcp",
+      "category": "node-mcp",
+      "stars": 272
+    },
+    {
+      "full_name": "r-huijts/xcode-mcp-server",
+      "pkg": "xcode-mcp-server",
+      "category": "node-mcp",
+      "stars": 371
+    },
+    {
+      "full_name": "Simon-Kansara/ableton-live-mcp-server",
+      "pkg": "ableton-live-mcp-server",
+      "category": "python-mcp",
+      "stars": 376
+    },
+    {
+      "full_name": "Alex2Yang97/yahoo-finance-mcp",
+      "pkg": "yahoo-finance-mcp",
+      "category": "python-mcp",
+      "stars": 267
+    },
+    {
+      "full_name": "apache/doris-mcp-server",
+      "pkg": "doris-mcp-server",
+      "category": "python-mcp",
+      "stars": 282
+    },
+    {
+      "full_name": "simon-ami/win-cli-mcp-server",
+      "pkg": "@simonb97/server-win-cli",
+      "category": "node-mcp",
+      "stars": 267
+    },
+    {
+      "full_name": "oOo0oOo/lean-lsp-mcp",
+      "pkg": "lean-lsp-mcp",
+      "category": "python-mcp",
+      "stars": 363
+    },
+    {
+      "full_name": "jae-jae/g-search-mcp",
+      "pkg": "g-search-mcp",
+      "category": "node-mcp",
+      "stars": 260
+    },
+    {
+      "full_name": "XeroAPI/xero-mcp-server",
+      "pkg": "@xeroapi/xero-mcp-server",
+      "category": "node-mcp",
+      "stars": 248
+    },
+    {
+      "full_name": "stefanoamorelli/sec-edgar-mcp",
+      "pkg": "sec-edgar-mcp",
+      "category": "python-mcp",
+      "stars": 251
+    },
+    {
+      "full_name": "langchain-ai/langchainjs-mcp-adapters",
+      "pkg": "@langchain/mcp-adapters",
+      "category": "node-mcp",
+      "stars": 245
+    },
+    {
+      "full_name": "nickgnd/tmux-mcp",
+      "pkg": "tmux-mcp",
+      "category": "node-mcp",
+      "stars": 260
+    },
+    {
+      "full_name": "aipotheosis-labs/aci-mcp",
+      "pkg": "aci-mcp",
+      "category": "python-mcp",
+      "stars": 248
+    },
+    {
+      "full_name": "formulahendry/mcp-server-code-runner",
+      "pkg": "mcp-server-code-runner",
+      "category": "node-mcp",
+      "stars": 242
+    },
+    {
+      "full_name": "burningion/video-editing-mcp",
+      "pkg": "video-editor-mcp",
+      "category": "python-mcp",
+      "stars": 260
+    },
+    {
+      "full_name": "ivnvxd/mcp-server-odoo",
+      "pkg": "mcp-server-odoo",
+      "category": "python-mcp",
+      "stars": 246
+    },
+    {
+      "full_name": "zhixiaoqiang/antd-components-mcp",
+      "pkg": "@jzone-mcp/antd-components-mcp",
+      "category": "node-mcp",
+      "stars": 238
+    },
+    {
+      "full_name": "tableau/tableau-mcp",
+      "pkg": "@tableau/mcp-server",
+      "category": "node-mcp",
+      "stars": 237
+    },
+    {
+      "full_name": "mixelpixx/Google-Search-MCP-Server",
+      "pkg": "google-search-mcp",
+      "category": "node-mcp",
+      "stars": 236
+    },
+    {
+      "full_name": "GlitterKill/sdl-mcp",
+      "pkg": "sdl-mcp",
+      "category": "node-mcp",
+      "stars": 234
+    },
+    {
+      "full_name": "nailuoGG/anki-mcp-server",
+      "pkg": "anki-mcp-server",
+      "category": "node-mcp",
+      "stars": 234
+    },
+    {
+      "full_name": "mhmzdev/figma-flutter-mcp",
+      "pkg": "figma-flutter-mcp",
+      "category": "node-mcp",
+      "stars": 231
+    },
+    {
+      "full_name": "Rudra-ravi/wikipedia-mcp",
+      "pkg": "wikipedia-mcp",
+      "category": "python-mcp",
+      "stars": 233
+    },
+    {
+      "full_name": "ankimcp/anki-mcp-server",
+      "pkg": "@ankimcp/anki-mcp-server",
+      "category": "node-mcp",
+      "stars": 229
+    },
+    {
+      "full_name": "zilliztech/mcp-server-milvus",
+      "pkg": "mcp-server-milvus",
+      "category": "python-mcp",
+      "stars": 227
+    },
+    {
+      "full_name": "hao-cyber/phone-mcp",
+      "pkg": "phone-mcp",
+      "category": "python-mcp",
+      "stars": 224
+    },
+    {
+      "full_name": "PraneshASP/foundry-mcp-server",
+      "pkg": "@pranesh.asp/foundry-mcp-server",
+      "category": "node-mcp",
+      "stars": 243
+    },
+    {
+      "full_name": "postmanlabs/postman-mcp-server",
+      "pkg": "@postman/postman-mcp-server",
+      "category": "node-mcp",
+      "stars": 218
+    },
+    {
+      "full_name": "run-llama/llamacloud-mcp",
+      "pkg": "llamacloud-mcp",
+      "category": "python-mcp",
+      "stars": 224
+    },
+    {
+      "full_name": "mhyrr/sketchup-mcp",
+      "pkg": "sketchup-mcp",
+      "category": "python-mcp",
+      "stars": 213
+    },
+    {
+      "full_name": "domdomegg/computer-use-mcp",
+      "pkg": "computer-use-mcp",
+      "category": "node-mcp",
+      "stars": 218
+    },
+    {
+      "full_name": "ErickWendel/erickwendel-contributions-mcp",
+      "pkg": "@erickwendel/contributions-mcp",
+      "category": "node-mcp",
+      "stars": 204
+    },
+    {
+      "full_name": "montevive/penpot-mcp",
+      "pkg": "penpot-mcp",
+      "category": "python-mcp",
+      "stars": 227
+    },
+    {
+      "full_name": "ariadng/metatrader-mcp-server",
+      "pkg": "metatrader-mcp-server",
+      "category": "python-mcp",
+      "stars": 215
+    },
+    {
+      "full_name": "ahonn/mcp-server-gsc",
+      "pkg": "mcp-server-gsc",
+      "category": "node-mcp",
+      "stars": 207
+    },
+    {
+      "full_name": "YuChenSSR/mindmap-mcp-server",
+      "pkg": "mindmap-mcp-server",
+      "category": "python-mcp",
+      "stars": 228
+    },
+    {
+      "full_name": "comet-ml/opik-mcp",
+      "pkg": "opik-mcp",
+      "category": "node-mcp",
+      "stars": 203
+    },
+    {
+      "full_name": "jinzcdev/markmap-mcp-server",
+      "pkg": "@jinzcdev/markmap-mcp-server",
+      "category": "node-mcp",
+      "stars": 197
+    },
+    {
+      "full_name": "chrisdoc/hevy-mcp",
+      "pkg": "hevy-mcp",
+      "category": "node-mcp",
+      "stars": 195
+    },
+    {
+      "full_name": "mukul975/cve-mcp-server",
+      "pkg": "cve-mcp-server",
+      "category": "python-mcp",
+      "stars": 196
+    },
+    {
+      "full_name": "GeLi2001/shopify-mcp",
+      "pkg": "shopify-mcp",
+      "category": "node-mcp",
+      "stars": 194
+    },
+    {
+      "full_name": "omar-haris/smart-coding-mcp",
+      "pkg": "smart-coding-mcp",
+      "category": "node-mcp",
+      "stars": 195
+    },
+    {
+      "full_name": "universal-tool-calling-protocol/utcp-mcp",
+      "pkg": "@utcp/mcp-bridge",
+      "category": "node-mcp",
+      "stars": 194
+    },
+    {
+      "full_name": "williamzujkowski/strudel-mcp-server",
+      "pkg": "@williamzujkowski/strudel-mcp-server",
+      "category": "node-mcp",
+      "stars": 190
+    },
+    {
+      "full_name": "zcaceres/easy-mcp",
+      "pkg": "easy-mcp",
+      "category": "node-mcp",
+      "stars": 193
+    },
+    {
+      "full_name": "ravinahp/flights-mcp",
+      "pkg": "flights-mcp",
+      "category": "python-mcp",
+      "stars": 188
+    },
+    {
+      "full_name": "rhel-lightspeed/linux-mcp-server",
+      "pkg": "linux-mcp-server",
+      "category": "python-mcp",
+      "stars": 209
+    },
+    {
+      "full_name": "makeplane/plane-mcp-server",
+      "pkg": "plane-mcp-server",
+      "category": "python-mcp",
+      "stars": 193
+    },
+    {
+      "full_name": "cbcoutinho/nextcloud-mcp-server",
+      "pkg": "nextcloud-mcp-server",
+      "category": "python-mcp",
+      "stars": 187
+    },
+    {
+      "full_name": "traceloop/opentelemetry-mcp-server",
+      "pkg": "opentelemetry-mcp",
+      "category": "python-mcp",
+      "stars": 184
+    },
+    {
+      "full_name": "dataforseo/mcp-server-typescript",
+      "pkg": "dataforseo-mcp-server",
+      "category": "node-mcp",
+      "stars": 177
+    },
+    {
+      "full_name": "heizaheiza/Charles-mcp",
+      "pkg": "charles-mcp",
+      "category": "python-mcp",
+      "stars": 177
+    },
+    {
+      "full_name": "Vvkmnn/claude-historian-mcp",
+      "pkg": "claude-historian-mcp",
+      "category": "node-mcp",
+      "stars": 174
+    },
+    {
+      "full_name": "MFYDev/ghost-mcp",
+      "pkg": "@fanyangmeng/ghost-mcp",
+      "category": "node-mcp",
+      "stars": 172
+    },
+    {
+      "full_name": "ravikiranvm/aws-finops-mcp-server",
+      "pkg": "aws-finops-mcp-server",
+      "category": "python-mcp",
+      "stars": 175
+    },
+    {
+      "full_name": "ericzakariasson/pg-mcp-server",
+      "pkg": "pg-mcp-server",
+      "category": "node-mcp",
+      "stars": 171
+    },
+    {
+      "full_name": "toolsdk-ai/toolsdk-mcp-registry",
+      "pkg": "@toolsdk.ai/registry",
+      "category": "node-mcp",
+      "stars": 170
+    },
+    {
+      "full_name": "egebese/seo-research-mcp",
+      "pkg": "seo-mcp",
+      "category": "python-mcp",
+      "stars": 172
+    },
+    {
+      "full_name": "dvcrn/mcp-server-siri-shortcuts",
+      "pkg": "mcp-server-siri-shortcuts",
+      "category": "node-mcp",
+      "stars": 184
+    },
+    {
+      "full_name": "cexll/codex-mcp-server",
+      "pkg": "@cexll/codex-mcp-server",
+      "category": "node-mcp",
+      "stars": 167
+    },
+    {
+      "full_name": "lostintangent/gistpad-mcp",
+      "pkg": "gistpad-mcp",
+      "category": "node-mcp",
+      "stars": 189
+    },
+    {
+      "full_name": "GongRzhe/Quickchart-MCP-Server",
+      "pkg": "@gongrzhe/quickchart-mcp-server",
+      "category": "node-mcp",
+      "stars": 160
+    },
+    {
+      "full_name": "CCCpan/data-verify-mcp",
+      "pkg": "data-verify-mcp",
+      "category": "node-mcp",
+      "stars": 164
+    },
+    {
+      "full_name": "ChenyqThu/mcp-server-weread",
+      "pkg": "mcp-server-weread",
+      "category": "node-mcp",
+      "stars": 162
+    },
+    {
+      "full_name": "tinyfish-io/agentql-mcp",
+      "pkg": "agentql-mcp",
+      "category": "node-mcp",
+      "stars": 161
+    },
+    {
+      "full_name": "GongRzhe/Human-In-the-Loop-MCP-Server",
+      "pkg": "hitl-mcp-server",
+      "category": "python-mcp",
+      "stars": 156
+    },
+    {
+      "full_name": "scrapeless-ai/scrapeless-mcp-server",
+      "pkg": "scrapeless-mcp-server",
+      "category": "node-mcp",
+      "stars": 160
+    },
+    {
+      "full_name": "jbeno/cursor-notebook-mcp",
+      "pkg": "cursor-notebook-mcp",
+      "category": "python-mcp",
+      "stars": 156
+    },
+    {
+      "full_name": "brijr/meta-mcp",
+      "pkg": "meta-ads-mcp",
+      "category": "node-mcp",
+      "stars": 155
+    },
+    {
+      "full_name": "Hawstein/mcp-server-reddit",
+      "pkg": "mcp-server-reddit",
+      "category": "python-mcp",
+      "stars": 171
+    },
+    {
+      "full_name": "sendaifun/solana-mcp",
+      "pkg": "solana-mcp",
+      "category": "node-mcp",
+      "stars": 157
+    },
+    {
+      "full_name": "integromat/make-mcp-server",
+      "pkg": "@makehq/mcp-server",
+      "category": "node-mcp",
+      "stars": 154
+    },
+    {
+      "full_name": "metatool-ai/mcp-server-metamcp",
+      "pkg": "@metamcp/mcp-server-metamcp",
+      "category": "node-mcp",
+      "stars": 154
+    },
+    {
+      "full_name": "StarRocks/mcp-server-starrocks",
+      "pkg": "mcp-server-starrocks",
+      "category": "python-mcp",
+      "stars": 167
+    },
+    {
+      "full_name": "marcopesani/mcp-server-serper",
+      "pkg": "serper-search-scrape-mcp-server",
+      "category": "node-mcp",
+      "stars": 151
+    },
+    {
+      "full_name": "yangkyeongmo/mcp-server-apache-airflow",
+      "pkg": "mcp-server-apache-airflow",
+      "category": "python-mcp",
+      "stars": 158
+    },
+    {
+      "full_name": "pyroprompts/any-chat-completions-mcp",
+      "pkg": "@pyroprompts/any-chat-completions-mcp",
+      "category": "node-mcp",
+      "stars": 151
+    },
+    {
+      "full_name": "jeff-nasseri/mikrotik-mcp",
+      "pkg": "mcp-server-mikrotik",
+      "category": "python-mcp",
+      "stars": 152
+    },
+    {
+      "full_name": "TimHolden/figma-mcp-server",
+      "pkg": "figma-mcp-server",
+      "category": "node-mcp",
+      "stars": 148
+    },
+    {
+      "full_name": "adeze/raindrop-mcp",
+      "pkg": "@adeze/raindrop-mcp",
+      "category": "node-mcp",
+      "stars": 148
+    },
+    {
+      "full_name": "githejie/mcp-server-calculator",
+      "pkg": "mcp-server-calculator",
+      "category": "python-mcp",
+      "stars": 148
+    },
+    {
+      "full_name": "dedalus-labs/dedalus-mcp-python",
+      "pkg": "dedalus_mcp",
+      "category": "python-mcp",
+      "stars": 153
+    },
+    {
+      "full_name": "tsmztech/mcp-server-salesforce",
+      "pkg": "@tsmztech/mcp-server-salesforce",
+      "category": "node-mcp",
+      "stars": 152
+    },
+    {
+      "full_name": "SammySnake-d/fast-context-mcp",
+      "pkg": "@sammysnake/fast-context-mcp",
+      "category": "node-mcp",
+      "stars": 147
+    },
+    {
+      "full_name": "aaronjmars/web3-research-mcp",
+      "pkg": "web3-research-mcp",
+      "category": "node-mcp",
+      "stars": 147
+    },
+    {
+      "full_name": "aaronsb/google-workspace-mcp",
+      "pkg": "@aaronsb/google-workspace-mcp",
+      "category": "node-mcp",
+      "stars": 146
+    },
+    {
+      "full_name": "hanzili/comet-mcp",
+      "pkg": "comet-mcp",
+      "category": "node-mcp",
+      "stars": 149
+    },
+    {
+      "full_name": "kujenga/zotero-mcp",
+      "pkg": "zotero-mcp",
+      "category": "python-mcp",
+      "stars": 145
+    },
+    {
+      "full_name": "DAWNCR0W/affine-mcp-server",
+      "pkg": "affine-mcp-server",
+      "category": "node-mcp",
+      "stars": 143
+    },
+    {
+      "full_name": "toolprint/hypertool-mcp",
+      "pkg": "@toolprint/hypertool-mcp",
+      "category": "node-mcp",
+      "stars": 151
+    },
+    {
+      "full_name": "HagaiHen/facebook-mcp-server",
+      "pkg": "facebook-mcp-server",
+      "category": "python-mcp",
+      "stars": 143
+    },
+    {
+      "full_name": "roychri/mcp-server-asana",
+      "pkg": "@roychri/mcp-server-asana",
+      "category": "node-mcp",
+      "stars": 137
+    },
+    {
+      "full_name": "stape-io/google-tag-manager-mcp-server",
+      "pkg": "google-tag-manager-mcp-server",
+      "category": "node-mcp",
+      "stars": 136
+    },
+    {
+      "full_name": "eliasbiondo/linkedin-mcp-server",
+      "pkg": "linkedin-mcp-server",
+      "category": "python-mcp",
+      "stars": 135
+    },
+    {
+      "full_name": "doggybee/mcp-server-ccxt",
+      "pkg": "@mcpfun/mcp-server-ccxt",
+      "category": "node-mcp",
+      "stars": 133
+    },
+    {
+      "full_name": "HaD0Yun/Gopeak-godot-mcp",
+      "pkg": "gopeak",
+      "category": "node-mcp",
+      "stars": 131
+    },
+    {
+      "full_name": "zwldarren/akshare-one-mcp",
+      "pkg": "akshare-one-mcp",
+      "category": "python-mcp",
+      "stars": 153
+    },
+    {
+      "full_name": "imbenrabi/Financial-Modeling-Prep-MCP-Server",
+      "pkg": "financial-modeling-prep-mcp-server",
+      "category": "node-mcp",
+      "stars": 128
+    },
+    {
+      "full_name": "PhillipRt/think-mcp-server",
+      "pkg": "think-mcp-server",
+      "category": "node-mcp",
+      "stars": 127
+    },
+    {
+      "full_name": "GongRzhe/A2A-MCP-Server",
+      "pkg": "a2a_mcp_server",
+      "category": "python-mcp",
+      "stars": 147
+    },
+    {
+      "full_name": "huweihua123/stock-mcp",
+      "pkg": "stock-mcp",
+      "category": "python-mcp",
+      "stars": 132
+    },
+    {
+      "full_name": "weidwonder/crawl4ai-mcp-server",
+      "pkg": "crawl4ai-mcp-server",
+      "category": "python-mcp",
+      "stars": 136
+    },
+    {
+      "full_name": "nloui/paperless-mcp",
+      "pkg": "@nloui/paperless-mcp",
+      "category": "node-mcp",
+      "stars": 158
+    }
+  ],
+  "github_only_confirmed": [
+    {
+      "full_name": "activepieces/activepieces",
+      "pkg": "activepieces",
+      "category": "node-mcp",
+      "stars": 21759
+    },
+    {
+      "full_name": "sansan0/TrendRadar",
+      "pkg": "trendradar",
+      "category": "python-mcp",
+      "stars": 51945
+    },
+    {
+      "full_name": "JoeanAmier/XHS-Downloader",
+      "pkg": "XHS-Downloader",
+      "category": "python-mcp",
+      "stars": 10829
+    },
+    {
+      "full_name": "0x4m4/hexstrike-ai",
+      "pkg": "hexstrike-ai",
+      "category": "python-mcp",
+      "stars": 8149
+    },
+    {
+      "full_name": "BeehiveInnovations/pal-mcp-server",
+      "pkg": "pal-mcp-server",
+      "category": "python-mcp",
+      "stars": 11441
+    },
+    {
+      "full_name": "nanbingxyz/5ire",
+      "pkg": "5ire",
+      "category": "node-mcp",
+      "stars": 5160
+    },
+    {
+      "full_name": "excalidraw/excalidraw-mcp",
+      "pkg": "@mcp-demos/excalidraw-server",
+      "category": "node-mcp",
+      "stars": 4026
+    },
+    {
+      "full_name": "wgpsec/ENScan_GO",
+      "pkg": null,
+      "category": "go-mcp",
+      "stars": 4332
+    },
+    {
+      "full_name": "0xJacky/nginx-ui",
+      "pkg": "nginx-ui",
+      "category": "go-mcp",
+      "stars": 11048
+    },
+    {
+      "full_name": "mark3labs/mcp-go",
+      "pkg": null,
+      "category": "go-mcp",
+      "stars": 8600
+    },
+    {
+      "full_name": "IBM/mcp-context-forge",
+      "pkg": null,
+      "category": "rust-mcp",
+      "stars": 3584
+    },
+    {
+      "full_name": "httprunner/httprunner",
+      "pkg": null,
+      "category": "go-mcp",
+      "stars": 4268
+    },
+    {
+      "full_name": "tradesdontlie/tradingview-mcp",
+      "pkg": "tradingview-mcp",
+      "category": "node-mcp",
+      "stars": 1933
+    },
+    {
+      "full_name": "AmoyLab/Unla",
+      "pkg": null,
+      "category": "go-mcp",
+      "stars": 2087
+    },
+    {
+      "full_name": "rusq/slackdump",
+      "pkg": null,
+      "category": "go-mcp",
+      "stars": 2548
+    },
+    {
+      "full_name": "isaacphi/mcp-language-server",
+      "pkg": null,
+      "category": "go-mcp",
+      "stars": 1511
+    },
+    {
+      "full_name": "harishsg993010/damn-vulnerable-MCP-server",
+      "pkg": "damn-vulnerable-MCP-server",
+      "category": "python-mcp",
+      "stars": 1278
+    },
+    {
+      "full_name": "refreshdotdev/web-eval-agent",
+      "pkg": "web-eval-agent",
+      "category": "python-mcp",
+      "stars": 1236
+    },
+    {
+      "full_name": "mark3labs/mcphost",
+      "pkg": null,
+      "category": "go-mcp",
+      "stars": 1599
+    },
+    {
+      "full_name": "cgoinglove/better-chatbot",
+      "pkg": "better-chatbot",
+      "category": "node-mcp",
+      "stars": 1067
+    },
+    {
+      "full_name": "microsoft/lets-learn-mcp-python",
+      "pkg": "mcp-python-demo",
+      "category": "python-mcp",
+      "stars": 1052
+    },
+    {
+      "full_name": "openops-cloud/openops",
+      "pkg": "openops",
+      "category": "node-mcp",
+      "stars": 1015
+    },
+    {
+      "full_name": "TencentCloudBase/CloudBase-MCP",
+      "pkg": "cloudbase-ai-toolkit",
+      "category": "node-mcp",
+      "stars": 992
+    },
+    {
+      "full_name": "f/mcptools",
+      "pkg": null,
+      "category": "go-mcp",
+      "stars": 1553
+    },
+    {
+      "full_name": "grafbase/grafbase",
+      "pkg": null,
+      "category": "rust-mcp",
+      "stars": 1227
+    },
+    {
+      "full_name": "6551Team/opennews-mcp",
+      "pkg": "opennews-mcp",
+      "category": "python-mcp",
+      "stars": 929
+    },
+    {
+      "full_name": "Devin-AXIS/A2V",
+      "pkg": "my-v0-project",
+      "category": "node-mcp",
+      "stars": 1200
+    },
+    {
+      "full_name": "antfu/nuxt-mcp-dev",
+      "pkg": null,
+      "category": "node-mcp",
+      "stars": 909
+    },
+    {
+      "full_name": "arben-adm/mcp-sequential-thinking",
+      "pkg": "sequential-thinking",
+      "category": "python-mcp",
+      "stars": 881
+    },
+    {
+      "full_name": "microsoft/wassette",
+      "pkg": null,
+      "category": "rust-mcp",
+      "stars": 875
+    },
+    {
+      "full_name": "mcpjungle/MCPJungle",
+      "pkg": null,
+      "category": "go-mcp",
+      "stars": 966
+    },
+    {
+      "full_name": "glidea/zenfeed",
+      "pkg": null,
+      "category": "go-mcp",
+      "stars": 1672
+    },
+    {
+      "full_name": "mrkrsl/web-search-mcp",
+      "pkg": "web-search-mcp-server",
+      "category": "node-mcp",
+      "stars": 771
+    },
+    {
+      "full_name": "WJZ-P/gemini-skill",
+      "pkg": "gemini-skill",
+      "category": "node-mcp",
+      "stars": 784
+    },
+    {
+      "full_name": "jjsantos01/qgis_mcp",
+      "pkg": "qgis-mcp",
+      "category": "python-mcp",
+      "stars": 906
+    },
+    {
+      "full_name": "jerry-ai-dev/MODULAR-RAG-MCP-SERVER",
+      "pkg": "modular-rag-mcp-server",
+      "category": "python-mcp",
+      "stars": 817
+    },
+    {
+      "full_name": "stacklok/toolhive",
+      "pkg": null,
+      "category": "go-mcp",
+      "stars": 1717
+    },
+    {
+      "full_name": "teddynote-lab/langgraph-mcp-agents",
+      "pkg": "langgraph-mcp-agents",
+      "category": "python-mcp",
+      "stars": 694
+    },
+    {
+      "full_name": "Cyfrin/aderyn",
+      "pkg": null,
+      "category": "rust-mcp",
+      "stars": 756
+    },
+    {
+      "full_name": "coleam00/mcp-mem0",
+      "pkg": "mem0-mcp",
+      "category": "python-mcp",
+      "stars": 672
+    },
+    {
+      "full_name": "hyper-mcp-rs/hyper-mcp",
+      "pkg": null,
+      "category": "rust-mcp",
+      "stars": 872
+    },
+    {
+      "full_name": "vllora/vllora",
+      "pkg": null,
+      "category": "rust-mcp",
+      "stars": 790
+    },
+    {
+      "full_name": "elastic/mcp-server-elasticsearch",
+      "pkg": null,
+      "category": "rust-mcp",
+      "stars": 644
+    },
+    {
+      "full_name": "mark3labs/mcp-filesystem-server",
+      "pkg": null,
+      "category": "go-mcp",
+      "stars": 631
+    },
+    {
+      "full_name": "6551Team/opentwitter-mcp",
+      "pkg": "opentwitter-mcp",
+      "category": "python-mcp",
+      "stars": 582
+    },
+    {
+      "full_name": "negokaz/excel-mcp-server",
+      "pkg": "@negokaz/excel-mcp-server",
+      "category": "go-mcp",
+      "stars": 920
+    },
+    {
+      "full_name": "TM9657/flow-like",
+      "pkg": "flow-like",
+      "category": "rust-mcp",
+      "stars": 799
+    },
+    {
+      "full_name": "vkhanhqui/figma-mcp-go",
+      "pkg": null,
+      "category": "go-mcp",
+      "stars": 602
+    },
+    {
+      "full_name": "automation-ai-labs/mcp-link",
+      "pkg": null,
+      "category": "go-mcp",
+      "stars": 602
+    },
+    {
+      "full_name": "KelvinQiu802/llm-mcp-rag",
+      "pkg": "ts-node-esm-template",
+      "category": "node-mcp",
+      "stars": 527
+    },
+    {
+      "full_name": "Roblox/studio-rust-mcp-server",
+      "pkg": null,
+      "category": "rust-mcp",
+      "stars": 460
+    },
+    {
+      "full_name": "zinja-coder/jadx-mcp-server",
+      "pkg": "jadx-mcp-server",
+      "category": "python-mcp",
+      "stars": 388
+    },
+    {
+      "full_name": "MorDavid/BloodHound-MCP-AI",
+      "pkg": "BloodHound-MCP-AI",
+      "category": "python-mcp",
+      "stars": 353
+    },
+    {
+      "full_name": "hemanth/paws-on-mcp",
+      "pkg": "paws-on-mcp",
+      "category": "python-mcp",
+      "stars": 331
+    },
+    {
+      "full_name": "InditexTech/mcp-server-simulator-ios-idb",
+      "pkg": "mcp-server-simulator-ios-idb",
+      "category": "node-mcp",
+      "stars": 302
+    },
+    {
+      "full_name": "RafalWilinski/aws-mcp",
+      "pkg": "chatwithcloud-mcp",
+      "category": "node-mcp",
+      "stars": 296
+    },
+    {
+      "full_name": "boshyxd/robloxstudio-mcp",
+      "pkg": "robloxstudio-mcp-monorepo",
+      "category": "node-mcp",
+      "stars": 365
+    },
+    {
+      "full_name": "coleam00/remote-mcp-server-with-auth",
+      "pkg": "remote-mcp-github-oauth",
+      "category": "node-mcp",
+      "stars": 292
+    },
+    {
+      "full_name": "daobataotie/CAD-MCP",
+      "pkg": "CAD-MCP",
+      "category": "python-mcp",
+      "stars": 305
+    },
+    {
+      "full_name": "marcelmarais/spotify-mcp-server",
+      "pkg": "spotify-mcp-server",
+      "category": "node-mcp",
+      "stars": 296
+    },
+    {
+      "full_name": "assafelovic/gptr-mcp",
+      "pkg": "gptr-mcp",
+      "category": "python-mcp",
+      "stars": 339
+    },
+    {
+      "full_name": "Dakkshin/after-effects-mcp",
+      "pkg": "after-effects-mcp",
+      "category": "node-mcp",
+      "stars": 293
+    },
+    {
+      "full_name": "blacktop/ida-mcp-rs",
+      "pkg": null,
+      "category": "rust-mcp",
+      "stars": 333
+    },
+    {
+      "full_name": "elusznik/mcp-server-code-execution-mode",
+      "pkg": "mcp-server-code-execution-mode",
+      "category": "python-mcp",
+      "stars": 323
+    },
+    {
+      "full_name": "Shelpuk-AI-Technology-Consulting/kindly-web-search-mcp-server",
+      "pkg": "kindly-web-search-mcp-server",
+      "category": "python-mcp",
+      "stars": 283
+    },
+    {
+      "full_name": "wgpsec/cloudsword",
+      "pkg": null,
+      "category": "go-mcp",
+      "stars": 601
+    },
+    {
+      "full_name": "burugo/one-mcp",
+      "pkg": null,
+      "category": "go-mcp",
+      "stars": 383
+    },
+    {
+      "full_name": "joenorton/comfyui-mcp-server",
+      "pkg": "comfyui-mcp-server",
+      "category": "python-mcp",
+      "stars": 282
+    },
+    {
+      "full_name": "gomarble-ai/facebook-ads-mcp-server",
+      "pkg": "facebook-ads-mcp-server",
+      "category": "python-mcp",
+      "stars": 269
+    },
+    {
+      "full_name": "Govcraft/rust-docs-mcp-server",
+      "pkg": null,
+      "category": "rust-mcp",
+      "stars": 270
+    },
+    {
+      "full_name": "mvilanova/intervals-mcp-server",
+      "pkg": "intervals-mcp-server",
+      "category": "python-mcp",
+      "stars": 225
+    },
+    {
+      "full_name": "hellokaton/unsplash-mcp-server",
+      "pkg": "unsplash-mcp-server",
+      "category": "python-mcp",
+      "stars": 214
+    },
+    {
+      "full_name": "Doriandarko/sora-mcp",
+      "pkg": "sora-mcp-server",
+      "category": "node-mcp",
+      "stars": 210
+    },
+    {
+      "full_name": "Ejb503/multimodal-mcp-client",
+      "pkg": "multimodal-mcp-client",
+      "category": "node-mcp",
+      "stars": 210
+    },
+    {
+      "full_name": "apollographql/apollo-mcp-server",
+      "pkg": null,
+      "category": "rust-mcp",
+      "stars": 277
+    },
+    {
+      "full_name": "mpeirone/zabbix-mcp-server",
+      "pkg": "zabbix-mcp-server",
+      "category": "python-mcp",
+      "stars": 200
+    },
+    {
+      "full_name": "AI-QL/chat-mcp",
+      "pkg": "aiql-desktop",
+      "category": "node-mcp",
+      "stars": 244
+    },
+    {
+      "full_name": "proxy-intell/facebook-ads-library-mcp",
+      "pkg": "facebook-ads-library-mcp",
+      "category": "python-mcp",
+      "stars": 203
+    },
+    {
+      "full_name": "gbrigandi/mcp-server-wazuh",
+      "pkg": null,
+      "category": "rust-mcp",
+      "stars": 196
+    },
+    {
+      "full_name": "razorpay/razorpay-mcp-server",
+      "pkg": null,
+      "category": "go-mcp",
+      "stars": 218
+    },
+    {
+      "full_name": "ericzakariasson/uber-eats-mcp-server",
+      "pkg": "uber-eats-mcp-server",
+      "category": "python-mcp",
+      "stars": 217
+    },
+    {
+      "full_name": "tiianhk/MaxMSP-MCP-Server",
+      "pkg": "MaxMSP-MCP-Server",
+      "category": "python-mcp",
+      "stars": 202
+    },
+    {
+      "full_name": "scorzeth/anki-mcp-server",
+      "pkg": "@scorzeth/anki-mcp-server",
+      "category": "node-mcp",
+      "stars": 179
+    },
+    {
+      "full_name": "pwno-io/pwno-mcp",
+      "pkg": "pwno-mcp",
+      "category": "python-mcp",
+      "stars": 244
+    },
+    {
+      "full_name": "rust-mcp-stack/rust-mcp-sdk",
+      "pkg": null,
+      "category": "rust-mcp",
+      "stars": 170
+    },
+    {
+      "full_name": "langfuse/mcp-server-langfuse",
+      "pkg": "mcp-server-langfuse",
+      "category": "node-mcp",
+      "stars": 160
+    },
+    {
+      "full_name": "intuit/quickbooks-online-mcp-server",
+      "pkg": "@qboapi/qbo-mcp-server",
+      "category": "node-mcp",
+      "stars": 168
+    },
+    {
+      "full_name": "robcerda/monarch-mcp-server",
+      "pkg": "monarch-mcp-server",
+      "category": "python-mcp",
+      "stars": 160
+    },
+    {
+      "full_name": "huangjunsen0406/xiaozhi-mcphub",
+      "pkg": "@huangjunsen0406/xiaozhi-mcphub",
+      "category": "node-mcp",
+      "stars": 159
+    },
+    {
+      "full_name": "zerodha/kite-mcp-server",
+      "pkg": null,
+      "category": "go-mcp",
+      "stars": 251
+    },
+    {
+      "full_name": "guangxiangdebizi/QMT-MCP",
+      "pkg": "QMT-MCP",
+      "category": "python-mcp",
+      "stars": 158
+    },
+    {
+      "full_name": "gensecaihq/Wazuh-MCP-Server",
+      "pkg": "wazuh-mcp-server",
+      "category": "python-mcp",
+      "stars": 162
+    },
+    {
+      "full_name": "weaviate/mcp-server-weaviate",
+      "pkg": null,
+      "category": "go-mcp",
+      "stars": 161
+    },
+    {
+      "full_name": "iolufemi/Express-REST-API-and-MCP-Server-Framework",
+      "pkg": "Express-REST-API-and-MCP-Server-Framework",
+      "category": "node-mcp",
+      "stars": 149
+    },
+    {
+      "full_name": "3dify-project/dify-mcp-client",
+      "pkg": "dify-mcp-client",
+      "category": "python-mcp",
+      "stars": 164
+    },
+    {
+      "full_name": "Azure-Samples/python-mcp-demos",
+      "pkg": "python-mcp-demos",
+      "category": "python-mcp",
+      "stars": 168
+    },
+    {
+      "full_name": "tuannvm/slack-mcp-client",
+      "pkg": null,
+      "category": "go-mcp",
+      "stars": 168
+    },
+    {
+      "full_name": "horw/esp-mcp",
+      "pkg": "esp-mcp",
+      "category": "python-mcp",
+      "stars": 148
+    },
+    {
+      "full_name": "the-momentum/apple-health-mcp-server",
+      "pkg": "apple-health-mcp-server",
+      "category": "python-mcp",
+      "stars": 156
+    },
+    {
+      "full_name": "awslabs/Log-Analyzer-with-MCP",
+      "pkg": "Log-Analyzer-with-MCP",
+      "category": "python-mcp",
+      "stars": 156
+    },
+    {
+      "full_name": "netboxlabs/netbox-mcp-server",
+      "pkg": "netbox-mcp-server",
+      "category": "python-mcp",
+      "stars": 150
+    },
+    {
+      "full_name": "puravparab/Gitingest-MCP",
+      "pkg": "gitingest-mcp",
+      "category": "python-mcp",
+      "stars": 137
+    },
+    {
+      "full_name": "delano/postman-mcp-server",
+      "pkg": "postman-api-server",
+      "category": "node-mcp",
+      "stars": 147
+    },
+    {
+      "full_name": "redpanda-data/protoc-gen-go-mcp",
+      "pkg": null,
+      "category": "go-mcp",
+      "stars": 194
+    },
+    {
+      "full_name": "entanglr/zettelkasten-mcp",
+      "pkg": "zettelkasten-mcp",
+      "category": "python-mcp",
+      "stars": 148
+    },
+    {
+      "full_name": "centminmod/gemini-cli-mcp-server",
+      "pkg": "gemini-cli-mcp-server",
+      "category": "python-mcp",
+      "stars": 136
+    },
+    {
+      "full_name": "jdez427/claude-ipc-mcp",
+      "pkg": "claude-ipc-mcp",
+      "category": "python-mcp",
+      "stars": 130
+    },
+    {
+      "full_name": "docker/hub-mcp",
+      "pkg": "dockerhub-mcp-server",
+      "category": "node-mcp",
+      "stars": 134
+    },
+    {
+      "full_name": "postrv/narsil-mcp",
+      "pkg": null,
+      "category": "rust-mcp",
+      "stars": 135
+    },
+    {
+      "full_name": "ConAcademy/buttplug-mcp",
+      "pkg": null,
+      "category": "go-mcp",
+      "stars": 128
+    },
+    {
+      "full_name": "rust-mcp-stack/rust-mcp-filesystem",
+      "pkg": null,
+      "category": "rust-mcp",
+      "stars": 144
+    },
+    {
+      "full_name": "paiml/paiml-mcp-agent-toolkit",
+      "pkg": null,
+      "category": "rust-mcp",
+      "stars": 148
+    },
+    {
+      "full_name": "cobanov/teslamate-mcp",
+      "pkg": "teslamate-mcp",
+      "category": "python-mcp",
+      "stars": 127
+    },
+    {
+      "full_name": "Azure/aks-mcp",
+      "pkg": null,
+      "category": "go-mcp",
+      "stars": 127
+    }
+  ]
+}
