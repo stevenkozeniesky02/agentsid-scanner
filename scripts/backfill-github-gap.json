@@ -1,0 +1,3764 @@
+{
+  "generated": "2026-04-17T19:05:59.592Z",
+  "source": "scanner/docs/census-2026/github-repo-scan.json",
+  "sourceLabel": "github-repo-scan-backfill:census-2026",
+  "stats": {
+    "input_total": 251,
+    "skipped_unsupported_category": 0,
+    "deduped": 250,
+    "node": 143,
+    "python": 107
+  },
+  "servers": [
+    {
+      "id": "pypi:gpt-researcher",
+      "name": "gpt-researcher",
+      "package": "gpt-researcher",
+      "command": "uvx gpt-researcher",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/assafelovic/gpt-researcher",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 26511
+    },
+    {
+      "id": "npm:figma-developer-mcp",
+      "name": "figma-developer-mcp",
+      "package": "figma-developer-mcp",
+      "command": "npx -y figma-developer-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/GLips/Figma-Context-MCP",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 14408
+    },
+    {
+      "id": "pypi:skill-seekers",
+      "name": "skill-seekers",
+      "package": "skill-seekers",
+      "command": "uvx skill-seekers",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/yusufkaraaslan/Skill_Seekers",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 12868
+    },
+    {
+      "id": "pypi:fastapi-mcp",
+      "name": "fastapi-mcp",
+      "package": "fastapi-mcp",
+      "command": "uvx fastapi-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/tadata-org/fastapi_mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 11811
+    },
+    {
+      "id": "pypi:GhidraMCP",
+      "name": "GhidraMCP",
+      "package": "GhidraMCP",
+      "command": "uvx GhidraMCP",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/LaurieWired/GhidraMCP",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 8443
+    },
+    {
+      "id": "pypi:upsonic",
+      "name": "upsonic",
+      "package": "upsonic",
+      "command": "uvx upsonic",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/Upsonic/Upsonic",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 7829
+    },
+    {
+      "id": "npm:context-mode",
+      "name": "context-mode",
+      "package": "context-mode",
+      "command": "npx -y context-mode",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/mksglu/context-mode",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 7437
+    },
+    {
+      "id": "npm:cursor-talk-to-figma-mcp",
+      "name": "cursor-talk-to-figma-mcp",
+      "package": "cursor-talk-to-figma-mcp",
+      "command": "npx -y cursor-talk-to-figma-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/grab/cursor-talk-to-figma-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 6661
+    },
+    {
+      "id": "npm:xcodebuildmcp",
+      "name": "xcodebuildmcp",
+      "package": "xcodebuildmcp",
+      "command": "npx -y xcodebuildmcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/getsentry/XcodeBuildMCP",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 5234
+    },
+    {
+      "id": "pypi:windows-mcp",
+      "name": "windows-mcp",
+      "package": "windows-mcp",
+      "command": "uvx windows-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/CursorTouch/Windows-MCP",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 5139
+    },
+    {
+      "id": "pypi:mcp-atlassian",
+      "name": "mcp-atlassian",
+      "package": "mcp-atlassian",
+      "command": "uvx mcp-atlassian",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/sooperset/mcp-atlassian",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 4963
+    },
+    {
+      "id": "pypi:mcpo",
+      "name": "mcpo",
+      "package": "mcpo",
+      "command": "uvx mcpo",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/open-webui/mcpo",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 4140
+    },
+    {
+      "id": "npm:@antv/mcp-server-chart",
+      "name": "@antv/mcp-server-chart",
+      "package": "@antv/mcp-server-chart",
+      "command": "npx -y @antv/mcp-server-chart",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/antvis/mcp-server-chart",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 3973
+    },
+    {
+      "id": "pypi:fast-agent-mcp",
+      "name": "fast-agent-mcp",
+      "package": "fast-agent-mcp",
+      "command": "uvx fast-agent-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/evalstate/fast-agent",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 3747
+    },
+    {
+      "id": "pypi:excel-mcp-server",
+      "name": "excel-mcp-server",
+      "package": "excel-mcp-server",
+      "command": "uvx excel-mcp-server",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/haris-musa/excel-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 3708
+    },
+    {
+      "id": "npm:@browserbasehq/mcp",
+      "name": "@browserbasehq/mcp",
+      "package": "@browserbasehq/mcp",
+      "command": "npx -y @browserbasehq/mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/browserbase/mcp-server-browserbase",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 3266
+    },
+    {
+      "id": "npm:n8n-nodes-mcp",
+      "name": "n8n-nodes-mcp",
+      "package": "n8n-nodes-mcp",
+      "command": "npx -y n8n-nodes-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/nerding-io/n8n-nodes-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 3006
+    },
+    {
+      "id": "npm:mcp-markdownify-server",
+      "name": "mcp-markdownify-server",
+      "package": "mcp-markdownify-server",
+      "command": "npx -y mcp-markdownify-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/zcaceres/markdownify-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 2589
+    },
+    {
+      "id": "pypi:zotero-mcp-server",
+      "name": "zotero-mcp-server",
+      "package": "zotero-mcp-server",
+      "command": "uvx zotero-mcp-server",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/54yyyu/zotero-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 2576
+    },
+    {
+      "id": "pypi:ableton-mcp",
+      "name": "ableton-mcp",
+      "package": "ableton-mcp",
+      "command": "uvx ableton-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/ahujasid/ableton-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 2413
+    },
+    {
+      "id": "npm:@brightdata/mcp",
+      "name": "@brightdata/mcp",
+      "package": "@brightdata/mcp",
+      "command": "npx -y @brightdata/mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/brightdata/brightdata-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 2301
+    },
+    {
+      "id": "pypi:workspace-mcp",
+      "name": "workspace-mcp",
+      "package": "workspace-mcp",
+      "command": "uvx workspace-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/taylorwilsdon/google_workspace_mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 2135
+    },
+    {
+      "id": "npm:mcp-shrimp-task-manager",
+      "name": "mcp-shrimp-task-manager",
+      "package": "mcp-shrimp-task-manager",
+      "command": "npx -y mcp-shrimp-task-manager",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/cjo4m06/mcp-shrimp-task-manager",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 2084
+    },
+    {
+      "id": "pypi:flights",
+      "name": "flights",
+      "package": "flights",
+      "command": "uvx flights",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/punitarani/fli",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 2055
+    },
+    {
+      "id": "npm:@samanhappy/mcphub",
+      "name": "@samanhappy/mcphub",
+      "package": "@samanhappy/mcphub",
+      "command": "npx -y @samanhappy/mcphub",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/samanhappy/mcphub",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 2017
+    },
+    {
+      "id": "pypi:mcp-cli",
+      "name": "mcp-cli",
+      "package": "mcp-cli",
+      "command": "uvx mcp-cli",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/IBM/mcp-cli",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1944
+    },
+    {
+      "id": "pypi:tradingview-mcp-server",
+      "name": "tradingview-mcp-server",
+      "package": "tradingview-mcp-server",
+      "command": "uvx tradingview-mcp-server",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/atilaahmettaner/tradingview-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1930
+    },
+    {
+      "id": "pypi:mcp-agent-mail",
+      "name": "mcp-agent-mail",
+      "package": "mcp-agent-mail",
+      "command": "uvx mcp-agent-mail",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/Dicklesworthstone/mcp_agent_mail",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1884
+    },
+    {
+      "id": "pypi:office-word-mcp-server",
+      "name": "office-word-mcp-server",
+      "package": "office-word-mcp-server",
+      "command": "uvx office-word-mcp-server",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/GongRzhe/Office-Word-MCP-Server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1864
+    },
+    {
+      "id": "npm:dive",
+      "name": "dive",
+      "package": "dive",
+      "command": "npx -y dive",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/OpenAgentPlatform/Dive",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1772
+    },
+    {
+      "id": "npm:contextplus",
+      "name": "contextplus",
+      "package": "contextplus",
+      "command": "npx -y contextplus",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/ForLoopCodes/contextplus",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1769
+    },
+    {
+      "id": "npm:mcp-excalidraw-server",
+      "name": "mcp-excalidraw-server",
+      "package": "mcp-excalidraw-server",
+      "command": "npx -y mcp-excalidraw-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/yctimlin/mcp_excalidraw",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1763
+    },
+    {
+      "id": "pypi:office-powerpoint-mcp-server",
+      "name": "office-powerpoint-mcp-server",
+      "package": "office-powerpoint-mcp-server",
+      "command": "uvx office-powerpoint-mcp-server",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/GongRzhe/Office-PowerPoint-MCP-Server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1644
+    },
+    {
+      "id": "npm:@leonardsellem/n8n-mcp-server",
+      "name": "@leonardsellem/n8n-mcp-server",
+      "package": "@leonardsellem/n8n-mcp-server",
+      "command": "npx -y @leonardsellem/n8n-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/leonardsellem/n8n-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1602
+    },
+    {
+      "id": "pypi:linkedin-scraper-mcp",
+      "name": "linkedin-scraper-mcp",
+      "package": "linkedin-scraper-mcp",
+      "command": "uvx linkedin-scraper-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/stickerdaniel/linkedin-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1590
+    },
+    {
+      "id": "npm:@benborla29/mcp-server-mysql",
+      "name": "@benborla29/mcp-server-mysql",
+      "package": "@benborla29/mcp-server-mysql",
+      "command": "npx -y @benborla29/mcp-server-mysql",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/benborla/mcp-server-mysql",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1550
+    },
+    {
+      "id": "npm:figma-console-mcp",
+      "name": "figma-console-mcp",
+      "package": "figma-console-mcp",
+      "command": "npx -y figma-console-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/southleft/figma-console-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1519
+    },
+    {
+      "id": "npm:korean-law-mcp",
+      "name": "korean-law-mcp",
+      "package": "korean-law-mcp",
+      "command": "npx -y korean-law-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/chrisryugj/korean-law-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1467
+    },
+    {
+      "id": "pypi:minimax-mcp",
+      "name": "minimax-mcp",
+      "package": "minimax-mcp",
+      "command": "uvx minimax-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/MiniMax-AI/MiniMax-MCP",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1424
+    },
+    {
+      "id": "pypi:mcp-brasil",
+      "name": "mcp-brasil",
+      "package": "mcp-brasil",
+      "command": "uvx mcp-brasil",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/jxnxts/mcp-brasil",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1381
+    },
+    {
+      "id": "pypi:mcp-server-qdrant",
+      "name": "mcp-server-qdrant",
+      "package": "mcp-server-qdrant",
+      "command": "uvx mcp-server-qdrant",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/qdrant/mcp-server-qdrant",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1354
+    },
+    {
+      "id": "pypi:paperbanana",
+      "name": "paperbanana",
+      "package": "paperbanana",
+      "command": "uvx paperbanana",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/llmsresearch/paperbanana",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1329
+    },
+    {
+      "id": "pypi:nerve-adk",
+      "name": "nerve-adk",
+      "package": "nerve-adk",
+      "command": "uvx nerve-adk",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/evilsocket/nerve",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1317
+    },
+    {
+      "id": "npm:@jshookmcp/jshook",
+      "name": "@jshookmcp/jshook",
+      "package": "@jshookmcp/jshook",
+      "command": "npx -y @jshookmcp/jshook",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/vmoranv/jshookmcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1252
+    },
+    {
+      "id": "npm:@arabold/docs-mcp-server",
+      "name": "@arabold/docs-mcp-server",
+      "package": "@arabold/docs-mcp-server",
+      "command": "npx -y @arabold/docs-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/arabold/docs-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1242
+    },
+    {
+      "id": "pypi:mcp-windbg",
+      "name": "mcp-windbg",
+      "package": "mcp-windbg",
+      "command": "uvx mcp-windbg",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/svnscha/mcp-windbg",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1227
+    },
+    {
+      "id": "npm:@kimsungwhee/apple-docs-mcp",
+      "name": "@kimsungwhee/apple-docs-mcp",
+      "package": "@kimsungwhee/apple-docs-mcp",
+      "command": "npx -y @kimsungwhee/apple-docs-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/kimsungwhee/apple-docs-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1225
+    },
+    {
+      "id": "pypi:chunkhound",
+      "name": "chunkhound",
+      "package": "chunkhound",
+      "command": "uvx chunkhound",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/chunkhound/chunkhound",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1221
+    },
+    {
+      "id": "pypi:Agent-MCP",
+      "name": "Agent-MCP",
+      "package": "Agent-MCP",
+      "command": "uvx Agent-MCP",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/rinadelph/Agent-MCP",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1218
+    },
+    {
+      "id": "npm:@wenyan-md/mcp",
+      "name": "@wenyan-md/mcp",
+      "package": "@wenyan-md/mcp",
+      "command": "npx -y @wenyan-md/mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/caol64/wenyan-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1183
+    },
+    {
+      "id": "pypi:ros-mcp",
+      "name": "ros-mcp",
+      "package": "ros-mcp",
+      "command": "uvx ros-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/robotmcp/ros-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1166
+    },
+    {
+      "id": "pypi:paper-search-mcp",
+      "name": "paper-search-mcp",
+      "package": "paper-search-mcp",
+      "command": "uvx paper-search-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/openags/paper-search-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1153
+    },
+    {
+      "id": "npm:tuui",
+      "name": "tuui",
+      "package": "tuui",
+      "command": "npx -y tuui",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/AI-QL/tuui",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1140
+    },
+    {
+      "id": "npm:mcp-cli",
+      "name": "mcp-cli",
+      "package": "mcp-cli",
+      "command": "npx -y mcp-cli",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/philschmid/mcp-cli",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1100
+    },
+    {
+      "id": "npm:short-video-maker",
+      "name": "short-video-maker",
+      "package": "short-video-maker",
+      "command": "npx -y short-video-maker",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/gyoridavid/short-video-maker",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1083
+    },
+    {
+      "id": "npm:ref-tools-mcp",
+      "name": "ref-tools-mcp",
+      "package": "ref-tools-mcp",
+      "command": "npx -y ref-tools-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/ref-tools/ref-tools-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1082
+    },
+    {
+      "id": "pypi:voice-mode",
+      "name": "voice-mode",
+      "package": "voice-mode",
+      "command": "uvx voice-mode",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/mbailey/voicemode",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1066
+    },
+    {
+      "id": "npm:fetcher-mcp",
+      "name": "fetcher-mcp",
+      "package": "fetcher-mcp",
+      "command": "npx -y fetcher-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/jae-jae/fetcher-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1024
+    },
+    {
+      "id": "npm:mcp-boilerplate",
+      "name": "mcp-boilerplate",
+      "package": "mcp-boilerplate",
+      "command": "npx -y mcp-boilerplate",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/iannuttall/mcp-boilerplate",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 1018
+    },
+    {
+      "id": "pypi:duckduckgo-mcp-server",
+      "name": "duckduckgo-mcp-server",
+      "package": "duckduckgo-mcp-server",
+      "command": "uvx duckduckgo-mcp-server",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/nickclyde/duckduckgo-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 991
+    },
+    {
+      "id": "pypi:mcpdoc",
+      "name": "mcpdoc",
+      "package": "mcpdoc",
+      "command": "uvx mcpdoc",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/langchain-ai/mcpdoc",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 976
+    },
+    {
+      "id": "pypi:massgen",
+      "name": "massgen",
+      "package": "massgen",
+      "command": "uvx massgen",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/massgen/MassGen",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 953
+    },
+    {
+      "id": "npm:@jetbrains/mcp-proxy",
+      "name": "@jetbrains/mcp-proxy",
+      "package": "@jetbrains/mcp-proxy",
+      "command": "npx -y @jetbrains/mcp-proxy",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/JetBrains/mcp-jetbrains",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 948
+    },
+    {
+      "id": "pypi:mcpm",
+      "name": "mcpm",
+      "package": "mcpm",
+      "command": "uvx mcpm",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/pathintegral-institute/mcpm.sh",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 927
+    },
+    {
+      "id": "npm:@brave/brave-search-mcp-server",
+      "name": "@brave/brave-search-mcp-server",
+      "package": "@brave/brave-search-mcp-server",
+      "command": "npx -y @brave/brave-search-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/brave/brave-search-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 906
+    },
+    {
+      "id": "pypi:AI-Gateway",
+      "name": "AI-Gateway",
+      "package": "AI-Gateway",
+      "command": "uvx AI-Gateway",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/Azure-Samples/AI-Gateway",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 903
+    },
+    {
+      "id": "pypi:cisco-ai-mcp-scanner",
+      "name": "cisco-ai-mcp-scanner",
+      "package": "cisco-ai-mcp-scanner",
+      "command": "uvx cisco-ai-mcp-scanner",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/cisco-ai-defense/mcp-scanner",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 889
+    },
+    {
+      "id": "npm:@suekou/mcp-notion-server",
+      "name": "@suekou/mcp-notion-server",
+      "package": "@suekou/mcp-notion-server",
+      "command": "npx -y @suekou/mcp-notion-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/suekou/mcp-notion-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 880
+    },
+    {
+      "id": "pypi:kubectl-mcp-server",
+      "name": "kubectl-mcp-server",
+      "package": "kubectl-mcp-server",
+      "command": "uvx kubectl-mcp-server",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/rohitg00/kubectl-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 869
+    },
+    {
+      "id": "npm:mcp-chat",
+      "name": "mcp-chat",
+      "package": "mcp-chat",
+      "command": "npx -y mcp-chat",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/zaidmukaddam/scira-mcp-chat",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 832
+    },
+    {
+      "id": "pypi:golf-mcp",
+      "name": "golf-mcp",
+      "package": "golf-mcp",
+      "command": "uvx golf-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/golf-mcp/golf",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 819
+    },
+    {
+      "id": "pypi:supabase-mcp-server",
+      "name": "supabase-mcp-server",
+      "package": "supabase-mcp-server",
+      "command": "uvx supabase-mcp-server",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/alexander-zuev/supabase-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 817
+    },
+    {
+      "id": "pypi:deepmcpagent",
+      "name": "deepmcpagent",
+      "package": "deepmcpagent",
+      "command": "uvx deepmcpagent",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/cryxnet/DeepMCPAgent",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 812
+    },
+    {
+      "id": "pypi:vibetest",
+      "name": "vibetest",
+      "package": "vibetest",
+      "command": "uvx vibetest",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/browser-use/vibetest-use",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 787
+    },
+    {
+      "id": "npm:12306-mcp",
+      "name": "12306-mcp",
+      "package": "12306-mcp",
+      "command": "npx -y 12306-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/Joooook/12306-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 784
+    },
+    {
+      "id": "npm:openmcp",
+      "name": "openmcp",
+      "package": "openmcp",
+      "command": "npx -y openmcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/LSTM-Kirigaya/openmcp-client",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 738
+    },
+    {
+      "id": "pypi:freecad-mcp",
+      "name": "freecad-mcp",
+      "package": "freecad-mcp",
+      "command": "uvx freecad-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/neka-nat/freecad-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 738
+    },
+    {
+      "id": "npm:next-devtools-mcp",
+      "name": "next-devtools-mcp",
+      "package": "next-devtools-mcp",
+      "command": "npx -y next-devtools-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/vercel/next-devtools-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 723
+    },
+    {
+      "id": "pypi:reverse-engineering-assistant",
+      "name": "reverse-engineering-assistant",
+      "package": "reverse-engineering-assistant",
+      "command": "uvx reverse-engineering-assistant",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/cyberkaida/reverse-engineering-assistant",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 705
+    },
+    {
+      "id": "npm:mcp-searxng",
+      "name": "mcp-searxng",
+      "package": "mcp-searxng",
+      "command": "npx -y mcp-searxng",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/ihor-sokoliuk/mcp-searxng",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 660
+    },
+    {
+      "id": "pypi:alpaca-mcp-server",
+      "name": "alpaca-mcp-server",
+      "package": "alpaca-mcp-server",
+      "command": "uvx alpaca-mcp-server",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/alpacahq/alpaca-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 654
+    },
+    {
+      "id": "npm:@sylphx/pdf-reader-mcp",
+      "name": "@sylphx/pdf-reader-mcp",
+      "package": "@sylphx/pdf-reader-mcp",
+      "command": "npx -y @sylphx/pdf-reader-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/SylphxAI/pdf-reader-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 648
+    },
+    {
+      "id": "pypi:MCP-Kali-Server",
+      "name": "MCP-Kali-Server",
+      "package": "MCP-Kali-Server",
+      "command": "uvx MCP-Kali-Server",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/Wh0am123/MCP-Kali-Server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 640
+    },
+    {
+      "id": "npm:@jason.today/webmcp",
+      "name": "@jason.today/webmcp",
+      "package": "@jason.today/webmcp",
+      "command": "npx -y @jason.today/webmcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/jasonjmcghee/WebMCP",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 636
+    },
+    {
+      "id": "npm:@softeria/ms-365-mcp-server",
+      "name": "@softeria/ms-365-mcp-server",
+      "package": "@softeria/ms-365-mcp-server",
+      "command": "npx -y @softeria/ms-365-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/Softeria/ms-365-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 627
+    },
+    {
+      "id": "npm:cclsp",
+      "name": "cclsp",
+      "package": "cclsp",
+      "command": "npx -y cclsp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/ktnyt/cclsp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 618
+    },
+    {
+      "id": "npm:reddit-mcp-buddy",
+      "name": "reddit-mcp-buddy",
+      "package": "reddit-mcp-buddy",
+      "command": "npx -y reddit-mcp-buddy",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/karanb192/reddit-mcp-buddy",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 608
+    },
+    {
+      "id": "pypi:tradememory-protocol",
+      "name": "tradememory-protocol",
+      "package": "tradememory-protocol",
+      "command": "uvx tradememory-protocol",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/mnemox-ai/tradememory-protocol",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 604
+    },
+    {
+      "id": "npm:feishu-mcp",
+      "name": "feishu-mcp",
+      "package": "feishu-mcp",
+      "command": "npx -y feishu-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/cso1z/Feishu-MCP",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 603
+    },
+    {
+      "id": "pypi:ai-trader",
+      "name": "ai-trader",
+      "package": "ai-trader",
+      "command": "uvx ai-trader",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/whchien/ai-trader",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 595
+    },
+    {
+      "id": "npm:@google-cloud/cloud-run-mcp",
+      "name": "@google-cloud/cloud-run-mcp",
+      "package": "@google-cloud/cloud-run-mcp",
+      "command": "npx -y @google-cloud/cloud-run-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/GoogleCloudPlatform/cloud-run-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 591
+    },
+    {
+      "id": "npm:google-search-cli",
+      "name": "google-search-cli",
+      "package": "google-search-cli",
+      "command": "npx -y google-search-cli",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/web-agent-master/google-search",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 583
+    },
+    {
+      "id": "npm:meigen",
+      "name": "meigen",
+      "package": "meigen",
+      "command": "npx -y meigen",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/jau123/MeiGen-AI-Design-MCP",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 581
+    },
+    {
+      "id": "pypi:docling-mcp",
+      "name": "docling-mcp",
+      "package": "docling-mcp",
+      "command": "uvx docling-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/docling-project/docling-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 576
+    },
+    {
+      "id": "npm:@line/line-bot-mcp-server",
+      "name": "@line/line-bot-mcp-server",
+      "package": "@line/line-bot-mcp-server",
+      "command": "npx -y @line/line-bot-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/line/line-bot-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 575
+    },
+    {
+      "id": "npm:claude-talk-to-figma-mcp",
+      "name": "claude-talk-to-figma-mcp",
+      "package": "claude-talk-to-figma-mcp",
+      "command": "npx -y claude-talk-to-figma-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/arinspunk/claude-talk-to-figma-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 574
+    },
+    {
+      "id": "pypi:mcp-google-ads",
+      "name": "mcp-google-ads",
+      "package": "mcp-google-ads",
+      "command": "uvx mcp-google-ads",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/cohnen/mcp-google-ads",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 548
+    },
+    {
+      "id": "npm:minecraft-mcp-server",
+      "name": "minecraft-mcp-server",
+      "package": "minecraft-mcp-server",
+      "command": "npx -y minecraft-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/yuniko-software/minecraft-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 546
+    },
+    {
+      "id": "npm:mantic.sh",
+      "name": "mantic.sh",
+      "package": "mantic.sh",
+      "command": "npx -y mantic.sh",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/marcoaapfortes/Mantic.sh",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 545
+    },
+    {
+      "id": "pypi:dbt-mcp",
+      "name": "dbt-mcp",
+      "package": "dbt-mcp",
+      "command": "uvx dbt-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/dbt-labs/dbt-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 539
+    },
+    {
+      "id": "pypi:pg-mcp",
+      "name": "pg-mcp",
+      "package": "pg-mcp",
+      "command": "uvx pg-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/stuzero/pg-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 537
+    },
+    {
+      "id": "pypi:chroma-mcp",
+      "name": "chroma-mcp",
+      "package": "chroma-mcp",
+      "command": "uvx chroma-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/chroma-core/chroma-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 535
+    },
+    {
+      "id": "pypi:mcp-server-ida",
+      "name": "mcp-server-ida",
+      "package": "mcp-server-ida",
+      "command": "uvx mcp-server-ida",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/MxIris-Reverse-Engineering/ida-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 534
+    },
+    {
+      "id": "npm:mcp-server-weread",
+      "name": "mcp-server-weread",
+      "package": "mcp-server-weread",
+      "command": "npx -y mcp-server-weread",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/freestylefly/mcp-server-weread",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 531
+    },
+    {
+      "id": "npm:@kimtaeyoon83/mcp-server-youtube-transcript",
+      "name": "@kimtaeyoon83/mcp-server-youtube-transcript",
+      "package": "@kimtaeyoon83/mcp-server-youtube-transcript",
+      "command": "npx -y @kimtaeyoon83/mcp-server-youtube-transcript",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/kimtaeyoon83/mcp-server-youtube-transcript",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 524
+    },
+    {
+      "id": "pypi:maverick_mcp",
+      "name": "maverick_mcp",
+      "package": "maverick_mcp",
+      "command": "uvx maverick_mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/wshobson/maverick-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 490
+    },
+    {
+      "id": "npm:@pv-bhat/vibe-check-mcp",
+      "name": "@pv-bhat/vibe-check-mcp",
+      "package": "@pv-bhat/vibe-check-mcp",
+      "command": "npx -y @pv-bhat/vibe-check-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/PV-Bhat/vibe-check-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 481
+    },
+    {
+      "id": "pypi:jobson-xhs-mcp",
+      "name": "jobson-xhs-mcp",
+      "package": "jobson-xhs-mcp",
+      "command": "uvx jobson-xhs-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/jobsonlook/xhs-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 475
+    },
+    {
+      "id": "pypi:stealth-browser-mcp",
+      "name": "stealth-browser-mcp",
+      "package": "stealth-browser-mcp",
+      "command": "uvx stealth-browser-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/vibheksoni/stealth-browser-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 475
+    },
+    {
+      "id": "npm:atlas-mcp-server",
+      "name": "atlas-mcp-server",
+      "package": "atlas-mcp-server",
+      "command": "npx -y atlas-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/cyanheads/atlas-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 470
+    },
+    {
+      "id": "pypi:mcp-server-motherduck",
+      "name": "mcp-server-motherduck",
+      "package": "mcp-server-motherduck",
+      "command": "uvx mcp-server-motherduck",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/motherduckdb/mcp-server-motherduck",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 466
+    },
+    {
+      "id": "npm:@peakmojo/applescript-mcp",
+      "name": "@peakmojo/applescript-mcp",
+      "package": "@peakmojo/applescript-mcp",
+      "command": "npx -y @peakmojo/applescript-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/peakmojo/applescript-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 448
+    },
+    {
+      "id": "npm:mcp-server-spec-driven-development",
+      "name": "mcp-server-spec-driven-development",
+      "package": "mcp-server-spec-driven-development",
+      "command": "npx -y mcp-server-spec-driven-development",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/formulahendry/mcp-server-spec-driven-development",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 428
+    },
+    {
+      "id": "npm:@openbnb/mcp-server-airbnb",
+      "name": "@openbnb/mcp-server-airbnb",
+      "package": "@openbnb/mcp-server-airbnb",
+      "command": "npx -y @openbnb/mcp-server-airbnb",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/openbnb-org/mcp-server-airbnb",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 424
+    },
+    {
+      "id": "npm:codex-mcp-server",
+      "name": "codex-mcp-server",
+      "package": "codex-mcp-server",
+      "command": "npx -y codex-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/tuannvm/codex-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 423
+    },
+    {
+      "id": "pypi:prometheus_mcp_server",
+      "name": "prometheus_mcp_server",
+      "package": "prometheus_mcp_server",
+      "command": "uvx prometheus_mcp_server",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/pab1it0/prometheus-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 416
+    },
+    {
+      "id": "npm:security-detections-mcp",
+      "name": "security-detections-mcp",
+      "package": "security-detections-mcp",
+      "command": "npx -y security-detections-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/MHaggis/Security-Detections-MCP",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 405
+    },
+    {
+      "id": "npm:pi-mcp-adapter",
+      "name": "pi-mcp-adapter",
+      "package": "pi-mcp-adapter",
+      "command": "npx -y pi-mcp-adapter",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/nicobailon/pi-mcp-adapter",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 404
+    },
+    {
+      "id": "npm:software-planning-tool",
+      "name": "software-planning-tool",
+      "package": "software-planning-tool",
+      "command": "npx -y software-planning-tool",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/NightTrek/Software-planning-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 394
+    },
+    {
+      "id": "npm:revit-mcp",
+      "name": "revit-mcp",
+      "package": "revit-mcp",
+      "command": "npx -y revit-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/mcp-servers-for-revit/revit-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 390
+    },
+    {
+      "id": "npm:@abhiz123/todoist-mcp-server",
+      "name": "@abhiz123/todoist-mcp-server",
+      "package": "@abhiz123/todoist-mcp-server",
+      "command": "npx -y @abhiz123/todoist-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/abhiz123/todoist-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 387
+    },
+    {
+      "id": "npm:automation-mcp",
+      "name": "automation-mcp",
+      "package": "automation-mcp",
+      "command": "npx -y automation-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/ashwwwin/automation-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 386
+    },
+    {
+      "id": "npm:@f2c/mcp",
+      "name": "@f2c/mcp",
+      "package": "@f2c/mcp",
+      "command": "npx -y @f2c/mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/f2c-ai/f2c-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 386
+    },
+    {
+      "id": "npm:@anyproto/anytype-mcp",
+      "name": "@anyproto/anytype-mcp",
+      "package": "@anyproto/anytype-mcp",
+      "command": "npx -y @anyproto/anytype-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/anyproto/anytype-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 382
+    },
+    {
+      "id": "npm:applescript-mcp",
+      "name": "applescript-mcp",
+      "package": "applescript-mcp",
+      "command": "npx -y applescript-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/joshrutkowski/applescript-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 376
+    },
+    {
+      "id": "pypi:ableton-live-mcp-server",
+      "name": "ableton-live-mcp-server",
+      "package": "ableton-live-mcp-server",
+      "command": "uvx ableton-live-mcp-server",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/Simon-Kansara/ableton-live-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 376
+    },
+    {
+      "id": "npm:graphlit-mcp-server",
+      "name": "graphlit-mcp-server",
+      "package": "graphlit-mcp-server",
+      "command": "npx -y graphlit-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/graphlit/graphlit-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 374
+    },
+    {
+      "id": "npm:@mcpdotdirect/evm-mcp-server",
+      "name": "@mcpdotdirect/evm-mcp-server",
+      "package": "@mcpdotdirect/evm-mcp-server",
+      "command": "npx -y @mcpdotdirect/evm-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/mcpdotdirect/evm-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 373
+    },
+    {
+      "id": "npm:xcode-mcp-server",
+      "name": "xcode-mcp-server",
+      "package": "xcode-mcp-server",
+      "command": "npx -y xcode-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/r-huijts/xcode-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 371
+    },
+    {
+      "id": "npm:@tiberriver256/mcp-server-azure-devops",
+      "name": "@tiberriver256/mcp-server-azure-devops",
+      "package": "@tiberriver256/mcp-server-azure-devops",
+      "command": "npx -y @tiberriver256/mcp-server-azure-devops",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/Tiberriver256/mcp-server-azure-devops",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 363
+    },
+    {
+      "id": "pypi:lean-lsp-mcp",
+      "name": "lean-lsp-mcp",
+      "package": "lean-lsp-mcp",
+      "command": "uvx lean-lsp-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/oOo0oOo/lean-lsp-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 363
+    },
+    {
+      "id": "pypi:apktool-mcp-server",
+      "name": "apktool-mcp-server",
+      "package": "apktool-mcp-server",
+      "command": "uvx apktool-mcp-server",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/zinja-coder/apktool-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 362
+    },
+    {
+      "id": "pypi:ebook-mcp",
+      "name": "ebook-mcp",
+      "package": "ebook-mcp",
+      "command": "uvx ebook-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/onebirdrocks/ebook-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 358
+    },
+    {
+      "id": "npm:vscode-mcp-server",
+      "name": "vscode-mcp-server",
+      "package": "vscode-mcp-server",
+      "command": "npx -y vscode-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/juehang/vscode-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 348
+    },
+    {
+      "id": "npm:interactive-mcp",
+      "name": "interactive-mcp",
+      "package": "interactive-mcp",
+      "command": "npx -y interactive-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/ttommyth/interactive-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 342
+    },
+    {
+      "id": "pypi:real_estate",
+      "name": "real_estate",
+      "package": "real_estate",
+      "command": "uvx real_estate",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/tae0y/real-estate-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 339
+    },
+    {
+      "id": "npm:open-deep-research",
+      "name": "open-deep-research",
+      "package": "open-deep-research",
+      "command": "npx -y open-deep-research",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/teelaitila/deep-research-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 321
+    },
+    {
+      "id": "npm:appium-mcp",
+      "name": "appium-mcp",
+      "package": "appium-mcp",
+      "command": "npx -y appium-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/appium/appium-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 321
+    },
+    {
+      "id": "npm:deepseek-mcp-server",
+      "name": "deepseek-mcp-server",
+      "package": "deepseek-mcp-server",
+      "command": "npx -y deepseek-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/DMontgomery40/deepseek-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 316
+    },
+    {
+      "id": "npm:mcp-server-apple-shortcuts",
+      "name": "mcp-server-apple-shortcuts",
+      "package": "mcp-server-apple-shortcuts",
+      "command": "npx -y mcp-server-apple-shortcuts",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/recursechat/mcp-server-apple-shortcuts",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 316
+    },
+    {
+      "id": "npm:appstore-connect-mcp-server",
+      "name": "appstore-connect-mcp-server",
+      "package": "appstore-connect-mcp-server",
+      "command": "npx -y appstore-connect-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/JoshuaRileyDev/app-store-connect-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 316
+    },
+    {
+      "id": "npm:@masonator/coolify-mcp",
+      "name": "@masonator/coolify-mcp",
+      "package": "@masonator/coolify-mcp",
+      "command": "npx -y @masonator/coolify-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/StuMason/coolify-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 315
+    },
+    {
+      "id": "pypi:django-mcp-server",
+      "name": "django-mcp-server",
+      "package": "django-mcp-server",
+      "command": "uvx django-mcp-server",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/gts360/django-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 314
+    },
+    {
+      "id": "pypi:nanobanana-mcp-server",
+      "name": "nanobanana-mcp-server",
+      "package": "nanobanana-mcp-server",
+      "command": "uvx nanobanana-mcp-server",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/zhongweili/nanobanana-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 311
+    },
+    {
+      "id": "pypi:imagesorcery-mcp",
+      "name": "imagesorcery-mcp",
+      "package": "imagesorcery-mcp",
+      "command": "uvx imagesorcery-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/sunriseapps/imagesorcery-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 304
+    },
+    {
+      "id": "pypi:mcp-server-tree-sitter",
+      "name": "mcp-server-tree-sitter",
+      "package": "mcp-server-tree-sitter",
+      "command": "uvx mcp-server-tree-sitter",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/wrale/mcp-server-tree-sitter",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 292
+    },
+    {
+      "id": "pypi:mcp-server-google-scholar",
+      "name": "mcp-server-google-scholar",
+      "package": "mcp-server-google-scholar",
+      "command": "uvx mcp-server-google-scholar",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/JackKuo666/Google-Scholar-MCP-Server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 289
+    },
+    {
+      "id": "npm:@goonnguyen/human-mcp",
+      "name": "@goonnguyen/human-mcp",
+      "package": "@goonnguyen/human-mcp",
+      "command": "npx -y @goonnguyen/human-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/mrgoonie/human-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 284
+    },
+    {
+      "id": "npm:@automatalabs/mcp-server-playwright",
+      "name": "@automatalabs/mcp-server-playwright",
+      "package": "@automatalabs/mcp-server-playwright",
+      "command": "npx -y @automatalabs/mcp-server-playwright",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/VikashLoomba/MCP-Server-Playwright",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 284
+    },
+    {
+      "id": "pypi:doris-mcp-server",
+      "name": "doris-mcp-server",
+      "package": "doris-mcp-server",
+      "command": "uvx doris-mcp-server",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/apache/doris-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 282
+    },
+    {
+      "id": "npm:touchdesigner-mcp-server",
+      "name": "touchdesigner-mcp-server",
+      "package": "touchdesigner-mcp-server",
+      "command": "npx -y touchdesigner-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/8beeeaaat/touchdesigner-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 280
+    },
+    {
+      "id": "npm:@wildcard-ai/deepcontext",
+      "name": "@wildcard-ai/deepcontext",
+      "package": "@wildcard-ai/deepcontext",
+      "command": "npx -y @wildcard-ai/deepcontext",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/Wildcard-Official/deepcontext-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 274
+    },
+    {
+      "id": "npm:ultra-mcp",
+      "name": "ultra-mcp",
+      "package": "ultra-mcp",
+      "command": "npx -y ultra-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/RealMikeChong/ultra-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 272
+    },
+    {
+      "id": "pypi:yahoo-finance-mcp",
+      "name": "yahoo-finance-mcp",
+      "package": "yahoo-finance-mcp",
+      "command": "uvx yahoo-finance-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/Alex2Yang97/yahoo-finance-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 267
+    },
+    {
+      "id": "npm:@simonb97/server-win-cli",
+      "name": "@simonb97/server-win-cli",
+      "package": "@simonb97/server-win-cli",
+      "command": "npx -y @simonb97/server-win-cli",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/simon-ami/win-cli-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 267
+    },
+    {
+      "id": "npm:g-search-mcp",
+      "name": "g-search-mcp",
+      "package": "g-search-mcp",
+      "command": "npx -y g-search-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/jae-jae/g-search-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 260
+    },
+    {
+      "id": "npm:tmux-mcp",
+      "name": "tmux-mcp",
+      "package": "tmux-mcp",
+      "command": "npx -y tmux-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/nickgnd/tmux-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 260
+    },
+    {
+      "id": "pypi:video-editor-mcp",
+      "name": "video-editor-mcp",
+      "package": "video-editor-mcp",
+      "command": "uvx video-editor-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/burningion/video-editing-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 260
+    },
+    {
+      "id": "pypi:sec-edgar-mcp",
+      "name": "sec-edgar-mcp",
+      "package": "sec-edgar-mcp",
+      "command": "uvx sec-edgar-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/stefanoamorelli/sec-edgar-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 251
+    },
+    {
+      "id": "npm:@xeroapi/xero-mcp-server",
+      "name": "@xeroapi/xero-mcp-server",
+      "package": "@xeroapi/xero-mcp-server",
+      "command": "npx -y @xeroapi/xero-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/XeroAPI/xero-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 248
+    },
+    {
+      "id": "pypi:aci-mcp",
+      "name": "aci-mcp",
+      "package": "aci-mcp",
+      "command": "uvx aci-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/aipotheosis-labs/aci-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 248
+    },
+    {
+      "id": "pypi:mcp-server-odoo",
+      "name": "mcp-server-odoo",
+      "package": "mcp-server-odoo",
+      "command": "uvx mcp-server-odoo",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/ivnvxd/mcp-server-odoo",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 246
+    },
+    {
+      "id": "npm:@langchain/mcp-adapters",
+      "name": "@langchain/mcp-adapters",
+      "package": "@langchain/mcp-adapters",
+      "command": "npx -y @langchain/mcp-adapters",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/langchain-ai/langchainjs-mcp-adapters",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 245
+    },
+    {
+      "id": "npm:@pranesh.asp/foundry-mcp-server",
+      "name": "@pranesh.asp/foundry-mcp-server",
+      "package": "@pranesh.asp/foundry-mcp-server",
+      "command": "npx -y @pranesh.asp/foundry-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/PraneshASP/foundry-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 243
+    },
+    {
+      "id": "npm:mcp-server-code-runner",
+      "name": "mcp-server-code-runner",
+      "package": "mcp-server-code-runner",
+      "command": "npx -y mcp-server-code-runner",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/formulahendry/mcp-server-code-runner",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 242
+    },
+    {
+      "id": "npm:@jzone-mcp/antd-components-mcp",
+      "name": "@jzone-mcp/antd-components-mcp",
+      "package": "@jzone-mcp/antd-components-mcp",
+      "command": "npx -y @jzone-mcp/antd-components-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/zhixiaoqiang/antd-components-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 238
+    },
+    {
+      "id": "npm:@tableau/mcp-server",
+      "name": "@tableau/mcp-server",
+      "package": "@tableau/mcp-server",
+      "command": "npx -y @tableau/mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/tableau/tableau-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 237
+    },
+    {
+      "id": "npm:google-search-mcp",
+      "name": "google-search-mcp",
+      "package": "google-search-mcp",
+      "command": "npx -y google-search-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/mixelpixx/Google-Search-MCP-Server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 236
+    },
+    {
+      "id": "npm:sdl-mcp",
+      "name": "sdl-mcp",
+      "package": "sdl-mcp",
+      "command": "npx -y sdl-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/GlitterKill/sdl-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 234
+    },
+    {
+      "id": "npm:anki-mcp-server",
+      "name": "anki-mcp-server",
+      "package": "anki-mcp-server",
+      "command": "npx -y anki-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/nailuoGG/anki-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 234
+    },
+    {
+      "id": "pypi:wikipedia-mcp",
+      "name": "wikipedia-mcp",
+      "package": "wikipedia-mcp",
+      "command": "uvx wikipedia-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/Rudra-ravi/wikipedia-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 233
+    },
+    {
+      "id": "npm:figma-flutter-mcp",
+      "name": "figma-flutter-mcp",
+      "package": "figma-flutter-mcp",
+      "command": "npx -y figma-flutter-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/mhmzdev/figma-flutter-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 231
+    },
+    {
+      "id": "npm:@ankimcp/anki-mcp-server",
+      "name": "@ankimcp/anki-mcp-server",
+      "package": "@ankimcp/anki-mcp-server",
+      "command": "npx -y @ankimcp/anki-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/ankimcp/anki-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 229
+    },
+    {
+      "id": "pypi:mindmap-mcp-server",
+      "name": "mindmap-mcp-server",
+      "package": "mindmap-mcp-server",
+      "command": "uvx mindmap-mcp-server",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/YuChenSSR/mindmap-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 228
+    },
+    {
+      "id": "pypi:mcp-server-milvus",
+      "name": "mcp-server-milvus",
+      "package": "mcp-server-milvus",
+      "command": "uvx mcp-server-milvus",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/zilliztech/mcp-server-milvus",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 227
+    },
+    {
+      "id": "pypi:penpot-mcp",
+      "name": "penpot-mcp",
+      "package": "penpot-mcp",
+      "command": "uvx penpot-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/montevive/penpot-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 227
+    },
+    {
+      "id": "pypi:phone-mcp",
+      "name": "phone-mcp",
+      "package": "phone-mcp",
+      "command": "uvx phone-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/hao-cyber/phone-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 224
+    },
+    {
+      "id": "pypi:llamacloud-mcp",
+      "name": "llamacloud-mcp",
+      "package": "llamacloud-mcp",
+      "command": "uvx llamacloud-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/run-llama/llamacloud-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 224
+    },
+    {
+      "id": "npm:@postman/postman-mcp-server",
+      "name": "@postman/postman-mcp-server",
+      "package": "@postman/postman-mcp-server",
+      "command": "npx -y @postman/postman-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/postmanlabs/postman-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 218
+    },
+    {
+      "id": "npm:computer-use-mcp",
+      "name": "computer-use-mcp",
+      "package": "computer-use-mcp",
+      "command": "npx -y computer-use-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/domdomegg/computer-use-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 218
+    },
+    {
+      "id": "pypi:metatrader-mcp-server",
+      "name": "metatrader-mcp-server",
+      "package": "metatrader-mcp-server",
+      "command": "uvx metatrader-mcp-server",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/ariadng/metatrader-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 215
+    },
+    {
+      "id": "pypi:sketchup-mcp",
+      "name": "sketchup-mcp",
+      "package": "sketchup-mcp",
+      "command": "uvx sketchup-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/mhyrr/sketchup-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 213
+    },
+    {
+      "id": "pypi:linux-mcp-server",
+      "name": "linux-mcp-server",
+      "package": "linux-mcp-server",
+      "command": "uvx linux-mcp-server",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/rhel-lightspeed/linux-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 209
+    },
+    {
+      "id": "npm:mcp-server-gsc",
+      "name": "mcp-server-gsc",
+      "package": "mcp-server-gsc",
+      "command": "npx -y mcp-server-gsc",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/ahonn/mcp-server-gsc",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 207
+    },
+    {
+      "id": "npm:@erickwendel/contributions-mcp",
+      "name": "@erickwendel/contributions-mcp",
+      "package": "@erickwendel/contributions-mcp",
+      "command": "npx -y @erickwendel/contributions-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/ErickWendel/erickwendel-contributions-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 204
+    },
+    {
+      "id": "npm:opik-mcp",
+      "name": "opik-mcp",
+      "package": "opik-mcp",
+      "command": "npx -y opik-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/comet-ml/opik-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 203
+    },
+    {
+      "id": "npm:@jinzcdev/markmap-mcp-server",
+      "name": "@jinzcdev/markmap-mcp-server",
+      "package": "@jinzcdev/markmap-mcp-server",
+      "command": "npx -y @jinzcdev/markmap-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/jinzcdev/markmap-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 197
+    },
+    {
+      "id": "pypi:cve-mcp-server",
+      "name": "cve-mcp-server",
+      "package": "cve-mcp-server",
+      "command": "uvx cve-mcp-server",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/mukul975/cve-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 196
+    },
+    {
+      "id": "npm:hevy-mcp",
+      "name": "hevy-mcp",
+      "package": "hevy-mcp",
+      "command": "npx -y hevy-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/chrisdoc/hevy-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 195
+    },
+    {
+      "id": "npm:smart-coding-mcp",
+      "name": "smart-coding-mcp",
+      "package": "smart-coding-mcp",
+      "command": "npx -y smart-coding-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/omar-haris/smart-coding-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 195
+    },
+    {
+      "id": "npm:shopify-mcp",
+      "name": "shopify-mcp",
+      "package": "shopify-mcp",
+      "command": "npx -y shopify-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/GeLi2001/shopify-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 194
+    },
+    {
+      "id": "npm:@utcp/mcp-bridge",
+      "name": "@utcp/mcp-bridge",
+      "package": "@utcp/mcp-bridge",
+      "command": "npx -y @utcp/mcp-bridge",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/universal-tool-calling-protocol/utcp-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 194
+    },
+    {
+      "id": "npm:easy-mcp",
+      "name": "easy-mcp",
+      "package": "easy-mcp",
+      "command": "npx -y easy-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/zcaceres/easy-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 193
+    },
+    {
+      "id": "pypi:plane-mcp-server",
+      "name": "plane-mcp-server",
+      "package": "plane-mcp-server",
+      "command": "uvx plane-mcp-server",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/makeplane/plane-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 193
+    },
+    {
+      "id": "npm:@williamzujkowski/strudel-mcp-server",
+      "name": "@williamzujkowski/strudel-mcp-server",
+      "package": "@williamzujkowski/strudel-mcp-server",
+      "command": "npx -y @williamzujkowski/strudel-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/williamzujkowski/strudel-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 190
+    },
+    {
+      "id": "npm:gistpad-mcp",
+      "name": "gistpad-mcp",
+      "package": "gistpad-mcp",
+      "command": "npx -y gistpad-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/lostintangent/gistpad-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 189
+    },
+    {
+      "id": "pypi:flights-mcp",
+      "name": "flights-mcp",
+      "package": "flights-mcp",
+      "command": "uvx flights-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/ravinahp/flights-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 188
+    },
+    {
+      "id": "pypi:nextcloud-mcp-server",
+      "name": "nextcloud-mcp-server",
+      "package": "nextcloud-mcp-server",
+      "command": "uvx nextcloud-mcp-server",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/cbcoutinho/nextcloud-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 187
+    },
+    {
+      "id": "pypi:opentelemetry-mcp",
+      "name": "opentelemetry-mcp",
+      "package": "opentelemetry-mcp",
+      "command": "uvx opentelemetry-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/traceloop/opentelemetry-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 184
+    },
+    {
+      "id": "npm:mcp-server-siri-shortcuts",
+      "name": "mcp-server-siri-shortcuts",
+      "package": "mcp-server-siri-shortcuts",
+      "command": "npx -y mcp-server-siri-shortcuts",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/dvcrn/mcp-server-siri-shortcuts",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 184
+    },
+    {
+      "id": "npm:dataforseo-mcp-server",
+      "name": "dataforseo-mcp-server",
+      "package": "dataforseo-mcp-server",
+      "command": "npx -y dataforseo-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/dataforseo/mcp-server-typescript",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 177
+    },
+    {
+      "id": "pypi:charles-mcp",
+      "name": "charles-mcp",
+      "package": "charles-mcp",
+      "command": "uvx charles-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/heizaheiza/Charles-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 177
+    },
+    {
+      "id": "pypi:aws-finops-mcp-server",
+      "name": "aws-finops-mcp-server",
+      "package": "aws-finops-mcp-server",
+      "command": "uvx aws-finops-mcp-server",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/ravikiranvm/aws-finops-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 175
+    },
+    {
+      "id": "npm:claude-historian-mcp",
+      "name": "claude-historian-mcp",
+      "package": "claude-historian-mcp",
+      "command": "npx -y claude-historian-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/Vvkmnn/claude-historian-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 174
+    },
+    {
+      "id": "npm:@fanyangmeng/ghost-mcp",
+      "name": "@fanyangmeng/ghost-mcp",
+      "package": "@fanyangmeng/ghost-mcp",
+      "command": "npx -y @fanyangmeng/ghost-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/MFYDev/ghost-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 172
+    },
+    {
+      "id": "pypi:seo-mcp",
+      "name": "seo-mcp",
+      "package": "seo-mcp",
+      "command": "uvx seo-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/egebese/seo-research-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 172
+    },
+    {
+      "id": "npm:pg-mcp-server",
+      "name": "pg-mcp-server",
+      "package": "pg-mcp-server",
+      "command": "npx -y pg-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/ericzakariasson/pg-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 171
+    },
+    {
+      "id": "pypi:mcp-server-reddit",
+      "name": "mcp-server-reddit",
+      "package": "mcp-server-reddit",
+      "command": "uvx mcp-server-reddit",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/Hawstein/mcp-server-reddit",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 171
+    },
+    {
+      "id": "npm:@toolsdk.ai/registry",
+      "name": "@toolsdk.ai/registry",
+      "package": "@toolsdk.ai/registry",
+      "command": "npx -y @toolsdk.ai/registry",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/toolsdk-ai/toolsdk-mcp-registry",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 170
+    },
+    {
+      "id": "npm:@cexll/codex-mcp-server",
+      "name": "@cexll/codex-mcp-server",
+      "package": "@cexll/codex-mcp-server",
+      "command": "npx -y @cexll/codex-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/cexll/codex-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 167
+    },
+    {
+      "id": "pypi:mcp-server-starrocks",
+      "name": "mcp-server-starrocks",
+      "package": "mcp-server-starrocks",
+      "command": "uvx mcp-server-starrocks",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/StarRocks/mcp-server-starrocks",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 167
+    },
+    {
+      "id": "npm:data-verify-mcp",
+      "name": "data-verify-mcp",
+      "package": "data-verify-mcp",
+      "command": "npx -y data-verify-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/CCCpan/data-verify-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 164
+    },
+    {
+      "id": "npm:agentql-mcp",
+      "name": "agentql-mcp",
+      "package": "agentql-mcp",
+      "command": "npx -y agentql-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/tinyfish-io/agentql-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 161
+    },
+    {
+      "id": "npm:@gongrzhe/quickchart-mcp-server",
+      "name": "@gongrzhe/quickchart-mcp-server",
+      "package": "@gongrzhe/quickchart-mcp-server",
+      "command": "npx -y @gongrzhe/quickchart-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/GongRzhe/Quickchart-MCP-Server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 160
+    },
+    {
+      "id": "npm:scrapeless-mcp-server",
+      "name": "scrapeless-mcp-server",
+      "package": "scrapeless-mcp-server",
+      "command": "npx -y scrapeless-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/scrapeless-ai/scrapeless-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 160
+    },
+    {
+      "id": "pypi:mcp-server-apache-airflow",
+      "name": "mcp-server-apache-airflow",
+      "package": "mcp-server-apache-airflow",
+      "command": "uvx mcp-server-apache-airflow",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/yangkyeongmo/mcp-server-apache-airflow",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 158
+    },
+    {
+      "id": "npm:@nloui/paperless-mcp",
+      "name": "@nloui/paperless-mcp",
+      "package": "@nloui/paperless-mcp",
+      "command": "npx -y @nloui/paperless-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/nloui/paperless-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 158
+    },
+    {
+      "id": "npm:solana-mcp",
+      "name": "solana-mcp",
+      "package": "solana-mcp",
+      "command": "npx -y solana-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/sendaifun/solana-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 157
+    },
+    {
+      "id": "pypi:hitl-mcp-server",
+      "name": "hitl-mcp-server",
+      "package": "hitl-mcp-server",
+      "command": "uvx hitl-mcp-server",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/GongRzhe/Human-In-the-Loop-MCP-Server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 156
+    },
+    {
+      "id": "pypi:cursor-notebook-mcp",
+      "name": "cursor-notebook-mcp",
+      "package": "cursor-notebook-mcp",
+      "command": "uvx cursor-notebook-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/jbeno/cursor-notebook-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 156
+    },
+    {
+      "id": "npm:meta-ads-mcp",
+      "name": "meta-ads-mcp",
+      "package": "meta-ads-mcp",
+      "command": "npx -y meta-ads-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/brijr/meta-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 155
+    },
+    {
+      "id": "npm:@makehq/mcp-server",
+      "name": "@makehq/mcp-server",
+      "package": "@makehq/mcp-server",
+      "command": "npx -y @makehq/mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/integromat/make-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 154
+    },
+    {
+      "id": "npm:@metamcp/mcp-server-metamcp",
+      "name": "@metamcp/mcp-server-metamcp",
+      "package": "@metamcp/mcp-server-metamcp",
+      "command": "npx -y @metamcp/mcp-server-metamcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/metatool-ai/mcp-server-metamcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 154
+    },
+    {
+      "id": "pypi:dedalus_mcp",
+      "name": "dedalus_mcp",
+      "package": "dedalus_mcp",
+      "command": "uvx dedalus_mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/dedalus-labs/dedalus-mcp-python",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 153
+    },
+    {
+      "id": "pypi:akshare-one-mcp",
+      "name": "akshare-one-mcp",
+      "package": "akshare-one-mcp",
+      "command": "uvx akshare-one-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/zwldarren/akshare-one-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 153
+    },
+    {
+      "id": "pypi:mcp-server-mikrotik",
+      "name": "mcp-server-mikrotik",
+      "package": "mcp-server-mikrotik",
+      "command": "uvx mcp-server-mikrotik",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/jeff-nasseri/mikrotik-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 152
+    },
+    {
+      "id": "npm:@tsmztech/mcp-server-salesforce",
+      "name": "@tsmztech/mcp-server-salesforce",
+      "package": "@tsmztech/mcp-server-salesforce",
+      "command": "npx -y @tsmztech/mcp-server-salesforce",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/tsmztech/mcp-server-salesforce",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 152
+    },
+    {
+      "id": "npm:serper-search-scrape-mcp-server",
+      "name": "serper-search-scrape-mcp-server",
+      "package": "serper-search-scrape-mcp-server",
+      "command": "npx -y serper-search-scrape-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/marcopesani/mcp-server-serper",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 151
+    },
+    {
+      "id": "npm:@pyroprompts/any-chat-completions-mcp",
+      "name": "@pyroprompts/any-chat-completions-mcp",
+      "package": "@pyroprompts/any-chat-completions-mcp",
+      "command": "npx -y @pyroprompts/any-chat-completions-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/pyroprompts/any-chat-completions-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 151
+    },
+    {
+      "id": "npm:@toolprint/hypertool-mcp",
+      "name": "@toolprint/hypertool-mcp",
+      "package": "@toolprint/hypertool-mcp",
+      "command": "npx -y @toolprint/hypertool-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/toolprint/hypertool-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 151
+    },
+    {
+      "id": "npm:comet-mcp",
+      "name": "comet-mcp",
+      "package": "comet-mcp",
+      "command": "npx -y comet-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/hanzili/comet-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 149
+    },
+    {
+      "id": "npm:figma-mcp-server",
+      "name": "figma-mcp-server",
+      "package": "figma-mcp-server",
+      "command": "npx -y figma-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/TimHolden/figma-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 148
+    },
+    {
+      "id": "npm:@adeze/raindrop-mcp",
+      "name": "@adeze/raindrop-mcp",
+      "package": "@adeze/raindrop-mcp",
+      "command": "npx -y @adeze/raindrop-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/adeze/raindrop-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 148
+    },
+    {
+      "id": "pypi:mcp-server-calculator",
+      "name": "mcp-server-calculator",
+      "package": "mcp-server-calculator",
+      "command": "uvx mcp-server-calculator",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/githejie/mcp-server-calculator",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 148
+    },
+    {
+      "id": "npm:@sammysnake/fast-context-mcp",
+      "name": "@sammysnake/fast-context-mcp",
+      "package": "@sammysnake/fast-context-mcp",
+      "command": "npx -y @sammysnake/fast-context-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/SammySnake-d/fast-context-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 147
+    },
+    {
+      "id": "npm:web3-research-mcp",
+      "name": "web3-research-mcp",
+      "package": "web3-research-mcp",
+      "command": "npx -y web3-research-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/aaronjmars/web3-research-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 147
+    },
+    {
+      "id": "pypi:a2a_mcp_server",
+      "name": "a2a_mcp_server",
+      "package": "a2a_mcp_server",
+      "command": "uvx a2a_mcp_server",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/GongRzhe/A2A-MCP-Server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 147
+    },
+    {
+      "id": "npm:@aaronsb/google-workspace-mcp",
+      "name": "@aaronsb/google-workspace-mcp",
+      "package": "@aaronsb/google-workspace-mcp",
+      "command": "npx -y @aaronsb/google-workspace-mcp",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/aaronsb/google-workspace-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 146
+    },
+    {
+      "id": "pypi:zotero-mcp",
+      "name": "zotero-mcp",
+      "package": "zotero-mcp",
+      "command": "uvx zotero-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/kujenga/zotero-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 145
+    },
+    {
+      "id": "npm:affine-mcp-server",
+      "name": "affine-mcp-server",
+      "package": "affine-mcp-server",
+      "command": "npx -y affine-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/DAWNCR0W/affine-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 143
+    },
+    {
+      "id": "pypi:facebook-mcp-server",
+      "name": "facebook-mcp-server",
+      "package": "facebook-mcp-server",
+      "command": "uvx facebook-mcp-server",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/HagaiHen/facebook-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 143
+    },
+    {
+      "id": "npm:@roychri/mcp-server-asana",
+      "name": "@roychri/mcp-server-asana",
+      "package": "@roychri/mcp-server-asana",
+      "command": "npx -y @roychri/mcp-server-asana",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/roychri/mcp-server-asana",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 137
+    },
+    {
+      "id": "npm:google-tag-manager-mcp-server",
+      "name": "google-tag-manager-mcp-server",
+      "package": "google-tag-manager-mcp-server",
+      "command": "npx -y google-tag-manager-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/stape-io/google-tag-manager-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 136
+    },
+    {
+      "id": "pypi:crawl4ai-mcp-server",
+      "name": "crawl4ai-mcp-server",
+      "package": "crawl4ai-mcp-server",
+      "command": "uvx crawl4ai-mcp-server",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/weidwonder/crawl4ai-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 136
+    },
+    {
+      "id": "pypi:linkedin-mcp-server",
+      "name": "linkedin-mcp-server",
+      "package": "linkedin-mcp-server",
+      "command": "uvx linkedin-mcp-server",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/eliasbiondo/linkedin-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 135
+    },
+    {
+      "id": "npm:@mcpfun/mcp-server-ccxt",
+      "name": "@mcpfun/mcp-server-ccxt",
+      "package": "@mcpfun/mcp-server-ccxt",
+      "command": "npx -y @mcpfun/mcp-server-ccxt",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/doggybee/mcp-server-ccxt",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 133
+    },
+    {
+      "id": "pypi:stock-mcp",
+      "name": "stock-mcp",
+      "package": "stock-mcp",
+      "command": "uvx stock-mcp",
+      "runtime": "python",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/huweihua123/stock-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 132
+    },
+    {
+      "id": "npm:gopeak",
+      "name": "gopeak",
+      "package": "gopeak",
+      "command": "npx -y gopeak",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/HaD0Yun/Gopeak-godot-mcp",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 131
+    },
+    {
+      "id": "npm:financial-modeling-prep-mcp-server",
+      "name": "financial-modeling-prep-mcp-server",
+      "package": "financial-modeling-prep-mcp-server",
+      "command": "npx -y financial-modeling-prep-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/imbenrabi/Financial-Modeling-Prep-MCP-Server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 128
+    },
+    {
+      "id": "npm:think-mcp-server",
+      "name": "think-mcp-server",
+      "package": "think-mcp-server",
+      "command": "npx -y think-mcp-server",
+      "runtime": "node",
+      "sources": [
+        "github-repo-scan-backfill:census-2026"
+      ],
+      "repo": "https://github.com/PhillipRt/think-mcp-server",
+      "downloads": 0,
+      "description": "",
+      "lastPublished": null,
+      "stars": 127
+    }
+  ]
+}
